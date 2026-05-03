@@ -169,8 +169,18 @@ class IDSocietyGenerator(BaseFeedGenerator):
                     return date
         
         # Try finding any text containing date pattern in the card
-        # Look for "April 27, 2026" style dates
         text = element.get_text()
+        
+        # First try "Last Updated\nApril 27, 2026" pattern
+        last_updated_pattern = r'Last\s*Updated[\s\n]+([A-Za-z]+\s+\d{1,2},?\s+\d{4})'
+        match = re.search(last_updated_pattern, text, re.IGNORECASE)
+        if match:
+            date = parse_date(match.group(1))
+            if date:
+                self.logger.debug(f"Found date from Last Updated: {date}")
+                return date
+        
+        # Then try "April 27, 2026" style dates
         date_pattern = r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}'
         match = re.search(date_pattern, text, re.IGNORECASE)
         if match:
@@ -220,7 +230,8 @@ class IDSocietyGenerator(BaseFeedGenerator):
     
     def fetch_article_content(self, url: str) -> Optional[Article]:
         """Fetch full article content from detail page."""
-        html = fetch_html(url)
+        # IDSociety requires JS rendering for detail pages too
+        html = smart_fetch(url, require_js=True, selenium_wait=5)
         if not html:
             self.logger.warning(f"Failed to fetch article: {url}")
             return None
@@ -261,10 +272,20 @@ class IDSocietyGenerator(BaseFeedGenerator):
         # Fallback: search for date pattern in page text
         if not published_at:
             text = soup.get_text()
-            date_pattern = r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}'
-            match = re.search(date_pattern, text, re.IGNORECASE)
+            # First try "Last Updated\nApril 27, 2026" pattern (with possible newlines)
+            last_updated_pattern = r'Last\s*Updated[\s\n]+([A-Za-z]+\s+\d{1,2},?\s+\d{4})'
+            match = re.search(last_updated_pattern, text, re.IGNORECASE)
             if match:
-                published_at = parse_date(match.group(0))
+                published_at = parse_date(match.group(1))
+                if published_at:
+                    self.logger.debug(f"Found date from Last Updated: {published_at}")
+            
+            # Then try general date pattern
+            if not published_at:
+                date_pattern = r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}'
+                match = re.search(date_pattern, text, re.IGNORECASE)
+                if match:
+                    published_at = parse_date(match.group(0))
         
         # Extract author from detail page
         author = None
