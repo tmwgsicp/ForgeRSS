@@ -26,6 +26,37 @@ logging.basicConfig(
 )
 
 
+def is_valid_cover_image(url: str) -> bool:
+    """
+    Check if URL is a valid cover image (not a tracking pixel or ad).
+    """
+    if not url:
+        return False
+    
+    # Blacklist tracking/ad domains
+    blacklist_domains = [
+        'adsrvr.org', 'doubleclick.net', 'googlesyndication.com',
+        'googleadservices.com', 'facebook.com/tr', 'analytics',
+        'pixel', 'tracker', 'beacon', 'ads.', 'ad.', 'track.',
+        'match.', 'sync.', 'cm.', 'ida.', 'ib.', 'cdn-cgi',
+    ]
+    url_lower = url.lower()
+    for domain in blacklist_domains:
+        if domain in url_lower:
+            return False
+    
+    # Must have image extension or be from known image paths
+    valid_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
+    has_extension = any(ext in url_lower for ext in valid_extensions)
+    
+    # Check for common image path patterns
+    image_patterns = ['/images/', '/assets/', '/uploads/', '/media/', '/content/', '/img/']
+    has_image_path = any(p in url_lower for p in image_patterns)
+    
+    # Allow if has valid extension OR is from image path
+    return has_extension or has_image_path
+
+
 def stable_fallback_date(identifier: str) -> datetime:
     """Generate stable date from URL hash when date extraction fails."""
     hash_val = abs(hash(identifier)) % 365
@@ -370,51 +401,61 @@ class BaseFeedGenerator(ABC):
             if article.category:
                 add_text(item, "category", article.category)
             
-            # Build description with cover image (CDATA wrapped)
-            cover = article.images[0] if article.images else None
-            desc_parts = []
-            if cover:
-                desc_parts.append(
-                    f'<div style="margin-bottom:12px">'
-                    f'<img src="{html_escape(cover)}" alt="{html_escape(article.title)}" '
-                    f'style="max-width:100%;height:auto;border-radius:8px" /></div>'
-                )
-            if article.summary:
-                desc_parts.append(
-                    f'<p style="color:#333;font-size:15px;line-height:1.8">'
-                    f'{html_escape(article.summary[:500])}...</p>'
-                )
-            desc_parts.append(
-                f'<p><a href="{html_escape(article.url)}" '
-                f'style="color:#1890ff;text-decoration:none">Read full article</a></p>'
-            )
+            # Filter out tracking pixels and get valid cover image
+            valid_images = [img for img in article.images if is_valid_cover_image(img)]
+            cover = valid_images[0] if valid_images else None
             
-            description = doc.createElement("description")
-            description.appendChild(doc.createCDATASection("\n".join(desc_parts)))
-            item.appendChild(description)
+            # Build HTML content (same for description and content:encoded)
+            # Following wechatrss pattern: use full content if available
+            html_parts = []
             
-            # content:encoded with full content (CDATA wrapped)
             if article.content:
-                content_parts = []
-                if cover:
-                    content_parts.append(
-                        f'<div style="margin-bottom:16px">'
-                        f'<img src="{html_escape(cover)}" alt="{html_escape(article.title)}" '
-                        f'style="max-width:100%;height:auto;border-radius:8px" /></div>'
-                    )
-                content_parts.append(
+                # Has full content - show it directly
+                html_parts.append(
                     f'<div style="font-size:16px;line-height:1.8;color:#333">'
                     f'{article.content}</div>'
                 )
                 if article.author:
-                    content_parts.append(
+                    html_parts.append(
                         f'<hr style="margin:24px 0;border:none;border-top:1px solid #eee" />'
-                        f'<p style="color:#888;font-size:13px">Author: {html_escape(article.author)}</p>'
+                        f'<p style="color:#888;font-size:13px;margin:0">Author: {html_escape(article.author)}</p>'
                     )
-                
-                content_encoded = doc.createElement("content:encoded")
-                content_encoded.appendChild(doc.createCDATASection("\n".join(content_parts)))
-                item.appendChild(content_encoded)
+            else:
+                # No full content - show cover + summary + read link
+                if cover:
+                    html_parts.append(
+                        f'<div style="margin-bottom:12px">'
+                        f'<a href="{html_escape(article.url)}">'
+                        f'<img src="{html_escape(cover)}" alt="{html_escape(article.title)}" '
+                        f'style="max-width:100%;height:auto;border-radius:8px" /></a></div>'
+                    )
+                if article.summary:
+                    html_parts.append(
+                        f'<p style="color:#333;font-size:15px;line-height:1.8;margin:0 0 16px">'
+                        f'{html_escape(article.summary)}</p>'
+                    )
+                if article.author:
+                    html_parts.append(
+                        f'<p style="color:#888;font-size:13px;margin:0 0 12px">'
+                        f'Author: {html_escape(article.author)}</p>'
+                    )
+                html_parts.append(
+                    f'<p style="margin:0"><a href="{html_escape(article.url)}" '
+                    f'style="color:#1890ff;text-decoration:none;font-size:14px">'
+                    f'Read full article &rarr;</a></p>'
+                )
+            
+            content_html = "\n".join(html_parts)
+            
+            # description (CDATA wrapped)
+            description = doc.createElement("description")
+            description.appendChild(doc.createCDATASection(content_html))
+            item.appendChild(description)
+            
+            # content:encoded (same content, CDATA wrapped)
+            content_encoded = doc.createElement("content:encoded")
+            content_encoded.appendChild(doc.createCDATASection(content_html))
+            item.appendChild(content_encoded)
             
             # Enclosure for cover image
             if cover:
