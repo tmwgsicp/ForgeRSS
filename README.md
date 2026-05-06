@@ -8,7 +8,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/tmwgsicp/ForgeRSS?style=for-the-badge&logo=github)](https://github.com/tmwgsicp/ForgeRSS/stargazers)
 [![License](https://img.shields.io/badge/License-AGPL%203.0-blue?style=for-the-badge)](LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tmwgsicp/ForgeRSS?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/tmwgsicp/ForgeRSS)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tmwgsicp/forgerss?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/tmwgsicp/forgerss)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
 > **100% 开源，100% 免费。** 代码完全公开，私有化部署无任何限制，不搞"开源"之名行收费之实。
