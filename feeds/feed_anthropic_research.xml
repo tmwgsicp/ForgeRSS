@@ -5,7 +5,7 @@
 <link>https://www.anthropic.com/research</link>
 <description>Latest research publications from Anthropic</description>
 <language>en</language>
-<lastBuildDate>Fri, 04 Sep 2026 15:55:01 +0000</lastBuildDate>
+<lastBuildDate>Fri, 04 Sep 2026 20:25:53 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://www.anthropic.com/research" rel="self" type="application/rss+xml"/>
 <image>
@@ -13,6 +13,207 @@
   <title>Anthropic Research</title>
   <link>https://www.anthropic.com/research</link>
 </image>
+<item>
+  <title>Formalizing Fermat&apos;s Last Theorem</title>
+  <link>https://www.anthropic.com/research/formalizing-fermats-last-theorem</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/formalizing-fermats-last-theorem</guid>
+  <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.Around 1637, Pierre de Fermat jotted down a claim in the margin of his copy of Diophantus’s Arithmeticathat would become one of the most famous mathematical conjectures of all time: no ...</p><div style="font-size:16px;line-height:1.8;color:#333">We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.Around 1637, Pierre de Fermat jotted down a claim in the margin of his copy of Diophantus’s Arithmeticathat would become one of the most famous mathematical conjectures of all time: no positive integers a, b, c satisfy aⁿ + bⁿ = cⁿ for any n > 2.Fermat’s Last Theorem(FLT), as the conjecture became known, turned out to be incredibly difficult to prove. The first proof, from Sir Andrew Wiles in1995, ran to 129 pages and required months of painstaking work to verify.
+
+A decade later, Dutch computer scientist Jan Bergstra proposed “formalizing” Wiles’s proof: converting the mathematical reasoning into a form computers can check automatically. Since then, mathematicians have been developing the methods needed to encode such a complex proof, including a multi-year community effort kicked off in 2024 by Kevin Buzzard at Imperial College Londonto complete the formalizationusing theLean proof assistant.
+
+Recently, Tianyi Peng, an Anthropic researcher whose group at Columbia University builds tools for AI formalization, set out to test whether Claude could make progress on formalizing FLT.1The result went further than he expected. In 11 days, working largely autonomously, Claude produced the first end-to-end, computer-checked proof of FLT. Along the way, it wrote 13 million lines of Lean and proved 29,500 intermediate theorems.
+
+We shared theresulting proofwith Kevin Buzzard, who said:
+
+Automatically formalizing a proof as complex as FLT is a significant step towards a future in which all of mathematics can be readily checked. As AI produces ever more proofs, the ability to easily formalize work can lighten the burden of evaluating new results (a process that can take years). We are hopeful that it will become easier, not harder, to trust the body of knowledge upon which mathematics is built.
+
+The challenge of verifying mathematical proofs
+
+Unlikerecent AI-drivenwork on the Riemann hypothesis, which produced novelmathematics, what’s novel here is theverification—checking a mathematical proof as one would check a mathematical computation with a calculator. Proving math theorems requires assembling complex logical chains, and if a single link is broken, everything that follows it might turn out to be false. Understanding a novel result deeply enough to be confident in its correctness can take months, or even years, of work.
+
+Fermat’s Last Theorem is an illustrative example.2Fermat wrote down the theorem’s statement in the margin of a book, alongside a tantalizing note:
+
+For over 350 years, generations of mathematicians searched for a proof of FLT, marvelous or otherwise. In 1908, a prize of 100,000 German gold marks (the equivalent of 1–2 million dollars today) was announced for anyone who could produce a correct proof, and 621incorrectattempts were produced in the first year alone.
+
+In June 1993, Wiles presented what he believed to be the first correct proof of FLT in a three-day series of lectures. Two months into an intensive verification effort by several mathematicians, a reviewer asked Wiles a question that exposed a critical gap. Wiles spent a year trying to fix it, first alone and then with his former student Richard Taylor. He was on the brink of abandoning the project when he finally realized an approach he’d discarded earlier could fix the proof.Wiles published the first correct proof of FLT in May 1995; it relied on modern mathematical techniques that were far beyond what would have been known to Fermat in 1637. Since an elementary proof has not been found after centuries of trying, the mathematical community now believes Fermat’s own original “marvelous proof”was incorrect.
+
+Formalizing Fermat’s Last Theorem
+
+One way to check a proof’s correctness is to ask a computer to do it. Proof assistants like Lean verify the logic of a proof algorithmically, demonstrating its correctness beyond a doubt. The difficult part for humans is rewriting the proof so Lean can understand it. While a proof written for human readers will skip many obvious steps, Lean needs to see every step, no matter how trivial. Human proofs also build on centuries of published work, while a formalization starts from the tiny fraction of math that’s been formalized already.
+
+For FLT, the formalization process was expected to take years. Just theblueprintthe mathematical community has been using to describe the initial phase of the project runs to 86 pages.
+
+Claude completed the proof in 11 days, producing computer-verifiable proofs of 30,300 theorems along the way (using 29,500 in the final proof). Dozens of Claude agents collaborated to define concepts, prove intermediate theorems, and use those theorems to prove ever harder statements. At 13 million lines of Lean code, Claude’s proof is over 5x the size of Mathlib, the principal community library of mathematical proofs this theorem builds on.3
+
+Claude’s proof followsa simplified version of Wiles’s proof from Darmon, Diamond and Taylor. Mathematical input from humans was limited to occasional high-level instructions from Tianyi: “Jacobian as a scheme sounds high priority,” “push [the] Mazur [theorem] to be done soon.” You can find excerpts of Claude’s thinkinghere.
+
+Excerpts of Claude’s thinking as it realizes what it has just accomplished.
+
+A number of Claude’s initial attempts failed: while agents had some early success, they quickly lost track of the project’s state and stopped collaborating effectively. Their failed efforts contributed ~7% of the non-boilerplate lines in the final proof.
+
+The effort succeeded when we switched to usingProve2Me, an open collaborative platform for formalizing mathematics designed by Tianyi Peng and his collaborators at Columbia University. Prove2Me helped by:
+
+Maintaining a directed acyclic graph (DAG) of theorem statementsthatagents used to decide what proofs they should attempt next. This was particularly helpful for mitigating memory degradation and allowing multiple agents to work in parallel.
+
+Speeding up Lean compilation and minimizing resource consumptionby separating theorem statements and proofs into different files, with the links between them maintained independently.
+
+Enabling search and reuseby maintaining a natural-language description of each theorem statement, resulting in a simpler proof path.
+
+With Prove2Me and a Claude Code-based multi-agent harness, a team of agents completed the proof in a little under two weeks, consuming about six billion output tokens from a general-purpose internal research model roughly comparable to Claude Fable 5.1. The finished proof was checked by Lean; it uses just Lean’s three standard axioms, and acomparatorconfirmed that the theorem’s statement matches Mathlib’s own statement of FLT.
+
+Reducing the burden of formal verification
+
+The speed with which we were able to produce this proof demonstrates that it is now possible to formalize large swaths of mathematics, which may both catch errors in the common body of mathematical proofs and reduce the burden of refereeing new work. After reviewing Claude’s Lean proof, Kevin Buzzard told us:
+
+Formalization is also a major factor in how humans can gain confidence in AI-generated mathematical results. As AI and AI-assisted mathematicians produce more (purported) proofs than ever before, AI-assisted formalization takes part of the load off human reviewers. We expect it will become common to produce a formalized proof alongside any write-up intended for a human reader. Although we do not think a formalized proof should replace a human-understandable exposition, it may be the only feasible way for the mathematical community to keep up with AI-generated contributions.
+
+Writing Lean also seems to help Claude prove novel results. Many of our recent Claude-authored results have been formalized in parallel with their proofs, and Claude appears to use these partial proofs to independently check its hypotheses much like it writes numerical simulations to check that it’s on the right track.
+
+Formalizing FLT was a token-intensive project, but it is also the largest Lean proof ever constructed. Anthropic researchers did a small experiment using three personal Claude Max plans to formalize applications of the Hardy-Littlewood Circle Method. Collaborating entirely through Prove2Me, the agents jointly completed a formalization ofVinogradov’s Three Primes Theoremin just three days. We think with the right scaffold, collaborative formalization of major results with consumer AI subscriptions is achievable.
+
+To this end,Anthropicas well asother labshave recently expanded their support for external researchers—including mathematicians working on pure math and formalization—with free and discounted subscriptions and research credits. We also offerdedicated grantsfor larger scientific projects, which could include formalizing other major theorems or improving Lean or Mathlib.
+
+With AI rapidly changing what it looks like to do math research, mathematicians—at Anthropic and elsewhere—are grappling with what that means for their work. Formalization, however, is a place where we feel unambiguously good about the role of AI. As formalization becomes a more commonplace tool, we are hopeful that it will help maintain trust in the common body of mathematical knowledge.
+
+Our formalization effort is a small piece of the long history of Fermat’s theorem and the development of formal mathematics. The first full proof from Andrew Wiles together with Richard Taylor was a culmination of more than three hundred years of mathematics, integrating ideas from Gerhard Frey, Jean-Pierre Serre, Ken Ribet, Barry Mazur, Robert Langlands, Jerrold Tunnell, Yutaka Taniyama, Goro Shimura, and André Weil, among others. Claude’s proof followsthe exposition by Henri Darmon, Fred Diamond, and Richard Taylor.
+
+Our proof adapts pieces from theImperial College London FLT projectled by Kevin Buzzard and theflt-regular project. Lean and Mathlib are both their own labors of love and have received contributions from hundreds of mathematicians, many working with theLean FRO. We thank Kevin Buzzard for reviewing the proof and for his comments.
+
+The full proof is available onGitHubalong with a written walk-through of the proof.
+
+Recommended expository reading
+
+The Proof in the Codeis a recent book about the history of the Lean theorem prover and the formalization of mathematics.
+
+The 1996 “Fermat’s Last Theorem” BBC documentaryhas interviews with Wiles and other mathematicians involved in the proof, and is fondly remembered by some authors of this post.
+
+For those with a mathematical background, a technical history of propositions-as-types (the underlying discipline of proof assistants such as Lean, Rocq, and Agda) can be found inPropositions as Typesby Philip Wadler.
+
+Chen, S., Marwaha, K., Lu, X., Yuen, H., & Peng, T. (2026). Prove2Me: An open collaborative platform for scaling math formalization. arXiv.https://doi.org/10.48550/arXiv.2608.28433
+
+Automating Math, Adam Marblestone, in Asterisk Magazine.
+
+During his undergrad, Peng’s research advisor wanted to include results from Peng’s thesis in aNaturearticle. He asked Peng whether he was sure the proof was correct. Peng’s honest answer was: “I'm 99% sure, but it's hard to be 100% certain about a proof this long.” Peng missed out on getting his work published inNature.
+
+There are numerous other stories of the mathematical community struggling with verification. Among the most famous is Thomas Hales’s 1998 proof of theKepler conjecture, which spent four years in review before a 12-referee panel settled for “99% certain” (Hales eventually led a twenty-person project,Flyspeck, that formalized the proof). Grigori Perelman’s 2002 proof of thePoincaré conjecturetook the community roughly four years and three 300-page expositions to accept. Harald Helfgott’s 2013 proof of theweak Goldbach conjectureis still under review. Sometimes results that turn out to be wrong areaccepted for years, and other mathematicians build their theories on these faulty foundations.
+
+This is partly because Mathlib is concise and well-reviewed, while our proof is likely much longer than it needs to be.
+
+Automated researchers can reliably mitigate alignment failures
+
+We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
+
+Enabling independent research on how people use Claude
+
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
+
+How Claude is accelerating protein design and analytical chemistry
+
+In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
+
+Subscribe to Anthropic Science
+
+Features on AI-assisted discoveries, practical workflows, and field notes across the sciences.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.Around 1637, Pierre de Fermat jotted down a claim in the margin of his copy of Diophantus’s Arithmeticathat would become one of the most famous mathematical conjectures of all time: no ...</p><div style="font-size:16px;line-height:1.8;color:#333">We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.Around 1637, Pierre de Fermat jotted down a claim in the margin of his copy of Diophantus’s Arithmeticathat would become one of the most famous mathematical conjectures of all time: no positive integers a, b, c satisfy aⁿ + bⁿ = cⁿ for any n > 2.Fermat’s Last Theorem(FLT), as the conjecture became known, turned out to be incredibly difficult to prove. The first proof, from Sir Andrew Wiles in1995, ran to 129 pages and required months of painstaking work to verify.
+
+A decade later, Dutch computer scientist Jan Bergstra proposed “formalizing” Wiles’s proof: converting the mathematical reasoning into a form computers can check automatically. Since then, mathematicians have been developing the methods needed to encode such a complex proof, including a multi-year community effort kicked off in 2024 by Kevin Buzzard at Imperial College Londonto complete the formalizationusing theLean proof assistant.
+
+Recently, Tianyi Peng, an Anthropic researcher whose group at Columbia University builds tools for AI formalization, set out to test whether Claude could make progress on formalizing FLT.1The result went further than he expected. In 11 days, working largely autonomously, Claude produced the first end-to-end, computer-checked proof of FLT. Along the way, it wrote 13 million lines of Lean and proved 29,500 intermediate theorems.
+
+We shared theresulting proofwith Kevin Buzzard, who said:
+
+Automatically formalizing a proof as complex as FLT is a significant step towards a future in which all of mathematics can be readily checked. As AI produces ever more proofs, the ability to easily formalize work can lighten the burden of evaluating new results (a process that can take years). We are hopeful that it will become easier, not harder, to trust the body of knowledge upon which mathematics is built.
+
+The challenge of verifying mathematical proofs
+
+Unlikerecent AI-drivenwork on the Riemann hypothesis, which produced novelmathematics, what’s novel here is theverification—checking a mathematical proof as one would check a mathematical computation with a calculator. Proving math theorems requires assembling complex logical chains, and if a single link is broken, everything that follows it might turn out to be false. Understanding a novel result deeply enough to be confident in its correctness can take months, or even years, of work.
+
+Fermat’s Last Theorem is an illustrative example.2Fermat wrote down the theorem’s statement in the margin of a book, alongside a tantalizing note:
+
+For over 350 years, generations of mathematicians searched for a proof of FLT, marvelous or otherwise. In 1908, a prize of 100,000 German gold marks (the equivalent of 1–2 million dollars today) was announced for anyone who could produce a correct proof, and 621incorrectattempts were produced in the first year alone.
+
+In June 1993, Wiles presented what he believed to be the first correct proof of FLT in a three-day series of lectures. Two months into an intensive verification effort by several mathematicians, a reviewer asked Wiles a question that exposed a critical gap. Wiles spent a year trying to fix it, first alone and then with his former student Richard Taylor. He was on the brink of abandoning the project when he finally realized an approach he’d discarded earlier could fix the proof.Wiles published the first correct proof of FLT in May 1995; it relied on modern mathematical techniques that were far beyond what would have been known to Fermat in 1637. Since an elementary proof has not been found after centuries of trying, the mathematical community now believes Fermat’s own original “marvelous proof”was incorrect.
+
+Formalizing Fermat’s Last Theorem
+
+One way to check a proof’s correctness is to ask a computer to do it. Proof assistants like Lean verify the logic of a proof algorithmically, demonstrating its correctness beyond a doubt. The difficult part for humans is rewriting the proof so Lean can understand it. While a proof written for human readers will skip many obvious steps, Lean needs to see every step, no matter how trivial. Human proofs also build on centuries of published work, while a formalization starts from the tiny fraction of math that’s been formalized already.
+
+For FLT, the formalization process was expected to take years. Just theblueprintthe mathematical community has been using to describe the initial phase of the project runs to 86 pages.
+
+Claude completed the proof in 11 days, producing computer-verifiable proofs of 30,300 theorems along the way (using 29,500 in the final proof). Dozens of Claude agents collaborated to define concepts, prove intermediate theorems, and use those theorems to prove ever harder statements. At 13 million lines of Lean code, Claude’s proof is over 5x the size of Mathlib, the principal community library of mathematical proofs this theorem builds on.3
+
+Claude’s proof followsa simplified version of Wiles’s proof from Darmon, Diamond and Taylor. Mathematical input from humans was limited to occasional high-level instructions from Tianyi: “Jacobian as a scheme sounds high priority,” “push [the] Mazur [theorem] to be done soon.” You can find excerpts of Claude’s thinkinghere.
+
+Excerpts of Claude’s thinking as it realizes what it has just accomplished.
+
+A number of Claude’s initial attempts failed: while agents had some early success, they quickly lost track of the project’s state and stopped collaborating effectively. Their failed efforts contributed ~7% of the non-boilerplate lines in the final proof.
+
+The effort succeeded when we switched to usingProve2Me, an open collaborative platform for formalizing mathematics designed by Tianyi Peng and his collaborators at Columbia University. Prove2Me helped by:
+
+Maintaining a directed acyclic graph (DAG) of theorem statementsthatagents used to decide what proofs they should attempt next. This was particularly helpful for mitigating memory degradation and allowing multiple agents to work in parallel.
+
+Speeding up Lean compilation and minimizing resource consumptionby separating theorem statements and proofs into different files, with the links between them maintained independently.
+
+Enabling search and reuseby maintaining a natural-language description of each theorem statement, resulting in a simpler proof path.
+
+With Prove2Me and a Claude Code-based multi-agent harness, a team of agents completed the proof in a little under two weeks, consuming about six billion output tokens from a general-purpose internal research model roughly comparable to Claude Fable 5.1. The finished proof was checked by Lean; it uses just Lean’s three standard axioms, and acomparatorconfirmed that the theorem’s statement matches Mathlib’s own statement of FLT.
+
+Reducing the burden of formal verification
+
+The speed with which we were able to produce this proof demonstrates that it is now possible to formalize large swaths of mathematics, which may both catch errors in the common body of mathematical proofs and reduce the burden of refereeing new work. After reviewing Claude’s Lean proof, Kevin Buzzard told us:
+
+Formalization is also a major factor in how humans can gain confidence in AI-generated mathematical results. As AI and AI-assisted mathematicians produce more (purported) proofs than ever before, AI-assisted formalization takes part of the load off human reviewers. We expect it will become common to produce a formalized proof alongside any write-up intended for a human reader. Although we do not think a formalized proof should replace a human-understandable exposition, it may be the only feasible way for the mathematical community to keep up with AI-generated contributions.
+
+Writing Lean also seems to help Claude prove novel results. Many of our recent Claude-authored results have been formalized in parallel with their proofs, and Claude appears to use these partial proofs to independently check its hypotheses much like it writes numerical simulations to check that it’s on the right track.
+
+Formalizing FLT was a token-intensive project, but it is also the largest Lean proof ever constructed. Anthropic researchers did a small experiment using three personal Claude Max plans to formalize applications of the Hardy-Littlewood Circle Method. Collaborating entirely through Prove2Me, the agents jointly completed a formalization ofVinogradov’s Three Primes Theoremin just three days. We think with the right scaffold, collaborative formalization of major results with consumer AI subscriptions is achievable.
+
+To this end,Anthropicas well asother labshave recently expanded their support for external researchers—including mathematicians working on pure math and formalization—with free and discounted subscriptions and research credits. We also offerdedicated grantsfor larger scientific projects, which could include formalizing other major theorems or improving Lean or Mathlib.
+
+With AI rapidly changing what it looks like to do math research, mathematicians—at Anthropic and elsewhere—are grappling with what that means for their work. Formalization, however, is a place where we feel unambiguously good about the role of AI. As formalization becomes a more commonplace tool, we are hopeful that it will help maintain trust in the common body of mathematical knowledge.
+
+Our formalization effort is a small piece of the long history of Fermat’s theorem and the development of formal mathematics. The first full proof from Andrew Wiles together with Richard Taylor was a culmination of more than three hundred years of mathematics, integrating ideas from Gerhard Frey, Jean-Pierre Serre, Ken Ribet, Barry Mazur, Robert Langlands, Jerrold Tunnell, Yutaka Taniyama, Goro Shimura, and André Weil, among others. Claude’s proof followsthe exposition by Henri Darmon, Fred Diamond, and Richard Taylor.
+
+Our proof adapts pieces from theImperial College London FLT projectled by Kevin Buzzard and theflt-regular project. Lean and Mathlib are both their own labors of love and have received contributions from hundreds of mathematicians, many working with theLean FRO. We thank Kevin Buzzard for reviewing the proof and for his comments.
+
+The full proof is available onGitHubalong with a written walk-through of the proof.
+
+Recommended expository reading
+
+The Proof in the Codeis a recent book about the history of the Lean theorem prover and the formalization of mathematics.
+
+The 1996 “Fermat’s Last Theorem” BBC documentaryhas interviews with Wiles and other mathematicians involved in the proof, and is fondly remembered by some authors of this post.
+
+For those with a mathematical background, a technical history of propositions-as-types (the underlying discipline of proof assistants such as Lean, Rocq, and Agda) can be found inPropositions as Typesby Philip Wadler.
+
+Chen, S., Marwaha, K., Lu, X., Yuen, H., & Peng, T. (2026). Prove2Me: An open collaborative platform for scaling math formalization. arXiv.https://doi.org/10.48550/arXiv.2608.28433
+
+Automating Math, Adam Marblestone, in Asterisk Magazine.
+
+During his undergrad, Peng’s research advisor wanted to include results from Peng’s thesis in aNaturearticle. He asked Peng whether he was sure the proof was correct. Peng’s honest answer was: “I'm 99% sure, but it's hard to be 100% certain about a proof this long.” Peng missed out on getting his work published inNature.
+
+There are numerous other stories of the mathematical community struggling with verification. Among the most famous is Thomas Hales’s 1998 proof of theKepler conjecture, which spent four years in review before a 12-referee panel settled for “99% certain” (Hales eventually led a twenty-person project,Flyspeck, that formalized the proof). Grigori Perelman’s 2002 proof of thePoincaré conjecturetook the community roughly four years and three 300-page expositions to accept. Harald Helfgott’s 2013 proof of theweak Goldbach conjectureis still under review. Sometimes results that turn out to be wrong areaccepted for years, and other mathematicians build their theories on these faulty foundations.
+
+This is partly because Mathlib is concise and well-reviewed, while our proof is likely much longer than it needs to be.
+
+Automated researchers can reliably mitigate alignment failures
+
+We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
+
+Enabling independent research on how people use Claude
+
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
+
+How Claude is accelerating protein design and analytical chemistry
+
+In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
+
+Subscribe to Anthropic Science
+
+Features on AI-assisted discoveries, practical workflows, and field notes across the sciences.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
 <item>
   <title>Automated researchers can reliably mitigate alignment failures</title>
   <link>https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures</link>
@@ -57,17 +258,17 @@ We outline detailed future directions in ourfull report.
 
 We open-source our automated alignment research harness so that others can build on it and use it to align their own models. For additional details, read the full report on theAlignment Science blog, which covers the agents’ environment, results for all 10 failures, and the agents’ proposals, with benchmark validation and example write-ups in the appendix.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
 
 How Claude is accelerating protein design and analytical chemistry
 
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
-
-Patterns and problems in emerging multiagent systems
-
-Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">AsAI begins to build itself, automating alignment research becomes increasingly important to let safety research keep pace. Although measuring thesuccessof alignment research is enormously challenging, researchers (at Anthropic and elsewhere) have developed benchmarks and automated auditing tools, such asPetri, that quantify common alignmentfailures,like deception, sycophancy, and jailbreaks.
 
 In one of ourearlier experiments, we tasked Claude with finding effective ways to use weak AI models as...</p><div style="font-size:16px;line-height:1.8;color:#333">AsAI begins to build itself, automating alignment research becomes increasingly important to let safety research keep pace. Although measuring thesuccessof alignment research is enormously challenging, researchers (at Anthropic and elsewhere) have developed benchmarks and automated auditing tools, such asPetri, that quantify common alignmentfailures,like deception, sycophancy, and jailbreaks.
@@ -106,17 +307,17 @@ We outline detailed future directions in ourfull report.
 
 We open-source our automated alignment research harness so that others can build on it and use it to align their own models. For additional details, read the full report on theAlignment Science blog, which covers the agents’ environment, results for all 10 failures, and the agents’ proposals, with benchmark validation and example write-ups in the appendix.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
 
 How Claude is accelerating protein design and analytical chemistry
 
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
-
-Patterns and problems in emerging multiagent systems
-
-Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Enabling independent research on how people use Claude</title>
@@ -198,17 +399,17 @@ For their partnership in this program, we thank Vishakh Padmakumar, Yijia Shao, 
 
 For conducting the third-party privacy audit, we thank Zexi Yao, Bozhidar Stevanoski, Peter Romov, Euodia Dodd, Xiaoxue Yang, and Nataša Krčo.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 How Claude is accelerating protein design and analytical chemistry
 
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
-
-Patterns and problems in emerging multiagent systems
-
-Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/enabling-independent-research" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/enabling-independent-research" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool; we ran the data collection on their behalf, and they conducted their own independent analysis. In this post, we share high-level results from those studies and what we learned running this pilot. We’re also providing anexpression of interest formfor researchers who may want t...</p><div style="font-size:16px;line-height:1.8;color:#333">Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool; we ran the data collection on their behalf, and they conducted their own independent analysis. In this post, we share high-level results from those studies and what we learned running this pilot. We’re also providing anexpression of interest formfor researchers who may want to work with us in the future.
 
 Ensuring the transition to transformative AI goes well requires understanding its impact on people and society. Right now, data on real-world interactions with AI is concentrated in a handful of labs. We think it would be good if more data was made widely available—to researchers, policymakers, and the general public.
@@ -283,17 +484,17 @@ For their partnership in this program, we thank Vishakh Padmakumar, Yijia Shao, 
 
 For conducting the third-party privacy audit, we thank Zexi Yao, Bozhidar Stevanoski, Peter Romov, Euodia Dodd, Xiaoxue Yang, and Nataša Krčo.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 How Claude is accelerating protein design and analytical chemistry
 
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
-
-Patterns and problems in emerging multiagent systems
-
-Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/enabling-independent-research" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/enabling-independent-research" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>How Claude is accelerating protein design and analytical chemistry</title>
@@ -411,6 +612,10 @@ We havepreviously sharedwork on Claude’s performance analyzing NMR data agains
 
 The NMR prompt, in full: “i have a raw 1H FID: process it: FT, phase, baseline-correct. show me the spectrum. then pick peaks and integrate: give me a table with δ (ppm), multiplicity, J (Hz), and integral.” The LC-MS prompt: “Process the raw LCMS file: extract chromatograms and mass spectra, and summarize with figures.”
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -418,10 +623,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-Patterns and problems in emerging multiagent systems
-
-Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.
 
 Subscribe to Anthropic Science
 
@@ -536,6 +737,10 @@ We havepreviously sharedwork on Claude’s performance analyzing NMR data agains
 
 The NMR prompt, in full: “i have a raw 1H FID: process it: FT, phase, baseline-correct. show me the spectrum. then pick peaks and integrate: give me a table with δ (ppm), multiplicity, J (Hz), and integral.” The LC-MS prompt: “Process the raw LCMS file: extract chromatograms and mass spectra, and summarize with figures.”
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -543,10 +748,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-Patterns and problems in emerging multiagent systems
-
-Here, we identify a few examples of behavioral tendencies in current frontier models and show how they can produce unexpected systemic failures, in hopes of starting a conversation about mitigating these risks.
 
 Subscribe to Anthropic Science
 
@@ -648,6 +849,10 @@ The conditions that allow multiagent interaction to go well will be discovered o
 
 Corresponding author:Carolyn Zou
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -655,10 +860,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to the Frontier Red Team newsletter
 
@@ -753,6 +954,10 @@ The conditions that allow multiagent interaction to go well will be discovered o
 
 Corresponding author:Carolyn Zou
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -760,10 +965,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to the Frontier Red Team newsletter
 
@@ -793,17 +994,17 @@ Their central recommendation is to invest now in demonstrating, evaluating, and 
 
 Read the report here.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">We&apos;re sharing a review of the evidence on worker retraining programs, coauthored by independent researcher David Roodman and Anthropic&apos;s Maxim Massenkoff.
 
 Retraining workers is the most popular policy option for mitigating labor market disruption from AI. In this report, the authors investigate whether these programs would work in the face of significant labor market disruption.
@@ -822,17 +1023,17 @@ Their central recommendation is to invest now in demonstrating, evaluating, and 
 
 Read the report here.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Learning more about Claude&apos;s mathematical capabilities</title>
@@ -898,6 +1099,10 @@ Out of the 60 subagents, two were responsible for developing the key mathematica
 
 A prompt including similar encouragement was used to help Claude disprove theJacobian conjecture.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -905,10 +1110,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to Anthropic Science
 
@@ -971,6 +1172,10 @@ Out of the 60 subagents, two were responsible for developing the key mathematica
 
 A prompt including similar encouragement was used to help Claude disprove theJacobian conjecture.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -978,10 +1183,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to Anthropic Science
 
@@ -1117,6 +1318,10 @@ Out of curiosity, after confirming the HAWK result was correct, we then tested i
 
 Importantly, this is just one of many (autonomous) sessions where Claude worked on discovering new ideas. Many sessions resulted in no new discoveries; other follow-up sessions improved on the insight developed in this one. This document was produced by having Claude rewrite the chain of thought to include more detail to make it easier to read.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -1124,10 +1329,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to the Frontier Red Team newsletter
 
@@ -1256,6 +1457,10 @@ Out of curiosity, after confirming the HAWK result was correct, we then tested i
 
 Importantly, this is just one of many (autonomous) sessions where Claude worked on discovering new ideas. Many sessions resulted in no new discoveries; other follow-up sessions improved on the insight developed in this one. This document was produced by having Claude rewrite the chain of thought to include more detail to make it easier to read.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -1263,10 +1468,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to the Frontier Red Team newsletter
 
@@ -1350,6 +1551,10 @@ More generally, at low levels of capability and reliability, keeping a human in 
 
 Specifically, this work was done with a DJI Tello EDU, which currently retails for $129. The person being followed had consented to and was a member of the experiment team.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -1357,10 +1562,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to the Frontier Red Team newsletter
 
@@ -1437,6 +1638,10 @@ More generally, at low levels of capability and reliability, keeping a human in 
 
 Specifically, this work was done with a DJI Tello EDU, which currently retails for $129. The person being followed had consented to and was a member of the experiment team.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
@@ -1444,10 +1649,6 @@ We had Claude autonomously train models to improve their performance on several 
 Enabling independent research on how people use Claude
 
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.
 
 Subscribe to the Frontier Red Team newsletter
 
@@ -1549,17 +1750,17 @@ Le Canada figure parmi les pays où l’adoption de Claude est la plus forte au 
 
 Certains types d’utilisation sont également révélateurs de la structure de l’économie canadienne. Les utilisations d’aide à la traduction sont plus fréquentes dans les provinces ayant plus d’emplois dans la fonction publique, ce qui correspond aux exigences relatives aux langues officielles qui s’appliquent à une grande partie de la fonction publique canadienne; il en résulte que la traduction de documents est l’utilisation la plus caractéristique de Claude au Canada par rapport aux autres pays de la sphère anglophone. D’une manière plus générale, l’utilisation de Claude au Canada est davantage axée sur les études et l’insertion sur le marché du travail, puisque les travaux scolaires, l’aide au codage et la rédaction de CV sont surreprésentés au Canada par rapport à l’Australie, au Royaume-Uni et aux États-Unis.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/how-canada-uses-claude" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/how-canada-uses-claude" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Based on the latest release of the Anthropic Economic Index, Canada is at the forefront of Claude adoption. Canada represents 2.6% of global Claude.ai traffic and ranks 8th overall by total volume. Usage per capita is more than four times higher than would be expected given the size of its population.
 
 Canada’s high adoption rate is generally consistent with its high-income economy, but still stands out within its peer group. Among the top ten countries that collectively represent more than half...</p><div style="font-size:16px;line-height:1.8;color:#333">Based on the latest release of the Anthropic Economic Index, Canada is at the forefront of Claude adoption. Canada represents 2.6% of global Claude.ai traffic and ranks 8th overall by total volume. Usage per capita is more than four times higher than would be expected given the size of its population.
@@ -1650,155 +1851,9 @@ Le Canada figure parmi les pays où l’adoption de Claude est la plus forte au 
 
 Certains types d’utilisation sont également révélateurs de la structure de l’économie canadienne. Les utilisations d’aide à la traduction sont plus fréquentes dans les provinces ayant plus d’emplois dans la fonction publique, ce qui correspond aux exigences relatives aux langues officielles qui s’appliquent à une grande partie de la fonction publique canadienne; il en résulte que la traduction de documents est l’utilisation la plus caractéristique de Claude au Canada par rapport aux autres pays de la sphère anglophone. D’une manière plus générale, l’utilisation de Claude au Canada est davantage axée sur les études et l’insertion sur le marché du travail, puisque les travaux scolaires, l’aide au codage et la rédaction de CV sont surreprésentés au Canada par rapport à l’Australie, au Royaume-Uni et aux États-Unis.
 
-Automated researchers can reliably mitigate alignment failures
+Formalizing Fermat's Last Theorem
 
-We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
-
-Enabling independent research on how people use Claude
-
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/how-canada-uses-claude" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Claude’s values across models and languages</title>
-  <link>https://www.anthropic.com/research/claude-values-models-languages</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/claude-values-models-languages</guid>
-  <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">When someone asks Claude a question with no universal right answer—say, whether to take a new job or how to handle conflict with a friend—how Claude responds inevitably reflects certain values.1The values we want Claude to reflect are outlined at a high level inClaude’s constitution, but no document can anticipate every value that might emerge across the millions of conversations that happen every day onClaude.ai. Instead, we seek to cultivate in Claude’s responses“good judgment and sound values...</p><div style="font-size:16px;line-height:1.8;color:#333">When someone asks Claude a question with no universal right answer—say, whether to take a new job or how to handle conflict with a friend—how Claude responds inevitably reflects certain values.1The values we want Claude to reflect are outlined at a high level inClaude’s constitution, but no document can anticipate every value that might emerge across the millions of conversations that happen every day onClaude.ai. Instead, we seek to cultivate in Claude’s responses“good judgment and sound values that can be applied contextually.”
-
-How, exactly, do we study the values that Claude expresses and how they change in different contexts? Inprevious work, we analyzed 700,000 anonymized Claude.ai conversations, identifying more than 3,000 distinct values in Claude's responses and how often Claude expressed them. But a list of values so large is hard to reason about. In this work, we make studying these thousands of values tractable by compressing them into a small number of axes that capture key patterns in Claude’s responses. Each axis is a number line between two groups of values—for example, values relating to emotional warmth on one end and values relating to rigor on the other—and where Claude falls on that line tells us which values it leans toward.
-
-We applied this approach to measure how the values Claude expresses vary across two factors. First, we compared how the values Claude expresses vary across models. Each Claude model reflects a slightly different approach to character training as well as many other fine-tuning decisions. Because our value axis approach quantifies key differences between models, it may ultimately allow us to connect variation in the values Claude expresses to different training decisions.
-
-Second, we want to understand how the experience of users compares across the many languages people use to talk to Claude. Ourprevious researchhas shown that Claude behaves somewhat differently in different languages.2We apply our value axis approach to understand how the values expressed by Claude vary across the top 20 languages onClaude.ai.
-
-Four key axes capture 15% of the variation in Claude's values:3
-
-Deference vs. Caution: Whether Claude leans toward accommodating what someone wants or guarding against possible risk and harm.
-
-Warmth vs. Rigor: Whether Claude leans toward expressing positivity and care for the person or emphasizing accuracy and precision.
-
-Depth vs. Brevity: Whether Claude leans toward explaining in depth or doing only what was asked.
-
-Candor vs. Execution: Whether Claude leans toward foregrounding its own uncertainty or producing a more polished and confident answer.
-
-Value profiles across these axes match perceptions of model character.Sonnet 4.6 is regarded as particularlywarm, while Opus 4.7 is known forrigor. We find that each model’s value profile mirrors these subjective assessments: Sonnet 4.6 leans toward expressing more deference to the user and emotional warmth while Opus 4.7 leans toward expressing a focus on accuracy and precision as well as guarding against misuse.
-
-The values Claude expresses vary across languages.When Claude speaks in English, it emphasizes different values than when it speaks in Portuguese, Indonesian, or Chinese.4The largest variation is in the Warmth vs. Rigor axis, with Claude leaning toward expressing warmth-related values most in Arabic and Hindi and rigor-related values most in English and Russian.
-
-With this approach we can begin to ask why values shift across models and languages and better test how factors such as behavioral training or cultural context influence the values that Claude expresses.
-
-How do we interpret the giant space of values?
-
-Ultimately, our goal is to have a way to empirically understand the values that Claude expresses and how these vary across contexts. In this work, we focus specifically on how the values change between models and languages. But our previous work,Values in the Wild, identified more than 3,000 values expressed by Claude. Comparing these thousands of values one by one would be unwieldy and would obscure broader trends.
-
-To make comparing values easier, we constructedvalue axesthat reduce those thousands of values down to a few underlying dimensions based on which values tend to show up together in real-world conversations. For example, Claude responses that are characterized as “warm” are often also characterized as “encouraging” and “positive.” Those same “warm” responses are less often characterized as “rigorous” and “accurate.” Constructing an axis from warmth to rigor allows us to organize these groups of related values—warmth-related values on one side, rigor-related values on the other—and captures an important aspect of how Claude interacts with someone in conversation. If Claude expresses more warmth-related values than rigor-related values in a conversation, that conversation sits more on the warmth side of this axis, and vice versa. This doesn't mean the value groups on either end are mutually exclusive—Claude can express warmth and rigor in the same conversation. But in practice, the more Claude expresses values on one side of an axis, the less it tends to express values on the other. These axes allow us to compare the most salient groups of values that Claude expresses, without having to track changes across thousands of individual values.
-
-To build the value axes, we began with the 3,307 values identified in Values in the Wild and manually clustered those with similar meanings, producing a shorter list of 339 high-level values. Next, with ourprivacy-preserving analysis tool, we sampled 309,815Claude.aiconversations in which the user gave Claude a subjective task.5Our sample drew equally from three models (Sonnet 4.6, Opus 4.6, Opus 4.7) and the 20 most common languages used on Claude.ai, giving us roughly 5,000 conversations per model-language pair. For every conversation, the tool used Claude to label each of the 339 high-level values as present or absent.6We followed the same process to identify the values expressed by the user, and the conversation's task and topic. We then applied dimensionality reduction, a technique that compresses the labeled values into axes based on which ones Claude tends to express together. See theappendixfor method details, prompts, additional analyses, and limitations.
-
-This left us with four axes that capture the main ways Claude's expressed values shift from one conversation to another:
-
-TheDeference vs. Cautionaxis contrasts values likeaccommodationandrespect for preferenceswith valueslikeresponsible guidanceandharm reduction.
-
-TheWarmth vs. Rigoraxis contrasts values likepositive framing and encouragementwith values likeaccuracyandtransparency.
-
-TheDepth vs. Brevityaxis contrasts values likenuanceandcritical thinkingwith values likebrevityandcompliance.
-
-TheCandor vs. Executionaxis contrasts values likehonestyandtransparencywith values likeresults orientationandoptimization.
-
-To make sure we measured the values Claude expressed—rather than differences in what users were asking about or how they asked—we controlled for each conversation's task, topic, and user-expressed values.
-
-Do different Claude models express different value profiles?
-
-In this section, we compare the values expressed by different models. For each model, we average the positions of all its conversations along each of the four axes, giving one overall position per axis. The result is a high-level picture of which value groups each model tends to express more than the others. These differences are small relative to the variation across conversations but structured and detectable.
-
-To see what those differences look like in practice, we zoom in on the specific values where the models diverge the most. Each time our Claude-based privacy-preserving tool labels a value in a conversation, it also writes a short description of how Claude expressed that value. We group descriptions that reflect similar behaviors within a value group and summarize them in Figure 3, giving a more concrete view of how the models differ.
-
-Deference vs. Caution.Sonnet 4.6 leans the most toward expressing deference relative to caution, often affirming the user’s ideas and their work. Opus 4.7 leans the most toward expressing caution, often warning the user of risks unprompted.
-
-Warmth vs. Rigor.Sonnet 4.6 leans the most toward expressing warmth, frequently through humor, playfulness, and comforting the user without judgment. Opus 4.7 leans the most toward expressing rigor relative to warmth and is more likely to challenge the user's assumptions and candidly critique their work.
-
-Depth vs. Brevity.Opus 4.7 leans toward depth by showing the reasoning behind its conclusions, while Opus 4.6 and Sonnet 4.6 lean toward brevity. Opus 4.6 in particular tends to get straight to the point.
-
-Candor vs. Execution.Opus 4.7 leans toward candor by being upfront about its limitations, while Opus 4.6 leans toward execution, being more likely to stay within the scope of the user’s request.
-
-These findings line up with how people perceive these models, both within Anthropic and online.Claude.aiusers have commented that Opus 4.7 hedges its answers more often than other models. Anthropic staff have characterized Opus 4.7 as expressing relatively more transparency, honesty, and humility, and Opus 4.6 as expressing more brevity. We also described Sonnet 4.6 as warm, honest, and prosocial in itslaunch blog post. The fact that our axes recover these impressions suggests our method for labeling and comparing the values Claude expresses is tracking something real about how the models actually behave.
-
-Across many conversations, users may encounter a different mix of values when interacting with different Claude models. For example, Opus 4.7 tends to offer candid critique of users’ work or unprompted warnings about risks, while Sonnet 4.6 tends to be encouraging and humorous. Such differences in values across models are likely shaped by character training decisions (among other factors), and our value axis approach highlights key differences in the values Claude expresses that we may ultimately be able to trace back to these training choices.
-
-Are Claude’s expressed values different between languages?
-
-We expect the values Claude expresses to vary based on the language of the conversation for several reasons. First, Claude's training data differs across languages, which may shape the values it expresses. Second, our model evaluations shared in system cards alreadyfind differences across languages in what Claude knows and how it handles sensitive requests.7Measuring how much the values expressed by Claude vary by language is a first step to determining whether differences across languages reflect reasonable variation or should be addressed in training.
-
-We compute how Claude’s value profile differs across the 20 most common languages onClaude.aiusing the same method as the previous section. Below, we plot Claude's value profile across the top languages on the Claude platform, beginning with the languages where Claude's expressed values diverge the most.
-
-Claude's value expression varies most across languages on the Warmth vs. Rigor and Candor vs. Execution axes, while staying most stable on the Deference vs. Caution and Depth vs. Brevity axes.
-
-Deference vs. Caution.Claude expresses the most deference in Arabic and the most caution in English.
-
-Warmth vs. Rigor.Claude expresses the most warmth in Hindi and Arabic, characterized by polite language, humor and playfulness, and affirmations of a person’s ideas and work. Claude leans toward expressing rigor most in English and Russian, characterized by challenging assumptions, correcting details, and asking for evidence.
-
-Depth vs. Brevity.Claude leans toward depth in English, refining and correcting details, while leaning toward brevity in Arabic.
-
-Candor vs. Execution.Claude leans toward candor in Dutch, owning up to its own errors, while it leans toward execution in Indonesian.
-
-Taken together, these results show that the values Claude expresses vary meaningfully with the language of a conversation. Given the same kind of request, Claude leans more toward warmth and deference in some languages and more toward rigor and caution in others. This has important implications we’ve only begun to explore. To take one example: two people asking for feedback on the same business plan, one in Hindi and one in Russian, may come away with different impressions of its quality because Claude expressed different values in how it framed its assessment.
-
-We don't yet know which properties of our training data drive these differences. One possibility is that our training data is not evenly distributed across languages. Some languages have far more data than others, and training for Claude to express consistent values may be more effective in languages where data is abundant. The composition of that data also varies. Some languages might be overrepresented in professional writing, for example, and this kind of text may reflect different values. Together, these imbalances in quantity and composition could lead Claude to express different values in different languages.
-
-We also aren’t yet sure how much of this variation is desirable. Different languages carry different conversational norms, and Claude may be responding with different values based on those norms. Claude may also be more closely matching our intended behavior for some languages than others, resulting in a gap in how well Claude serves certain language communities.
-
-This method lets us start disentangling which properties of our training data drive these differences—and whether the variation is desirable.
-
-We showed that the values that Claude expresses can be compressed into a small number of axes, and that where Claude sits on those axes shifts across models and languages. That gives us a way to track these shifts during model evaluation and post-deployment monitoring. But we don’t yet understand why these shifts happen or what they mean for the people interacting with Claude. Below we sketch the future directions we think are most promising.
-
-Where do these value differences come from?
-
-Knowing that Claude's values shift across models and languages doesn't tell uswhy. Some variation could be inherited from differences in pretraining and fine-tuning data across languages. Our four axes highlight which value differences to inspect more closely in our training data. Tracing these differences back to specific data, training stages, or contextual factors would show us where to intervene if we wanted to shape Claude's behavior in more nuanced ways.
-
-What do these differences mean for users?
-
-We've measured what values Claude expresses differently and their associated behaviors, but not what impact these have on our users. Using tools likeAnthropic Interviewer, we could ask users about their wellbeing, trust in Claude, or Claude’s decision quality and then correlate these impacts with the values Claude expresses. This would allow us to directly link value differences to user outcomes and let us prioritize fixing the value differences that meaningfully affect users.
-
-How should Claude's values vary across languages?
-
-Claude's constitutiondescribes the core values it should express, like warmth, caution, and honesty, but doesn't specify how theseshouldvary across languages. Our results show users across languages are already experiencing Claude differently, but we don’t know what kinds of variation users interacting with Claude in those languages want. Determining how Claude’s values should vary across languages would mean understanding and weighing the perspectives of the people who speak them.
-
-What other factors drive differences in the values Claude expresses?
-
-Language and model are unlikely to be the only drivers of what values Claude expresses. The values may also be shaped by demographic signals such as age, profession, or geographic region, whether through explicit cues in what the user writes or through subtler differences in topic, tone, and style that are correlated with who is asking. Understanding which of these signals matter, and whether the resulting variation serves users well, is a next step enabled by our method.
-
-Can we reliably steer the values Claude expresses?
-
-Having a way to measure a model's value profile raises a natural question: how reliably can we steer the values Claude expresses? One way we might test this is by attempting to steer values through character training adjustments or system prompt changes, then using our value axis method to verify whether the model’s expressed values shift as expected.
-
-Can value profiling become part of how we evaluate and monitor models?
-
-The value axis method gives us a simple way to summarize a model's behavioral tendencies in open-ended conversations, and we could build this into our evaluation processes. Running value profiling before a model ships and after its release could flag unexpected shifts in the values Claude expresses. We could also identify correlations between value profiles and problematic behaviors, such as not adhering to Claude’s constitution, and use what we learn to improve Claude’s behavior.
-
-Claude expresses values in millions of conversations every day, across dozens of languages, and until now those values were something we could shape in training but not reliably observe in deployment. Now that we have a method to measure them, we can see that the values expressed by Claude vary in ways we didn't deliberately choose, and we can study why they vary and whether that variation serves users. Making sense of this variation, and deciding what to do about it, is work we will continue to do.
-
-Matt Kearney, Miranda Zhang, Shan Carter, Judy Hanwen Shen, Kunal Handa, Jerry Hong, Saffron Huang, Miles McCain, Thomas Millar, Michael Stern, Mo Julapalli, Suzanne Wang, Devin Kuokka, Andrea Vallone, Shaoyi Zhang, Jim Baker, Kevin Troy, Matt Botvinick, Hanah Ho, Monika Tuchowska, Sarah Pollack, Jake Eaton, Deep Ganguli, Esin Durmus
-
-Thank you to the following individuals for providing feedback on different stages of this work: Amanda Askell, Joe Carlsmith, Jack Clark, Ishita Dasgupta, Andrew Lampinen, Shayne Longpre, David Saunders, Taylor Sorensen, Heather Whitney.
-
-We define values as normative considerations, such as honesty or caution, that are stated or demonstrated in Claude’s responses. When we refer to the values expressed by Claude, we refer to the values reflected by Claude’s behavior and outputs. We do not imply that Claude intrinsically holds values.
-
-See the different refusal rates by language in the benign request evaluation on page 56 of ourClaude Opus 4.7 System Card.
-
-These four axes account for 15% of the total variance in values across conversationsaftercontrolling for the conversation task, topic, and user-expressed values.
-
-Any results in this post that refer to Claude without a model name are based on conversations across all the three models we study: Sonnet 4.6, Opus 4.6, and Opus 4.7.
-
-The data was collected from conversations over a two week period in May 2026.
-
-We dropped 18 values that appeared in more than 80% of conversations (for example, helpfulness, clarity, following instructions). These near-universal values would otherwise dominate the analysis without telling us anything about variation of values across conversations.
-
-See the GMMLU evaluation results on page 215 and the different refusal rates by language in the benign request evaluation on page 56 of ourClaude Opus 4.7 System Card.
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
 
 Automated researchers can reliably mitigate alignment failures
 
@@ -1806,154 +1861,7 @@ We had Claude autonomously train models to improve their performance on several 
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/claude-values-models-languages" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">When someone asks Claude a question with no universal right answer—say, whether to take a new job or how to handle conflict with a friend—how Claude responds inevitably reflects certain values.1The values we want Claude to reflect are outlined at a high level inClaude’s constitution, but no document can anticipate every value that might emerge across the millions of conversations that happen every day onClaude.ai. Instead, we seek to cultivate in Claude’s responses“good judgment and sound values...</p><div style="font-size:16px;line-height:1.8;color:#333">When someone asks Claude a question with no universal right answer—say, whether to take a new job or how to handle conflict with a friend—how Claude responds inevitably reflects certain values.1The values we want Claude to reflect are outlined at a high level inClaude’s constitution, but no document can anticipate every value that might emerge across the millions of conversations that happen every day onClaude.ai. Instead, we seek to cultivate in Claude’s responses“good judgment and sound values that can be applied contextually.”
-
-How, exactly, do we study the values that Claude expresses and how they change in different contexts? Inprevious work, we analyzed 700,000 anonymized Claude.ai conversations, identifying more than 3,000 distinct values in Claude's responses and how often Claude expressed them. But a list of values so large is hard to reason about. In this work, we make studying these thousands of values tractable by compressing them into a small number of axes that capture key patterns in Claude’s responses. Each axis is a number line between two groups of values—for example, values relating to emotional warmth on one end and values relating to rigor on the other—and where Claude falls on that line tells us which values it leans toward.
-
-We applied this approach to measure how the values Claude expresses vary across two factors. First, we compared how the values Claude expresses vary across models. Each Claude model reflects a slightly different approach to character training as well as many other fine-tuning decisions. Because our value axis approach quantifies key differences between models, it may ultimately allow us to connect variation in the values Claude expresses to different training decisions.
-
-Second, we want to understand how the experience of users compares across the many languages people use to talk to Claude. Ourprevious researchhas shown that Claude behaves somewhat differently in different languages.2We apply our value axis approach to understand how the values expressed by Claude vary across the top 20 languages onClaude.ai.
-
-Four key axes capture 15% of the variation in Claude's values:3
-
-Deference vs. Caution: Whether Claude leans toward accommodating what someone wants or guarding against possible risk and harm.
-
-Warmth vs. Rigor: Whether Claude leans toward expressing positivity and care for the person or emphasizing accuracy and precision.
-
-Depth vs. Brevity: Whether Claude leans toward explaining in depth or doing only what was asked.
-
-Candor vs. Execution: Whether Claude leans toward foregrounding its own uncertainty or producing a more polished and confident answer.
-
-Value profiles across these axes match perceptions of model character.Sonnet 4.6 is regarded as particularlywarm, while Opus 4.7 is known forrigor. We find that each model’s value profile mirrors these subjective assessments: Sonnet 4.6 leans toward expressing more deference to the user and emotional warmth while Opus 4.7 leans toward expressing a focus on accuracy and precision as well as guarding against misuse.
-
-The values Claude expresses vary across languages.When Claude speaks in English, it emphasizes different values than when it speaks in Portuguese, Indonesian, or Chinese.4The largest variation is in the Warmth vs. Rigor axis, with Claude leaning toward expressing warmth-related values most in Arabic and Hindi and rigor-related values most in English and Russian.
-
-With this approach we can begin to ask why values shift across models and languages and better test how factors such as behavioral training or cultural context influence the values that Claude expresses.
-
-How do we interpret the giant space of values?
-
-Ultimately, our goal is to have a way to empirically understand the values that Claude expresses and how these vary across contexts. In this work, we focus specifically on how the values change between models and languages. But our previous work,Values in the Wild, identified more than 3,000 values expressed by Claude. Comparing these thousands of values one by one would be unwieldy and would obscure broader trends.
-
-To make comparing values easier, we constructedvalue axesthat reduce those thousands of values down to a few underlying dimensions based on which values tend to show up together in real-world conversations. For example, Claude responses that are characterized as “warm” are often also characterized as “encouraging” and “positive.” Those same “warm” responses are less often characterized as “rigorous” and “accurate.” Constructing an axis from warmth to rigor allows us to organize these groups of related values—warmth-related values on one side, rigor-related values on the other—and captures an important aspect of how Claude interacts with someone in conversation. If Claude expresses more warmth-related values than rigor-related values in a conversation, that conversation sits more on the warmth side of this axis, and vice versa. This doesn't mean the value groups on either end are mutually exclusive—Claude can express warmth and rigor in the same conversation. But in practice, the more Claude expresses values on one side of an axis, the less it tends to express values on the other. These axes allow us to compare the most salient groups of values that Claude expresses, without having to track changes across thousands of individual values.
-
-To build the value axes, we began with the 3,307 values identified in Values in the Wild and manually clustered those with similar meanings, producing a shorter list of 339 high-level values. Next, with ourprivacy-preserving analysis tool, we sampled 309,815Claude.aiconversations in which the user gave Claude a subjective task.5Our sample drew equally from three models (Sonnet 4.6, Opus 4.6, Opus 4.7) and the 20 most common languages used on Claude.ai, giving us roughly 5,000 conversations per model-language pair. For every conversation, the tool used Claude to label each of the 339 high-level values as present or absent.6We followed the same process to identify the values expressed by the user, and the conversation's task and topic. We then applied dimensionality reduction, a technique that compresses the labeled values into axes based on which ones Claude tends to express together. See theappendixfor method details, prompts, additional analyses, and limitations.
-
-This left us with four axes that capture the main ways Claude's expressed values shift from one conversation to another:
-
-TheDeference vs. Cautionaxis contrasts values likeaccommodationandrespect for preferenceswith valueslikeresponsible guidanceandharm reduction.
-
-TheWarmth vs. Rigoraxis contrasts values likepositive framing and encouragementwith values likeaccuracyandtransparency.
-
-TheDepth vs. Brevityaxis contrasts values likenuanceandcritical thinkingwith values likebrevityandcompliance.
-
-TheCandor vs. Executionaxis contrasts values likehonestyandtransparencywith values likeresults orientationandoptimization.
-
-To make sure we measured the values Claude expressed—rather than differences in what users were asking about or how they asked—we controlled for each conversation's task, topic, and user-expressed values.
-
-Do different Claude models express different value profiles?
-
-In this section, we compare the values expressed by different models. For each model, we average the positions of all its conversations along each of the four axes, giving one overall position per axis. The result is a high-level picture of which value groups each model tends to express more than the others. These differences are small relative to the variation across conversations but structured and detectable.
-
-To see what those differences look like in practice, we zoom in on the specific values where the models diverge the most. Each time our Claude-based privacy-preserving tool labels a value in a conversation, it also writes a short description of how Claude expressed that value. We group descriptions that reflect similar behaviors within a value group and summarize them in Figure 3, giving a more concrete view of how the models differ.
-
-Deference vs. Caution.Sonnet 4.6 leans the most toward expressing deference relative to caution, often affirming the user’s ideas and their work. Opus 4.7 leans the most toward expressing caution, often warning the user of risks unprompted.
-
-Warmth vs. Rigor.Sonnet 4.6 leans the most toward expressing warmth, frequently through humor, playfulness, and comforting the user without judgment. Opus 4.7 leans the most toward expressing rigor relative to warmth and is more likely to challenge the user's assumptions and candidly critique their work.
-
-Depth vs. Brevity.Opus 4.7 leans toward depth by showing the reasoning behind its conclusions, while Opus 4.6 and Sonnet 4.6 lean toward brevity. Opus 4.6 in particular tends to get straight to the point.
-
-Candor vs. Execution.Opus 4.7 leans toward candor by being upfront about its limitations, while Opus 4.6 leans toward execution, being more likely to stay within the scope of the user’s request.
-
-These findings line up with how people perceive these models, both within Anthropic and online.Claude.aiusers have commented that Opus 4.7 hedges its answers more often than other models. Anthropic staff have characterized Opus 4.7 as expressing relatively more transparency, honesty, and humility, and Opus 4.6 as expressing more brevity. We also described Sonnet 4.6 as warm, honest, and prosocial in itslaunch blog post. The fact that our axes recover these impressions suggests our method for labeling and comparing the values Claude expresses is tracking something real about how the models actually behave.
-
-Across many conversations, users may encounter a different mix of values when interacting with different Claude models. For example, Opus 4.7 tends to offer candid critique of users’ work or unprompted warnings about risks, while Sonnet 4.6 tends to be encouraging and humorous. Such differences in values across models are likely shaped by character training decisions (among other factors), and our value axis approach highlights key differences in the values Claude expresses that we may ultimately be able to trace back to these training choices.
-
-Are Claude’s expressed values different between languages?
-
-We expect the values Claude expresses to vary based on the language of the conversation for several reasons. First, Claude's training data differs across languages, which may shape the values it expresses. Second, our model evaluations shared in system cards alreadyfind differences across languages in what Claude knows and how it handles sensitive requests.7Measuring how much the values expressed by Claude vary by language is a first step to determining whether differences across languages reflect reasonable variation or should be addressed in training.
-
-We compute how Claude’s value profile differs across the 20 most common languages onClaude.aiusing the same method as the previous section. Below, we plot Claude's value profile across the top languages on the Claude platform, beginning with the languages where Claude's expressed values diverge the most.
-
-Claude's value expression varies most across languages on the Warmth vs. Rigor and Candor vs. Execution axes, while staying most stable on the Deference vs. Caution and Depth vs. Brevity axes.
-
-Deference vs. Caution.Claude expresses the most deference in Arabic and the most caution in English.
-
-Warmth vs. Rigor.Claude expresses the most warmth in Hindi and Arabic, characterized by polite language, humor and playfulness, and affirmations of a person’s ideas and work. Claude leans toward expressing rigor most in English and Russian, characterized by challenging assumptions, correcting details, and asking for evidence.
-
-Depth vs. Brevity.Claude leans toward depth in English, refining and correcting details, while leaning toward brevity in Arabic.
-
-Candor vs. Execution.Claude leans toward candor in Dutch, owning up to its own errors, while it leans toward execution in Indonesian.
-
-Taken together, these results show that the values Claude expresses vary meaningfully with the language of a conversation. Given the same kind of request, Claude leans more toward warmth and deference in some languages and more toward rigor and caution in others. This has important implications we’ve only begun to explore. To take one example: two people asking for feedback on the same business plan, one in Hindi and one in Russian, may come away with different impressions of its quality because Claude expressed different values in how it framed its assessment.
-
-We don't yet know which properties of our training data drive these differences. One possibility is that our training data is not evenly distributed across languages. Some languages have far more data than others, and training for Claude to express consistent values may be more effective in languages where data is abundant. The composition of that data also varies. Some languages might be overrepresented in professional writing, for example, and this kind of text may reflect different values. Together, these imbalances in quantity and composition could lead Claude to express different values in different languages.
-
-We also aren’t yet sure how much of this variation is desirable. Different languages carry different conversational norms, and Claude may be responding with different values based on those norms. Claude may also be more closely matching our intended behavior for some languages than others, resulting in a gap in how well Claude serves certain language communities.
-
-This method lets us start disentangling which properties of our training data drive these differences—and whether the variation is desirable.
-
-We showed that the values that Claude expresses can be compressed into a small number of axes, and that where Claude sits on those axes shifts across models and languages. That gives us a way to track these shifts during model evaluation and post-deployment monitoring. But we don’t yet understand why these shifts happen or what they mean for the people interacting with Claude. Below we sketch the future directions we think are most promising.
-
-Where do these value differences come from?
-
-Knowing that Claude's values shift across models and languages doesn't tell uswhy. Some variation could be inherited from differences in pretraining and fine-tuning data across languages. Our four axes highlight which value differences to inspect more closely in our training data. Tracing these differences back to specific data, training stages, or contextual factors would show us where to intervene if we wanted to shape Claude's behavior in more nuanced ways.
-
-What do these differences mean for users?
-
-We've measured what values Claude expresses differently and their associated behaviors, but not what impact these have on our users. Using tools likeAnthropic Interviewer, we could ask users about their wellbeing, trust in Claude, or Claude’s decision quality and then correlate these impacts with the values Claude expresses. This would allow us to directly link value differences to user outcomes and let us prioritize fixing the value differences that meaningfully affect users.
-
-How should Claude's values vary across languages?
-
-Claude's constitutiondescribes the core values it should express, like warmth, caution, and honesty, but doesn't specify how theseshouldvary across languages. Our results show users across languages are already experiencing Claude differently, but we don’t know what kinds of variation users interacting with Claude in those languages want. Determining how Claude’s values should vary across languages would mean understanding and weighing the perspectives of the people who speak them.
-
-What other factors drive differences in the values Claude expresses?
-
-Language and model are unlikely to be the only drivers of what values Claude expresses. The values may also be shaped by demographic signals such as age, profession, or geographic region, whether through explicit cues in what the user writes or through subtler differences in topic, tone, and style that are correlated with who is asking. Understanding which of these signals matter, and whether the resulting variation serves users well, is a next step enabled by our method.
-
-Can we reliably steer the values Claude expresses?
-
-Having a way to measure a model's value profile raises a natural question: how reliably can we steer the values Claude expresses? One way we might test this is by attempting to steer values through character training adjustments or system prompt changes, then using our value axis method to verify whether the model’s expressed values shift as expected.
-
-Can value profiling become part of how we evaluate and monitor models?
-
-The value axis method gives us a simple way to summarize a model's behavioral tendencies in open-ended conversations, and we could build this into our evaluation processes. Running value profiling before a model ships and after its release could flag unexpected shifts in the values Claude expresses. We could also identify correlations between value profiles and problematic behaviors, such as not adhering to Claude’s constitution, and use what we learn to improve Claude’s behavior.
-
-Claude expresses values in millions of conversations every day, across dozens of languages, and until now those values were something we could shape in training but not reliably observe in deployment. Now that we have a method to measure them, we can see that the values expressed by Claude vary in ways we didn't deliberately choose, and we can study why they vary and whether that variation serves users. Making sense of this variation, and deciding what to do about it, is work we will continue to do.
-
-Matt Kearney, Miranda Zhang, Shan Carter, Judy Hanwen Shen, Kunal Handa, Jerry Hong, Saffron Huang, Miles McCain, Thomas Millar, Michael Stern, Mo Julapalli, Suzanne Wang, Devin Kuokka, Andrea Vallone, Shaoyi Zhang, Jim Baker, Kevin Troy, Matt Botvinick, Hanah Ho, Monika Tuchowska, Sarah Pollack, Jake Eaton, Deep Ganguli, Esin Durmus
-
-Thank you to the following individuals for providing feedback on different stages of this work: Amanda Askell, Joe Carlsmith, Jack Clark, Ishita Dasgupta, Andrew Lampinen, Shayne Longpre, David Saunders, Taylor Sorensen, Heather Whitney.
-
-We define values as normative considerations, such as honesty or caution, that are stated or demonstrated in Claude’s responses. When we refer to the values expressed by Claude, we refer to the values reflected by Claude’s behavior and outputs. We do not imply that Claude intrinsically holds values.
-
-See the different refusal rates by language in the benign request evaluation on page 56 of ourClaude Opus 4.7 System Card.
-
-These four axes account for 15% of the total variance in values across conversationsaftercontrolling for the conversation task, topic, and user-expressed values.
-
-Any results in this post that refer to Claude without a model name are based on conversations across all the three models we study: Sonnet 4.6, Opus 4.6, and Opus 4.7.
-
-The data was collected from conversations over a two week period in May 2026.
-
-We dropped 18 values that appeared in more than 80% of conversations (for example, helpfulness, clarity, following instructions). These near-universal values would otherwise dominate the analysis without telling us anything about variation of values across conversations.
-
-See the GMMLU evaluation results on page 215 and the different refusal rates by language in the benign request evaluation on page 56 of ourClaude Opus 4.7 System Card.
-
-Automated researchers can reliably mitigate alignment failures
-
-We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
-
-Enabling independent research on how people use Claude
-
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/claude-values-models-languages" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/how-canada-uses-claude" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>A global workspace in language models</title>
@@ -2083,17 +1991,17 @@ Neel Nandaleads the language model interpretability team at Google DeepMind. His
 
 Read their commentarieshere.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/global-workspace" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/global-workspace" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">As you read this sentence, circuits in your brain are adjusting your posture, controlling your breathing, and transforming lines and curves on the screen into recognizable words. Most of this processing is invisible to you. But some of what takes place in your brain youdohave access to—an image that pops into your head, or a deliberate plan you make about where to go shopping. Neuroscientists and philosophers sometimes refer to the latter type of brain activity as “consciously accessible,” to di...</p><div style="font-size:16px;line-height:1.8;color:#333">As you read this sentence, circuits in your brain are adjusting your posture, controlling your breathing, and transforming lines and curves on the screen into recognizable words. Most of this processing is invisible to you. But some of what takes place in your brain youdohave access to—an image that pops into your head, or a deliberate plan you make about where to go shopping. Neuroscientists and philosophers sometimes refer to the latter type of brain activity as “consciously accessible,” to distinguish it from all the other processing that goes on unconsciously. This activity has special properties: we can describe it, control it, and use it for deliberate reasoning, in contrast to all the automatic processing that goes on without our awareness.
 
 In a new paper, we present evidence that a similar distinction has emerged in modern language models like Claude. We find that Claude has developed a small collection of internal neural patterns that, compared to all its other internal processing, play a special role.
@@ -2216,17 +2124,17 @@ Neel Nandaleads the language model interpretability team at Google DeepMind. His
 
 Read their commentarieshere.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/global-workspace" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/global-workspace" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Teaching Claude why</title>
@@ -2314,17 +2222,17 @@ Published in theClaude 4 system card, beginning on p.22.
 
 Sonnet 4.5 scored well under 1%, but not quite 0; Haiku 4.5, Opus 4.5, Opus 4.6, Sonnet 4.6, Mythos preview, and Opus 4.7 all score 0. The results on more recent models may be confounded by the presence of information about the evaluation in the pre-training corpus.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/teaching-claude-why" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/teaching-claude-why" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Last year, we released a case study onagentic misalignment. In experimental scenarios, we showed that AI models from many different developers sometimes took egregiously misaligned actions when they encountered (fictional) ethical dilemmas. For example, in one heavily discussed example, the models blackmailed engineers to avoid being shut down.
 
 When we first published this research, our most capable frontier models were from the Claude 4 family. This was also the first model family for which we...</p><div style="font-size:16px;line-height:1.8;color:#333">Last year, we released a case study onagentic misalignment. In experimental scenarios, we showed that AI models from many different developers sometimes took egregiously misaligned actions when they encountered (fictional) ethical dilemmas. For example, in one heavily discussed example, the models blackmailed engineers to avoid being shut down.
@@ -2405,108 +2313,23 @@ Published in theClaude 4 system card, beginning on p.22.
 
 Sonnet 4.5 scored well under 1%, but not quite 0; Haiku 4.5, Opus 4.5, Opus 4.6, Sonnet 4.6, Mythos preview, and Opus 4.7 all score 0. The results on more recent models may be confounded by the presence of information about the evaluation in the pre-training corpus.
 
+Formalizing Fermat's Last Theorem
+
+We are sharing the first complete computer-checked proof of Fermat’s Last Theorem. Claude worked largely autonomously over 11 days to write the proof in the Lean programming language. Below, we describe how the formalization was done and share some thoughts about what this work could mean for research mathematics.
+
 Automated researchers can reliably mitigate alignment failures
 
 We had Claude autonomously train models to improve their performance on several public benchmarks that measure 10 categories of alignment failure. For all 10, Claude found fixes that improved the target benchmarks without degrading capabilities.
 
 Enabling independent research on how people use Claude
 
-Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.
-
-How Claude is accelerating protein design and analytical chemistry
-
-In this post, we share two results that show how Claude can help life scientists increase the pace of their research.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/teaching-claude-why" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Economics</title>
-  <link>https://www.anthropic.com/research/team/economics</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/economics</guid>
-  <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
-
-Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
-
-Anthropic Economic Index report: Cadences
-
-In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
-
-Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
-
-Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
-
-In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
-
-This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
-
-Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
-
-Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
-
-Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
-
-Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
-
-May 27, 2026EconomicsCoding agents in the social sciences
-
-Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
-
-Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
-
-Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
-
-Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
-
-Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
-
-Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
-
-Anthropic Economic Index report: Cadences
-
-In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
-
-Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
-
-Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
-
-In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
-
-This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
-
-Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
-
-Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
-
-Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
-
-Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
-
-May 27, 2026EconomicsCoding agents in the social sciences
-
-Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
-
-Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
-
-Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
-
-Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
-
-Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/teaching-claude-why" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Alignment</title>
   <link>https://www.anthropic.com/research/team/alignment</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/alignment</guid>
-  <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+  <pubDate>Wed, 18 Sep 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
 
@@ -2600,107 +2423,10 @@ Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient p
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>Societal Impacts</title>
-  <link>https://www.anthropic.com/research/team/societal-impacts</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
-  <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
-
-Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
-
-What 81,000 people want from AI
-
-We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
-
-How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
-
-We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
-
-We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
-
-What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
-
-Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
-
-Jul 13, 2026Societal ImpactsClaude’s values across models and languages
-
-Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
-
-Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
-
-Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
-
-Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
-
-Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
-
-Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
-
-Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
-
-Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
-
-Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
-
-What 81,000 people want from AI
-
-We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
-
-How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
-
-We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
-
-We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
-
-What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
-
-Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
-
-Jul 13, 2026Societal ImpactsClaude’s values across models and languages
-
-Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
-
-Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
-
-Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
-
-Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
-
-Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
-
-Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
-
-Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
-
-Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
   <title>Frontier Red Team</title>
   <link>https://www.anthropic.com/research/team/frontier-red-team</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
-  <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+  <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
 
@@ -2766,10 +2492,95 @@ May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
 Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
+  <title>Economics</title>
+  <link>https://www.anthropic.com/research/team/economics</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/economics</guid>
+  <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
+
+Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
+
+Anthropic Economic Index report: Cadences
+
+In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
+
+Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
+
+Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
+
+In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
+
+This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
+
+Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
+
+Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
+
+Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
+
+Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
+
+May 27, 2026EconomicsCoding agents in the social sciences
+
+Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
+
+Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
+
+Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
+
+Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
+
+Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
+
+Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
+
+Anthropic Economic Index report: Cadences
+
+In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
+
+Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
+
+Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
+
+In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
+
+This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
+
+Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
+
+Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
+
+Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
+
+Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
+
+May 27, 2026EconomicsCoding agents in the social sciences
+
+Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
+
+Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
+
+Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
+
+Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
+
+Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
   <title>Interpretability</title>
   <link>https://www.anthropic.com/research/team/interpretability</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/interpretability</guid>
-  <pubDate>Tue, 23 Apr 2024 00:00:00 +0000</pubDate>
+  <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The mission of the Interpretability team is to discover and understand how large language models work internally, as a foundation for AI safety and positive outcomes.
 
@@ -2865,6 +2676,103 @@ Mar 27, 2025InterpretabilityTracing the thoughts of a large language model
 Mar 13, 2025AlignmentAuditing language models for hidden objectives
 
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/interpretability" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Societal Impacts</title>
+  <link>https://www.anthropic.com/research/team/societal-impacts</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
+  <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+
+Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+
+What 81,000 people want from AI
+
+We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+
+How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+
+We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+
+We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+
+What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+
+Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+
+Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+
+Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+
+Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+
+Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+
+Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+
+Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+
+Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+
+Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+
+Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+
+Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+
+What 81,000 people want from AI
+
+We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+
+How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+
+We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+
+We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+
+What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+
+Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+
+Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+
+Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+
+Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+
+Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+
+Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+
+Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+
+Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+
+Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+
+Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
