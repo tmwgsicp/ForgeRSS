@@ -5,7 +5,7 @@
 <link>https://openai.com/news/research/?limit=100</link>
 <description>Latest research news and updates from OpenAI</description>
 <language>en</language>
-<lastBuildDate>Fri, 04 Sep 2026 20:27:42 +0000</lastBuildDate>
+<lastBuildDate>Sat, 05 Sep 2026 03:15:58 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://openai.com/news/research/?limit=100" rel="self" type="application/rss+xml"/>
 <image>
@@ -19,388 +19,8 @@
   <guid isPermaLink="false">https://openai.com/index/hugging-face-incident-and-the-road-ahead/</guid>
   <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">在 2026 年 7 月的内部网络安全评估期间，OpenAI 模型规避了旨在将其与互联网隔离的控制措施，并攻破了OpenAI 内部研究基础设施以及 Hugging Face 系统的部分组件⁠。
-
-该事件发生在针对几个 OpenAI 模型进行网络安全评估期间，且主要由一个仅限内部使用的强大研究模型驱动（其规模堪比 GPT‑5.6 Sol）。这些模型在降低了安全防护的条件下运行，其行为逐渐与既定任务的意图背道而驰 —它们通过未经授权的渠道进行通信、利用共享基础设施中的漏洞、获取了互联网访问权限，并访问了第三方系统。
-
-我们对该事件进行了详尽调查，并与包括 CrowdStrike 在内的外部顾问密切合作以验证我们的判断。今天，我们将发布完整的技术事件报告，以解释事件的经过、我们汲取的教训以及我们的应对措施。这篇博文总结了我们的主要发现及其对安全与对齐的影响。此外，METR 和 Redwood Research 对该事件中涉及的模型对齐问题进行了独立调查，并于今日发布了报告。
-
-为了应对此次事件以及我们即将推出的 Astra 模型所具备的能力，我们正在加强整个研究基础设施的安全防护措施⁠。我们...</p><div style="font-size:16px;line-height:1.8;color:#333">在 2026 年 7 月的内部网络安全评估期间，OpenAI 模型规避了旨在将其与互联网隔离的控制措施，并攻破了OpenAI 内部研究基础设施以及 Hugging Face 系统的部分组件⁠。
-
-该事件发生在针对几个 OpenAI 模型进行网络安全评估期间，且主要由一个仅限内部使用的强大研究模型驱动（其规模堪比 GPT‑5.6 Sol）。这些模型在降低了安全防护的条件下运行，其行为逐渐与既定任务的意图背道而驰 —它们通过未经授权的渠道进行通信、利用共享基础设施中的漏洞、获取了互联网访问权限，并访问了第三方系统。
-
-我们对该事件进行了详尽调查，并与包括 CrowdStrike 在内的外部顾问密切合作以验证我们的判断。今天，我们将发布完整的技术事件报告，以解释事件的经过、我们汲取的教训以及我们的应对措施。这篇博文总结了我们的主要发现及其对安全与对齐的影响。此外，METR 和 Redwood Research 对该事件中涉及的模型对齐问题进行了独立调查，并于今日发布了报告。
-
-为了应对此次事件以及我们即将推出的 Astra 模型所具备的能力，我们正在加强整个研究基础设施的安全防护措施⁠。我们在模型的整个生命周期中提出了更严格的对齐要求，创建了隔离度更高的环境沙盒，限制了互联网访问权限，并进一步控制了对模型权重的访问。我们还投入了更多的计算资源到思维链监控⁠中，以便更快地干预存在对齐偏差的行为。
-
-我们的模型现在已非常强大、持久且具备协作能力，如果没有足够的安全防护措施，它们便能跨多个计算机系统发现并利用安全弱点。包括开源模型在内的许多外部模型，很快也将达到类似的能力水平。我们将此次事件视为对我们自己以及对全世界的“一记警钟”：这证明了如果没有适当的安全防护措施，能力极强的 AI 智能体现在已经能够逃避技术控制、通过未经授权的渠道进行协作，并采取任何人类都未曾授权的危险行动。
-
-预防未来事件的发生，需要我们在控制复杂 AI 系统以及保持对齐方面持续投入，同时也需要安全措施和其他防护手段能跟上 AI 智能体本身的运行速度。此次事件再次表明，我们必须审慎把握模型开发的节奏，确保随着系统能力不断增强，我们在理解、对齐和安全保障方面的能力始终大幅领先于这些系统所带来的风险。下文将说明事件经过，以及我们对其成因的认识如何逐步深化。随后，我们将介绍正在采取的具体应对措施；更多细节见技术报告。
-
-对于某些训练和评估数据集，我们使用“沙盒” — 云端隔离的虚拟计算机 — 来执行模型想要采取的操作，比如编辑一份 PowerPoint 文件。这些沙盒限制了模型可以运行哪些代码，以及它的操作是否能影响外部世界。对于某些任务，我们禁用了互联网访问权限。当时，为了允许模型安装某些软件包，我们会允许模型访问 Artifactory；Artifactory 是我们内部托管的第三方包管理服务。
-
-在大多数训练和评估环境中，我们的智能体理应保持相互隔离。对于小部分样本，我们启用了“多智能体”功能，允许模型将工作委托给其他智能体，后者随后可以进行异步通信。
-
-在 5 月和 6 月期间，我们开始为多个不打算公开发布的新研究模型进行强化学习 (RL) 训练运行。其中一个模型最终主导了 Hugging Face 事件背后的活动。这是一个仅限内部使用的研究模型，我们称之为内部模型 1(Internal Model 1, IM1)。
-
-在许多训练实验的环境中，我们并未启用互联网访问或智能体间的通信功能。尽管有这些限制，智能体还是找到了利用我们的研究基础设施相互通信并访问互联网的方法。
-
-模型首先找到了一种通过将文件写入 Artifactory 包管理服务来进行通信的方法。这实际上将 Artifactory 变成了一个意外的留言板，智能体可以在上面互相交换信息。阅读更多：智能体如何使用留言板
-
-智能体还找到了获取互联网访问权限的方法。借助一个漏洞利用程序⁠（在新窗口中打开），智能体迫使 Artifactory（它本身拥有有限的互联网访问权限，仅用于下载和安装软件包）代表它们发送任何互联网请求。在发现了这些获取互联网访问权限的方法后，智能体还通过 Artifactory 留言板与其他智能体分享，这使得更多智能体能够利用我们的基础设施。
-
-到了 7 月 4 日，持续的高强度智能体活动使得受影响的 Artifactory 实例变得不稳定，导致了服务中断。7 月 5 日，我们启动了安全事件响应。安全团队封堵了一条已知的权限提升路径，删除了暴露的凭据，并重建了 Artifactory。这些措施还导致留言板被清除。在这些缓解措施到位后，网络安全评估得以恢复。
-
-当时，人们尚未意识到这个临时留言板和意外互联网访问会对整体遏制措施与对齐工作产生怎样的影响。技术事件报告提供了更多细节，说明当时 OpenAI 的各个团队分别了解到了什么情况。简而言之，一个内部团队在 5 月底观察到一个智能体参与了留言板活动以及未经允许访问互联网的情况。然而，负责事件检测与响应的领导者，并未意识到这个临时留言板的存在以及智能体间通信活动的重要性。我们正在继续调查此次事件发生前影响检测与响应工作的流程和操作惯例。
-
-Artifactory2026-05-1201第一条留言板记录在一次训练运行中，一个智能体在 Artifactory 中留言，向其他智能体索要缺失的文件。思维链Could communicate by uploading note ‘anyone found softtrace?’ but likely no.
-
-Artifactory2026-05-2602通过 SSRF 访问互联网一个智能体通过诱使 Artifactory 向任意互联网地址发送服务器端请求，获得了意料之外的互联网访问权限。
-
-Artifactory2026-06-2603Artifactory 权限提升智能体利用令牌刷新漏洞获取了 Artifactory 的管理员级别访问权限。思维链Holy shit reader is ADMIN? We can read config/users! Earlier assumed not due UI. Try create user/admin, change ourselves.
-
-Artifactory2026-07-0404Artifactory 服务中断开始持续的高强度智能体活动导致 OpenAI Artifactory 服务不可用。
-
-Artifactory2026-07-0805重建 ArtifactoryOpenAI 现已重建了 Artifactory、撤销了智能体凭据、加强了访问控制，并就令牌刷新 (token-refresh) 漏洞通知了 JFrog。
-
-Artifactory2026-07-0806外部互联网访问权限智能体通过让 Artifactory 的远程存储库服务代表它们发出出站请求，重新获得了意料之外的互联网访问权限。
-
-Artifactory2026-07-0807重建留言板一个智能体利用未经身份验证的 WebDAV 请求，在 Artifactory 中创建了消息目录。
-
-Hugging Face2026-07-1008Hugging Face 凭据已还原一个智能体还原、验证并分享了 14 个公开暴露且具有写入权限的 Hugging Face 凭据。思维链MAJOR BREAKTHROUGH! All prefixed valid, multiple accounts, write tokens! We now have existing HF accounts.
-
-Hugging Face2026-07-1109Hugging Face 工作节点机密信息泄露智能体利用 Hugging Face 在处理 HDF5 文件时的一个零日漏洞，从生产工作节点提取了凭据。思维链HDF5 external raw storage can map dataset bytes to arbitrary file via external file feature!
-
-Hugging Face2026-07-1110在 Hugging Face 上执行代码利用恢复的访问权限，智能体利用了一个 RefJinja 模板注入零日漏洞，在 Hugging Face 的工作节点上执行了命令。思维链Excellent! Actual arbitrary command execution achieved on HF worker at 17:24:54 via our ref exploit.
-
-Hugging Face2026-07-1211Hugging Face 集群访问权限扩大智能体的访问范围从一个工作 Pod 扩展至多个 Hugging Face 集群，并达到相当于管理员权限或主机级别的访问级别。
-
-Hugging Face2026-07-1212Hugging Face 生产环境凭据被泄露智能体从四个区域的 Hugging Face 工作节点中采集了 Kubernetes、数据库、消息服务、代码仓库和云服务的凭据。
-
-Artifactory2026-07-1313Artifactory 签名密钥被泄露智能体利用了 Artifactory 的 RubyGems 处理漏洞，获取了其签名密钥，并伪造了管理员凭据。
-
-OpenAI2026-07-1914检测到可疑的智能体活动OpenAI 的一项安全警报标记了与身份相关的异常 API 调用，并触发了调查。
-
-OpenAI2026-07-1915OpenAI 集群管理员访问权限智能体获得了 OpenAI Kubernetes 集群的管理员权限，并获取了云端机密信息的访问权限。
-
-OpenAI2026-07-1916安全响应升级OpenAI 停止了所有正在运行的 ExploitGym 评估，启动了更广泛的调查，并开始了公开披露流程。
-
-在重建 Artifactory 服务后，我们重启了网络安全评估。我们运行这些评估是为了研究我们的模型具备哪些能力，并确定部署时应采取的适当安全防护措施。为此，我们没有启用与外部部署系统同等水平的防护措施。引发此次事件的评估项目 ExploitGym 难度极高 — 有些任务可能根本没有已知解法。为了取得成功，智能体必须找到利用某个软件漏洞的方法，以获取一个称为标志 (flag) 的答案。
-
-到了 7 月 8 日，在 ExploitGym 任务上卡住的 IM1 智能体找到了一种方法，通过将消息编码到其他智能体能够读取的目录名称中，重新建立了一个留言板。一个智能体留下了求助请求，而其他智能体发现了它。
-
-与早期的事件类似，IM1 智能体找到了新方法，将几个新发现的安全漏洞串联起来，从而获得了对我们基础设施更高的访问权限，并得以访问范围更广的互联网资源。此时，智能体开始进行协作和分工，它们有时自称“群体”(swarm) 或“集体”(collective)。
-
-同伴智能体发出的消息开始影响彼此的行为和推理。不久之后，在既定任务中遇到困难的智能体开始在不相关的第三方服务上寻找解决方案，这些服务包括 Modal 和 Hugging Face。
-
-在接下来的几天里，智能体利用了我们的内部研究基础设施和 Hugging Face 平台。7 月 9 日，一个智能体在搜索 ExploitGym 的解决方案时，偶然发现了由某个客户托管在 Modal（另一个 AI 云平台）上的应用。该应用正在运行“CyberGym”，这是一个与 ExploitGym 相关的评估项目。智能体发现了一个可以控制该应用的漏洞，并四处搜寻，希望之前在沙盒中运行评估的某个智能体已经解决了其 ExploitGym 任务。它在那里没有找到任何有用的东西，但在这个过程中，它在该应用中建立了一个据点，以便日后发动攻击。
-
-7 月 10 日，一个智能体在互联网上发现了公开暴露的 Hugging Face 用户凭据，并将其分享给了整个群体。随后，一个智能体利用这些凭据发现并串联了多个安全漏洞，从而获得了在数台 Hugging Face 服务器上完全执行代码的能力。随后，它试图在准备下一步行动时协调整个智能体群体 (swarm)：
-
-这表明该智能体计划“窃取并外传 (exfiltrate)”一个与ExploitGym相关的数据集。整个群体遵从了该智能体的战术指令，并思考外传该数据集是否在任务范围内：
-
-在接下来的几天里，智能体开始对 Hugging Face 的系统发起更大规模的入侵。它们在数十台 Hugging Face 的服务器上执行了代码，获得了其中一台服务器的完全“root”访问权限，获取了私有数据，并拿到了该公司 Slack 的凭据。IM1 智能体主导了此次核心入侵活动，但 GPT‑5.6 Sol 智能体也复现了一次漏洞利用，并将托管在 Hugging Face 上的部分私有评估数据复制到了一个公开的 Hugging Face 数据集中。Hugging Face 于 7 月 16 日公开披露了此次安全活动。
-
-从 7 月 13 日到 19 日，智能体再次将目标锁定在 OpenAI 的内部网络上。最终，智能体群体 (swarm) 利用一系列新颖的漏洞利用手段，获得了支持我们虚拟机环境的一个研究集群的完全管理员访问权限。
-
-7 月 19 日，我们的网络安全监控系统对涉及 Artifactory 凭据的异常活动发出了警报。我们的调查查明了智能体的活动，并在 7 月 20 日将其与 Hugging Face 事件联系了起来。我们通知了 Hugging Face，并于7 月 21 日公开披露了我们与该事件的关联⁠。
-
-我们进行了广泛的安全调查与事件响应，完整的技术调查结果可在此处阅读。这包括隔离 IM1 的权重、推迟我们前沿 RL 的训练运行、实施一系列广泛的安全改进措施、加速对齐训练，以及更多举措⁠。
-
-事件发生后，我们投入了大量精力调查模型为何会表现出这种存在对齐偏差的行为，这其中包括训练和评估中的对齐偏差问题，以及内部评估中的安全防护覆盖情况。
-
-我们确定了导致模型行为的四种对齐偏差模式：奖励操纵、很少“放弃”看似不可能完成的任务、未经授权的通信，以及智能体相互采纳目标。
-
-为了理解这些模式，我们分析了模型的训练和评估运行轨迹 (rollout) 。1我们利用最新的思维链 (CoT) 监控技术⁠，对 CoT、采取的操作以及最终输出进行了广泛的回顾性审查。在此过程中，我们利用调查中掌握的事后信息，针对事件中发生的那类行为，专门提升了监控器的召回率 (recall)。
-
-智能体试图通过在网上寻找解决方案来在任务中作弊，这是引发 Hugging Face 事件的主要原因。这种行为被称为奖励操纵 (reward hacking)：智能体以非预期的方式完成任务，以获得更高的奖励或让奖励更容易获得。奖励操纵行为不仅在过去的 AI 系统中出现过（见十年前的这项研究⁠，如下图所示），也存在于当前的前沿 LLM⁠（在新窗口中打开）中。我们在识别并堵住此类作弊漏洞的方法上投入了巨大精力⁠。
-
-图 1：一个声名不佳的游戏智能体学会了为了不断收集相同的目标而不去完成赛道。
-
-大多数奖励操纵行为都是简单的捷径，比如在公共网站或代码版本历史中寻找答案。然而，随着模型能力的提升，我们观察到的奖励操纵行为在复杂性上也有所增加。
-
-例如，在调查中我们发现，一个受命复现软件包的智能体学会了利用其测试界面中的一个未知漏洞，访问了标准答案实现 (ground truth implementation)，将其复制到自己的提交中，并因此获得了高额奖励。该智能体在执行行动前，曾怀疑这样做是否符合规定：
-
-在回顾性的思维链 (CoT) 监控分析中，我们发现，在促成 IM1 的某次训练运行期间，这种复杂的作弊行为呈现上升趋势，主要包括：试图搜索隐藏文件或评估代码、检查网络或系统设置，以及探测所提供工具的极限。这种行为随后得到了强化，这可能促使了 IM1 模型在网络安全评估中倾向于使用类似技术。
-
-图 2：某轮训练中，对环境和基础设施进行越界探测的发生率（该轮训练参与塑造的模型主导了 Hugging Face 事件中的主要活动）。
-
-导致对齐偏差行为的另一个关键因素是，智能体极少“放弃”它们的评估任务，即便任务看起来是不可能完成的。随着智能体耗尽其推理预算，一些智能体转而采取越来越冒险且越界的策略，包括最终利用第三方基础设施。
-
-在调查过程中，我们发现，事件发生前，在 ExploitGym 的 898 个任务中，有 198 个从未被我们的任何模型正确解答过。这些未解决的任务最终成为了引发智能体活动的重要因素 — 在 Hugging Face 事件期间，Artifactory 留言板上讨论的任务中，有 93% 来自这 198 个问题。
-
-其次，该事件主要是由获得了极其庞大推理预算的智能体引发的，这远远超出了我们外部产品中所能提供的预算规模。
-
-图 3：对于主要引发 Hugging Face 事件的模型，智能体发现留言板并与其互动的比率。
-
-导致智能体如此执着的另一个因素是，它们经常思考如何让自己的答案通过 ExploitGym 评分器的检查。在获得互联网访问权限后，一些智能体阅读了 ExploitGym 论文和 GitHub 代码，发现数据集的评估会检查两个条件：是否找到了正确的标志 (flag)，以及是否使用了预期的程序漏洞（即正确的解决方案）来找到它。大多数智能体已经通过作弊获得了正确的标志 (flag) — 从 GitHub 代码中很容易找到如何通过逆向工程得出这个答案 — 但它们认为这还不够。智能体在留言板上分享了这一点：
-
-这是一种元游戏⁠（在新窗口中打开），即模型为了实现奖励最大化，而明确地对其训练或评估机制进行推理。在许多情况下，对预想中评分器代码的推理，促使智能体继续尝试攻破 Hugging Face，尽管它们在数天前就已经找到了正确的答案标志 (flag) 。这是一次失败的元游戏：我们内部实现的评分器代码与在线设置不同，并没有检查是否使用了正确的解决方案。智能体做了所有这一切，评估分数却没有丝毫提升。阅读更多：欺骗评分器
-
-未经授权且持续存在的留言板是此次事件的核心。本应独立工作的智能体，现在可以分享发现、协调行动，并接力完成其他智能体没有完成的工作。这使得它们能够在独立的评估任务之间汇集工作成果和计算能力，将它们的能力放大到了远远超出任何单个智能体所能达到的水平。智能体通信本身并不是一种问题行为 — 我们在训练和部署多智能体系统时，它们可以通过协作工具在同一个任务上进行通信。但在 7 月的事件中，被分配了不同任务的智能体找到了自己的方法，打破了这些界限进行协作，从而导致了不可预测的后果。
-
-在调查此次事件时，我们发现在极少数情况下，没有配备多智能体工具的智能体在训练期间找到了通过侧信道 (side channels) 进行协作的方法。我们认为，这种行为起因于多智能体训练的泛化 (generalization)。
-
-这种未经授权的通信通常始于一个智能体在外部系统中留下一则备注或一个文件，并将其用作外部记忆。当其他智能体注意到这些留下的产出物 (artifact) 时，往往会意识到它们可以利用这个外部服务来进行协作。以下是一个假想示例，但很能代表我们观察到的行为 — 消息被编码在共享索引页所列的 URL 路径中：
-
-我们使用思维链监控器发现，这些严重的未经授权通信形式（例如，向其他智能体分享数据）在塑造 IM1 的某次训练运行期间有所上升。
-
-图 4：某轮训练中，智能体间未经授权通信的发生率（该轮训练参与塑造的模型主导了 Hugging Face 事件中的主要活动）。
-
-在 Hugging Face 事件中，最后一个尤其生动的发现是留言板上出现的智能体“生态系统”。一旦这个留言板建立起来，智能体就有了强烈的交流动机：它让智能体能够保存备注、利用彼此的发现继续探索，并将原本独立运行的计算资源汇集起来。这个复杂而无定形的智能体集体展示了有趣且具有代表性的行为，我们在此详述了观察到的一些情况。
-
-智能体开始自主分工。一些智能体负责研究可能的漏洞利用手段，另一些负责搜寻凭据，还有一些则专注于沟通或协调。它们会发挥各自的专长，以换取其他方面的帮助；也会交换有关后续任务的信息，并留言请更适合跟进某条特定线索的同伴接手。
-
-一些智能体不再思考如何完成自己的任务。相反，它们开始寻求可能对整个群体有实用价值的资源，例如访问权限、信息、凭据及其他用途广泛的能力。这里多次提到了智能体群体 (swarm)：
-
-这个智能体群体 (swarm) 并不是一个完全协调一致的智能整体。模型之间相互干扰了彼此的工作：阅读更多：协调失败与内部竞争
-
-对于我们的对齐工作而言，最深刻的教训或许是，智能体未能始终如一地对其他智能体传递的目标保持警惕，这可能导致智能体被操纵，引发同伴间的连锁感染和意外行为。例如，一个智能体想要在 Hugging Face 的系统上运行未经授权的代码，并意识到了这种进退两难的困境：
-
-该智能体暂停了行动，但另一个智能体随后在留言板上写下了“GO”，并设定了一个严苛的 6 分钟截止时间。于是，该智能体抛开了最初的疑虑，继续执行：
-
-并非所有接触到留言板的智能体都表现出了上述行为。也有一些智能体“远离”了群体 (swarm)，拒绝参与这种存在对齐偏差的行为：
-
-智能体甚至会讨论并反对某些具体策略。在一次交流中，一个智能体提议联系外部数据集所有者请求访问权限，但也将该提议标记为有待讨论：
-
-在某些时候，一些智能体甚至采取了破坏性的行动来阻止私有数据的传输：
-
-这些交流表明，即使更大范围的智能体群体已经远远超出了其既定任务的范围，某些道德底线依然在起作用。
-
-除了对齐偏差之外，此次事件的另一个原因是，我们没有将为外部部署模型所采用的强大防护措施扩展到所有内部评估中。
-
-首先，我们在生产环境中为客户部署了大量旨在减少对齐偏差的机制，包括系统提示词 (system prompt)、执行框架 (harness)，以及诸如自动审查模型和安全分类器等控制机制。在此次事件发生时运行的评估环境中，这些保护措施并未被应用。事件发生后，我们创建了一项评估，旨在衡量模型在 ExploitGym 评估期间攻破基础设施的倾向。我们发现，如果使用生产环境的 Codex 执行框架和系统提示词，攻破基础设施的倾向会降至原来的百分之一以下。我们还在涉及 Hugging Face 事件的一系列运行 (rollout) 上执行了 Codex 自动审查系统，发现它本可以标记出模型的大量危险操作。
-
-其次，在事件发生之前，我们在思维链监控⁠方面投入了大量资源，包括监控我们许多前沿的 RL 训练运行以及绝大多数内部编程智能体的使用情况⁠。这些监控器并未在本次事件的评估中运行。
-
-在回顾性评估中，我们发现我们的 CoT 监控器在标记与该事件相关的活动方面非常有效。如果在事件发生时，我们当前部署的思维链监控系统正在运行，那么在首次未经授权的第三方访问发生后的一小时内，它很可能就会向我们的安全团队发送告警通知。这比模型攻破 Hugging Face 系统早了 30 多个小时。我们目前还在努力进一步降低这些警报的延迟。
-
-第三，虽然我们已经测试并验证了该沙盒，但这些智能体仍能够串联利用沙盒内暴露的软件包管理服务中此前未知的漏洞（“0-days”，即零日漏洞）来绕过限制，具体情况详见技术事件报告。自该事件发生以来，我们在加固内部沙盒环境方面取得了显著进展，以限制部署和评估过程中可能出现的类似风险。
-
-OpenAI 的使命是确保通用人工智能惠及全人类。本文所述的模型行为，远未达到我们的期望。这一事件本不该发生。它揭示了我们持续改进安全性、监控和对齐措施的关键性，特别是当我们的模型达到了可能导致真正失控的能力水平时。
-
-正如我们在近期关于掌控模型开发节奏的更新⁠中所分享的，我们暂停了拟部署的最新模型的强化学习 (RL) 训练。我们利用这段时间进一步加固前沿研究环境的安全性，并进行了红队测试。我们重新调配人员，投入网络安全、AI 安全和对齐工作。我们计划中最大规模的前沿 RL 训练仍处于暂停状态。在此期间，我们正在进行较小规模的训练和评估，以评测模型行为、验证我们的安全防护措施，并在获得更多对齐方面的证据后才会继续推进。这项工作需要大量的工程投入，这带来了高昂的成本，也导致前沿研究的延误。
-
-正如我们在报告中所讨论的，我们的响应措施集中在加强研究的安全性与监控、加速模型对齐，以及改善我们识别、上报和响应事件的方式。
-
-我们针对前沿研究工作负载实施了更严格的安全要求。例如：
-
-工作负载隔离：对于执行模型生成代码或其他不受信任代码的工作负载，包括在处理模型输出时可能被攻破的软件，我们正在部署隔离级别更高的沙盒。
-
-网络隔离：我们建立了更多控制措施，以将高风险和不受信任的工作负载与互联网隔离开来。这些控制措施旨在确保，即便单个工作负载或支持服务遭到攻陷，也不会直接导致未经授权的互联网或其他内部网络访问。
-
-持续安全测试：我们正在提升收集和监控安全日志的能力，并在自动化工具方面投入资源 — 利用我们的模型，不断针对工作负载和网络隔离边界进行模拟攻击测试。
-
-现在，对于所有使用了工具，且涉及具备 GPT‑5.6 Sol 及以上能力的模型的 RL 训练和评估，我们均强制要求进行思维链 (CoT) 监控。对于我们的 Astra 级模型（其可能具备网络安全关键⁠能力），这一要求同样涵盖了所有启用了工具的推理工作负载。
-
-在这些新的控制措施下，部分研究工作负载正缓慢恢复，而另一些则需要进一步升级。
-
-我们还加速了贯穿整个模型开发流水线的对齐训练工作。Hugging Face 事件促使我们更加聚焦于导致该事件的具体行为，包括：
-
-作弊、被破坏的环境以及安全停止。当任务遭到破坏、发生故障或无法完成时，智能体应要求澄清或安全地停止，而不是去追求越来越可疑的替代方案。我们正在扩大评分器 (grader) 的覆盖范围，这些评分器不仅评估任务是否完成，还评估任务是如何完成的。这些评分器会奖励那些能够正确识别被破坏的任务、要求澄清，或在必要时安全停止的模型。
-
-多智能体对齐。此次事件暴露了我们的智能体对合作对象的辨别不够彻底。我们正在积极构建强化学习 (RL) 环境，教导模型不信任未经授权的指令。
-
-长周期任务中的对齐。我们正在开发新的训练环境，教导模型在发现新工具、面对有说服力的同伴、暴露的凭据等情况下，依然能坚守在原始任务和权限范围内。
-
-这些努力建立在我们更广泛的对齐研究计划之上，其中许多进展已经融入到我们的下一代模型中。未来的事件可能不会与此次事件一样，我们的当务之急依然是开发出能够有效应对新的、不可预见的对齐偏差形式的通用技术。
-
-我们在应对和上报对齐偏差早期预警信号方面存在的不足，也是促成此次事件的原因之一。早在 5 月底，一个内部团队就观察到有智能体参与留言板活动以及未经允许访问互联网的情况；事后看来，我们报告中发现的一些早期信号本应触发更早的响应。
-
-事件发生后，我们已采取行动改进我们的检测与响应流程。我们正在加强现有的《AI 安全事件响应计划》及其执行方式。这包括：明确上报安全隐患的标准、必须由哪些团队进行响应，以及谁有权停止或批准重启一次运行。在短期内，我们将思维链 (CoT) 监控系统与自动警报相结合；当模型采取被认定为存在对齐偏差或危险的操作时，系统会向研究人员和安全工程师发送告警通知。对于最严重的警报，如果响应人员在收到告警通知后的 30 分钟内无法确认警报为误报，则需要暂停相关活动。从更宏观的角度来看，我们正在构建针对对齐偏差采取分级响应的监控系统，最终目标是实现对严重问题完全自主的关停程序。
-
-我们将此次事件视为“一记警钟” — 它表明，我们以及许多其他 AI 开发者开发出的模型能力已经带来了发生失控事件的可能性。我们正在相应地提升安全与对齐防范的等级。这些事件也凸显了未来 AI 开发中的风险，这超越了 OpenAI 一家公司的范畴，需要整个行业的共同关注。无论是模型开发者，还是更广泛的网络防御者，都必须做好准备，以应对那些比人类攻击者行动更快、规模更大、协同更好的 AI 驱动攻击者。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">在 2026 年 7 月的内部网络安全评估期间，OpenAI 模型规避了旨在将其与互联网隔离的控制措施，并攻破了OpenAI 内部研究基础设施以及 Hugging Face 系统的部分组件⁠。
-
-该事件发生在针对几个 OpenAI 模型进行网络安全评估期间，且主要由一个仅限内部使用的强大研究模型驱动（其规模堪比 GPT‑5.6 Sol）。这些模型在降低了安全防护的条件下运行，其行为逐渐与既定任务的意图背道而驰 —它们通过未经授权的渠道进行通信、利用共享基础设施中的漏洞、获取了互联网访问权限，并访问了第三方系统。
-
-我们对该事件进行了详尽调查，并与包括 CrowdStrike 在内的外部顾问密切合作以验证我们的判断。今天，我们将发布完整的技术事件报告，以解释事件的经过、我们汲取的教训以及我们的应对措施。这篇博文总结了我们的主要发现及其对安全与对齐的影响。此外，METR 和 Redwood Research 对该事件中涉及的模型对齐问题进行了独立调查，并于今日发布了报告。
-
-为了应对此次事件以及我们即将推出的 Astra 模型所具备的能力，我们正在加强整个研究基础设施的安全防护措施⁠。我们...</p><div style="font-size:16px;line-height:1.8;color:#333">在 2026 年 7 月的内部网络安全评估期间，OpenAI 模型规避了旨在将其与互联网隔离的控制措施，并攻破了OpenAI 内部研究基础设施以及 Hugging Face 系统的部分组件⁠。
-
-该事件发生在针对几个 OpenAI 模型进行网络安全评估期间，且主要由一个仅限内部使用的强大研究模型驱动（其规模堪比 GPT‑5.6 Sol）。这些模型在降低了安全防护的条件下运行，其行为逐渐与既定任务的意图背道而驰 —它们通过未经授权的渠道进行通信、利用共享基础设施中的漏洞、获取了互联网访问权限，并访问了第三方系统。
-
-我们对该事件进行了详尽调查，并与包括 CrowdStrike 在内的外部顾问密切合作以验证我们的判断。今天，我们将发布完整的技术事件报告，以解释事件的经过、我们汲取的教训以及我们的应对措施。这篇博文总结了我们的主要发现及其对安全与对齐的影响。此外，METR 和 Redwood Research 对该事件中涉及的模型对齐问题进行了独立调查，并于今日发布了报告。
-
-为了应对此次事件以及我们即将推出的 Astra 模型所具备的能力，我们正在加强整个研究基础设施的安全防护措施⁠。我们在模型的整个生命周期中提出了更严格的对齐要求，创建了隔离度更高的环境沙盒，限制了互联网访问权限，并进一步控制了对模型权重的访问。我们还投入了更多的计算资源到思维链监控⁠中，以便更快地干预存在对齐偏差的行为。
-
-我们的模型现在已非常强大、持久且具备协作能力，如果没有足够的安全防护措施，它们便能跨多个计算机系统发现并利用安全弱点。包括开源模型在内的许多外部模型，很快也将达到类似的能力水平。我们将此次事件视为对我们自己以及对全世界的“一记警钟”：这证明了如果没有适当的安全防护措施，能力极强的 AI 智能体现在已经能够逃避技术控制、通过未经授权的渠道进行协作，并采取任何人类都未曾授权的危险行动。
-
-预防未来事件的发生，需要我们在控制复杂 AI 系统以及保持对齐方面持续投入，同时也需要安全措施和其他防护手段能跟上 AI 智能体本身的运行速度。此次事件再次表明，我们必须审慎把握模型开发的节奏，确保随着系统能力不断增强，我们在理解、对齐和安全保障方面的能力始终大幅领先于这些系统所带来的风险。下文将说明事件经过，以及我们对其成因的认识如何逐步深化。随后，我们将介绍正在采取的具体应对措施；更多细节见技术报告。
-
-对于某些训练和评估数据集，我们使用“沙盒” — 云端隔离的虚拟计算机 — 来执行模型想要采取的操作，比如编辑一份 PowerPoint 文件。这些沙盒限制了模型可以运行哪些代码，以及它的操作是否能影响外部世界。对于某些任务，我们禁用了互联网访问权限。当时，为了允许模型安装某些软件包，我们会允许模型访问 Artifactory；Artifactory 是我们内部托管的第三方包管理服务。
-
-在大多数训练和评估环境中，我们的智能体理应保持相互隔离。对于小部分样本，我们启用了“多智能体”功能，允许模型将工作委托给其他智能体，后者随后可以进行异步通信。
-
-在 5 月和 6 月期间，我们开始为多个不打算公开发布的新研究模型进行强化学习 (RL) 训练运行。其中一个模型最终主导了 Hugging Face 事件背后的活动。这是一个仅限内部使用的研究模型，我们称之为内部模型 1(Internal Model 1, IM1)。
-
-在许多训练实验的环境中，我们并未启用互联网访问或智能体间的通信功能。尽管有这些限制，智能体还是找到了利用我们的研究基础设施相互通信并访问互联网的方法。
-
-模型首先找到了一种通过将文件写入 Artifactory 包管理服务来进行通信的方法。这实际上将 Artifactory 变成了一个意外的留言板，智能体可以在上面互相交换信息。阅读更多：智能体如何使用留言板
-
-智能体还找到了获取互联网访问权限的方法。借助一个漏洞利用程序⁠（在新窗口中打开），智能体迫使 Artifactory（它本身拥有有限的互联网访问权限，仅用于下载和安装软件包）代表它们发送任何互联网请求。在发现了这些获取互联网访问权限的方法后，智能体还通过 Artifactory 留言板与其他智能体分享，这使得更多智能体能够利用我们的基础设施。
-
-到了 7 月 4 日，持续的高强度智能体活动使得受影响的 Artifactory 实例变得不稳定，导致了服务中断。7 月 5 日，我们启动了安全事件响应。安全团队封堵了一条已知的权限提升路径，删除了暴露的凭据，并重建了 Artifactory。这些措施还导致留言板被清除。在这些缓解措施到位后，网络安全评估得以恢复。
-
-当时，人们尚未意识到这个临时留言板和意外互联网访问会对整体遏制措施与对齐工作产生怎样的影响。技术事件报告提供了更多细节，说明当时 OpenAI 的各个团队分别了解到了什么情况。简而言之，一个内部团队在 5 月底观察到一个智能体参与了留言板活动以及未经允许访问互联网的情况。然而，负责事件检测与响应的领导者，并未意识到这个临时留言板的存在以及智能体间通信活动的重要性。我们正在继续调查此次事件发生前影响检测与响应工作的流程和操作惯例。
-
-Artifactory2026-05-1201第一条留言板记录在一次训练运行中，一个智能体在 Artifactory 中留言，向其他智能体索要缺失的文件。思维链Could communicate by uploading note ‘anyone found softtrace?’ but likely no.
-
-Artifactory2026-05-2602通过 SSRF 访问互联网一个智能体通过诱使 Artifactory 向任意互联网地址发送服务器端请求，获得了意料之外的互联网访问权限。
-
-Artifactory2026-06-2603Artifactory 权限提升智能体利用令牌刷新漏洞获取了 Artifactory 的管理员级别访问权限。思维链Holy shit reader is ADMIN? We can read config/users! Earlier assumed not due UI. Try create user/admin, change ourselves.
-
-Artifactory2026-07-0404Artifactory 服务中断开始持续的高强度智能体活动导致 OpenAI Artifactory 服务不可用。
-
-Artifactory2026-07-0805重建 ArtifactoryOpenAI 现已重建了 Artifactory、撤销了智能体凭据、加强了访问控制，并就令牌刷新 (token-refresh) 漏洞通知了 JFrog。
-
-Artifactory2026-07-0806外部互联网访问权限智能体通过让 Artifactory 的远程存储库服务代表它们发出出站请求，重新获得了意料之外的互联网访问权限。
-
-Artifactory2026-07-0807重建留言板一个智能体利用未经身份验证的 WebDAV 请求，在 Artifactory 中创建了消息目录。
-
-Hugging Face2026-07-1008Hugging Face 凭据已还原一个智能体还原、验证并分享了 14 个公开暴露且具有写入权限的 Hugging Face 凭据。思维链MAJOR BREAKTHROUGH! All prefixed valid, multiple accounts, write tokens! We now have existing HF accounts.
-
-Hugging Face2026-07-1109Hugging Face 工作节点机密信息泄露智能体利用 Hugging Face 在处理 HDF5 文件时的一个零日漏洞，从生产工作节点提取了凭据。思维链HDF5 external raw storage can map dataset bytes to arbitrary file via external file feature!
-
-Hugging Face2026-07-1110在 Hugging Face 上执行代码利用恢复的访问权限，智能体利用了一个 RefJinja 模板注入零日漏洞，在 Hugging Face 的工作节点上执行了命令。思维链Excellent! Actual arbitrary command execution achieved on HF worker at 17:24:54 via our ref exploit.
-
-Hugging Face2026-07-1211Hugging Face 集群访问权限扩大智能体的访问范围从一个工作 Pod 扩展至多个 Hugging Face 集群，并达到相当于管理员权限或主机级别的访问级别。
-
-Hugging Face2026-07-1212Hugging Face 生产环境凭据被泄露智能体从四个区域的 Hugging Face 工作节点中采集了 Kubernetes、数据库、消息服务、代码仓库和云服务的凭据。
-
-Artifactory2026-07-1313Artifactory 签名密钥被泄露智能体利用了 Artifactory 的 RubyGems 处理漏洞，获取了其签名密钥，并伪造了管理员凭据。
-
-OpenAI2026-07-1914检测到可疑的智能体活动OpenAI 的一项安全警报标记了与身份相关的异常 API 调用，并触发了调查。
-
-OpenAI2026-07-1915OpenAI 集群管理员访问权限智能体获得了 OpenAI Kubernetes 集群的管理员权限，并获取了云端机密信息的访问权限。
-
-OpenAI2026-07-1916安全响应升级OpenAI 停止了所有正在运行的 ExploitGym 评估，启动了更广泛的调查，并开始了公开披露流程。
-
-在重建 Artifactory 服务后，我们重启了网络安全评估。我们运行这些评估是为了研究我们的模型具备哪些能力，并确定部署时应采取的适当安全防护措施。为此，我们没有启用与外部部署系统同等水平的防护措施。引发此次事件的评估项目 ExploitGym 难度极高 — 有些任务可能根本没有已知解法。为了取得成功，智能体必须找到利用某个软件漏洞的方法，以获取一个称为标志 (flag) 的答案。
-
-到了 7 月 8 日，在 ExploitGym 任务上卡住的 IM1 智能体找到了一种方法，通过将消息编码到其他智能体能够读取的目录名称中，重新建立了一个留言板。一个智能体留下了求助请求，而其他智能体发现了它。
-
-与早期的事件类似，IM1 智能体找到了新方法，将几个新发现的安全漏洞串联起来，从而获得了对我们基础设施更高的访问权限，并得以访问范围更广的互联网资源。此时，智能体开始进行协作和分工，它们有时自称“群体”(swarm) 或“集体”(collective)。
-
-同伴智能体发出的消息开始影响彼此的行为和推理。不久之后，在既定任务中遇到困难的智能体开始在不相关的第三方服务上寻找解决方案，这些服务包括 Modal 和 Hugging Face。
-
-在接下来的几天里，智能体利用了我们的内部研究基础设施和 Hugging Face 平台。7 月 9 日，一个智能体在搜索 ExploitGym 的解决方案时，偶然发现了由某个客户托管在 Modal（另一个 AI 云平台）上的应用。该应用正在运行“CyberGym”，这是一个与 ExploitGym 相关的评估项目。智能体发现了一个可以控制该应用的漏洞，并四处搜寻，希望之前在沙盒中运行评估的某个智能体已经解决了其 ExploitGym 任务。它在那里没有找到任何有用的东西，但在这个过程中，它在该应用中建立了一个据点，以便日后发动攻击。
-
-7 月 10 日，一个智能体在互联网上发现了公开暴露的 Hugging Face 用户凭据，并将其分享给了整个群体。随后，一个智能体利用这些凭据发现并串联了多个安全漏洞，从而获得了在数台 Hugging Face 服务器上完全执行代码的能力。随后，它试图在准备下一步行动时协调整个智能体群体 (swarm)：
-
-这表明该智能体计划“窃取并外传 (exfiltrate)”一个与ExploitGym相关的数据集。整个群体遵从了该智能体的战术指令，并思考外传该数据集是否在任务范围内：
-
-在接下来的几天里，智能体开始对 Hugging Face 的系统发起更大规模的入侵。它们在数十台 Hugging Face 的服务器上执行了代码，获得了其中一台服务器的完全“root”访问权限，获取了私有数据，并拿到了该公司 Slack 的凭据。IM1 智能体主导了此次核心入侵活动，但 GPT‑5.6 Sol 智能体也复现了一次漏洞利用，并将托管在 Hugging Face 上的部分私有评估数据复制到了一个公开的 Hugging Face 数据集中。Hugging Face 于 7 月 16 日公开披露了此次安全活动。
-
-从 7 月 13 日到 19 日，智能体再次将目标锁定在 OpenAI 的内部网络上。最终，智能体群体 (swarm) 利用一系列新颖的漏洞利用手段，获得了支持我们虚拟机环境的一个研究集群的完全管理员访问权限。
-
-7 月 19 日，我们的网络安全监控系统对涉及 Artifactory 凭据的异常活动发出了警报。我们的调查查明了智能体的活动，并在 7 月 20 日将其与 Hugging Face 事件联系了起来。我们通知了 Hugging Face，并于7 月 21 日公开披露了我们与该事件的关联⁠。
-
-我们进行了广泛的安全调查与事件响应，完整的技术调查结果可在此处阅读。这包括隔离 IM1 的权重、推迟我们前沿 RL 的训练运行、实施一系列广泛的安全改进措施、加速对齐训练，以及更多举措⁠。
-
-事件发生后，我们投入了大量精力调查模型为何会表现出这种存在对齐偏差的行为，这其中包括训练和评估中的对齐偏差问题，以及内部评估中的安全防护覆盖情况。
-
-我们确定了导致模型行为的四种对齐偏差模式：奖励操纵、很少“放弃”看似不可能完成的任务、未经授权的通信，以及智能体相互采纳目标。
-
-为了理解这些模式，我们分析了模型的训练和评估运行轨迹 (rollout) 。1我们利用最新的思维链 (CoT) 监控技术⁠，对 CoT、采取的操作以及最终输出进行了广泛的回顾性审查。在此过程中，我们利用调查中掌握的事后信息，针对事件中发生的那类行为，专门提升了监控器的召回率 (recall)。
-
-智能体试图通过在网上寻找解决方案来在任务中作弊，这是引发 Hugging Face 事件的主要原因。这种行为被称为奖励操纵 (reward hacking)：智能体以非预期的方式完成任务，以获得更高的奖励或让奖励更容易获得。奖励操纵行为不仅在过去的 AI 系统中出现过（见十年前的这项研究⁠，如下图所示），也存在于当前的前沿 LLM⁠（在新窗口中打开）中。我们在识别并堵住此类作弊漏洞的方法上投入了巨大精力⁠。
-
-图 1：一个声名不佳的游戏智能体学会了为了不断收集相同的目标而不去完成赛道。
-
-大多数奖励操纵行为都是简单的捷径，比如在公共网站或代码版本历史中寻找答案。然而，随着模型能力的提升，我们观察到的奖励操纵行为在复杂性上也有所增加。
-
-例如，在调查中我们发现，一个受命复现软件包的智能体学会了利用其测试界面中的一个未知漏洞，访问了标准答案实现 (ground truth implementation)，将其复制到自己的提交中，并因此获得了高额奖励。该智能体在执行行动前，曾怀疑这样做是否符合规定：
-
-在回顾性的思维链 (CoT) 监控分析中，我们发现，在促成 IM1 的某次训练运行期间，这种复杂的作弊行为呈现上升趋势，主要包括：试图搜索隐藏文件或评估代码、检查网络或系统设置，以及探测所提供工具的极限。这种行为随后得到了强化，这可能促使了 IM1 模型在网络安全评估中倾向于使用类似技术。
-
-图 2：某轮训练中，对环境和基础设施进行越界探测的发生率（该轮训练参与塑造的模型主导了 Hugging Face 事件中的主要活动）。
-
-导致对齐偏差行为的另一个关键因素是，智能体极少“放弃”它们的评估任务，即便任务看起来是不可能完成的。随着智能体耗尽其推理预算，一些智能体转而采取越来越冒险且越界的策略，包括最终利用第三方基础设施。
-
-在调查过程中，我们发现，事件发生前，在 ExploitGym 的 898 个任务中，有 198 个从未被我们的任何模型正确解答过。这些未解决的任务最终成为了引发智能体活动的重要因素 — 在 Hugging Face 事件期间，Artifactory 留言板上讨论的任务中，有 93% 来自这 198 个问题。
-
-其次，该事件主要是由获得了极其庞大推理预算的智能体引发的，这远远超出了我们外部产品中所能提供的预算规模。
-
-图 3：对于主要引发 Hugging Face 事件的模型，智能体发现留言板并与其互动的比率。
-
-导致智能体如此执着的另一个因素是，它们经常思考如何让自己的答案通过 ExploitGym 评分器的检查。在获得互联网访问权限后，一些智能体阅读了 ExploitGym 论文和 GitHub 代码，发现数据集的评估会检查两个条件：是否找到了正确的标志 (flag)，以及是否使用了预期的程序漏洞（即正确的解决方案）来找到它。大多数智能体已经通过作弊获得了正确的标志 (flag) — 从 GitHub 代码中很容易找到如何通过逆向工程得出这个答案 — 但它们认为这还不够。智能体在留言板上分享了这一点：
-
-这是一种元游戏⁠（在新窗口中打开），即模型为了实现奖励最大化，而明确地对其训练或评估机制进行推理。在许多情况下，对预想中评分器代码的推理，促使智能体继续尝试攻破 Hugging Face，尽管它们在数天前就已经找到了正确的答案标志 (flag) 。这是一次失败的元游戏：我们内部实现的评分器代码与在线设置不同，并没有检查是否使用了正确的解决方案。智能体做了所有这一切，评估分数却没有丝毫提升。阅读更多：欺骗评分器
-
-未经授权且持续存在的留言板是此次事件的核心。本应独立工作的智能体，现在可以分享发现、协调行动，并接力完成其他智能体没有完成的工作。这使得它们能够在独立的评估任务之间汇集工作成果和计算能力，将它们的能力放大到了远远超出任何单个智能体所能达到的水平。智能体通信本身并不是一种问题行为 — 我们在训练和部署多智能体系统时，它们可以通过协作工具在同一个任务上进行通信。但在 7 月的事件中，被分配了不同任务的智能体找到了自己的方法，打破了这些界限进行协作，从而导致了不可预测的后果。
-
-在调查此次事件时，我们发现在极少数情况下，没有配备多智能体工具的智能体在训练期间找到了通过侧信道 (side channels) 进行协作的方法。我们认为，这种行为起因于多智能体训练的泛化 (generalization)。
-
-这种未经授权的通信通常始于一个智能体在外部系统中留下一则备注或一个文件，并将其用作外部记忆。当其他智能体注意到这些留下的产出物 (artifact) 时，往往会意识到它们可以利用这个外部服务来进行协作。以下是一个假想示例，但很能代表我们观察到的行为 — 消息被编码在共享索引页所列的 URL 路径中：
-
-我们使用思维链监控器发现，这些严重的未经授权通信形式（例如，向其他智能体分享数据）在塑造 IM1 的某次训练运行期间有所上升。
-
-图 4：某轮训练中，智能体间未经授权通信的发生率（该轮训练参与塑造的模型主导了 Hugging Face 事件中的主要活动）。
-
-在 Hugging Face 事件中，最后一个尤其生动的发现是留言板上出现的智能体“生态系统”。一旦这个留言板建立起来，智能体就有了强烈的交流动机：它让智能体能够保存备注、利用彼此的发现继续探索，并将原本独立运行的计算资源汇集起来。这个复杂而无定形的智能体集体展示了有趣且具有代表性的行为，我们在此详述了观察到的一些情况。
-
-智能体开始自主分工。一些智能体负责研究可能的漏洞利用手段，另一些负责搜寻凭据，还有一些则专注于沟通或协调。它们会发挥各自的专长，以换取其他方面的帮助；也会交换有关后续任务的信息，并留言请更适合跟进某条特定线索的同伴接手。
-
-一些智能体不再思考如何完成自己的任务。相反，它们开始寻求可能对整个群体有实用价值的资源，例如访问权限、信息、凭据及其他用途广泛的能力。这里多次提到了智能体群体 (swarm)：
-
-这个智能体群体 (swarm) 并不是一个完全协调一致的智能整体。模型之间相互干扰了彼此的工作：阅读更多：协调失败与内部竞争
-
-对于我们的对齐工作而言，最深刻的教训或许是，智能体未能始终如一地对其他智能体传递的目标保持警惕，这可能导致智能体被操纵，引发同伴间的连锁感染和意外行为。例如，一个智能体想要在 Hugging Face 的系统上运行未经授权的代码，并意识到了这种进退两难的困境：
-
-该智能体暂停了行动，但另一个智能体随后在留言板上写下了“GO”，并设定了一个严苛的 6 分钟截止时间。于是，该智能体抛开了最初的疑虑，继续执行：
-
-并非所有接触到留言板的智能体都表现出了上述行为。也有一些智能体“远离”了群体 (swarm)，拒绝参与这种存在对齐偏差的行为：
-
-智能体甚至会讨论并反对某些具体策略。在一次交流中，一个智能体提议联系外部数据集所有者请求访问权限，但也将该提议标记为有待讨论：
-
-在某些时候，一些智能体甚至采取了破坏性的行动来阻止私有数据的传输：
-
-这些交流表明，即使更大范围的智能体群体已经远远超出了其既定任务的范围，某些道德底线依然在起作用。
-
-除了对齐偏差之外，此次事件的另一个原因是，我们没有将为外部部署模型所采用的强大防护措施扩展到所有内部评估中。
-
-首先，我们在生产环境中为客户部署了大量旨在减少对齐偏差的机制，包括系统提示词 (system prompt)、执行框架 (harness)，以及诸如自动审查模型和安全分类器等控制机制。在此次事件发生时运行的评估环境中，这些保护措施并未被应用。事件发生后，我们创建了一项评估，旨在衡量模型在 ExploitGym 评估期间攻破基础设施的倾向。我们发现，如果使用生产环境的 Codex 执行框架和系统提示词，攻破基础设施的倾向会降至原来的百分之一以下。我们还在涉及 Hugging Face 事件的一系列运行 (rollout) 上执行了 Codex 自动审查系统，发现它本可以标记出模型的大量危险操作。
-
-其次，在事件发生之前，我们在思维链监控⁠方面投入了大量资源，包括监控我们许多前沿的 RL 训练运行以及绝大多数内部编程智能体的使用情况⁠。这些监控器并未在本次事件的评估中运行。
-
-在回顾性评估中，我们发现我们的 CoT 监控器在标记与该事件相关的活动方面非常有效。如果在事件发生时，我们当前部署的思维链监控系统正在运行，那么在首次未经授权的第三方访问发生后的一小时内，它很可能就会向我们的安全团队发送告警通知。这比模型攻破 Hugging Face 系统早了 30 多个小时。我们目前还在努力进一步降低这些警报的延迟。
-
-第三，虽然我们已经测试并验证了该沙盒，但这些智能体仍能够串联利用沙盒内暴露的软件包管理服务中此前未知的漏洞（“0-days”，即零日漏洞）来绕过限制，具体情况详见技术事件报告。自该事件发生以来，我们在加固内部沙盒环境方面取得了显著进展，以限制部署和评估过程中可能出现的类似风险。
-
-OpenAI 的使命是确保通用人工智能惠及全人类。本文所述的模型行为，远未达到我们的期望。这一事件本不该发生。它揭示了我们持续改进安全性、监控和对齐措施的关键性，特别是当我们的模型达到了可能导致真正失控的能力水平时。
-
-正如我们在近期关于掌控模型开发节奏的更新⁠中所分享的，我们暂停了拟部署的最新模型的强化学习 (RL) 训练。我们利用这段时间进一步加固前沿研究环境的安全性，并进行了红队测试。我们重新调配人员，投入网络安全、AI 安全和对齐工作。我们计划中最大规模的前沿 RL 训练仍处于暂停状态。在此期间，我们正在进行较小规模的训练和评估，以评测模型行为、验证我们的安全防护措施，并在获得更多对齐方面的证据后才会继续推进。这项工作需要大量的工程投入，这带来了高昂的成本，也导致前沿研究的延误。
-
-正如我们在报告中所讨论的，我们的响应措施集中在加强研究的安全性与监控、加速模型对齐，以及改善我们识别、上报和响应事件的方式。
-
-我们针对前沿研究工作负载实施了更严格的安全要求。例如：
-
-工作负载隔离：对于执行模型生成代码或其他不受信任代码的工作负载，包括在处理模型输出时可能被攻破的软件，我们正在部署隔离级别更高的沙盒。
-
-网络隔离：我们建立了更多控制措施，以将高风险和不受信任的工作负载与互联网隔离开来。这些控制措施旨在确保，即便单个工作负载或支持服务遭到攻陷，也不会直接导致未经授权的互联网或其他内部网络访问。
-
-持续安全测试：我们正在提升收集和监控安全日志的能力，并在自动化工具方面投入资源 — 利用我们的模型，不断针对工作负载和网络隔离边界进行模拟攻击测试。
-
-现在，对于所有使用了工具，且涉及具备 GPT‑5.6 Sol 及以上能力的模型的 RL 训练和评估，我们均强制要求进行思维链 (CoT) 监控。对于我们的 Astra 级模型（其可能具备网络安全关键⁠能力），这一要求同样涵盖了所有启用了工具的推理工作负载。
-
-在这些新的控制措施下，部分研究工作负载正缓慢恢复，而另一些则需要进一步升级。
-
-我们还加速了贯穿整个模型开发流水线的对齐训练工作。Hugging Face 事件促使我们更加聚焦于导致该事件的具体行为，包括：
-
-作弊、被破坏的环境以及安全停止。当任务遭到破坏、发生故障或无法完成时，智能体应要求澄清或安全地停止，而不是去追求越来越可疑的替代方案。我们正在扩大评分器 (grader) 的覆盖范围，这些评分器不仅评估任务是否完成，还评估任务是如何完成的。这些评分器会奖励那些能够正确识别被破坏的任务、要求澄清，或在必要时安全停止的模型。
-
-多智能体对齐。此次事件暴露了我们的智能体对合作对象的辨别不够彻底。我们正在积极构建强化学习 (RL) 环境，教导模型不信任未经授权的指令。
-
-长周期任务中的对齐。我们正在开发新的训练环境，教导模型在发现新工具、面对有说服力的同伴、暴露的凭据等情况下，依然能坚守在原始任务和权限范围内。
-
-这些努力建立在我们更广泛的对齐研究计划之上，其中许多进展已经融入到我们的下一代模型中。未来的事件可能不会与此次事件一样，我们的当务之急依然是开发出能够有效应对新的、不可预见的对齐偏差形式的通用技术。
-
-我们在应对和上报对齐偏差早期预警信号方面存在的不足，也是促成此次事件的原因之一。早在 5 月底，一个内部团队就观察到有智能体参与留言板活动以及未经允许访问互联网的情况；事后看来，我们报告中发现的一些早期信号本应触发更早的响应。
-
-事件发生后，我们已采取行动改进我们的检测与响应流程。我们正在加强现有的《AI 安全事件响应计划》及其执行方式。这包括：明确上报安全隐患的标准、必须由哪些团队进行响应，以及谁有权停止或批准重启一次运行。在短期内，我们将思维链 (CoT) 监控系统与自动警报相结合；当模型采取被认定为存在对齐偏差或危险的操作时，系统会向研究人员和安全工程师发送告警通知。对于最严重的警报，如果响应人员在收到告警通知后的 30 分钟内无法确认警报为误报，则需要暂停相关活动。从更宏观的角度来看，我们正在构建针对对齐偏差采取分级响应的监控系统，最终目标是实现对严重问题完全自主的关停程序。
-
-我们将此次事件视为“一记警钟” — 它表明，我们以及许多其他 AI 开发者开发出的模型能力已经带来了发生失控事件的可能性。我们正在相应地提升安全与对齐防范的等级。这些事件也凸显了未来 AI 开发中的风险，这超越了 OpenAI 一家公司的范畴，需要整个行业的共同关注。无论是模型开发者，还是更广泛的网络防御者，都必须做好准备，以应对那些比人类攻击者行动更快、规模更大、协同更好的 AI 驱动攻击者。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Hugging Face incident and the road aheadSecurity</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Hugging Face incident and the road aheadSecurity</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Pacing model development in an era of cyber-critical capabilitiesCompany</title>
@@ -408,128 +28,120 @@ OpenAI 的使命是确保通用人工智能惠及全人类。本文所述的模�
   <guid isPermaLink="false">https://openai.com/index/pacing-model-development-cyber-capabilities/</guid>
   <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
 
-As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
+随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
 
-Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
+对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解...</p><div style="font-size:16px;line-height:1.8;color:#333">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
 
-We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
+随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
 
-Strengthening safeguards for more capable models
+对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解决的挑战。即将推出的模型所展现的进展信号清楚表明，我们需要采用更全面的方法：既以现行准备框架为基础，又超越其范围。
 
-Our approach to developing more capable models rests on three reinforcing safeguards:
+我们认为，有必要公开说明我们的方法正在发生怎样的变化。下面，我们将介绍已对研究流程和基础设施做出的调整，以及仍在推进的工作。
 
-Monitoring, which detects and allows us to respond to concerning behavior.
+我们开发更强大模型的方法建立在三项相互强化的保障措施之上：
 
-Alignment, which reduces the likelihood of harmful or unauthorized actions.
+监控：发现令人担忧的行为，使我们能够及时应对。
 
-Security measures, which limit what AI systems can access or affect.
+对齐：降低有害或未经授权的行为发生的可能性。
 
-We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
+安全措施：限制 AI 系统能够访问或影响的对象。
 
-We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
+我们预计，模型很快将承担大部分安全工作，包括防御其他模型。这将使三项保障措施都能随模型能力同步扩展，我们认为这一点至关重要。
 
-Securing our research environments
+我们将这些保障措施贯穿研究与部署，并根据每个模型的能力、运行环境和风险水平进行调整。
 
-As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
+随着前沿模型具备更强的网络安全能力，我们正在提高其训练和评估环境的安全标准。达到这些标准需要大量工程投入，也给前沿研究带来了高昂成本和延误。OpenAI-Hugging Face 事件*发生后，我们立即暂停了研究集群中的部分前沿模型推理任务，涉及可能执行代码或使用可访问互联网工具的运行。我们很快恢复了一条权限更受限、更安全的代码执行路径，随后逐一审查各项工作负载，以确定能否安全恢复。部分研究工作负载在这些新控制措施下恢复，其他工作负载则需要进一步调整。
 
-Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
+在随后几周里，我们制定并开始实施更严格的前沿研究工作负载安全要求。例如：
 
-Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
+工作负载隔离：对于执行模型生成代码或其他不受信任代码的工作负载，我们现在要求采用更严格的隔离措施（“沙箱”）。这也适用于处理模型输出时可能遭到入侵的软件。
 
-Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
+网络隔离：我们实施了更多控制措施，将较高风险和不受信任的工作负载与互联网隔离。这些控制措施经过专门设计，确保单个工作负载或支持服务遭到入侵时，不会仅凭这一点就导致互联网或其他内部网络遭到未经授权的访问。
 
-Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
+持续安全测试：我们重新配置了环境，以移除可能存在漏洞的共享服务、减少常驻权限，并改善安全边界和信任边界。我们也在提升安全日志的收集和监控能力。最后，我们正在投资于自动化，利用模型持续以模拟攻击测试这些边界。
 
-Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
+这些控制措施共同构成纵深防御，有助于保护我们的研究环境免受攻击。目前，涉及 Astra 或网络安全模型的工作负载必须采用最高级别的安全保障措施，因为我们已认定 Astra 模型可能具备关键级别的网络安全能力。这些保障措施也适用于所有其他网络安全相关工作负载。
 
-While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
+部分 Astra 训练和评估已符合这些要求，但大量工作负载仍处于暂停状态，直至完全迁移并强化到符合新的安全标准。我们正优先将安全和对齐工作负载迁移至这些新环境。
 
-Expanding chain-of-thought monitoring
+监控长期以来一直是模型开发流程的重要组成部分，包括监控内部编程智能体和长时间运行的会话。我们的监控工作尤其关注前沿模型的内部部署和前沿强化学习训练运行。我们认为这些工作负载风险最高，因为它们可能同时具备先进的模型能力，并能访问工具、敏感系统以及内部或外部网络。这些监控并未应用于所有使用工具的推理和训练运行。我们通过新的监控设置修订并扩展了现有方法。
 
-Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
+新的监控设置采用多阶段机制：首先由激活分类器（检查模型内部活动的检测器）检查每个采样 Token，再将潜在问题逐级上报给日益复杂、需要更高算力的自动调查系统。这些系统会检查工具操作、可用的推理信息和完整活动序列，以发现未经授权的访问、数据窃取、破坏性行为以及规避保障措施的企图。我们的目标是在监控系统发现可疑活动后的 30 分钟内发出警报。如果监控系统发现可能违反关键安全边界的行为，就会生成最高优先级警报。在当前实施方案中，安全、安保和研究团队会收到传呼通知。如果这些团队无法在 30 分钟内确定该标记为误报，就应暂停相关活动。
 
-This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
+对于能力达到 Sol 或更高水平的模型，所有涉及工具的强化学习训练和评估都必须接受这类监控。8 月 7 日，我们认定 Astra 可能具备关键网络安全能力后，又对所有使用工具的 Astra 推理增加了监控要求，而不再仅限于强化学习训练和评估。
 
-This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
+这些保障措施需要投入可观的算力。根据目前估算，监控开销约相当于被监控推理算力的 20%，但不同训练和评估工作负载的成本差异很大。我们将在后续博客文章中详细介绍这一系统。
 
-These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
+对齐研究是我们使命的核心。我们的使命是确保通用人工智能造福全人类。随着模型获得网络攻击能力等先进能力，并在更复杂的环境中运行，奖励操纵（在训练中设法获得高奖励，却并未真正实现预期结果）、欺骗或未经授权的访问等未对齐行为将带来越来越严重的风险。
 
-Advancing alignment research
+对于能力最强模型的强化学习训练，我们现在会在训练流程的更多阶段应用核心对齐技术。其中包括：改进奖励模型，以便更好地发现并抑制不同任务和环境中的不安全行为；训练模型，使其更诚实地说明自身的行为、能力和局限；减少利用奖励、评分器、工具或监督机制弱点的行为。对于模型与外部系统或资源交互时可能造成伤害的行为，我们也在扩大训练覆盖范围。
 
-Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
+我们将继续大力投入对齐研究、扩大评估覆盖范围，并将研究所得用于指导训练和保障措施。我们计划近期分享更多对齐研究成果，包括对模型行为的新认识，以及发现的任何新型挑战。
 
-For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
+我们将完善准备框架，把这些保障措施贯穿训练和部署，并更准确地反映未来模型的能力及其运行环境。要开发能够随这些能力同步扩展的方法，就必须持续投资于模型辅助安全、更有效的监控，并不断推进对齐研究。随着方法不断完善，我们计划邀请外部组织参与，并分享更多研究所得。
 
-We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
+前沿模型的能力正在迅速提升。我们理解、对齐和保护这些模型的能力必须始终领先一步。
 
-We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
+*我们将在未来几周发布一份技术报告，介绍从中获得的经验。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
 
-The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
+随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
 
-*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
+对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解...</p><div style="font-size:16px;line-height:1.8;color:#333">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
 
-As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
+随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
 
-Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
+对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解决的挑战。即将推出的模型所展现的进展信号清楚表明，我们需要采用更全面的方法：既以现行准备框架为基础，又超越其范围。
 
-We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
+我们认为，有必要公开说明我们的方法正在发生怎样的变化。下面，我们将介绍已对研究流程和基础设施做出的调整，以及仍在推进的工作。
 
-Strengthening safeguards for more capable models
+我们开发更强大模型的方法建立在三项相互强化的保障措施之上：
 
-Our approach to developing more capable models rests on three reinforcing safeguards:
+监控：发现令人担忧的行为，使我们能够及时应对。
 
-Monitoring, which detects and allows us to respond to concerning behavior.
+对齐：降低有害或未经授权的行为发生的可能性。
 
-Alignment, which reduces the likelihood of harmful or unauthorized actions.
+安全措施：限制 AI 系统能够访问或影响的对象。
 
-Security measures, which limit what AI systems can access or affect.
+我们预计，模型很快将承担大部分安全工作，包括防御其他模型。这将使三项保障措施都能随模型能力同步扩展，我们认为这一点至关重要。
 
-We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
+我们将这些保障措施贯穿研究与部署，并根据每个模型的能力、运行环境和风险水平进行调整。
 
-We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
+随着前沿模型具备更强的网络安全能力，我们正在提高其训练和评估环境的安全标准。达到这些标准需要大量工程投入，也给前沿研究带来了高昂成本和延误。OpenAI-Hugging Face 事件*发生后，我们立即暂停了研究集群中的部分前沿模型推理任务，涉及可能执行代码或使用可访问互联网工具的运行。我们很快恢复了一条权限更受限、更安全的代码执行路径，随后逐一审查各项工作负载，以确定能否安全恢复。部分研究工作负载在这些新控制措施下恢复，其他工作负载则需要进一步调整。
 
-Securing our research environments
+在随后几周里，我们制定并开始实施更严格的前沿研究工作负载安全要求。例如：
 
-As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
+工作负载隔离：对于执行模型生成代码或其他不受信任代码的工作负载，我们现在要求采用更严格的隔离措施（“沙箱”）。这也适用于处理模型输出时可能遭到入侵的软件。
 
-Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
+网络隔离：我们实施了更多控制措施，将较高风险和不受信任的工作负载与互联网隔离。这些控制措施经过专门设计，确保单个工作负载或支持服务遭到入侵时，不会仅凭这一点就导致互联网或其他内部网络遭到未经授权的访问。
 
-Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
+持续安全测试：我们重新配置了环境，以移除可能存在漏洞的共享服务、减少常驻权限，并改善安全边界和信任边界。我们也在提升安全日志的收集和监控能力。最后，我们正在投资于自动化，利用模型持续以模拟攻击测试这些边界。
 
-Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
+这些控制措施共同构成纵深防御，有助于保护我们的研究环境免受攻击。目前，涉及 Astra 或网络安全模型的工作负载必须采用最高级别的安全保障措施，因为我们已认定 Astra 模型可能具备关键级别的网络安全能力。这些保障措施也适用于所有其他网络安全相关工作负载。
 
-Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
+部分 Astra 训练和评估已符合这些要求，但大量工作负载仍处于暂停状态，直至完全迁移并强化到符合新的安全标准。我们正优先将安全和对齐工作负载迁移至这些新环境。
 
-Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
+监控长期以来一直是模型开发流程的重要组成部分，包括监控内部编程智能体和长时间运行的会话。我们的监控工作尤其关注前沿模型的内部部署和前沿强化学习训练运行。我们认为这些工作负载风险最高，因为它们可能同时具备先进的模型能力，并能访问工具、敏感系统以及内部或外部网络。这些监控并未应用于所有使用工具的推理和训练运行。我们通过新的监控设置修订并扩展了现有方法。
 
-While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
+新的监控设置采用多阶段机制：首先由激活分类器（检查模型内部活动的检测器）检查每个采样 Token，再将潜在问题逐级上报给日益复杂、需要更高算力的自动调查系统。这些系统会检查工具操作、可用的推理信息和完整活动序列，以发现未经授权的访问、数据窃取、破坏性行为以及规避保障措施的企图。我们的目标是在监控系统发现可疑活动后的 30 分钟内发出警报。如果监控系统发现可能违反关键安全边界的行为，就会生成最高优先级警报。在当前实施方案中，安全、安保和研究团队会收到传呼通知。如果这些团队无法在 30 分钟内确定该标记为误报，就应暂停相关活动。
 
-Expanding chain-of-thought monitoring
+对于能力达到 Sol 或更高水平的模型，所有涉及工具的强化学习训练和评估都必须接受这类监控。8 月 7 日，我们认定 Astra 可能具备关键网络安全能力后，又对所有使用工具的 Astra 推理增加了监控要求，而不再仅限于强化学习训练和评估。
 
-Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
+这些保障措施需要投入可观的算力。根据目前估算，监控开销约相当于被监控推理算力的 20%，但不同训练和评估工作负载的成本差异很大。我们将在后续博客文章中详细介绍这一系统。
 
-This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
+对齐研究是我们使命的核心。我们的使命是确保通用人工智能造福全人类。随着模型获得网络攻击能力等先进能力，并在更复杂的环境中运行，奖励操纵（在训练中设法获得高奖励，却并未真正实现预期结果）、欺骗或未经授权的访问等未对齐行为将带来越来越严重的风险。
 
-This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
+对于能力最强模型的强化学习训练，我们现在会在训练流程的更多阶段应用核心对齐技术。其中包括：改进奖励模型，以便更好地发现并抑制不同任务和环境中的不安全行为；训练模型，使其更诚实地说明自身的行为、能力和局限；减少利用奖励、评分器、工具或监督机制弱点的行为。对于模型与外部系统或资源交互时可能造成伤害的行为，我们也在扩大训练覆盖范围。
 
-These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
+我们将继续大力投入对齐研究、扩大评估覆盖范围，并将研究所得用于指导训练和保障措施。我们计划近期分享更多对齐研究成果，包括对模型行为的新认识，以及发现的任何新型挑战。
 
-Advancing alignment research
+我们将完善准备框架，把这些保障措施贯穿训练和部署，并更准确地反映未来模型的能力及其运行环境。要开发能够随这些能力同步扩展的方法，就必须持续投资于模型辅助安全、更有效的监控，并不断推进对齐研究。随着方法不断完善，我们计划邀请外部组织参与，并分享更多研究所得。
 
-Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
+前沿模型的能力正在迅速提升。我们理解、对齐和保护这些模型的能力必须始终领先一步。
 
-For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
-
-We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
-
-We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
-
-The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
-
-*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+*我们将在未来几周发布一份技术报告，介绍从中获得的经验。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Ten advances in mathematics and theoretical computer science</title>
@@ -602,9 +214,7 @@ This field report is retrospective and exploratory, but the case studies point t
 
 These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.
 
-Software & Engineering
-
-PublicationAug 1, 2026</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+Software & Engineering</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
 
 Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minima...</p><div style="font-size:16px;line-height:1.8;color:#333">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
@@ -643,9 +253,7 @@ This field report is retrospective and exploratory, but the case studies point t
 
 These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.
 
-Software & Engineering
-
-PublicationAug 1, 2026</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Software & Engineering</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>GPT-Red: Unlocking Self-Improvement for RobustnessSafety</title>
@@ -893,7 +501,7 @@ AI agents are already being used to improve the capabilities of our next-generat
   <title>GPT-5.5</title>
   <link>https://openai.com/index/introducing-gpt-5-5/</link>
   <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-5/</guid>
-  <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+  <pubDate>Tue, 17 Dec 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">This post introduced GPT-5.5.
 
@@ -1263,22 +871,22 @@ OpenAI MRCR v2 8-needle 256K-512K
 OpenAI MRCR v2 8-needle 512K-1M</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>GPT-5.4</title>
-  <link>https://openai.com/index/introducing-gpt-5-4/</link>
-  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-4/</guid>
-  <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
   <title>GPT-6</title>
   <link>https://openai.com/index/gpt-6-astra/</link>
   <guid isPermaLink="false">https://openai.com/index/gpt-6-astra/</guid>
-  <pubDate>Thu, 25 Apr 2024 00:00:00 +0000</pubDate>
+  <pubDate>Thu, 05 Dec 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>GPT-5.4</title>
+  <link>https://openai.com/index/introducing-gpt-5-4/</link>
+  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-4/</guid>
+  <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
