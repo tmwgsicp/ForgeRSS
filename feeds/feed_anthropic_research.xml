@@ -5,7 +5,7 @@
 <link>https://www.anthropic.com/research</link>
 <description>Latest research publications from Anthropic</description>
 <language>en</language>
-<lastBuildDate>Sat, 05 Sep 2026 14:45:24 +0000</lastBuildDate>
+<lastBuildDate>Sat, 05 Sep 2026 20:04:10 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://www.anthropic.com/research" rel="self" type="application/rss+xml"/>
 <image>
@@ -2326,10 +2326,358 @@ Enabling independent research on how people use Claude
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/teaching-claude-why" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
+  <title>Alignment</title>
+  <link>https://www.anthropic.com/research/team/alignment</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/alignment</guid>
+  <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
+
+Stress-testing safeguards
+
+Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
+
+New research on how we've reduced agentic misalignment.
+
+Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
+
+Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
+
+Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
+
+We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
+
+Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
+
+May 8, 2026AlignmentTeaching Claude why
+
+May 7, 2026AlignmentDonating our open-source alignment tool
+
+Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
+
+Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
+
+Feb 23, 2026AlignmentThe persona selection model
+
+Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
+
+Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
+
+Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
+
+Stress-testing safeguards
+
+Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
+
+New research on how we've reduced agentic misalignment.
+
+Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
+
+Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
+
+Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
+
+We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
+
+Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
+
+May 8, 2026AlignmentTeaching Claude why
+
+May 7, 2026AlignmentDonating our open-source alignment tool
+
+Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
+
+Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
+
+Feb 23, 2026AlignmentThe persona selection model
+
+Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
+
+Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
+
+Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Frontier Red Team</title>
+  <link>https://www.anthropic.com/research/team/frontier-red-team</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
+  <pubDate>Sun, 30 Jun 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
+
+Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
+
+Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
+
+Jul 9, 2026Frontier Red TeamClaude plays robotics
+
+Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
+
+Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
+
+Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
+
+Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
+
+May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
+
+Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
+
+Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
+
+Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
+
+Jul 9, 2026Frontier Red TeamClaude plays robotics
+
+Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
+
+Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
+
+Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
+
+Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
+
+May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
+
+Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Societal Impacts</title>
+  <link>https://www.anthropic.com/research/team/societal-impacts</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
+  <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+
+Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+
+What 81,000 people want from AI
+
+We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+
+How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+
+We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+
+We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+
+What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+
+Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+
+Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+
+Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+
+Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+
+Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+
+Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+
+Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+
+Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+
+Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+
+Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+
+Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+
+What 81,000 people want from AI
+
+We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+
+How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+
+We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+
+We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+
+What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+
+Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+
+Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+
+Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+
+Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+
+Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+
+Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+
+Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+
+Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+
+Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+
+Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Economics</title>
+  <link>https://www.anthropic.com/research/team/economics</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/economics</guid>
+  <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
+
+Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
+
+Anthropic Economic Index report: Cadences
+
+In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
+
+Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
+
+Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
+
+In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
+
+This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
+
+Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
+
+Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
+
+Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
+
+Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
+
+May 27, 2026EconomicsCoding agents in the social sciences
+
+Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
+
+Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
+
+Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
+
+Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
+
+Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
+
+We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
+
+Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
+
+Anthropic Economic Index report: Cadences
+
+In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
+
+Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
+
+Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
+
+In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
+
+This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
+
+Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
+
+Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
+
+Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
+
+Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
+
+May 27, 2026EconomicsCoding agents in the social sciences
+
+Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
+
+Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
+
+Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
+
+Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
+
+Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
   <title>Interpretability</title>
   <link>https://www.anthropic.com/research/team/interpretability</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/interpretability</guid>
-  <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
+  <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The mission of the Interpretability team is to discover and understand how large language models work internally, as a foundation for AI safety and positive outcomes.
 
@@ -2425,354 +2773,6 @@ Mar 27, 2025InterpretabilityTracing the thoughts of a large language model
 Mar 13, 2025AlignmentAuditing language models for hidden objectives
 
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/interpretability" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Frontier Red Team</title>
-  <link>https://www.anthropic.com/research/team/frontier-red-team</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
-  <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
-
-Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
-
-Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
-
-Jul 9, 2026Frontier Red TeamClaude plays robotics
-
-Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
-
-Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
-
-Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
-
-Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
-
-May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
-
-Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
-
-Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
-
-Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
-
-Jul 9, 2026Frontier Red TeamClaude plays robotics
-
-Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
-
-Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
-
-Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
-
-Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
-
-May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
-
-Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Alignment</title>
-  <link>https://www.anthropic.com/research/team/alignment</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/alignment</guid>
-  <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
-
-Stress-testing safeguards
-
-Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
-
-New research on how we've reduced agentic misalignment.
-
-Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
-
-Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
-
-Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
-
-We show for the first time that realistic AI training processes can accidentally produce misaligned models.
-
-Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
-
-Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
-
-May 8, 2026AlignmentTeaching Claude why
-
-May 7, 2026AlignmentDonating our open-source alignment tool
-
-Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
-
-Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
-
-Feb 23, 2026AlignmentThe persona selection model
-
-Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
-
-Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
-
-Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
-
-Stress-testing safeguards
-
-Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
-
-New research on how we've reduced agentic misalignment.
-
-Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
-
-Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
-
-Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
-
-We show for the first time that realistic AI training processes can accidentally produce misaligned models.
-
-Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
-
-Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
-
-May 8, 2026AlignmentTeaching Claude why
-
-May 7, 2026AlignmentDonating our open-source alignment tool
-
-Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
-
-Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
-
-Feb 23, 2026AlignmentThe persona selection model
-
-Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
-
-Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
-
-Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Economics</title>
-  <link>https://www.anthropic.com/research/team/economics</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/economics</guid>
-  <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
-
-Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
-
-Anthropic Economic Index report: Cadences
-
-In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
-
-Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
-
-Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
-
-In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
-
-This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
-
-Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
-
-Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
-
-Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
-
-Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
-
-May 27, 2026EconomicsCoding agents in the social sciences
-
-Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
-
-Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
-
-Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
-
-Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
-
-Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI&apos;s economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world an...</p><div style="font-size:16px;line-height:1.8;color:#333">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI's real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
-
-We build the empirical foundation for understanding AI's economic impact. Our flagship Anthropic Economic Index tracks how AI tools are actually being used around the world and across every sector of the economy—moving beyond speculation to measure adoption patterns as they unfold. Alongside our index reports, we produce novel research that studies the implications of AI usage and diffusion—as tracked in the index—for workers, for firms, and for the broader economy.
-
-Economic transitions create both opportunity and disruption. The speed of AI development means the stakes are unusually high. We need reliable data to inform the decisions that workers, employers, and policymakers make about the future. Our research provides evidence to address uncertainty and helps society navigate this transition in ways that are broadly beneficial.
-
-Anthropic Economic Index report: Cadences
-
-In our latest Economic Index report, we sample hourly for the first time to ask: When do people come to Claude? What do they produce with it? And how do they perceive AI's impact on their work?
-
-Anthropic's fifth Economic Index report studies Claude usage in February 2026, building on the economic primitives framework introduced in our previous report.
-
-Our recent survey study with 81,000 Claude users provides a way to connect people’s economic concerns with what we’ve quantified in Claude traffic.
-
-In this paper, we present a new framework for understanding AI’s labor market impacts, and test it against early data.
-
-This report introduces new metrics of AI usage to provide a rich portrait of interactions with Claude in November 2025, just prior to the release of Opus 4.5.
-
-Aug 12, 2026EconomicsReviewing the evidence on worker retraining programs
-
-Jul 14, 2026EconomicsHow Canada uses Claude: Findings from the Anthropic Economic Index
-
-Jun 26, 2026EconomicsAnthropic Economic Index report: Cadences
-
-Jun 16, 2026EconomicsAgentic coding and persistent returns to expertise
-
-May 27, 2026EconomicsCoding agents in the social sciences
-
-Apr 22, 2026EconomicsAnnouncing the Anthropic Economic Index Survey
-
-Apr 22, 2026EconomicsWhat 81,000 people told us about the economics of AI
-
-Mar 31, 2026EconomicsHow Australia Uses Claude: Findings from the Anthropic Economic Index
-
-Mar 24, 2026EconomicsAnthropic Economic Index report: Learning curves
-
-Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/economics" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Societal Impacts</title>
-  <link>https://www.anthropic.com/research/team/societal-impacts</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
-  <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
-
-Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
-
-What 81,000 people want from AI
-
-We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
-
-How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
-
-We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
-
-We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
-
-What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
-
-Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
-
-Jul 13, 2026Societal ImpactsClaude’s values across models and languages
-
-Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
-
-Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
-
-Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
-
-Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
-
-Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
-
-Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
-
-Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
-
-Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
-
-Sociotechnical alignment
-
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
-
-Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
-
-What 81,000 people want from AI
-
-We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
-
-How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
-
-We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
-
-We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
-
-What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
-
-Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
-
-Jul 13, 2026Societal ImpactsClaude’s values across models and languages
-
-Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
-
-Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
-
-Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
-
-Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
-
-Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
-
-Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
-
-Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
-
-Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
