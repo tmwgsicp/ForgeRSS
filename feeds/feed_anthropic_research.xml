@@ -5,7 +5,7 @@
 <link>https://www.anthropic.com/research</link>
 <description>Latest research publications from Anthropic</description>
 <language>en</language>
-<lastBuildDate>Sat, 05 Sep 2026 10:05:59 +0000</lastBuildDate>
+<lastBuildDate>Sat, 05 Sep 2026 14:45:24 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://www.anthropic.com/research" rel="self" type="application/rss+xml"/>
 <image>
@@ -2326,107 +2326,10 @@ Enabling independent research on how people use Claude
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/teaching-claude-why" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>Alignment</title>
-  <link>https://www.anthropic.com/research/team/alignment</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/alignment</guid>
-  <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
-
-Stress-testing safeguards
-
-Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
-
-New research on how we've reduced agentic misalignment.
-
-Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
-
-Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
-
-Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
-
-We show for the first time that realistic AI training processes can accidentally produce misaligned models.
-
-Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
-
-Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
-
-May 8, 2026AlignmentTeaching Claude why
-
-May 7, 2026AlignmentDonating our open-source alignment tool
-
-Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
-
-Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
-
-Feb 23, 2026AlignmentThe persona selection model
-
-Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
-
-Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
-
-Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
-
-Evaluation and oversight
-
-Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
-
-Stress-testing safeguards
-
-Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
-
-New research on how we've reduced agentic misalignment.
-
-Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
-
-Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
-
-Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
-
-We show for the first time that realistic AI training processes can accidentally produce misaligned models.
-
-Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
-
-Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
-
-May 8, 2026AlignmentTeaching Claude why
-
-May 7, 2026AlignmentDonating our open-source alignment tool
-
-Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
-
-Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
-
-Feb 23, 2026AlignmentThe persona selection model
-
-Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
-
-Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
-
-Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
   <title>Interpretability</title>
   <link>https://www.anthropic.com/research/team/interpretability</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/interpretability</guid>
-  <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+  <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The mission of the Interpretability team is to discover and understand how large language models work internally, as a foundation for AI safety and positive outcomes.
 
@@ -2524,10 +2427,176 @@ Mar 13, 2025AlignmentAuditing language models for hidden objectives
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/interpretability" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
+  <title>Frontier Red Team</title>
+  <link>https://www.anthropic.com/research/team/frontier-red-team</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
+  <pubDate>Thu, 26 Sep 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
+
+Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
+
+Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
+
+Jul 9, 2026Frontier Red TeamClaude plays robotics
+
+Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
+
+Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
+
+Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
+
+Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
+
+May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
+
+Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
+
+Project Fetch: Phase two
+
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
+
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
+
+Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
+
+Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
+
+Jul 9, 2026Frontier Red TeamClaude plays robotics
+
+Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
+
+Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
+
+Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
+
+Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
+
+May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
+
+Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Alignment</title>
+  <link>https://www.anthropic.com/research/team/alignment</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/alignment</guid>
+  <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
+
+Stress-testing safeguards
+
+Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
+
+New research on how we've reduced agentic misalignment.
+
+Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
+
+Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
+
+Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
+
+We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
+
+Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
+
+May 8, 2026AlignmentTeaching Claude why
+
+May 7, 2026AlignmentDonating our open-source alignment tool
+
+Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
+
+Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
+
+Feb 23, 2026AlignmentThe persona selection model
+
+Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
+
+Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
+
+Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under ...</p><div style="font-size:16px;line-height:1.8;color:#333">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
+
+Evaluation and oversight
+
+Alignment researchers validate that models are harmless and honest even under very different circumstances than those under which they were trained. They also develop methods to allow humans to collaborate with language models to verify claims that humans might not be able to on their own.
+
+Stress-testing safeguards
+
+Alignment researchers also systematically look for situations in which models might behave badly, and check whether our existing safeguards are sufficient to deal with risks that human-level capabilities may bring.
+
+New research on how we've reduced agentic misalignment.
+
+Can Claude develop, test, and analyze alignment ideas of its own? We ran an experiment to find out.
+
+Why do AI assistants like Claude sometimes seem surprisingly human. We advance a theory.
+
+Last year, we described a new approach to defend against jailbreaks, which we called Constitutional Classifiers. We’ve now developed the next generation.
+
+We show for the first time that realistic AI training processes can accidentally produce misaligned models.
+
+Aug 28, 2026AlignmentAutomated researchers can reliably mitigate alignment failures
+
+Jul 8, 2026AlignmentAn off switch for dual-use knowledge in AI models
+
+May 8, 2026AlignmentTeaching Claude why
+
+May 7, 2026AlignmentDonating our open-source alignment tool
+
+Apr 14, 2026AlignmentAutomated Alignment Researchers: Using large language models to scale scalable oversight
+
+Feb 25, 2026AlignmentAn update on our model deprecation commitments for Claude Opus 3
+
+Feb 23, 2026AlignmentThe persona selection model
+
+Jan 29, 2026AlignmentHow AI assistance impacts the formation of coding skills
+
+Jan 28, 2026AlignmentDisempowerment patterns in real-world AI usage
+
+Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient protection against universal jailbreaks
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
   <title>Economics</title>
   <link>https://www.anthropic.com/research/team/economics</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/economics</guid>
-  <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+  <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
 
@@ -2612,7 +2681,7 @@ Mar 5, 2026EconomicsLabor market impacts of AI: A new measure and early evidence
   <title>Societal Impacts</title>
   <link>https://www.anthropic.com/research/team/societal-impacts</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
-  <pubDate>Thu, 11 Jul 2024 00:00:00 +0000</pubDate>
+  <pubDate>Fri, 19 Jul 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
 
@@ -2704,75 +2773,6 @@ Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software 
 Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
 
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Frontier Red Team</title>
-  <link>https://www.anthropic.com/research/team/frontier-red-team</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
-  <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
-
-Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
-
-Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
-
-Jul 9, 2026Frontier Red TeamClaude plays robotics
-
-Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
-
-Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
-
-Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
-
-Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
-
-May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
-
-Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
-
-Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
-
-Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
-
-Jul 9, 2026Frontier Red TeamClaude plays robotics
-
-Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
-
-Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
-
-Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
-
-Jun 3, 2026PolicyWhat we learned mapping a year’s worth of AI-enabled cyber threats
-
-May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
-
-Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>

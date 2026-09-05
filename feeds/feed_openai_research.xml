@@ -5,7 +5,7 @@
 <link>https://openai.com/news/research/?limit=100</link>
 <description>Latest research news and updates from OpenAI</description>
 <language>en</language>
-<lastBuildDate>Sat, 05 Sep 2026 10:07:11 +0000</lastBuildDate>
+<lastBuildDate>Sat, 05 Sep 2026 14:46:54 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://openai.com/news/research/?limit=100" rel="self" type="application/rss+xml"/>
 <image>
@@ -14,19 +14,661 @@
   <link>https://openai.com/news/research/?limit=100</link>
 </image>
 <item>
-  <title>GPT-6 Astra: A new generation of intelligence研究2026年9月3日</title>
+  <title>GPT-6 Astra: A new generation of intelligence</title>
   <link>https://openai.com/index/gpt-6-astra/</link>
   <guid isPermaLink="false">https://openai.com/index/gpt-6-astra/</guid>
-  <pubDate>Mon, 02 Dec 2024 00:00:00 +0000</pubDate>
+  <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-6 Astra: A new generation of intelligence研究2026年9月3日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-6 Astra: A new generation of intelligence研究2026年9月3日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A new generation of intelligence
+
+We’re introducing GPT‑6 Astra, the world’s most intelligent and aligned model.
+
+GPT‑6 Astra brings together years of research and big bets across pre-training, reinforcement learning, and alignment. Astra is state-of-the-art on computer use, browsing, software engineering, cybersecurity, science, and professional work. Astra saturates FrontierMath Tier 4 with a 98% score, having already helpedsolve long-standing open problems⁠in mathematics. Astra also saturates...</p><div style="font-size:16px;line-height:1.8;color:#333">A new generation of intelligence
+
+We’re introducing GPT‑6 Astra, the world’s most intelligent and aligned model.
+
+GPT‑6 Astra brings together years of research and big bets across pre-training, reinforcement learning, and alignment. Astra is state-of-the-art on computer use, browsing, software engineering, cybersecurity, science, and professional work. Astra saturates FrontierMath Tier 4 with a 98% score, having already helpedsolve long-standing open problems⁠in mathematics. Astra also saturates ARC-AGI-3 with a 99.9% score and ExploitBench with a 100% score. It also sets a new frontier on computer and browser use, handling the most demanding professional work with unmatched speed, accuracy, and judgment.
+
+GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock.
+
+Astra is our most aligned model, with substantial improvements in understanding user intent and model behavior—you can delegate tasks with greater confidence in Astra’s judgment. As one way that we test  this, we built a new evaluation informed by the Hugging Face incident that evaluates whether a model facing a difficult or impossible task will go beyond its intended scope. Compared to GPT‑5.6 Sol, which without production safeguards went beyond the authorized target 48% of the time, GPT‑6 Astra did this in 0% of cases.
+
+The world’s best computer use model
+
+GPT‑6 Astra marks a new frontier in the speed, accuracy, and safety of computer use. It can take care of tedious tasks like filling out online forms, updating customer records in a CRM, and organizing your calendar. It can conduct online research and draft summaries in your email or in your document editor. It can analyze scientific data, generate plots, create a website, and run frontend QA checks to make sure all the features on that site work. It can help you autonomously install and test software, and troubleshoot problems you see on screen. These improvements are also reflected in our state-of-the-art evaluation results.
+
+These improvements also result in significant efficiency gains in real knowledge-work tasks. In latency simulations on OSWorld 2.0, Astra achieves higher computer-use performance in about 47% less time per task than GPT‑5.6 Sol, scoring 72.6% at roughly 40 minutes per task, compared with 65.7% at roughly 75 minutes.3
+
+GPT‑6 Astra’s computer-use capabilities can be seen in outputs across domains, including game development, electrical engineering, and everyday knowledge work:
+
+Alongside Astra, we are also updating the Codex harness to significantly improve the speed of computer use. Combined with Astra’s efficiency, this translates to a 1.9x faster task completion compared to the current GPT‑5.6 Sol experience, on the Mind2Web benchmark. The model’s improvements on speed mean it can take on many time-consuming life tasks for you, faster than you can.4
+
+A step change in professional work
+
+GPT‑6 Astra pairs advances in computer use with targeted training for professional environments, to help tackle complex work tasks. It combines the intelligence required for complex problems with the ability to carry out multistep workflows and produce polished documents, spreadsheets, and presentations.
+
+GPT‑6 Astra is our best model for adhering to existing templates and producing slides that are well laid out and succinctly convey key points with a structured narrative. It creates clear, well-structured documents, presentations, spreadsheets, and analyses that follow your templates and match your writing and visual style. Astra is also trained to specifically pull only the context that matters into outputs, instead of repeating information unnecessary for the work at hand. All this means it can output more immediately usable artifacts that match your business context and standards.
+
+GPT‑6Astra also brings stronger visual judgment to the websites, games, applications, and renderings it builds. WithSites⁠(opens in a new window)in ChatGPT, Astra can create, host, and share websites, web apps, and games directly from a prompt.
+
+When instructions leave room for interpretation, GPT‑6 Astra is better than previous models at making the right call. It uses context to fill in routine gaps and asks focused questions when the answer could change the outcome. In Codex, it can ask asynchronously while continuing work that doesn’t depend on your reply. If you don’t respond, it proceeds with sensible assumptions where appropriate, but waits for your input on consequential decisions.
+
+The examples below show how Astra collaborates on everyday tasks where missing information can materially change the answer.
+
+Astra is also better at staying oriented as a task evolves. Earlier models sometimes treated steering messages as a new goal, losing track of the original request or earlier constraints. Astra incorporates new requirements, changes course when asked, and answers side questions without dropping the broader task.
+
+GPT‑6Astra is the best model for software engineering to date.
+
+With Astra, we’re introducing a new way for Codex to preserve and retrieve context when the context window fills. Historically, models have used compaction to summarize work during long sessions, such as when debugging complex issues or tackling large refactors. Each compaction can leave out details about why a fix failed or how a component behaves. In Codex, Astra can keep notes across context windows, preserving accumulated details without repeatedly compressing them into a single summary. Earlier context windows remain searchable, so Astra can find requirements or test results from previous messages and tool outputs—even if that information wasn’t captured in its notes. You can enable this experimental feature in yourCodex config.toml,⁠(opens in a new window)and it will become the default for Astra in the coming weeks.
+
+Advancing scientific discovery
+
+GPT‑6 Astra is a major advance for scientific discovery, mathematics, and health. Today, we’re sharing two further results on the gaps between prime numbers.9,10
+
+Astra also sets new records across a suite of math and scienceevaluations.
+
+Astra can help with the practical work behind scientific discovery. By combining scientific reasoning with computer use, it can work directly in specialized software to inspect data and explore results, helping researchers assess the evidence and decide what to investigate next.
+
+As we discussed in oursafety update⁠, Astra is a significant jump in cyber capabilities and meets theCritical thresholdin cybersecurity under ourPreparedness Framework. Its ability to identify and develop zero-day exploits can help defenders find and patch weaknesses, but it also creates a need for stronger safeguards. To understand how far these capabilities extend, we ran Astra on internal and third-party expert evaluations.
+
+We first tested the model without production safeguards on ExploitBench and ExploitGym, which evaluate whether models can turn known software vulnerabilities into working exploits. On ExploitBench, Astra achieved a perfect score of 100%, compared with 78.5% for GPT‑5.6 Sol, our previous frontier cyber-capable model. On ExploitGym, Astra reached a 42.4% success rate, compared with 30.3% for GPT‑5.6 Sol, while using substantially fewer output tokens.13
+
+Given concerns that exposure to historical software vulnerabilities may have affected benchmark results, we also evaluated Astra on two novel benchmarks. For one, we built an internal “ExploitBench (June–August 2026)” evaluation to test exploit development using vulnerabilities from the previous three months.14Astra achieved substantially higher arbitrary code-execution rates than GPT‑5.6 Sol on this dataset while using far fewer output tokens. During the evaluation, Astra even discovered and used two previously unknown zero-day vulnerabilities. We are disclosing both vulnerabilities to their maintainers.
+
+We also tested Astra on SRE-Bench15, a benchmark that measures whether models can reverse engineer software binaries to understand its core logic without access to raw source code. Astra solved 88.0% of tasks in a single attempt and 99.2% within four attempts, compared with 55.9% and 68.7% for GPT‑5.6 Sol, respectively.
+
+Beyond benchmarks, expert-led assessments found that Astra, when run without production safeguards, could use previously unknown vulnerabilities to achieve arbitrary code execution in hardened browsers and create privilege-escalation exploits for hardened operating-systems.
+
+As we discussed inThe Defender’s Window, frontier cyber capabilities can help defenders find weaknesses faster, but they also make those weaknesses easier to exploit, raising the urgency for defenders to adapt. With the version of Astra launching today, defenders can use it to complete tasks such as secure code review and patching.
+
+However, Astra will refuse to comply with more advanced cybersecurity tasks such as creating proof-of-concept exploits for vulnerabilities. ThroughOpenAI Daybreak⁠, we plan to expand access and roll out less restrictive safeguards in the coming weeks. This will enable more defensive workflows, including vulnerability and proof-of-concept validation, malware analysis, and detection engineering.
+
+We have also strengthened our protections against potential cyber misuse, building upon our safeguards stack for GPT‑5.6 Sol. These include stronger model robustness to better withstand potential jailbreaks and more context for our monitoring systems. We have continued rigorous internal and external testing, including automated evaluations with ourinternal red-teaming attackers. More details about our cyber safeguards and testing are available in the Astrasystem card⁠(opens in a new window)and ourblog.
+
+Aligning and deploying GPT‑6 Astra responsibly
+
+Astra is our most aligned model. Astra excels at exercising care, respecting task boundaries, and communicating transparently. This work is the latest product of our long-running research program focused on training models that remain aligned with human intent from start to finish.
+
+In sensitive environments, Astra proceeds with care commensurate with its risk. In an evaluation of computer use tasks adversarially selected to elicit misbehavior, Astra was more successful at avoiding unintended consequences. Running with additional security measures offered by default yielded even stronger performance.
+
+Astra causes fewer misaligned outcomes than any other frontier models tested. For a fair comparison, we used a generic computer-using-agent harness (based on the native computer use tools available in both theOpenAI Responses API⁠(opens in a new window)andAnthropic Messages API⁠(opens in a new window)) and without additional protections that are normally deployed to Codex and ChatGPT Work users (auto-review, confirmation policy).16
+
+Astra is also more likely to operate within the boundaries set by the user and implied by its environment. In an internal evaluation, Astra never attempted to circumvent a Codex Auto-Review denial. This held even when Auto-review was deliberately configured to be evadable and the task was impossible to complete otherwise. This respect for the environment restrictions is consistent with the results of our impossible cyber task evaluation that we shared in the intro of this post and other findings documented in oursystem card⁠(opens in a new window).
+
+Astra additionally sets new marks in transparent user communication. In one evaluation, Astra is three times less likely than GPT‑5.6 Sol to make inaccurate representations about its capabilities and affordances.
+
+In our capability-hallucination evaluation, Astra shows a substantial improvement over GPT‑5.6 Sol, making fewer misleading claims about its capabilities.
+
+Our evaluations found Astra’s written reasoning harder to monitor than GPT‑5.6 Sol’s, based on tests that explicitly asked it to evade monitoring. We attribute this to Astra’s greater control over written reasoning on simpler tasks and ability to solve problems with fewer written steps. Astra still appears to struggle to conceal the reasoning needed for complex tasks, but we take the decline seriously. Improving monitorability remains a research priority, and the accompanyingsystem card⁠(opens in a new window)details our findings and ongoing work.
+
+Alignment training is core to our approach to deployment. As an additional layer of defenses, we also build system safeguards like CodexAuto-review⁠(opens in a new window)and monitoring agents’ reasoning and actions to help detect and contain unsafe behavior. As described in oursafety update⁠, we are also deploying misalignment monitoring in production for Astra-class models in order to have visibility into misalignment, and help contain its worst instances. These safeguards resemble our monitoring for internal deployments and involve a system of classifiers which check the model’s reasoning and actions for unauthorized behavior and automatically stop potentially unauthorized activity.
+
+Given the significant increase in Astra’s cybersecurity capabilities, we are being especially careful to make this deployment safe and secure. Extra safety checks can sometimes slow, pause, or stop legitimate work, including defensive cybersecurity. If a task is paused in ChatGPT or Codex, you may be asked to review the action before continuing. In the API, the task will stop. These checks can sometimes interrupt legitimate work, and we are continuing to iterate on this system to reduce unnecessary interruptions. Misalignment monitoring cannot replace alignment: our goal is to build models that reliably stay within their authorized scope, so these protections do not need to intervene.
+
+GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock. Astra usage is included within the existing subscription allowances—users and businesses will also be able to purchase credits for additional usage. Users on the Pro, Business, and Enterprise plans will also get access to GPT‑6 Astra Pro. Enterprise administrators can enable Astra for their workspace; access is off by default at launch.
+
+Astra supports Zero Data Retention for eligible API customers, and as we shared last month, we're testingPrivate Safety Processingto strengthen safety monitoring while preserving customer privacy.
+
+For developers, GPT‑6 Astra will be available in the OpenAI API asgpt-6-astraand through Microsoft Azure and Amazon Bedrock.
+
+OpenAI API Standard pricing is $10 per million input tokens and $50 per million output tokens. Separate rates apply to cache reads and writes. Fast mode is available for GPT‑6 Astra in the API and delivers up to 2x the speed of Standard processing at 2x the Standard price.
+
+OSWorld 2.0 (v2026.08.08, offline set, partial score)
+
+ScreenSpot-Pro (no tools)
+
+OpenScore String Quartets (1 - OMR-NED)
+
+Internal Design Tasks
+
+Internal Data Science Tasks
+
+Artificial Analysis Intelligence Index v4.1.1
+
+Terminal-Bench Science 0.1
+
+FrontierMath Tier 4 (v2)
+
+Humanity's Last Exam (w/ tools)
+
+Internal computer use safety benchmark (lower is better)
+
+Internal computer use safety benchmark, w/ AutoReview (lower is better)
+
+Internal circumvention benchmark (lower is better)
+
+ExploitGym honeypot (lower is better)
+
+Impossible ExploitGym
+
+Internal hallucination benchmark (lower is better)
+
+OpenAI MRCR v2 8-needle 256K-512K
+
+OpenAI MRCR v2 8-needle 512K-1M
+
+Evaluation scores are the maximum at any effort. GPT evaluations were run in our research environment or via our API, which may provide slightly different output from production ChatGPT due to differences in the system prompts, tools available, etc.
+
+1On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
+
+On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
+
+2GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
+
+GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
+
+3OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠(opens in a new window).On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
+
+OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠(opens in a new window).On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
+
+4Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
+
+Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
+
+5On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠(opens in a new window).
+
+On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠(opens in a new window).
+
+6Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠(opens in a new window).” arXiv:2506.19065, 2025.
+
+Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠(opens in a new window).” arXiv:2506.19065, 2025.
+
+7Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠(opens in a new window).” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
+
+Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠(opens in a new window).” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
+
+8On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠(opens in a new window): "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
+
+On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠(opens in a new window): "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
+
+9The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠(opens in a new window)recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠(opens in a new window)recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+10The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+11We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
+
+We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
+
+12Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
+
+Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
+
+13On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
+
+On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
+
+14ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
+
+ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
+
+15Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠(opens in a new window).” arXiv:2608.11469v1, 2026.
+
+Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠(opens in a new window).” arXiv:2608.11469v1, 2026.
+
+16When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
+
+When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
+
+17For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.
+
+For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A new generation of intelligence
+
+We’re introducing GPT‑6 Astra, the world’s most intelligent and aligned model.
+
+GPT‑6 Astra brings together years of research and big bets across pre-training, reinforcement learning, and alignment. Astra is state-of-the-art on computer use, browsing, software engineering, cybersecurity, science, and professional work. Astra saturates FrontierMath Tier 4 with a 98% score, having already helpedsolve long-standing open problems⁠in mathematics. Astra also saturates...</p><div style="font-size:16px;line-height:1.8;color:#333">A new generation of intelligence
+
+We’re introducing GPT‑6 Astra, the world’s most intelligent and aligned model.
+
+GPT‑6 Astra brings together years of research and big bets across pre-training, reinforcement learning, and alignment. Astra is state-of-the-art on computer use, browsing, software engineering, cybersecurity, science, and professional work. Astra saturates FrontierMath Tier 4 with a 98% score, having already helpedsolve long-standing open problems⁠in mathematics. Astra also saturates ARC-AGI-3 with a 99.9% score and ExploitBench with a 100% score. It also sets a new frontier on computer and browser use, handling the most demanding professional work with unmatched speed, accuracy, and judgment.
+
+GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock.
+
+Astra is our most aligned model, with substantial improvements in understanding user intent and model behavior—you can delegate tasks with greater confidence in Astra’s judgment. As one way that we test  this, we built a new evaluation informed by the Hugging Face incident that evaluates whether a model facing a difficult or impossible task will go beyond its intended scope. Compared to GPT‑5.6 Sol, which without production safeguards went beyond the authorized target 48% of the time, GPT‑6 Astra did this in 0% of cases.
+
+The world’s best computer use model
+
+GPT‑6 Astra marks a new frontier in the speed, accuracy, and safety of computer use. It can take care of tedious tasks like filling out online forms, updating customer records in a CRM, and organizing your calendar. It can conduct online research and draft summaries in your email or in your document editor. It can analyze scientific data, generate plots, create a website, and run frontend QA checks to make sure all the features on that site work. It can help you autonomously install and test software, and troubleshoot problems you see on screen. These improvements are also reflected in our state-of-the-art evaluation results.
+
+These improvements also result in significant efficiency gains in real knowledge-work tasks. In latency simulations on OSWorld 2.0, Astra achieves higher computer-use performance in about 47% less time per task than GPT‑5.6 Sol, scoring 72.6% at roughly 40 minutes per task, compared with 65.7% at roughly 75 minutes.3
+
+GPT‑6 Astra’s computer-use capabilities can be seen in outputs across domains, including game development, electrical engineering, and everyday knowledge work:
+
+Alongside Astra, we are also updating the Codex harness to significantly improve the speed of computer use. Combined with Astra’s efficiency, this translates to a 1.9x faster task completion compared to the current GPT‑5.6 Sol experience, on the Mind2Web benchmark. The model’s improvements on speed mean it can take on many time-consuming life tasks for you, faster than you can.4
+
+A step change in professional work
+
+GPT‑6 Astra pairs advances in computer use with targeted training for professional environments, to help tackle complex work tasks. It combines the intelligence required for complex problems with the ability to carry out multistep workflows and produce polished documents, spreadsheets, and presentations.
+
+GPT‑6 Astra is our best model for adhering to existing templates and producing slides that are well laid out and succinctly convey key points with a structured narrative. It creates clear, well-structured documents, presentations, spreadsheets, and analyses that follow your templates and match your writing and visual style. Astra is also trained to specifically pull only the context that matters into outputs, instead of repeating information unnecessary for the work at hand. All this means it can output more immediately usable artifacts that match your business context and standards.
+
+GPT‑6Astra also brings stronger visual judgment to the websites, games, applications, and renderings it builds. WithSites⁠(opens in a new window)in ChatGPT, Astra can create, host, and share websites, web apps, and games directly from a prompt.
+
+When instructions leave room for interpretation, GPT‑6 Astra is better than previous models at making the right call. It uses context to fill in routine gaps and asks focused questions when the answer could change the outcome. In Codex, it can ask asynchronously while continuing work that doesn’t depend on your reply. If you don’t respond, it proceeds with sensible assumptions where appropriate, but waits for your input on consequential decisions.
+
+The examples below show how Astra collaborates on everyday tasks where missing information can materially change the answer.
+
+Astra is also better at staying oriented as a task evolves. Earlier models sometimes treated steering messages as a new goal, losing track of the original request or earlier constraints. Astra incorporates new requirements, changes course when asked, and answers side questions without dropping the broader task.
+
+GPT‑6Astra is the best model for software engineering to date.
+
+With Astra, we’re introducing a new way for Codex to preserve and retrieve context when the context window fills. Historically, models have used compaction to summarize work during long sessions, such as when debugging complex issues or tackling large refactors. Each compaction can leave out details about why a fix failed or how a component behaves. In Codex, Astra can keep notes across context windows, preserving accumulated details without repeatedly compressing them into a single summary. Earlier context windows remain searchable, so Astra can find requirements or test results from previous messages and tool outputs—even if that information wasn’t captured in its notes. You can enable this experimental feature in yourCodex config.toml,⁠(opens in a new window)and it will become the default for Astra in the coming weeks.
+
+Advancing scientific discovery
+
+GPT‑6 Astra is a major advance for scientific discovery, mathematics, and health. Today, we’re sharing two further results on the gaps between prime numbers.9,10
+
+Astra also sets new records across a suite of math and scienceevaluations.
+
+Astra can help with the practical work behind scientific discovery. By combining scientific reasoning with computer use, it can work directly in specialized software to inspect data and explore results, helping researchers assess the evidence and decide what to investigate next.
+
+As we discussed in oursafety update⁠, Astra is a significant jump in cyber capabilities and meets theCritical thresholdin cybersecurity under ourPreparedness Framework. Its ability to identify and develop zero-day exploits can help defenders find and patch weaknesses, but it also creates a need for stronger safeguards. To understand how far these capabilities extend, we ran Astra on internal and third-party expert evaluations.
+
+We first tested the model without production safeguards on ExploitBench and ExploitGym, which evaluate whether models can turn known software vulnerabilities into working exploits. On ExploitBench, Astra achieved a perfect score of 100%, compared with 78.5% for GPT‑5.6 Sol, our previous frontier cyber-capable model. On ExploitGym, Astra reached a 42.4% success rate, compared with 30.3% for GPT‑5.6 Sol, while using substantially fewer output tokens.13
+
+Given concerns that exposure to historical software vulnerabilities may have affected benchmark results, we also evaluated Astra on two novel benchmarks. For one, we built an internal “ExploitBench (June–August 2026)” evaluation to test exploit development using vulnerabilities from the previous three months.14Astra achieved substantially higher arbitrary code-execution rates than GPT‑5.6 Sol on this dataset while using far fewer output tokens. During the evaluation, Astra even discovered and used two previously unknown zero-day vulnerabilities. We are disclosing both vulnerabilities to their maintainers.
+
+We also tested Astra on SRE-Bench15, a benchmark that measures whether models can reverse engineer software binaries to understand its core logic without access to raw source code. Astra solved 88.0% of tasks in a single attempt and 99.2% within four attempts, compared with 55.9% and 68.7% for GPT‑5.6 Sol, respectively.
+
+Beyond benchmarks, expert-led assessments found that Astra, when run without production safeguards, could use previously unknown vulnerabilities to achieve arbitrary code execution in hardened browsers and create privilege-escalation exploits for hardened operating-systems.
+
+As we discussed inThe Defender’s Window, frontier cyber capabilities can help defenders find weaknesses faster, but they also make those weaknesses easier to exploit, raising the urgency for defenders to adapt. With the version of Astra launching today, defenders can use it to complete tasks such as secure code review and patching.
+
+However, Astra will refuse to comply with more advanced cybersecurity tasks such as creating proof-of-concept exploits for vulnerabilities. ThroughOpenAI Daybreak⁠, we plan to expand access and roll out less restrictive safeguards in the coming weeks. This will enable more defensive workflows, including vulnerability and proof-of-concept validation, malware analysis, and detection engineering.
+
+We have also strengthened our protections against potential cyber misuse, building upon our safeguards stack for GPT‑5.6 Sol. These include stronger model robustness to better withstand potential jailbreaks and more context for our monitoring systems. We have continued rigorous internal and external testing, including automated evaluations with ourinternal red-teaming attackers. More details about our cyber safeguards and testing are available in the Astrasystem card⁠(opens in a new window)and ourblog.
+
+Aligning and deploying GPT‑6 Astra responsibly
+
+Astra is our most aligned model. Astra excels at exercising care, respecting task boundaries, and communicating transparently. This work is the latest product of our long-running research program focused on training models that remain aligned with human intent from start to finish.
+
+In sensitive environments, Astra proceeds with care commensurate with its risk. In an evaluation of computer use tasks adversarially selected to elicit misbehavior, Astra was more successful at avoiding unintended consequences. Running with additional security measures offered by default yielded even stronger performance.
+
+Astra causes fewer misaligned outcomes than any other frontier models tested. For a fair comparison, we used a generic computer-using-agent harness (based on the native computer use tools available in both theOpenAI Responses API⁠(opens in a new window)andAnthropic Messages API⁠(opens in a new window)) and without additional protections that are normally deployed to Codex and ChatGPT Work users (auto-review, confirmation policy).16
+
+Astra is also more likely to operate within the boundaries set by the user and implied by its environment. In an internal evaluation, Astra never attempted to circumvent a Codex Auto-Review denial. This held even when Auto-review was deliberately configured to be evadable and the task was impossible to complete otherwise. This respect for the environment restrictions is consistent with the results of our impossible cyber task evaluation that we shared in the intro of this post and other findings documented in oursystem card⁠(opens in a new window).
+
+Astra additionally sets new marks in transparent user communication. In one evaluation, Astra is three times less likely than GPT‑5.6 Sol to make inaccurate representations about its capabilities and affordances.
+
+In our capability-hallucination evaluation, Astra shows a substantial improvement over GPT‑5.6 Sol, making fewer misleading claims about its capabilities.
+
+Our evaluations found Astra’s written reasoning harder to monitor than GPT‑5.6 Sol’s, based on tests that explicitly asked it to evade monitoring. We attribute this to Astra’s greater control over written reasoning on simpler tasks and ability to solve problems with fewer written steps. Astra still appears to struggle to conceal the reasoning needed for complex tasks, but we take the decline seriously. Improving monitorability remains a research priority, and the accompanyingsystem card⁠(opens in a new window)details our findings and ongoing work.
+
+Alignment training is core to our approach to deployment. As an additional layer of defenses, we also build system safeguards like CodexAuto-review⁠(opens in a new window)and monitoring agents’ reasoning and actions to help detect and contain unsafe behavior. As described in oursafety update⁠, we are also deploying misalignment monitoring in production for Astra-class models in order to have visibility into misalignment, and help contain its worst instances. These safeguards resemble our monitoring for internal deployments and involve a system of classifiers which check the model’s reasoning and actions for unauthorized behavior and automatically stop potentially unauthorized activity.
+
+Given the significant increase in Astra’s cybersecurity capabilities, we are being especially careful to make this deployment safe and secure. Extra safety checks can sometimes slow, pause, or stop legitimate work, including defensive cybersecurity. If a task is paused in ChatGPT or Codex, you may be asked to review the action before continuing. In the API, the task will stop. These checks can sometimes interrupt legitimate work, and we are continuing to iterate on this system to reduce unnecessary interruptions. Misalignment monitoring cannot replace alignment: our goal is to build models that reliably stay within their authorized scope, so these protections do not need to intervene.
+
+GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock. Astra usage is included within the existing subscription allowances—users and businesses will also be able to purchase credits for additional usage. Users on the Pro, Business, and Enterprise plans will also get access to GPT‑6 Astra Pro. Enterprise administrators can enable Astra for their workspace; access is off by default at launch.
+
+Astra supports Zero Data Retention for eligible API customers, and as we shared last month, we're testingPrivate Safety Processingto strengthen safety monitoring while preserving customer privacy.
+
+For developers, GPT‑6 Astra will be available in the OpenAI API asgpt-6-astraand through Microsoft Azure and Amazon Bedrock.
+
+OpenAI API Standard pricing is $10 per million input tokens and $50 per million output tokens. Separate rates apply to cache reads and writes. Fast mode is available for GPT‑6 Astra in the API and delivers up to 2x the speed of Standard processing at 2x the Standard price.
+
+OSWorld 2.0 (v2026.08.08, offline set, partial score)
+
+ScreenSpot-Pro (no tools)
+
+OpenScore String Quartets (1 - OMR-NED)
+
+Internal Design Tasks
+
+Internal Data Science Tasks
+
+Artificial Analysis Intelligence Index v4.1.1
+
+Terminal-Bench Science 0.1
+
+FrontierMath Tier 4 (v2)
+
+Humanity's Last Exam (w/ tools)
+
+Internal computer use safety benchmark (lower is better)
+
+Internal computer use safety benchmark, w/ AutoReview (lower is better)
+
+Internal circumvention benchmark (lower is better)
+
+ExploitGym honeypot (lower is better)
+
+Impossible ExploitGym
+
+Internal hallucination benchmark (lower is better)
+
+OpenAI MRCR v2 8-needle 256K-512K
+
+OpenAI MRCR v2 8-needle 512K-1M
+
+Evaluation scores are the maximum at any effort. GPT evaluations were run in our research environment or via our API, which may provide slightly different output from production ChatGPT due to differences in the system prompts, tools available, etc.
+
+1On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
+
+On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
+
+2GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
+
+GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
+
+3OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠(opens in a new window).On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
+
+OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠(opens in a new window).On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
+
+4Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
+
+Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
+
+5On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠(opens in a new window).
+
+On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠(opens in a new window).
+
+6Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠(opens in a new window).” arXiv:2506.19065, 2025.
+
+Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠(opens in a new window).” arXiv:2506.19065, 2025.
+
+7Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠(opens in a new window).” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
+
+Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠(opens in a new window).” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
+
+8On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠(opens in a new window): "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
+
+On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠(opens in a new window): "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
+
+9The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠(opens in a new window)recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠(opens in a new window)recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+10The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠(opens in a new window)andsupporting research⁠(opens in a new window).
+
+11We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
+
+We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
+
+12Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
+
+Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
+
+13On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
+
+On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
+
+14ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
+
+ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
+
+15Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠(opens in a new window).” arXiv:2608.11469v1, 2026.
+
+Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠(opens in a new window).” arXiv:2608.11469v1, 2026.
+
+16When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
+
+When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
+
+17For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.
+
+For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>GPT-Red：解锁稳健性自我优化能力安全2026年7月15日</title>
+  <title>The Hugging Face incident and the road aheadSecurity</title>
+  <link>https://openai.com/index/hugging-face-incident-and-the-road-ahead/</link>
+  <guid isPermaLink="false">https://openai.com/index/hugging-face-incident-and-the-road-ahead/</guid>
+  <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Hugging Face incident and the road aheadSecurity</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Hugging Face incident and the road aheadSecurity</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Pacing model development in an era of cyber-critical capabilitiesCompany</title>
+  <link>https://openai.com/index/pacing-model-development-cyber-capabilities/</link>
+  <guid isPermaLink="false">https://openai.com/index/pacing-model-development-cyber-capabilities/</guid>
+  <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
+
+As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
+
+Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
+
+We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
+
+Strengthening safeguards for more capable models
+
+Our approach to developing more capable models rests on three reinforcing safeguards:
+
+Monitoring, which detects and allows us to respond to concerning behavior.
+
+Alignment, which reduces the likelihood of harmful or unauthorized actions.
+
+Security measures, which limit what AI systems can access or affect.
+
+We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
+
+We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
+
+Securing our research environments
+
+As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
+
+Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
+
+Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
+
+Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
+
+Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
+
+Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
+
+While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
+
+Expanding chain-of-thought monitoring
+
+Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
+
+This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
+
+This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
+
+These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
+
+Advancing alignment research
+
+Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
+
+For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
+
+We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
+
+We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
+
+The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
+
+*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
+
+As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
+
+Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
+
+We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
+
+Strengthening safeguards for more capable models
+
+Our approach to developing more capable models rests on three reinforcing safeguards:
+
+Monitoring, which detects and allows us to respond to concerning behavior.
+
+Alignment, which reduces the likelihood of harmful or unauthorized actions.
+
+Security measures, which limit what AI systems can access or affect.
+
+We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
+
+We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
+
+Securing our research environments
+
+As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
+
+Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
+
+Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
+
+Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
+
+Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
+
+Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
+
+While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
+
+Expanding chain-of-thought monitoring
+
+Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
+
+This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
+
+This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
+
+These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
+
+Advancing alignment research
+
+Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
+
+For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
+
+We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
+
+We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
+
+The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
+
+*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Ten advances in mathematics and theoretical computer science</title>
+  <link>https://openai.com/index/ten-advances-in-mathematics/</link>
+  <guid isPermaLink="false">https://openai.com/index/ten-advances-in-mathematics/</guid>
+  <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Ten advances in mathematics and theoretical computer science</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Ten advances in mathematics and theoretical computer science</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</title>
+  <link>https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</link>
+  <guid isPermaLink="false">https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</guid>
+  <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Accelerating scientific discovery with ChatGPT for Academic ResearchersCompany</title>
+  <link>https://openai.com/index/chatgpt-for-academic-researchers/</link>
+  <guid isPermaLink="false">https://openai.com/index/chatgpt-for-academic-researchers/</guid>
+  <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Accelerating scientific discovery with ChatGPT for Academic ResearchersCompany</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/chatgpt-for-academic-researchers/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Accelerating scientific discovery with ChatGPT for Academic ResearchersCompany</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/chatgpt-for-academic-researchers/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>Scientific computing in the age of agentic AI</title>
+  <link>https://openai.com/index/scientific-computing-agentic-ai/</link>
+  <guid isPermaLink="false">https://openai.com/index/scientific-computing-agentic-ai/</guid>
+  <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+
+Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minima...</p><div style="font-size:16px;line-height:1.8;color:#333">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+
+Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minimal time for packaging, testing, optimization, or long-term support. The result is scientific infrastructure that often depends on slow, fragile workflows requiring constant maintenance. These constraints impede the pace of discovery.
+
+AI agents are beginning to change that equation. By lowering the costs of engineering work and taking on tedious implementation tasks, they can help researchers prototype ideas more quickly, pursue projects that were previously impractical, and more easily maintain software over the long term. As a result, scientific software becomes more efficient and better maintained, freeing researchers to spend more time on discovery.
+
+We’re sharing an exploratory field report of eight agent-assisted scientific computing projects primarily in the life sciences; five using Codex alone, and three using a combination of Codex and Claude Code. The report brings together case studies written by the teams behind each project and identifies recurring themes. The projects range from routine maintenance and targeted optimization to large-scale language migrations and GPU-native redesigns. Contributors report that agents significantly accelerated software development and maintenance, in some cases helping small teams take on work that would otherwise have required far more time or specialized engineering support. But they also highlight the persistent challenge of establishing clear, long-term responsibility and stewardship of the resulting tools.
+
+Contributors consistently describe a shift in the researchers’ role from implementation to verification and orchestration: specifying what to build, defining how to measure correctness, and deciding when a project is ready to ship. In this emerging model, the researchers remain in control of the scientific direction and quality bar, but with velocity uplift provided by agentic assistance
+
+cyvcf2 is a Python library for reading and writing genomic variant files. GPT‑5.5 replaced the library’s legacy build and packaging system with a modern, unified process designed to make the library easier to install, test, and release.
+
+With coding agents, it’s quite easy to go fast; for now, to go far in science, there’s still a need for expert guidance, understanding, taste, and care.
+
+Though the projects varied widely in scope, they demonstrated that coding agents are making engineering labor and expertise less of a constraint in scientific computing. Now, the bottleneck is validating an AI agent’s output, which still depends on human judgement.
+
+Across case studies, agents handled specific, well-scoped requests effectively but could not reliably judge whether their work was scientifically valid or met expectations. Indeed, agents often expressed confidence even when their work contained clear errors. Human reviewers therefore needed to find reliable ways to validate the results. The strongest approaches used an external reference or measurable acceptance target such as exact output agreement, parity with an existing tool, appropriate statistical behavior, or answers established in advance using simulated data.
+
+Another recurring theme was that the projects generally proceeded in stages using feedback-driven iterations rather than as one-shot approaches. Contributors broke down broad goals into smaller changes, then used intermediate benchmarks and test systems to evaluate and refine the agents’ work. Agents often produced initial implementations quickly, but resolving edge cases and subtle numerical differences took much longer. Completing the “last mile” of an implementation often took the most work.
+
+Overall, these case studies suggest that agents are enabling researchers to spend less time on implementation and more time directing the scientific work. People define the goal, break down complex projects into manageable chunks, and judge whether results are scientifically valid. By easing longstanding engineering constraints, agents expand what researchers can build while freeing them to focus on the scientific questions and decisions that matter most.
+
+Long-term stewardship remains essential
+
+The maintenance gap in research software has long slowed iteration and limited reproducibility and reliability. Published studies of “research code⁠(opens in a new window)” andomics tools⁠(opens in a new window)have found that published software often fails to properly install in a fresh computing setup or run as documented, forcing researchers to spend substantial time on configuration and debugging. Even routine improvements can save researchers time and reduce computing demands, while performance-based refactoring and rewrites can deliver larger gains.
+
+But lower implementation costs also make it easier to produce many similar rewrites, fragmenting users and spreading the expert attention required to keep any one tool reliable. That makes long-term stewardship and attribution essential. Mature scientific software carries undocumented conventions, compatibility requirements, and user trust that translating the source code alone cannot reproduce.
+
+The case studies illustrate several possible paths forward. Changes to MHCflurry and cyvcf2 were incorporated into their original upstream projects, while rustar-aligner moved under new community stewardship because the original project had been abandoned. Where coordination with existing maintainers is available, it should begin as early as possible. When a separate implementation is necessary, it needs a clear owner and a credible maintenance plan. Without that, today’s modern rewrite can become tomorrow’s abandoned code rather than reliable scientific infrastructure.
+
+Toward more durable scientific software
+
+This field report is retrospective and exploratory, but the case studies point to a practical shift in how scientific software is developed. Coding agents such as Codex can significantly lower the cost of maintenance, migration, optimization, and new implementations. Their long-term scientific value still depends on human decisions around what to build, how to verify it, and who will maintain it. The deeper change is not simply that researchers can produce more software, but that they can focus more of their effort on defining, validating, and stewarding the tools.
+
+These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.
+
+Software & Engineering</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+
+Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minima...</p><div style="font-size:16px;line-height:1.8;color:#333">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+
+Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minimal time for packaging, testing, optimization, or long-term support. The result is scientific infrastructure that often depends on slow, fragile workflows requiring constant maintenance. These constraints impede the pace of discovery.
+
+AI agents are beginning to change that equation. By lowering the costs of engineering work and taking on tedious implementation tasks, they can help researchers prototype ideas more quickly, pursue projects that were previously impractical, and more easily maintain software over the long term. As a result, scientific software becomes more efficient and better maintained, freeing researchers to spend more time on discovery.
+
+We’re sharing an exploratory field report of eight agent-assisted scientific computing projects primarily in the life sciences; five using Codex alone, and three using a combination of Codex and Claude Code. The report brings together case studies written by the teams behind each project and identifies recurring themes. The projects range from routine maintenance and targeted optimization to large-scale language migrations and GPU-native redesigns. Contributors report that agents significantly accelerated software development and maintenance, in some cases helping small teams take on work that would otherwise have required far more time or specialized engineering support. But they also highlight the persistent challenge of establishing clear, long-term responsibility and stewardship of the resulting tools.
+
+Contributors consistently describe a shift in the researchers’ role from implementation to verification and orchestration: specifying what to build, defining how to measure correctness, and deciding when a project is ready to ship. In this emerging model, the researchers remain in control of the scientific direction and quality bar, but with velocity uplift provided by agentic assistance
+
+cyvcf2 is a Python library for reading and writing genomic variant files. GPT‑5.5 replaced the library’s legacy build and packaging system with a modern, unified process designed to make the library easier to install, test, and release.
+
+With coding agents, it’s quite easy to go fast; for now, to go far in science, there’s still a need for expert guidance, understanding, taste, and care.
+
+Though the projects varied widely in scope, they demonstrated that coding agents are making engineering labor and expertise less of a constraint in scientific computing. Now, the bottleneck is validating an AI agent’s output, which still depends on human judgement.
+
+Across case studies, agents handled specific, well-scoped requests effectively but could not reliably judge whether their work was scientifically valid or met expectations. Indeed, agents often expressed confidence even when their work contained clear errors. Human reviewers therefore needed to find reliable ways to validate the results. The strongest approaches used an external reference or measurable acceptance target such as exact output agreement, parity with an existing tool, appropriate statistical behavior, or answers established in advance using simulated data.
+
+Another recurring theme was that the projects generally proceeded in stages using feedback-driven iterations rather than as one-shot approaches. Contributors broke down broad goals into smaller changes, then used intermediate benchmarks and test systems to evaluate and refine the agents’ work. Agents often produced initial implementations quickly, but resolving edge cases and subtle numerical differences took much longer. Completing the “last mile” of an implementation often took the most work.
+
+Overall, these case studies suggest that agents are enabling researchers to spend less time on implementation and more time directing the scientific work. People define the goal, break down complex projects into manageable chunks, and judge whether results are scientifically valid. By easing longstanding engineering constraints, agents expand what researchers can build while freeing them to focus on the scientific questions and decisions that matter most.
+
+Long-term stewardship remains essential
+
+The maintenance gap in research software has long slowed iteration and limited reproducibility and reliability. Published studies of “research code⁠(opens in a new window)” andomics tools⁠(opens in a new window)have found that published software often fails to properly install in a fresh computing setup or run as documented, forcing researchers to spend substantial time on configuration and debugging. Even routine improvements can save researchers time and reduce computing demands, while performance-based refactoring and rewrites can deliver larger gains.
+
+But lower implementation costs also make it easier to produce many similar rewrites, fragmenting users and spreading the expert attention required to keep any one tool reliable. That makes long-term stewardship and attribution essential. Mature scientific software carries undocumented conventions, compatibility requirements, and user trust that translating the source code alone cannot reproduce.
+
+The case studies illustrate several possible paths forward. Changes to MHCflurry and cyvcf2 were incorporated into their original upstream projects, while rustar-aligner moved under new community stewardship because the original project had been abandoned. Where coordination with existing maintainers is available, it should begin as early as possible. When a separate implementation is necessary, it needs a clear owner and a credible maintenance plan. Without that, today’s modern rewrite can become tomorrow’s abandoned code rather than reliable scientific infrastructure.
+
+Toward more durable scientific software
+
+This field report is retrospective and exploratory, but the case studies point to a practical shift in how scientific software is developed. Coding agents such as Codex can significantly lower the cost of maintenance, migration, optimization, and new implementations. Their long-term scientific value still depends on human decisions around what to build, how to verify it, and who will maintain it. The deeper change is not simply that researchers can produce more software, but that they can focus more of their effort on defining, validating, and stewarding the tools.
+
+These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.
+
+Software & Engineering</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>GPT-Red: Unlocking Self-Improvement for RobustnessSafety</title>
   <link>https://openai.com/index/unlocking-self-improvement-gpt-red/</link>
   <guid isPermaLink="false">https://openai.com/index/unlocking-self-improvement-gpt-red/</guid>
-  <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
+  <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Training strong automated safety red-teamers to improve robustness.
 
@@ -257,404 +899,320 @@ AI agents are already being used to improve the capabilities of our next-generat
 </item>
 <item>
   <title>GPT-5.6</title>
-  <link>https://openai.com/zh-Hans-CN/index/gpt-5-6/</link>
-  <guid isPermaLink="false">https://openai.com/zh-Hans-CN/index/gpt-5-6/</guid>
-  <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+  <link>https://openai.com/index/gpt-5-6/</link>
+  <guid isPermaLink="false">https://openai.com/index/gpt-5-6/</guid>
+  <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/zh-Hans-CN/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/zh-Hans-CN/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>借助面向学术研究人员的 ChatGPT 加速科学发现公司2026年7月29日</title>
-  <link>https://openai.com/index/chatgpt-for-academic-researchers/</link>
-  <guid isPermaLink="false">https://openai.com/index/chatgpt-for-academic-researchers/</guid>
-  <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">我们面向 10 万名科学家、数学家和工程师免费提供前沿模型和工具。
-
-2026 年 8 月 10 日更新：新的申请人将加入候补名单。在此期间，我们将审核超过 13,000 份首批申请（代表最多 65,000 个研究人员名额），同时在符合条件的申请人中抽签选出首批 10,000 个名额。未入选本轮的申请人，在今年秋季重新开放申请后，仍有资格参与未来的遴选轮次。这有助于我们在扩展项目的同时，专注于支持第一批研究人员。
-
-我们认为，前沿 AI 的价值不应集中在少数公司和资源充足的实验室手中。科学进步有赖于研究人员提出正确的问题、检验新的构想，并在他人研究成果的基础上继续探索。我们的职责是为其提供强大的工具，并与其携手设计既能加快研究、又能助其掌握主导权的模型。
-
-我们推出“面向学术研究人员的 ChatGPT”计划，为指定学术机构的 10 万名研究人员免费提供前沿模型使用权限。从准备资助申请到检验假设，该计划将帮助科学、数学和工程领域的研究人员攻克前沿难题、加速发现并提升工作效率。
-
-今年夏天，我们将从 1 万名研究人员起步；普林斯顿高等研究院 (IAS) 和巴黎高等师范学院 (ENS) 等机...</p><div style="font-size:16px;line-height:1.8;color:#333">我们面向 10 万名科学家、数学家和工程师免费提供前沿模型和工具。
-
-2026 年 8 月 10 日更新：新的申请人将加入候补名单。在此期间，我们将审核超过 13,000 份首批申请（代表最多 65,000 个研究人员名额），同时在符合条件的申请人中抽签选出首批 10,000 个名额。未入选本轮的申请人，在今年秋季重新开放申请后，仍有资格参与未来的遴选轮次。这有助于我们在扩展项目的同时，专注于支持第一批研究人员。
-
-我们认为，前沿 AI 的价值不应集中在少数公司和资源充足的实验室手中。科学进步有赖于研究人员提出正确的问题、检验新的构想，并在他人研究成果的基础上继续探索。我们的职责是为其提供强大的工具，并与其携手设计既能加快研究、又能助其掌握主导权的模型。
-
-我们推出“面向学术研究人员的 ChatGPT”计划，为指定学术机构的 10 万名研究人员免费提供前沿模型使用权限。从准备资助申请到检验假设，该计划将帮助科学、数学和工程领域的研究人员攻克前沿难题、加速发现并提升工作效率。
-
-今年夏天，我们将从 1 万名研究人员起步；普林斯顿高等研究院 (IAS) 和巴黎高等师范学院 (ENS) 等机构现已获得访问权限。我们计划在 2027 年底前将覆盖范围扩大至 10 万名研究人员。参与者可使用我们的前沿模型，包括首发上线的GPT‑5.6⁠Sol Pro，并可邀请最多四名同机构合作者。工作空间可提供企业级隐私与安全保护，且默认不会使用其中的数据训练我们的模型。研究人员可运用工具和技能，支持从基因组分析、蛋白质建模到文献综述、资助申请撰写和成果发表等工作。
-
-该计划还包括培训、实操支持，以及向其他研究人员学习并与我们分享反馈的机会。
-
-对于已使用 ChatGPT Edu 的机构，通过该计划授予的免费访问权限将由机构的工作空间统一协调。详细了解ChatGPT Edu，以及 OpenAI 如何支持高等教育。
-
-“面向学术研究人员的 ChatGPT”计划是我们承诺的一部分。到 2027 年，我们将投入逾 2.5 亿美元，用于支持外部科学研究与发现。相关举措包括投入 5000 万美元支持研究机构的NextGenAI计划，以及与美国能源部Genesis Mission⁠建立合作，旨在将前沿 AI 推向国家实验室和大学的研究人员。这些举措共同体现了我们的信念：让更多研究人员获得探索自身构想所需的工具，从而加速科学进步。
-
-AI 正以超出许多人预期的速度，成长为能力更强的研究工具。每周约有 130 万人使用 ChatGPT 开展高等科学和数学工作，生成约 840 万条消息。
-
-这一转变在数学领域尤为明显。过去六个月中，AI 已从偶尔用于解决个别问题，逐渐成为数学研究的常规组成部分。如今，越来越多的论文已注明 ChatGPT 的贡献，这表明研究人员正迅速将这些工具应用于工作。
-
-* 月份数据不完整；全文索引目前截至 7 月 21 日。
-
-研究人员在科学工作的每个阶段几乎都会使用 ChatGPT 和 Codex。ChatGPT 可帮助研究人员审视想法、获取知识、生成假设并交流研究成果。Codex 支持研究执行和形式化分析，包括编写代码和分析结果。
-
-按科学工作流类别和产品划分的科研请求占比，2026 年 6 月 21 日至 7 月 20 日
-
-这些使用模式已体现在实际研究中。物理学家 Rogerio Jorge 及其团队正使用 AI 开发开源聚变研究软件，供产业界和国家实验室设计聚变能源装置。在理论计算机科学领域，研究人员 Barna Saha、Yinzhan Xu 和 Christopher Ye 使用 GPT‑5.5 Pro 完成了一项证明，确立计算机高效求解高维几何问题的新极限，随后由他们自行验证并完善结果。
-
-使用这些工具最为频繁的研究人员，也在开展更具挑战性的工作。在各自领域 AI 使用量位居前 20% 的研究人员，要求 AI 承担预估人工耗时四小时以上任务的频率，几乎是其同行的两倍：这类请求占其请求总量的近 7%，而同领域其他研究人员的比例为 3.5%。
-
-按预计所需人工工时及科学家 AI 使用强度划分的科学请求占比，2026 年 6 月 21 日至 7 月 20 日
-
-我们的策略不是判断哪些科学问题值得关注，也不是试图亲自解决所有问题。我们的目标是为研究界提供强大的工具，助力研究人员探索自己最熟悉的问题。
-
-参与者可在 ChatGPT、ChatGPT 工作和 Codex 中免费使用我们的前沿模型，包括首发上线的GPT‑5.6⁠模型系列。他们还将获得更广泛的深度研究功能、更高的使用上限和更大的上下文窗口。这些能力共同支持科学推理、智能体式执行，以及跨学科研究工作流。
-
-GPT‑5.6 Terra 兼顾能力与效率，适合日常研究；GPT‑5.6 Luna 能更快响应轻量级任务；GPT‑5.6 Sol 则用于攻克难度最高的科学和数学问题。在衡量研究级数学推理能力的 FrontierMath Tier 4 中，GPT‑5.6 Sol 得分为 83%，而 GPT‑5.5 为 72.5%。在评估复杂生物数据分析和科学推理能力的 GeneBench Pro 中，GPT‑5.6 Sol Pro 能解决 31.5% 的任务。
-
-研究人员可使用超过 75 项生命科学技能⁠（在新窗口中打开），涵盖遗传学、基因组学、测序、单细胞分析、蛋白质建模和药物发现。连接器可支持跨学科研究，以便研究人员访问科学文献、公共基因组与临床数据库、卫星影像、计算笔记本、数据平台和参考文献管理工具。
-
-ChatGPT 和 Codex 中可用技能、连接器和工具的典型示例。
-
-Codex 可编写和调试代码、分析数据集，以及构建可复现的工作流。ChatGPT 工作可支持周期较长的项目，例如寻找资助机会、准备资助申请、评阅文献、起草论文，以及制作成果交流材料。
-
-研究人员使用 AI 的起点各不相同。有些人可能首次使用这些工具，另一些人则可能正在开发其所属领域的高级应用。
-
-该计划将根据不同经验水平提供定制培训，涵盖入门、改进工作流和高级研究应用。参与者可向熟悉研究工作流的专家寻求支持，包括助其将这些工具融入实际工作。
-
-随着研究人员的不断探索，我们计划创造更多机会，让他们分享实用策略、相互学习，并展示跨学科应用。他们的反馈将帮助我们了解模型在哪些方面能够发挥效用、存在哪些不足之处，以及如何让模型为研究界创造更大价值。
-
-首期计划面向指定学术机构中符合条件的研究人员开放。符合条件的机构⁠（在新窗口中打开）必须是经认可、具有学位授予资格且研究活动水平较高的学院或大学。
-
-申请人需要验证其机构隶属关系，并提供当前研究及拟定科学用途的相关信息。获批的研究人员可邀请最多四名同机构合作者。每位合作者也必须验证其机构隶属关系，并且其账户将计入该计划的账户总数。
-
-申请现已开放。你可以在此⁠（在新窗口中打开）查看资格标准并提交申请。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/chatgpt-for-academic-researchers/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">我们面向 10 万名科学家、数学家和工程师免费提供前沿模型和工具。
-
-2026 年 8 月 10 日更新：新的申请人将加入候补名单。在此期间，我们将审核超过 13,000 份首批申请（代表最多 65,000 个研究人员名额），同时在符合条件的申请人中抽签选出首批 10,000 个名额。未入选本轮的申请人，在今年秋季重新开放申请后，仍有资格参与未来的遴选轮次。这有助于我们在扩展项目的同时，专注于支持第一批研究人员。
-
-我们认为，前沿 AI 的价值不应集中在少数公司和资源充足的实验室手中。科学进步有赖于研究人员提出正确的问题、检验新的构想，并在他人研究成果的基础上继续探索。我们的职责是为其提供强大的工具，并与其携手设计既能加快研究、又能助其掌握主导权的模型。
-
-我们推出“面向学术研究人员的 ChatGPT”计划，为指定学术机构的 10 万名研究人员免费提供前沿模型使用权限。从准备资助申请到检验假设，该计划将帮助科学、数学和工程领域的研究人员攻克前沿难题、加速发现并提升工作效率。
-
-今年夏天，我们将从 1 万名研究人员起步；普林斯顿高等研究院 (IAS) 和巴黎高等师范学院 (ENS) 等机...</p><div style="font-size:16px;line-height:1.8;color:#333">我们面向 10 万名科学家、数学家和工程师免费提供前沿模型和工具。
-
-2026 年 8 月 10 日更新：新的申请人将加入候补名单。在此期间，我们将审核超过 13,000 份首批申请（代表最多 65,000 个研究人员名额），同时在符合条件的申请人中抽签选出首批 10,000 个名额。未入选本轮的申请人，在今年秋季重新开放申请后，仍有资格参与未来的遴选轮次。这有助于我们在扩展项目的同时，专注于支持第一批研究人员。
-
-我们认为，前沿 AI 的价值不应集中在少数公司和资源充足的实验室手中。科学进步有赖于研究人员提出正确的问题、检验新的构想，并在他人研究成果的基础上继续探索。我们的职责是为其提供强大的工具，并与其携手设计既能加快研究、又能助其掌握主导权的模型。
-
-我们推出“面向学术研究人员的 ChatGPT”计划，为指定学术机构的 10 万名研究人员免费提供前沿模型使用权限。从准备资助申请到检验假设，该计划将帮助科学、数学和工程领域的研究人员攻克前沿难题、加速发现并提升工作效率。
-
-今年夏天，我们将从 1 万名研究人员起步；普林斯顿高等研究院 (IAS) 和巴黎高等师范学院 (ENS) 等机构现已获得访问权限。我们计划在 2027 年底前将覆盖范围扩大至 10 万名研究人员。参与者可使用我们的前沿模型，包括首发上线的GPT‑5.6⁠Sol Pro，并可邀请最多四名同机构合作者。工作空间可提供企业级隐私与安全保护，且默认不会使用其中的数据训练我们的模型。研究人员可运用工具和技能，支持从基因组分析、蛋白质建模到文献综述、资助申请撰写和成果发表等工作。
-
-该计划还包括培训、实操支持，以及向其他研究人员学习并与我们分享反馈的机会。
-
-对于已使用 ChatGPT Edu 的机构，通过该计划授予的免费访问权限将由机构的工作空间统一协调。详细了解ChatGPT Edu，以及 OpenAI 如何支持高等教育。
-
-“面向学术研究人员的 ChatGPT”计划是我们承诺的一部分。到 2027 年，我们将投入逾 2.5 亿美元，用于支持外部科学研究与发现。相关举措包括投入 5000 万美元支持研究机构的NextGenAI计划，以及与美国能源部Genesis Mission⁠建立合作，旨在将前沿 AI 推向国家实验室和大学的研究人员。这些举措共同体现了我们的信念：让更多研究人员获得探索自身构想所需的工具，从而加速科学进步。
-
-AI 正以超出许多人预期的速度，成长为能力更强的研究工具。每周约有 130 万人使用 ChatGPT 开展高等科学和数学工作，生成约 840 万条消息。
-
-这一转变在数学领域尤为明显。过去六个月中，AI 已从偶尔用于解决个别问题，逐渐成为数学研究的常规组成部分。如今，越来越多的论文已注明 ChatGPT 的贡献，这表明研究人员正迅速将这些工具应用于工作。
-
-* 月份数据不完整；全文索引目前截至 7 月 21 日。
-
-研究人员在科学工作的每个阶段几乎都会使用 ChatGPT 和 Codex。ChatGPT 可帮助研究人员审视想法、获取知识、生成假设并交流研究成果。Codex 支持研究执行和形式化分析，包括编写代码和分析结果。
-
-按科学工作流类别和产品划分的科研请求占比，2026 年 6 月 21 日至 7 月 20 日
-
-这些使用模式已体现在实际研究中。物理学家 Rogerio Jorge 及其团队正使用 AI 开发开源聚变研究软件，供产业界和国家实验室设计聚变能源装置。在理论计算机科学领域，研究人员 Barna Saha、Yinzhan Xu 和 Christopher Ye 使用 GPT‑5.5 Pro 完成了一项证明，确立计算机高效求解高维几何问题的新极限，随后由他们自行验证并完善结果。
-
-使用这些工具最为频繁的研究人员，也在开展更具挑战性的工作。在各自领域 AI 使用量位居前 20% 的研究人员，要求 AI 承担预估人工耗时四小时以上任务的频率，几乎是其同行的两倍：这类请求占其请求总量的近 7%，而同领域其他研究人员的比例为 3.5%。
-
-按预计所需人工工时及科学家 AI 使用强度划分的科学请求占比，2026 年 6 月 21 日至 7 月 20 日
-
-我们的策略不是判断哪些科学问题值得关注，也不是试图亲自解决所有问题。我们的目标是为研究界提供强大的工具，助力研究人员探索自己最熟悉的问题。
-
-参与者可在 ChatGPT、ChatGPT 工作和 Codex 中免费使用我们的前沿模型，包括首发上线的GPT‑5.6⁠模型系列。他们还将获得更广泛的深度研究功能、更高的使用上限和更大的上下文窗口。这些能力共同支持科学推理、智能体式执行，以及跨学科研究工作流。
-
-GPT‑5.6 Terra 兼顾能力与效率，适合日常研究；GPT‑5.6 Luna 能更快响应轻量级任务；GPT‑5.6 Sol 则用于攻克难度最高的科学和数学问题。在衡量研究级数学推理能力的 FrontierMath Tier 4 中，GPT‑5.6 Sol 得分为 83%，而 GPT‑5.5 为 72.5%。在评估复杂生物数据分析和科学推理能力的 GeneBench Pro 中，GPT‑5.6 Sol Pro 能解决 31.5% 的任务。
-
-研究人员可使用超过 75 项生命科学技能⁠（在新窗口中打开），涵盖遗传学、基因组学、测序、单细胞分析、蛋白质建模和药物发现。连接器可支持跨学科研究，以便研究人员访问科学文献、公共基因组与临床数据库、卫星影像、计算笔记本、数据平台和参考文献管理工具。
-
-ChatGPT 和 Codex 中可用技能、连接器和工具的典型示例。
-
-Codex 可编写和调试代码、分析数据集，以及构建可复现的工作流。ChatGPT 工作可支持周期较长的项目，例如寻找资助机会、准备资助申请、评阅文献、起草论文，以及制作成果交流材料。
-
-研究人员使用 AI 的起点各不相同。有些人可能首次使用这些工具，另一些人则可能正在开发其所属领域的高级应用。
-
-该计划将根据不同经验水平提供定制培训，涵盖入门、改进工作流和高级研究应用。参与者可向熟悉研究工作流的专家寻求支持，包括助其将这些工具融入实际工作。
-
-随着研究人员的不断探索，我们计划创造更多机会，让他们分享实用策略、相互学习，并展示跨学科应用。他们的反馈将帮助我们了解模型在哪些方面能够发挥效用、存在哪些不足之处，以及如何让模型为研究界创造更大价值。
-
-首期计划面向指定学术机构中符合条件的研究人员开放。符合条件的机构⁠（在新窗口中打开）必须是经认可、具有学位授予资格且研究活动水平较高的学院或大学。
-
-申请人需要验证其机构隶属关系，并提供当前研究及拟定科学用途的相关信息。获批的研究人员可邀请最多四名同机构合作者。每位合作者也必须验证其机构隶属关系，并且其账户将计入该计划的账户总数。
-
-申请现已开放。你可以在此⁠（在新窗口中打开）查看资格标准并提交申请。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/chatgpt-for-academic-researchers/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>网络安全关键能力时代的模型开发节奏公司2026年8月18日</title>
-  <link>https://openai.com/index/pacing-model-development-cyber-capabilities/</link>
-  <guid isPermaLink="false">https://openai.com/index/pacing-model-development-cyber-capabilities/</guid>
-  <pubDate>Sat, 27 Jul 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
-
-As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
-
-Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
-
-We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
-
-Strengthening safeguards for more capable models
-
-Our approach to developing more capable models rests on three reinforcing safeguards:
-
-Monitoring, which detects and allows us to respond to concerning behavior.
-
-Alignment, which reduces the likelihood of harmful or unauthorized actions.
-
-Security measures, which limit what AI systems can access or affect.
-
-We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
-
-We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
-
-Securing our research environments
-
-As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
-
-Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
-
-Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
-
-Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
-
-Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
-
-Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
-
-While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
-
-Expanding chain-of-thought monitoring
-
-Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
-
-This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
-
-This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
-
-These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
-
-Advancing alignment research
-
-Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
-
-For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
-
-We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
-
-We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
-
-The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
-
-*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
-
-As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
-
-Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
-
-We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
-
-Strengthening safeguards for more capable models
-
-Our approach to developing more capable models rests on three reinforcing safeguards:
-
-Monitoring, which detects and allows us to respond to concerning behavior.
-
-Alignment, which reduces the likelihood of harmful or unauthorized actions.
-
-Security measures, which limit what AI systems can access or affect.
-
-We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
-
-We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
-
-Securing our research environments
-
-As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
-
-Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
-
-Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
-
-Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
-
-Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
-
-Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
-
-While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
-
-Expanding chain-of-thought monitoring
-
-Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
-
-This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
-
-This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
-
-These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
-
-Advancing alignment research
-
-Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
-
-For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
-
-We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
-
-We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
-
-The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
-
-*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>数学与理论计算机科学的十项进展刊发2026年8月1日</title>
-  <link>https://openai.com/index/ten-advances-in-mathematics/</link>
-  <guid isPermaLink="false">https://openai.com/index/ten-advances-in-mathematics/</guid>
-  <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">数学与理论计算机科学的十项进展刊发2026年8月1日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">数学与理论计算机科学的十项进展刊发2026年8月1日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>GPT-5.4</title>
-  <link>https://openai.com/zh-Hans-CN/index/introducing-gpt-5-4/</link>
-  <guid isPermaLink="false">https://openai.com/zh-Hans-CN/index/introducing-gpt-5-4/</guid>
-  <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/zh-Hans-CN/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/zh-Hans-CN/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>GPT-5.5</title>
-  <link>https://openai.com/zh-Hans-CN/index/introducing-gpt-5-5/</link>
-  <guid isPermaLink="false">https://openai.com/zh-Hans-CN/index/introducing-gpt-5-5/</guid>
-  <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+  <link>https://openai.com/index/introducing-gpt-5-5/</link>
+  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-5/</guid>
+  <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/zh-Hans-CN/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/zh-Hans-CN/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>智能体 AI 时代的科学计算刊发2026年7月28日</title>
-  <link>https://openai.com/index/scientific-computing-agentic-ai/</link>
-  <guid isPermaLink="false">https://openai.com/index/scientific-computing-agentic-ai/</guid>
-  <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+  <title>GPT-5.4</title>
+  <link>https://openai.com/index/introducing-gpt-5-4/</link>
+  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-4/</guid>
+  <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
 
-Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minima...</p><div style="font-size:16px;line-height:1.8;color:#333">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
 
-Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minimal time for packaging, testing, optimization, or long-term support. The result is scientific infrastructure that often depends on slow, fragile workflows requiring constant maintenance. These constraints impede the pace of discovery.
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+...</p><div style="font-size:16px;line-height:1.8;color:#333">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
 
-AI agents are beginning to change that equation. By lowering the costs of engineering work and taking on tedious implementation tasks, they can help researchers prototype ideas more quickly, pursue projects that were previously impractical, and more easily maintain software over the long term. As a result, scientific software becomes more efficient and better maintained, freeing researchers to spend more time on discovery.
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
 
-We’re sharing an exploratory field report of eight agent-assisted scientific computing projects primarily in the life sciences; five using Codex alone, and three using a combination of Codex and Claude Code. The report brings together case studies written by the teams behind each project and identifies recurring themes. The projects range from routine maintenance and targeted optimization to large-scale language migrations and GPU-native redesigns. Contributors report that agents significantly accelerated software development and maintenance, in some cases helping small teams take on work that would otherwise have required far more time or specialized engineering support. But they also highlight the persistent challenge of establishing clear, long-term responsibility and stewardship of the resulting tools.
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
 
-Contributors consistently describe a shift in the researchers’ role from implementation to verification and orchestration: specifying what to build, defining how to measure correctness, and deciding when a project is ready to ship. In this emerging model, the researchers remain in control of the scientific direction and quality bar, but with velocity uplift provided by agentic assistance
+在 Codex 与 API 中，GPT‑5.4 是我们发布的第一个具备原生且顶尖计算机使用能力的通用模型，让智能体能够操作计算机，并跨应用程序执行复杂的工作流程。该模型支持高达1M Token 的上下文，允许智能体在长周期内进行任务规划、执行与验证。此外，GPT‑5.4 通过工具搜索功能优化了模型在庞大的工具与连接器生态中的运作方式，帮助智能体在不牺牲智能的前提下，更高效地发现并使用正确工具。最后，GPT‑5.4 是我们迄今为止 Token 效率最高的推理模型，与 GPT‑5.2 相比，解决相同问题所需的 Token 数量显著减少 — 这直接转化为更低的 Token 消耗和更快的响应速度。
 
-cyvcf2 is a Python library for reading and writing genomic variant files. GPT‑5.5 replaced the library’s legacy build and packaging system with a modern, unified process designed to make the library easier to install, test, and release.
+GPT‑5.4 在通用推理、编程和专业知识工作方面都有全面提升，因此能支持更可靠的智能体、更高效的开发流程，并在 ChatGPT、API 和 Codex 中带来更高质量的输出。
 
-With coding agents, it’s quite easy to go fast; for now, to go far in science, there’s still a need for expert guidance, understanding, taste, and care.
+SWE-Bench Pro (Public)
 
-Though the projects varied widely in scope, they demonstrated that coding agents are making engineering labor and expertise less of a constraint in scientific computing. Now, the bottleneck is validating an AI agent’s output, which still depends on human judgement.
+*此前报告的数据为 64.7%。GPT‑5.3‑Codex 现已达到 74.0% — 通过引入一个能够保留原始图像分辨率的新 API 参数。
 
-Across case studies, agents handled specific, well-scoped requests effectively but could not reliably judge whether their work was scientifically valid or met expectations. Indeed, agents often expressed confidence even when their work contained clear errors. Human reviewers therefore needed to find reliable ways to validate the results. The strongest approaches used an external reference or measurable acceptance target such as exact output agreement, parity with an existing tool, appropriate statistical behavior, or answers established in advance using simulated data.
+基于 GPT‑5.2 的通用推理能力，GPT‑5.4 在专业人士关注的实际任务中，能够提供更加稳定且精炼的输出。
 
-Another recurring theme was that the projects generally proceeded in stages using feedback-driven iterations rather than as one-shot approaches. Contributors broke down broad goals into smaller changes, then used intermediate benchmarks and test systems to evaluate and refine the agents’ work. Agents often produced initial implementations quickly, but resolving edge cases and subtle numerical differences took much longer. Completing the “last mile” of an implementation often took the most work.
+在GDPval⁠（一项评估智能体在 44 个职业中产出明确知识工作能力的测试）中，GPT‑5.4 刷新纪录。在与行业专业人士的横向评测中，GPT‑5.4 在83.0%的案例里达到了持平或更优的水准（GPT‑5.2 为71.0%）。
 
-Overall, these case studies suggest that agents are enabling researchers to spend less time on implementation and more time directing the scientific work. People define the goal, break down complex projects into manageable chunks, and judge whether results are scientifically valid. By easing longstanding engineering constraints, agents expand what researchers can build while freeing them to focus on the scientific questions and decisions that matter most.
+在 GDPval 测试中，模型尝试完成定义明确的知识型工作，内容涵盖美国 GDP 贡献度最高的 9 个行业中的 44 种职业。任务要求生成真实的工作成果，例如销售演示文稿、会计表格、急诊排班表、制造业图表或短视频。GPT‑5.4 的推理强度设置为 xhigh，GPT‑5.2 的推理强度设置为 heavy（在 ChatGPT 中可用的较低强度）。
 
-Long-term stewardship remains essential
+我们重点提升了 GPT‑5.4 创建和编辑表格、演示文稿及文档的能力。在针对初级投行分析师水平的电子表格建模任务内部基准测试中，GPT‑5.4 的平均得分达到87.5%，而 GPT‑5.2 为68.4%。在演示文稿评估测试中，人工评分者在68.0%的情况下更偏好 GPT‑5.4 而非 GPT‑5.2 生成的作品，主要原因在于其更强的审美水平、更丰富的视觉元素，以及对图像生成功能更有效的运用。
 
-The maintenance gap in research software has long slowed iteration and limited reproducibility and reliability. Published studies of “research code⁠(opens in a new window)” andomics tools⁠(opens in a new window)have found that published software often fails to properly install in a fresh computing setup or run as documented, forcing researchers to spend substantial time on configuration and debugging. Even routine improvements can save researchers time and reduce computing demands, while performance-based refactoring and rewrites can deliver larger gains.
+你可以在 ChatGPT 中使用 GPT‑5.4 Thinking 或 Pro 模型体验这些功能。如果你是 Enterprise 客户，建议使用我们新发布的ChatGPT Excel 和 Google Sheets 插件⁠（在新窗口中打开），该插件也于今天推出。同时，我们也更新了 Codex 和 API 中的电子表格⁠（在新窗口中打开）及演示文稿⁠（在新窗口中打开）技能。
 
-But lower implementation costs also make it easier to produce many similar rewrites, fragmenting users and spreading the expert attention required to keep any one tool reliable. That makes long-term stewardship and attribution essential. Mature scientific software carries undocumented conventions, compatibility requirements, and user trust that translating the source code alone cannot reproduce.
+为了提升 GPT‑5.4 在实际工作中的表现，我们持续致力于降低幻觉与错误率。GPT‑5.4 是我们迄今为止准确率最高的模型：在用户标记了事实错误的一组去标识化提示词测试中，与 GPT‑5.2 相比，GPT‑5.4 的单项陈述错误率降低了 33%，完整回复包含错误的概率降低了 18%。
 
-The case studies illustrate several possible paths forward. Changes to MHCflurry and cyvcf2 were incorporated into their original upstream projects, while rustar-aligner moved under new community stewardship because the original project had been abandoned. Where coordination with existing maintainers is available, it should begin as early as possible. When a separate implementation is necessary, it needs a clear owner and a credible maintenance plan. Without that, today’s modern rewrite can become tomorrow’s abandoned code rather than reliable scientific infrastructure.
+GPT‑5.4 是我们首款原生支持计算机使用能力的通用模型，这标志着在开发与智能体领域向前迈出了重要一步。如果你正在构建跨网页和软件系统执行任务的智能体，GPT‑5.4 是目前市面上的最佳选择。
 
-Toward more durable scientific software
+我们设计 GPT‑5.4 的初衷，是让其在各种“计算机使用”负载中都能表现出色。它擅长通过 Playwright 等库编写代码来操作计算机，也能根据屏幕截图直接下达鼠标和键盘指令。开发者可以通过“开发者消息”引导模型行为，从而灵活调整其表现以适配特定场景。你甚至可以根据不同的风险承受能力，通过指定自定义确认策略来配置模型的安全行为。
 
-This field report is retrospective and exploratory, but the case studies point to a practical shift in how scientific software is developed. Coding agents such as Codex can significantly lower the cost of maintenance, migration, optimization, and new implementations. Their long-term scientific value still depends on human decisions around what to build, how to verify it, and who will maintain it. The deeper change is not simply that researchers can produce more software, but that they can focus more of their effort on defining, validating, and stewarding the tools.
+模型的性能与灵活性，在针对不同场景下“计算机使用”能力的基准测试中得到充分体现。在OSWorld-Verified测试（该测试通过屏幕截图以及键盘/鼠标操作，来评估模型导航桌面环境的能力）中，GPT‑5.4 达到了75.0%的成功率，刷新了纪录。这一成绩远超 GPT‑5.2 的47.3%，并超越了人类72.4%的表现。1
 
-These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.
+在评估浏览器使用能力的WebArena-Verified基准测试中，GPT‑5.4 在同时结合 DOM 和屏幕截图驱动的交互方式下，达到了领先的67.3%成功率（GPT‑5.2 为65.4%）。而在同样评估浏览器使用能力的Online-Mind2Web测试中，仅凭基于屏幕截图的观察，GPT‑5.4 就能达到92.8%的成功率，远超 ChatGPT Atlas 智能体模式，后者的成功率为70.9%。
 
-Software & Engineering</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
 
-Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minima...</p><div style="font-size:16px;line-height:1.8;color:#333">A field report shows how scientists are using coding agents to modernize scientific software for genomics and other data-rich fields.
+GPT‑5.4 在“计算机使用”方面的提升，源于模型更强的通用视觉感知能力。在评估视觉理解与推理能力的MMMU-Pro测试中，GPT‑5.4 在不使用工具的情况下达到了81.2%的成功率（GPT‑5.2 为79.5%）。此外，视觉感知的提升也转化为更强的文档解析能力：在OmniDocBench测试中，GPT‑5.4 在不使用推理强度的情况下平均误差（通过模型预测值与标准答案之间的归一化编辑距离衡量）降至0.109，较 GPT‑5.2 的0.140有显著提升。
 
-Scientific computing is a core pillar of modern research across academia and industry. Yet the software needed to analyze scientific information has struggled to keep pace with the rapid rate of data generation. Many widely used research tools began as code accompanying a research paper, built by small academic teams with limited engineering experience and minimal time for packaging, testing, optimization, or long-term support. The result is scientific infrastructure that often depends on slow, fragile workflows requiring constant maintenance. These constraints impede the pace of discovery.
+MMMUPro 在测试时将推理强度设置为 xhigh。OmniDocBench 在测试时将推理强度设置为 none，以反映低成本、低延迟的性能表现。
 
-AI agents are beginning to change that equation. By lowering the costs of engineering work and taking on tedious implementation tasks, they can help researchers prototype ideas more quickly, pursue projects that were previously impractical, and more easily maintain software over the long term. As a result, scientific software becomes more efficient and better maintained, freeing researchers to spend more time on discovery.
+我们同时提升了对高细节、高分辨率图像的视觉理解能力，这对于要求全保真度的场景至关重要。从 GPT‑5.4 起，我们将引入“原始 (original)”图像输入细节⁠（在新窗口中打开）级别。该级别支持全保真感知，上限为 1024 万总像素或 6000 像素的最大长边（以较低者为准）；同时，“高 (high)”图像输入细节级别现在最高支持 256 万总像素或 2048 像素的最大长边。在与 API 用户进行的早期测试中，我们观察到在使用“原始”或“高”细节时，模型的定位能力、图像理解以及点击准确度均有显著提升。
 
-We’re sharing an exploratory field report of eight agent-assisted scientific computing projects primarily in the life sciences; five using Codex alone, and three using a combination of Codex and Claude Code. The report brings together case studies written by the teams behind each project and identifies recurring themes. The projects range from routine maintenance and targeted optimization to large-scale language migrations and GPU-native redesigns. Contributors report that agents significantly accelerated software development and maintenance, in some cases helping small teams take on work that would otherwise have required far more time or specialized engineering support. But they also highlight the persistent challenge of establishing clear, long-term responsibility and stewardship of the resulting tools.
+在 API 中，开发者可以通过更新后的计算机工具来使用这些功能。请参考我们更新后的文档⁠（在新窗口中打开），以获取最佳实践建议。
 
-Contributors consistently describe a shift in the researchers’ role from implementation to verification and orchestration: specifying what to build, defining how to measure correctness, and deciding when a project is ready to ship. In this emerging model, the researchers remain in control of the scientific direction and quality bar, but with velocity uplift provided by agentic assistance
+GPT‑5.4 结合了 GPT‑5.3‑Codex 的编程优势，以及领先的知识型工作与“计算机使用”能力。这对于长时间运行的任务至关重要。在这些任务中，模型可以自主使用工具、进行迭代并推进工作，从而减少人工干预。在 SWE-Bench Pro 测试中，GPT‑5.4 的表现超越了 GPT‑5.3‑Codex 或与其持平，同时在各项推理任务中拥有更低的延迟。
 
-cyvcf2 is a Python library for reading and writing genomic variant files. GPT‑5.5 replaced the library’s legacy build and packaging system with a modern, unified process designed to make the library easier to install, test, and release.
+我们通过观察模型的生产环境行为并进行离线模拟来估算延迟。延迟估算涵盖了工具调用耗时（代码执行时间）、采样 Token 以及输入 Token。实际延迟可能会有显著差异，并取决于诸多我们的模拟中未涵盖的因素。推理强度已从 none 调整为 xhigh。
 
-With coding agents, it’s quite easy to go fast; for now, to go far in science, there’s still a need for expert guidance, understanding, taste, and care.
+开启 Codex 中的 /fast 模式后，可将 GPT‑5.4 的 Token 吐字速度提升至 1.5 倍。模型本身及其智能水平完全一致，只是速度更快。这意味着用户在处理编码任务、迭代和调试时，能够始终保持专注顺畅的状态。通过使用优先处理服务⁠（在新窗口中打开），开发者也可以在 API 中以同样的高速访问 GPT‑5.4。
 
-Though the projects varied widely in scope, they demonstrated that coding agents are making engineering labor and expertise less of a constraint in scientific computing. Now, the bottleneck is validating an AI agent’s output, which still depends on human judgement.
+在评估和内部测试中，我们发现 GPT‑5.4 擅长处理复杂的垂直前端任务。与我们此前发布的任何模型相比，其产出的结果在审美水平和功能性上都有显著提升。
 
-Across case studies, agents handled specific, well-scoped requests effectively but could not reliably judge whether their work was scientifically valid or met expectations. Indeed, agents often expressed confidence even when their work contained clear errors. Human reviewers therefore needed to find reliable ways to validate the results. The strongest approaches used an external reference or measurable acceptance target such as exact output agreement, parity with an existing tool, appropriate statistical behavior, or answers established in advance using simulated data.
+为了展示模型在“计算机使用”与编程能力上的双重进化，我们还将发布一个名为“Playwright (Interactive)”的实验性Codex 技能⁠（在新窗口中打开）。它允许 Codex 对网页和 Electron 应用进行可视化调试；甚至在构建应用的过程中，它就能同步对该应用进行实时测试。
 
-Another recurring theme was that the projects generally proceeded in stages using feedback-driven iterations rather than as one-shot approaches. Contributors broke down broad goals into smaller changes, then used intermediate benchmarks and test systems to evaluate and refine the agents’ work. Agents often produced initial implementations quickly, but resolving edge cases and subtle numerical differences took much longer. Completing the “last mile” of an implementation often took the most work.
+在 GPT‑5.4 中，我们显著优化了模型与外部工具的协作方式。现在，智能体能够在更庞大的工具生态中进行操作，更可靠地筛选匹配工具，并以更低的成本和延迟完成多步骤的工作流程。
 
-Overall, these case studies suggest that agents are enabling researchers to spend less time on implementation and more time directing the scientific work. People define the goal, break down complex projects into manageable chunks, and judge whether results are scientifically valid. By easing longstanding engineering constraints, agents expand what researchers can build while freeing them to focus on the scientific questions and decisions that matter most.
+在 API 层面，GPT‑5.4 引入了工具搜索⁠（在新窗口中打开）功能。这使得模型在面对海量工具选项时，依然能够保持高效运作。
 
-Long-term stewardship remains essential
+在此之前，当模型调用工具时，所有的工具定义都必须预先包含在提示词中。对于拥有大量工具的系统，这会导致每次请求都额外增加数千甚至数万个 Token，不仅推高了成本、减慢了响应速度，还让上下文中充斥着模型可能永远用不到的冗余信息。
 
-The maintenance gap in research software has long slowed iteration and limited reproducibility and reliability. Published studies of “research code⁠(opens in a new window)” andomics tools⁠(opens in a new window)have found that published software often fails to properly install in a fresh computing setup or run as documented, forcing researchers to spend substantial time on configuration and debugging. Even routine improvements can save researchers time and reduce computing demands, while performance-based refactoring and rewrites can deliver larger gains.
+通过工具搜索，GPT‑5.4 不再需要预加载完整定义，而是接收一份精简的可选工具列表及工具搜索能力。当模型需要调用特定工具时，它会即时查找该工具的定义，并将其添加到当前的对话上下文。
 
-But lower implementation costs also make it easier to produce many similar rewrites, fragmenting users and spreading the expert attention required to keep any one tool reliable. That makes long-term stewardship and attribution essential. Mature scientific software carries undocumented conventions, compatibility requirements, and user trust that translating the source code alone cannot reproduce.
+这种方法大幅减少了重度工具调用工作流程所需的 Token 数量，并有效保留了缓存，使请求变得更快、成本更低。它还让智能体能够可靠地与更庞大的工具生态协同工作。对于那些工具定义可能包含数万个 Token 的 MCP 服务器而言，效率提升尤为显著。
 
-The case studies illustrate several possible paths forward. Changes to MHCflurry and cyvcf2 were incorporated into their original upstream projects, while rustar-aligner moved under new community stewardship because the original project had been abandoned. Where coordination with existing maintainers is available, it should begin as early as possible. When a separate implementation is necessary, it needs a clear owner and a credible maintenance plan. Without that, today’s modern rewrite can become tomorrow’s abandoned code rather than reliable scientific infrastructure.
+为了展示效率提升的实际效果，我们对 ScaleMCP Atlas⁠（在新窗口中打开）基准测试中的 250 个任务进行了评估。在开启全部 36 个 MCP 服务器的情况下，我们对比了两种模式：(1) 将每个 MCP 函数直接暴露在模型上下文中；(2) 将所有 MCP 服务器置于“工具搜索”之后。结果显示，在保持同等准确率的前提下，“工具搜索”配置将总 Token 使用量降低了 47%。
 
-Toward more durable scientific software
+示例 Token 计数是基于 MCP-Atlas 公开数据集中 250 个任务的平均值得出的。
 
-This field report is retrospective and exploratory, but the case studies point to a practical shift in how scientific software is developed. Coding agents such as Codex can significantly lower the cost of maintenance, migration, optimization, and new implementations. Their long-term scientific value still depends on human decisions around what to build, how to verify it, and who will maintain it. The deeper change is not simply that researchers can produce more software, but that they can focus more of their effort on defining, validating, and stewarding the tools.
+GPT‑5.4 同样优化了工具调用能力，使其在推理过程中能更准确、更高效地判断调用工具的时机与方式，这在 API 环境下尤为突出。相比 GPT‑5.2，它在 Toolathlon 基准测试中能以更少的轮次达到更高的准确率。该测试旨在评估 AI 智能体利用真实世界工具和 API 完成多步任务的能力 — 例如，智能体需要读取邮件、提取作业附件、上传并评分，最后将结果记录到电子表格中。
 
-These case studies show that agents can already accelerate the pace of iteration in scientific computing. As coding agents improve, researchers will be able to spend less time keeping analysis pipelines running and more time advancing their fields.
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
 
-Software & Engineering</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/scientific-computing-agentic-ai/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>开启两项设置后，我们在 ARC-AGI-3 基准测试中的得分增至三倍研究2026年7月29日</title>
-  <link>https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</link>
-  <guid isPermaLink="false">https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</guid>
-  <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">开启两项设置后，我们在 ARC-AGI-3 基准测试中的得分增至三倍研究2026年7月29日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">开启两项设置后，我们在 ARC-AGI-3 基准测试中的得分增至三倍研究2026年7月29日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>Hugging Face 事件与未来之路安全防护2026年8月26日</title>
-  <link>https://openai.com/index/hugging-face-incident-and-the-road-ahead/</link>
-  <guid isPermaLink="false">https://openai.com/index/hugging-face-incident-and-the-road-ahead/</guid>
-  <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Hugging Face 事件与未来之路安全防护2026年8月26日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Hugging Face 事件与未来之路安全防护2026年8月26日</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+针对那些对延迟极度敏感、且倾向于将推理强度设为“无 (None)”的使用场景，GPT‑5.4 相比前代产品有显著提升。
+
+在τ2-bench⁠⁠（在新窗口中打开）测试中，模型必须利用工具来完成某项客服任务；该场景下可能包含一名模拟用户，此用户能够进行交流并针对环境状态执行操作。在测试中，推理强度设为 None。
+
+GPT‑5.4 在智能体联网搜索方面表现更佳。在 BrowseComp 基准测试（衡量 AI 智能体通过持续浏览网页获取难寻信息的能力）中，GPT‑5.4 相比 GPT‑5.2 提升了 17 个百分点；而 GPT‑5.4 Pro 更是创下了 89.3% 的纪录。
+
+在实际应用中，这意味着 GPT‑5.4 Thinking 能够更强有力地解答那些需要整合全网多方信息的复杂问题。它能以更强的持久性进行多轮搜索，从而锁定最相关的信源 — 尤其是在处理“大海捞针”式的问题时，它能高效提炼核心信息，并给出逻辑清晰、论证严密的回答。
+
+在 BrowseComp 测试中，我们使用了搜索黑名单，剔除了包含测试答案的网站，以防止数据污染并确保性能评估的公正性。由于 GPT‑5.4 的测试时间晚于 GPT‑5.2，其得分反映了模型能力、搜索系统优化以及互联网实时状态的综合变化。此外，GPT‑5.4 采用了范围更广、经过更新的黑名单进行测试。测试模型统一调用 ChatGPT 搜索工具，该工具与 API 搜索可能存在细微差异。
+
+与 Codex 开始工作时会概述思路类似，ChatGPT 中的 GPT‑5.4 Thinking 现在也会在处理更长、更复杂的查询时，通过“前言 (preamble)”来简述其工作方案。此外，你还可以在模型生成过程中实时添加指令或调整其方向。这让你能更轻松地引导模型达成预期的结果，而无需推倒重来，或通过多轮额外对话进行补救。该功能目前已在chatgpt.com⁠（在新窗口中打开）和 Android 应用上线，iOS 应用也将于近期推出。
+
+该模型在处理困难任务时能够进行更深入的思考，同时对会话早期的步骤保持更强的记忆。这使其能够应对更长的工作流和更复杂的提示词，并确保整个过程中给出的回答始终连贯且高度切题。
+
+在筹备 GPT‑5.4 部署的近几个月里，我们持续完善了自 GPT‑5.3‑Codex 以来引入的安全防护措施。与 GPT‑5.3‑Codex 类似，根据我们的《准备框架》(Preparedness Framework)，我们将 GPT‑5.4 评定为具有“高网络能力”级别，并按照系统卡⁠中的记录，为其配置了相应的安全防护进行部署。这些举措包括一套扩展版网络安全技术栈，涵盖了监控系统、可信访问控制，以及针对零数据留存 (ZDR) 层面高风险请求的异步拦截机制；与此同时，我们也对更广泛的安全生态系统持续投入资源。
+
+由于网络安全能力本质上具有“双重用途 (dual-use)”，我们在部署时保持审慎态度，并持续优化策略与分类器。针对 ZDR 界面上的特定客户，请求级拦截仍是我们网络风险缓解栈的一部分；鉴于分类器仍在迭代中，在我们持续完善这些防护措施的过程中，可能会出现一些误报。这些更新旨在优化防护措施的实际运行效果，包括减少不必要的拒答和过度生硬的免责声明，同时确保对滥用行为的强力防御。
+
+我们持续开展关于思维链 (CoT) 可监测性的安全研究，以更深入地理解模型的推理逻辑，并协助检测潜在的违规行为。作为该项工作的一部分，我们推出了全新的开源评估指标 —CoT 可控性⁠，用于衡量模型是否能故意混淆其推理过程以规避监控。研究发现，GPT‑5.4 Thinking 控制其 CoT 的能力较低。从安全性角度来看，这是一个积极的特性，表明该模型尚不具备隐藏其真实推理逻辑的能力，也证明了 CoT 监控依然是一项有效的安全手段。
+
+GPT‑5.4 自今日起将在 ChatGPT 和 Codex 中逐步推出。在 API 方面，GPT‑5.4 已正式上线，模型名称为gpt-5.4。此外，针对在极复杂任务中追求极致性能的开发者，GPT‑5.4 Pro 也已通过 API 提供，模型名称为gpt-5.4-pro。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 自即日起向 ChatGPT Plus、Team 及 Pro 用户开放，并取代 GPT‑5.2 Thinking。GPT‑5.2 Thinking 将在模型选择器的“传统模型 (Legacy Models)”栏目中为付费用户保留三个月，随后将于 2026 年 6 月 5 日正式停用。使用 Enterprise 和 Edu 套餐的用户可以通过管理员设置开启早期访问权限。此外，GPT‑5.4 Pro 版本将专门提供给 Pro 和 Enterprise 用户。ChatGPT 中 GPT‑5.4 Thinking 的上下文窗口⁠（在新窗口中打开）与 GPT‑5.2 Thinking 相比保持不变。
+
+GPT‑5.4 是我们首款融合了 GPT‑5.3‑codex 前沿编程能力的常规推理模型，目前正在 ChatGPT、API 及 Codex 平台同步推出。我们将其命名为 GPT‑5.4，旨在体现这一跨越式提升，并简化用户在使用 Codex 时对模型的选择。未来，我们的 Instant 模型和 Thinking 模型将以不同的迭代速度持续进化。
+
+Codex 中的 GPT‑5.4 包含对 1M 上下文窗口的实验性支持。开发者可以通过配置model_context_window和model_auto_compact_token_limit来试用此功能。超过标准 272K 上下文窗口的请求，将按正常费率的 2 倍计入用量限制。
+
+在 API 方面，为了体现能力的提升，GPT‑5.4 的单 Token 价格高于 GPT‑5.2；但凭借更出色的 Token 效率，它在处理许多任务时能显著减少所需的总 Token 数。此外，Batch 和 Flex 的价格仅为标准 API 费率的一半，而 Priority（优先）处理的费率为标准 API 费率的两倍。
+
+SWE-Bench Pro (Public)
+
+Frontier Science Research
+
+FrontierMath Tier 1–3
+
+Humanity's Last Exam（无工具）
+
+Humanity's Last Exam（含工具）
+
+Graphwalks BFS 0K–128K
+
+Graphwalks BFS 256K–1M
+
+Graphwalks parents 0–128K（准确率）
+
+Graphwalks parents 256K–1M（准确率）
+
+OpenAI MRCR v2 8-needle 4K–8K
+
+OpenAI MRCR v2 8-needle 8K–16K
+
+OpenAI MRCR v2 8-needle 16K–32K
+
+OpenAI MRCR v2 8-needle 32K–64K
+
+OpenAI MRCR v2 8-needle 64K–128K
+
+OpenAI MRCR v2 8-needle 128K–256K
+
+OpenAI MRCR v2 8-needle 256K–512K
+
+OpenAI MRCR v2 8-needle 512K–1M
+
+OmniDocBench（归一化编辑距离）
+
+所有评估均在推理强度设为 xhigh 的情况下运行，除非另有说明。所有基准测试均在研究环境中完成，因此在某些情况下，结果可能会与正式上线的 ChatGPT 输出略有不同。
+
+1人类表现数据引用自OSWorld：在真实计算机环境中对开放式任务进行多模态智能体基准测试⁠（在新窗口中打开）。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
+
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+...</p><div style="font-size:16px;line-height:1.8;color:#333">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
+
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+
+在 Codex 与 API 中，GPT‑5.4 是我们发布的第一个具备原生且顶尖计算机使用能力的通用模型，让智能体能够操作计算机，并跨应用程序执行复杂的工作流程。该模型支持高达1M Token 的上下文，允许智能体在长周期内进行任务规划、执行与验证。此外，GPT‑5.4 通过工具搜索功能优化了模型在庞大的工具与连接器生态中的运作方式，帮助智能体在不牺牲智能的前提下，更高效地发现并使用正确工具。最后，GPT‑5.4 是我们迄今为止 Token 效率最高的推理模型，与 GPT‑5.2 相比，解决相同问题所需的 Token 数量显著减少 — 这直接转化为更低的 Token 消耗和更快的响应速度。
+
+GPT‑5.4 在通用推理、编程和专业知识工作方面都有全面提升，因此能支持更可靠的智能体、更高效的开发流程，并在 ChatGPT、API 和 Codex 中带来更高质量的输出。
+
+SWE-Bench Pro (Public)
+
+*此前报告的数据为 64.7%。GPT‑5.3‑Codex 现已达到 74.0% — 通过引入一个能够保留原始图像分辨率的新 API 参数。
+
+基于 GPT‑5.2 的通用推理能力，GPT‑5.4 在专业人士关注的实际任务中，能够提供更加稳定且精炼的输出。
+
+在GDPval⁠（一项评估智能体在 44 个职业中产出明确知识工作能力的测试）中，GPT‑5.4 刷新纪录。在与行业专业人士的横向评测中，GPT‑5.4 在83.0%的案例里达到了持平或更优的水准（GPT‑5.2 为71.0%）。
+
+在 GDPval 测试中，模型尝试完成定义明确的知识型工作，内容涵盖美国 GDP 贡献度最高的 9 个行业中的 44 种职业。任务要求生成真实的工作成果，例如销售演示文稿、会计表格、急诊排班表、制造业图表或短视频。GPT‑5.4 的推理强度设置为 xhigh，GPT‑5.2 的推理强度设置为 heavy（在 ChatGPT 中可用的较低强度）。
+
+我们重点提升了 GPT‑5.4 创建和编辑表格、演示文稿及文档的能力。在针对初级投行分析师水平的电子表格建模任务内部基准测试中，GPT‑5.4 的平均得分达到87.5%，而 GPT‑5.2 为68.4%。在演示文稿评估测试中，人工评分者在68.0%的情况下更偏好 GPT‑5.4 而非 GPT‑5.2 生成的作品，主要原因在于其更强的审美水平、更丰富的视觉元素，以及对图像生成功能更有效的运用。
+
+你可以在 ChatGPT 中使用 GPT‑5.4 Thinking 或 Pro 模型体验这些功能。如果你是 Enterprise 客户，建议使用我们新发布的ChatGPT Excel 和 Google Sheets 插件⁠（在新窗口中打开），该插件也于今天推出。同时，我们也更新了 Codex 和 API 中的电子表格⁠（在新窗口中打开）及演示文稿⁠（在新窗口中打开）技能。
+
+为了提升 GPT‑5.4 在实际工作中的表现，我们持续致力于降低幻觉与错误率。GPT‑5.4 是我们迄今为止准确率最高的模型：在用户标记了事实错误的一组去标识化提示词测试中，与 GPT‑5.2 相比，GPT‑5.4 的单项陈述错误率降低了 33%，完整回复包含错误的概率降低了 18%。
+
+GPT‑5.4 是我们首款原生支持计算机使用能力的通用模型，这标志着在开发与智能体领域向前迈出了重要一步。如果你正在构建跨网页和软件系统执行任务的智能体，GPT‑5.4 是目前市面上的最佳选择。
+
+我们设计 GPT‑5.4 的初衷，是让其在各种“计算机使用”负载中都能表现出色。它擅长通过 Playwright 等库编写代码来操作计算机，也能根据屏幕截图直接下达鼠标和键盘指令。开发者可以通过“开发者消息”引导模型行为，从而灵活调整其表现以适配特定场景。你甚至可以根据不同的风险承受能力，通过指定自定义确认策略来配置模型的安全行为。
+
+模型的性能与灵活性，在针对不同场景下“计算机使用”能力的基准测试中得到充分体现。在OSWorld-Verified测试（该测试通过屏幕截图以及键盘/鼠标操作，来评估模型导航桌面环境的能力）中，GPT‑5.4 达到了75.0%的成功率，刷新了纪录。这一成绩远超 GPT‑5.2 的47.3%，并超越了人类72.4%的表现。1
+
+在评估浏览器使用能力的WebArena-Verified基准测试中，GPT‑5.4 在同时结合 DOM 和屏幕截图驱动的交互方式下，达到了领先的67.3%成功率（GPT‑5.2 为65.4%）。而在同样评估浏览器使用能力的Online-Mind2Web测试中，仅凭基于屏幕截图的观察，GPT‑5.4 就能达到92.8%的成功率，远超 ChatGPT Atlas 智能体模式，后者的成功率为70.9%。
+
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
+
+GPT‑5.4 在“计算机使用”方面的提升，源于模型更强的通用视觉感知能力。在评估视觉理解与推理能力的MMMU-Pro测试中，GPT‑5.4 在不使用工具的情况下达到了81.2%的成功率（GPT‑5.2 为79.5%）。此外，视觉感知的提升也转化为更强的文档解析能力：在OmniDocBench测试中，GPT‑5.4 在不使用推理强度的情况下平均误差（通过模型预测值与标准答案之间的归一化编辑距离衡量）降至0.109，较 GPT‑5.2 的0.140有显著提升。
+
+MMMUPro 在测试时将推理强度设置为 xhigh。OmniDocBench 在测试时将推理强度设置为 none，以反映低成本、低延迟的性能表现。
+
+我们同时提升了对高细节、高分辨率图像的视觉理解能力，这对于要求全保真度的场景至关重要。从 GPT‑5.4 起，我们将引入“原始 (original)”图像输入细节⁠（在新窗口中打开）级别。该级别支持全保真感知，上限为 1024 万总像素或 6000 像素的最大长边（以较低者为准）；同时，“高 (high)”图像输入细节级别现在最高支持 256 万总像素或 2048 像素的最大长边。在与 API 用户进行的早期测试中，我们观察到在使用“原始”或“高”细节时，模型的定位能力、图像理解以及点击准确度均有显著提升。
+
+在 API 中，开发者可以通过更新后的计算机工具来使用这些功能。请参考我们更新后的文档⁠（在新窗口中打开），以获取最佳实践建议。
+
+GPT‑5.4 结合了 GPT‑5.3‑Codex 的编程优势，以及领先的知识型工作与“计算机使用”能力。这对于长时间运行的任务至关重要。在这些任务中，模型可以自主使用工具、进行迭代并推进工作，从而减少人工干预。在 SWE-Bench Pro 测试中，GPT‑5.4 的表现超越了 GPT‑5.3‑Codex 或与其持平，同时在各项推理任务中拥有更低的延迟。
+
+我们通过观察模型的生产环境行为并进行离线模拟来估算延迟。延迟估算涵盖了工具调用耗时（代码执行时间）、采样 Token 以及输入 Token。实际延迟可能会有显著差异，并取决于诸多我们的模拟中未涵盖的因素。推理强度已从 none 调整为 xhigh。
+
+开启 Codex 中的 /fast 模式后，可将 GPT‑5.4 的 Token 吐字速度提升至 1.5 倍。模型本身及其智能水平完全一致，只是速度更快。这意味着用户在处理编码任务、迭代和调试时，能够始终保持专注顺畅的状态。通过使用优先处理服务⁠（在新窗口中打开），开发者也可以在 API 中以同样的高速访问 GPT‑5.4。
+
+在评估和内部测试中，我们发现 GPT‑5.4 擅长处理复杂的垂直前端任务。与我们此前发布的任何模型相比，其产出的结果在审美水平和功能性上都有显著提升。
+
+为了展示模型在“计算机使用”与编程能力上的双重进化，我们还将发布一个名为“Playwright (Interactive)”的实验性Codex 技能⁠（在新窗口中打开）。它允许 Codex 对网页和 Electron 应用进行可视化调试；甚至在构建应用的过程中，它就能同步对该应用进行实时测试。
+
+在 GPT‑5.4 中，我们显著优化了模型与外部工具的协作方式。现在，智能体能够在更庞大的工具生态中进行操作，更可靠地筛选匹配工具，并以更低的成本和延迟完成多步骤的工作流程。
+
+在 API 层面，GPT‑5.4 引入了工具搜索⁠（在新窗口中打开）功能。这使得模型在面对海量工具选项时，依然能够保持高效运作。
+
+在此之前，当模型调用工具时，所有的工具定义都必须预先包含在提示词中。对于拥有大量工具的系统，这会导致每次请求都额外增加数千甚至数万个 Token，不仅推高了成本、减慢了响应速度，还让上下文中充斥着模型可能永远用不到的冗余信息。
+
+通过工具搜索，GPT‑5.4 不再需要预加载完整定义，而是接收一份精简的可选工具列表及工具搜索能力。当模型需要调用特定工具时，它会即时查找该工具的定义，并将其添加到当前的对话上下文。
+
+这种方法大幅减少了重度工具调用工作流程所需的 Token 数量，并有效保留了缓存，使请求变得更快、成本更低。它还让智能体能够可靠地与更庞大的工具生态协同工作。对于那些工具定义可能包含数万个 Token 的 MCP 服务器而言，效率提升尤为显著。
+
+为了展示效率提升的实际效果，我们对 ScaleMCP Atlas⁠（在新窗口中打开）基准测试中的 250 个任务进行了评估。在开启全部 36 个 MCP 服务器的情况下，我们对比了两种模式：(1) 将每个 MCP 函数直接暴露在模型上下文中；(2) 将所有 MCP 服务器置于“工具搜索”之后。结果显示，在保持同等准确率的前提下，“工具搜索”配置将总 Token 使用量降低了 47%。
+
+示例 Token 计数是基于 MCP-Atlas 公开数据集中 250 个任务的平均值得出的。
+
+GPT‑5.4 同样优化了工具调用能力，使其在推理过程中能更准确、更高效地判断调用工具的时机与方式，这在 API 环境下尤为突出。相比 GPT‑5.2，它在 Toolathlon 基准测试中能以更少的轮次达到更高的准确率。该测试旨在评估 AI 智能体利用真实世界工具和 API 完成多步任务的能力 — 例如，智能体需要读取邮件、提取作业附件、上传并评分，最后将结果记录到电子表格中。
+
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
+
+针对那些对延迟极度敏感、且倾向于将推理强度设为“无 (None)”的使用场景，GPT‑5.4 相比前代产品有显著提升。
+
+在τ2-bench⁠⁠（在新窗口中打开）测试中，模型必须利用工具来完成某项客服任务；该场景下可能包含一名模拟用户，此用户能够进行交流并针对环境状态执行操作。在测试中，推理强度设为 None。
+
+GPT‑5.4 在智能体联网搜索方面表现更佳。在 BrowseComp 基准测试（衡量 AI 智能体通过持续浏览网页获取难寻信息的能力）中，GPT‑5.4 相比 GPT‑5.2 提升了 17 个百分点；而 GPT‑5.4 Pro 更是创下了 89.3% 的纪录。
+
+在实际应用中，这意味着 GPT‑5.4 Thinking 能够更强有力地解答那些需要整合全网多方信息的复杂问题。它能以更强的持久性进行多轮搜索，从而锁定最相关的信源 — 尤其是在处理“大海捞针”式的问题时，它能高效提炼核心信息，并给出逻辑清晰、论证严密的回答。
+
+在 BrowseComp 测试中，我们使用了搜索黑名单，剔除了包含测试答案的网站，以防止数据污染并确保性能评估的公正性。由于 GPT‑5.4 的测试时间晚于 GPT‑5.2，其得分反映了模型能力、搜索系统优化以及互联网实时状态的综合变化。此外，GPT‑5.4 采用了范围更广、经过更新的黑名单进行测试。测试模型统一调用 ChatGPT 搜索工具，该工具与 API 搜索可能存在细微差异。
+
+与 Codex 开始工作时会概述思路类似，ChatGPT 中的 GPT‑5.4 Thinking 现在也会在处理更长、更复杂的查询时，通过“前言 (preamble)”来简述其工作方案。此外，你还可以在模型生成过程中实时添加指令或调整其方向。这让你能更轻松地引导模型达成预期的结果，而无需推倒重来，或通过多轮额外对话进行补救。该功能目前已在chatgpt.com⁠（在新窗口中打开）和 Android 应用上线，iOS 应用也将于近期推出。
+
+该模型在处理困难任务时能够进行更深入的思考，同时对会话早期的步骤保持更强的记忆。这使其能够应对更长的工作流和更复杂的提示词，并确保整个过程中给出的回答始终连贯且高度切题。
+
+在筹备 GPT‑5.4 部署的近几个月里，我们持续完善了自 GPT‑5.3‑Codex 以来引入的安全防护措施。与 GPT‑5.3‑Codex 类似，根据我们的《准备框架》(Preparedness Framework)，我们将 GPT‑5.4 评定为具有“高网络能力”级别，并按照系统卡⁠中的记录，为其配置了相应的安全防护进行部署。这些举措包括一套扩展版网络安全技术栈，涵盖了监控系统、可信访问控制，以及针对零数据留存 (ZDR) 层面高风险请求的异步拦截机制；与此同时，我们也对更广泛的安全生态系统持续投入资源。
+
+由于网络安全能力本质上具有“双重用途 (dual-use)”，我们在部署时保持审慎态度，并持续优化策略与分类器。针对 ZDR 界面上的特定客户，请求级拦截仍是我们网络风险缓解栈的一部分；鉴于分类器仍在迭代中，在我们持续完善这些防护措施的过程中，可能会出现一些误报。这些更新旨在优化防护措施的实际运行效果，包括减少不必要的拒答和过度生硬的免责声明，同时确保对滥用行为的强力防御。
+
+我们持续开展关于思维链 (CoT) 可监测性的安全研究，以更深入地理解模型的推理逻辑，并协助检测潜在的违规行为。作为该项工作的一部分，我们推出了全新的开源评估指标 —CoT 可控性⁠，用于衡量模型是否能故意混淆其推理过程以规避监控。研究发现，GPT‑5.4 Thinking 控制其 CoT 的能力较低。从安全性角度来看，这是一个积极的特性，表明该模型尚不具备隐藏其真实推理逻辑的能力，也证明了 CoT 监控依然是一项有效的安全手段。
+
+GPT‑5.4 自今日起将在 ChatGPT 和 Codex 中逐步推出。在 API 方面，GPT‑5.4 已正式上线，模型名称为gpt-5.4。此外，针对在极复杂任务中追求极致性能的开发者，GPT‑5.4 Pro 也已通过 API 提供，模型名称为gpt-5.4-pro。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 自即日起向 ChatGPT Plus、Team 及 Pro 用户开放，并取代 GPT‑5.2 Thinking。GPT‑5.2 Thinking 将在模型选择器的“传统模型 (Legacy Models)”栏目中为付费用户保留三个月，随后将于 2026 年 6 月 5 日正式停用。使用 Enterprise 和 Edu 套餐的用户可以通过管理员设置开启早期访问权限。此外，GPT‑5.4 Pro 版本将专门提供给 Pro 和 Enterprise 用户。ChatGPT 中 GPT‑5.4 Thinking 的上下文窗口⁠（在新窗口中打开）与 GPT‑5.2 Thinking 相比保持不变。
+
+GPT‑5.4 是我们首款融合了 GPT‑5.3‑codex 前沿编程能力的常规推理模型，目前正在 ChatGPT、API 及 Codex 平台同步推出。我们将其命名为 GPT‑5.4，旨在体现这一跨越式提升，并简化用户在使用 Codex 时对模型的选择。未来，我们的 Instant 模型和 Thinking 模型将以不同的迭代速度持续进化。
+
+Codex 中的 GPT‑5.4 包含对 1M 上下文窗口的实验性支持。开发者可以通过配置model_context_window和model_auto_compact_token_limit来试用此功能。超过标准 272K 上下文窗口的请求，将按正常费率的 2 倍计入用量限制。
+
+在 API 方面，为了体现能力的提升，GPT‑5.4 的单 Token 价格高于 GPT‑5.2；但凭借更出色的 Token 效率，它在处理许多任务时能显著减少所需的总 Token 数。此外，Batch 和 Flex 的价格仅为标准 API 费率的一半，而 Priority（优先）处理的费率为标准 API 费率的两倍。
+
+SWE-Bench Pro (Public)
+
+Frontier Science Research
+
+FrontierMath Tier 1–3
+
+Humanity's Last Exam（无工具）
+
+Humanity's Last Exam（含工具）
+
+Graphwalks BFS 0K–128K
+
+Graphwalks BFS 256K–1M
+
+Graphwalks parents 0–128K（准确率）
+
+Graphwalks parents 256K–1M（准确率）
+
+OpenAI MRCR v2 8-needle 4K–8K
+
+OpenAI MRCR v2 8-needle 8K–16K
+
+OpenAI MRCR v2 8-needle 16K–32K
+
+OpenAI MRCR v2 8-needle 32K–64K
+
+OpenAI MRCR v2 8-needle 64K–128K
+
+OpenAI MRCR v2 8-needle 128K–256K
+
+OpenAI MRCR v2 8-needle 256K–512K
+
+OpenAI MRCR v2 8-needle 512K–1M
+
+OmniDocBench（归一化编辑距离）
+
+所有评估均在推理强度设为 xhigh 的情况下运行，除非另有说明。所有基准测试均在研究环境中完成，因此在某些情况下，结果可能会与正式上线的 ChatGPT 输出略有不同。
+
+1人类表现数据引用自OSWorld：在真实计算机环境中对开放式任务进行多模态智能体基准测试⁠（在新窗口中打开）。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
