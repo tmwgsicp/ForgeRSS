@@ -5,7 +5,7 @@
 <link>https://developers.openai.com/codex</link>
 <description>OpenAI Codex coding agent documentation</description>
 <language>en</language>
-<lastBuildDate>Mon, 31 Aug 2026 03:23:20 +0000</lastBuildDate>
+<lastBuildDate>Mon, 07 Sep 2026 02:43:19 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://developers.openai.com/codex" rel="self" type="application/rss+xml"/>
 <image>
@@ -17,7 +17,7 @@
   <title>Overview</title>
   <link>https://developers.openai.com/codex</link>
   <guid isPermaLink="false">https://developers.openai.com/codex</guid>
-  <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+  <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
   <category>Documentation</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Overview
 Start with a goal, idea, or task. ChatGPT can gather context, take action, and produce something useful.
@@ -71,16 +71,14 @@ Codey
 I found a tiny loose thread in settings. Want me to tug it?
 What’s new
 View all updates
+August 31–September 4, 2026
+Take on demanding work with GPT-6 Astra
+GPT-6 Astra combines advanced reasoning, computer use, and stronger judgment for complex work across code, apps, and research in Codex and ChatGPT Work.
 August 24–28, 2026
 Work with more websites
 Use your browser: Work in Edge, Brave, Opera, or Vivaldi as well as Chrome from the ChatGPT desktop app.
 Run scheduled tasks from app events
-Scheduled tasks can now start when a supported event occurs in Gmail, Slack, or GitHub.
-August 17–21, 2026
-Work with more of your apps and content
-Apple Messages: Find chats, summarize messages, prepare replies, and send through Messages on your Mac.
-Work with GitLab projects in Codex cloud
-GitLab support is available in beta on all ChatGPT plans.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+Scheduled tasks can now start when a supported event occurs in Gmail, Slack, or GitHub.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Overview
 Start with a goal, idea, or task. ChatGPT can gather context, take action, and produce something useful.
 Quickstart
@@ -133,16 +131,14 @@ Codey
 I found a tiny loose thread in settings. Want me to tug it?
 What’s new
 View all updates
+August 31–September 4, 2026
+Take on demanding work with GPT-6 Astra
+GPT-6 Astra combines advanced reasoning, computer use, and stronger judgment for complex work across code, apps, and research in Codex and ChatGPT Work.
 August 24–28, 2026
 Work with more websites
 Use your browser: Work in Edge, Brave, Opera, or Vivaldi as well as Chrome from the ChatGPT desktop app.
 Run scheduled tasks from app events
-Scheduled tasks can now start when a supported event occurs in Gmail, Slack, or GitHub.
-August 17–21, 2026
-Work with more of your apps and content
-Apple Messages: Find chats, summarize messages, prepare replies, and send through Messages on your Mac.
-Work with GitLab projects in Codex cloud
-GitLab support is available in beta on all ChatGPT plans.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Scheduled tasks can now start when a supported event occurs in Gmail, Slack, or GitHub.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
