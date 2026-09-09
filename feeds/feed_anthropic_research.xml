@@ -5,7 +5,7 @@
 <link>https://www.anthropic.com/research</link>
 <description>Latest research publications from Anthropic</description>
 <language>en</language>
-<lastBuildDate>Wed, 09 Sep 2026 03:23:54 +0000</lastBuildDate>
+<lastBuildDate>Wed, 09 Sep 2026 10:54:54 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://www.anthropic.com/research" rel="self" type="application/rss+xml"/>
 <image>
@@ -2137,10 +2137,107 @@ Enabling independent research on how people use Claude
 Earlier this year, we ran a pilot giving external researchers access to aggregate, real-world Claude usage data. Three research groups designed their own studies for Anthropic Insights, our privacy-preserving analysis tool. In this post, we share high-level results from those studies and what we learned running this pilot.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/global-workspace" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
+  <title>Societal Impacts</title>
+  <link>https://www.anthropic.com/research/team/societal-impacts</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
+  <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+
+Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+
+What 81,000 people want from AI
+
+We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+
+How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+
+We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+
+We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+
+What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+
+Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+
+Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+
+Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+
+Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+
+Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+
+Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+
+Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+
+Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+
+Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+
+Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+
+Sociotechnical alignment
+
+Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+
+Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+
+What 81,000 people want from AI
+
+We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+
+How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+
+We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+
+We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+
+What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+
+Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+
+Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+
+Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+
+Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+
+Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+
+Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+
+Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+
+Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+
+Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+
+Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+
+Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
   <title>Interpretability</title>
   <link>https://www.anthropic.com/research/team/interpretability</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/interpretability</guid>
-  <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+  <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The mission of the Interpretability team is to discover and understand how large language models work internally, as a foundation for AI safety and positive outcomes.
 
@@ -2238,107 +2335,79 @@ Mar 13, 2025AlignmentAuditing language models for hidden objectives
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/interpretability" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>Societal Impacts</title>
-  <link>https://www.anthropic.com/research/team/societal-impacts</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/societal-impacts</guid>
-  <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+  <title>Frontier Red Team</title>
+  <link>https://www.anthropic.com/research/team/frontier-red-team</link>
+  <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
+  <pubDate>Tue, 27 Aug 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
 
-Sociotechnical alignment
+Project Fetch: Phase two
 
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
 
-Sociotechnical alignment
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
 
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+Project Fetch: Phase two
 
-Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
 
-What 81,000 people want from AI
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
 
-We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
 
-How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
+Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
 
-We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
+Jul 9, 2026Frontier Red TeamClaude plays robotics
 
-We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
+Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
 
-What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
+Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
 
-Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
+Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
 
-Jul 13, 2026Societal ImpactsClaude’s values across models and languages
+Jun 3, 2026AnnouncementsWhat we learned mapping a year’s worth of AI-enabled cyber threats
 
-Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
+May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
 
-Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
+Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
 
-Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
+Project Fetch: Phase two
 
-Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
 
-Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
 
-Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
+Project Fetch: Phase two
 
-Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
+We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
 
-Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
+Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
 
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
 
-Sociotechnical alignment
+Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
 
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these ques...</p><div style="font-size:16px;line-height:1.8;color:#333">Working closely with the Anthropic Policy and Safeguards teams, Societal Impacts is a technical research team that explores how AI is used in the real world.
+Jul 9, 2026Frontier Red TeamClaude plays robotics
 
-Sociotechnical alignment
+Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
 
-Which human values should AI models hold, and how should they operate in the face of conflicting or ambiguous values? How is AI used (and misused) in the wild? How can we anticipate future uses and risks of AI? Societal Impacts researchers develop experiments, training methods, and evaluations to answer these questions.
+Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
 
-Though the Societal Impacts team is technical, they often pick research questions that have policy relevance. They believe that providing trustworthy research concerning topics policymakers care about will lead to better policy (and overall) outcomes for everyone.
+Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
 
-What 81,000 people want from AI
+Jun 3, 2026AnnouncementsWhat we learned mapping a year’s worth of AI-enabled cyber threats
 
-We invited Claude.ai users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people participated—the largest and most multilingual qualitative study of its kind. Here's what we found.
+May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
 
-How much autonomy do people grant agents? How does that change as people gain experience? We analyzed millions of human-agent interactions to answer these and other questions.
-
-We built an interview tool called Anthropic Interviewer. Powered by Claude, Anthropic Interviewer runs detailed interviews automatically and at unprecedented scale.
-
-We surveyed Anthropic engineers and researchers, conducted in-depth qualitative interviews, and studied internal Claude Code usage data to find out how AI use is changing how we do our jobs.
-
-What values does Claude actually express during real conversations? Analyzing 700,000 interactions, this paper creates the first large-scale empirical taxonomy of AI values.
-
-Aug 26, 2026Societal ImpactsEnabling independent research on how people use Claude
-
-Jul 13, 2026Societal ImpactsClaude’s values across models and languages
-
-Apr 30, 2026Societal ImpactsHow people ask Claude for personal guidance
-
-Feb 18, 2026Societal ImpactsMeasuring AI agent autonomy in practice
-
-Dec 4, 2025Societal ImpactsIntroducing Anthropic Interviewer: What 1,250 professionals told us about working with AI
-
-Dec 2, 2025Societal ImpactsHow AI is transforming work at Anthropic
-
-Aug 27, 2025Societal ImpactsAnthropic Education Report: How educators use Claude
-
-Jun 27, 2025Societal ImpactsHow people use Claude for support, advice, and companionship
-
-Apr 28, 2025Societal ImpactsAnthropic Economic Index: AI’s impact on software development
-
-Apr 21, 2025Societal ImpactsValues in the wild: Discovering and analyzing values in real-world language model interactions
-
-Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/societal-impacts" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Alignment</title>
   <link>https://www.anthropic.com/research/team/alignment</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/alignment</guid>
-  <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+  <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Future AI systems will be even more powerful than today’s, likely in ways that break key assumptions behind current safety techniques. That’s why it’s important to develop sophisticated safeguards to ensure models remain helpful, honest, and harmless. The Alignment team works to understand the challenges ahead and create protocols to train, evaluate, and monitor highly-capable models safely.
 
@@ -2432,79 +2501,10 @@ Jan 9, 2026AlignmentNext-generation Constitutional Classifiers: More efficient p
 Join the Research team</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/alignment" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>Frontier Red Team</title>
-  <link>https://www.anthropic.com/research/team/frontier-red-team</link>
-  <guid isPermaLink="false">https://www.anthropic.com/research/team/frontier-red-team</guid>
-  <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
-
-Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
-
-Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
-
-Jul 9, 2026Frontier Red TeamClaude plays robotics
-
-Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
-
-Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
-
-Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
-
-Jun 3, 2026AnnouncementsWhat we learned mapping a year’s worth of AI-enabled cyber threats
-
-May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
-
-Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent s...</p><div style="font-size:16px;line-height:1.8;color:#333">The Frontier Red Team stress-tests AI systems to understand the full extent of their current capabilities and anticipate what comes next. We provide evidence-based analysis about AI’s implications for cybersecurity, national security, and autonomous systems.
-
-Project Fetch: Phase two
-
-We report results from our latest test of whether Claude can help Anthropic employees perform sophisticated (and amusing) robotics tasks.
-
-Aug 13, 2026Frontier Red TeamPatterns and problems in emerging multiagent systems
-
-Jul 28, 2026Frontier Red TeamDiscovering cryptographic weaknesses with Claude
-
-Jul 24, 2026Frontier Red TeamProject Pilot: Can AI control a drone?
-
-Jul 9, 2026Frontier Red TeamClaude plays robotics
-
-Jun 18, 2026Frontier Red TeamProject Fetch: Phase two
-
-Jun 8, 2026Frontier Red TeamMeasuring LLMs’ impact on N-day exploits
-
-Jun 3, 2026Frontier Red TeamMapping AI-enabled cyber threats: Insights from the LLM ATT&CK Navigator
-
-Jun 3, 2026AnnouncementsWhat we learned mapping a year’s worth of AI-enabled cyber threats
-
-May 22, 2026Frontier Red TeamMeasuring LLMs’ ability to develop exploits
-
-Apr 7, 2026Frontier Red TeamAssessing Claude Mythos Preview’s cybersecurity capabilities</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://www.anthropic.com/research/team/frontier-red-team" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
   <title>Economics</title>
   <link>https://www.anthropic.com/research/team/economics</link>
   <guid isPermaLink="false">https://www.anthropic.com/research/team/economics</guid>
-  <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
+  <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">The Economics team studies how AI is reshaping the economy, including work, productivity, and economic opportunity. Through rigorous data collection and analysis, we track AI&apos;s real-world economic effects and publish research that helps policymakers, businesses, and the public understand and prepare for the changes ahead.
 
