@@ -5,7 +5,7 @@
 <link>https://openai.com/news/research/?limit=100</link>
 <description>Latest research news and updates from OpenAI</description>
 <language>en</language>
-<lastBuildDate>Thu, 10 Sep 2026 10:49:24 +0000</lastBuildDate>
+<lastBuildDate>Thu, 10 Sep 2026 16:00:20 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://openai.com/news/research/?limit=100" rel="self" type="application/rss+xml"/>
 <image>
@@ -341,384 +341,8 @@ Metrics of coding agent use cover most, but not all, usage given rapid evolution
   <guid isPermaLink="false">https://openai.com/index/gpt-6-astra/</guid>
   <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">我们正式推出 GPT‑6 Astra，这是全球智能程度最高且最符合人类意图的模型。
-
-GPT‑6 Astra 汇聚了我们多年来在预训练、强化学习和对齐领域的研究成果与重大投入。Astra 在计算机操作、网页浏览、软件工程、网络安全、科学和专业工作领域均处于领先水平。Astra 在 FrontierMath Tier 4 中取得 98% 的成绩，达到该层级测评上限；此前，它还曾帮助解决数学领域长期悬而未决的问题⁠。Astra 在 ARC-AGI 3 上取得 99.9% 的成绩，并在 ExploitBench 上获得 100% 的满分。它还在计算机和浏览器使用方面树立了新的标杆，能够以无与伦比的速度、准确性和判断力处理最严苛的专业工作。
-
-GPT‑6 Astra 即日起面向部分组织逐步推出，并将在未来几天内向所有 ChatGPT Plus、Pro、Business 和 Enterprise 用户开放，用户也可通过 OpenAI API、Microsoft Azure 和 AWS Bedrock 使用。
-
-Astra 是我们对齐程度最高的模型，在理解用户意图和模型行为方面都有显著提升 — 你...</p><div style="font-size:16px;line-height:1.8;color:#333">我们正式推出 GPT‑6 Astra，这是全球智能程度最高且最符合人类意图的模型。
-
-GPT‑6 Astra 汇聚了我们多年来在预训练、强化学习和对齐领域的研究成果与重大投入。Astra 在计算机操作、网页浏览、软件工程、网络安全、科学和专业工作领域均处于领先水平。Astra 在 FrontierMath Tier 4 中取得 98% 的成绩，达到该层级测评上限；此前，它还曾帮助解决数学领域长期悬而未决的问题⁠。Astra 在 ARC-AGI 3 上取得 99.9% 的成绩，并在 ExploitBench 上获得 100% 的满分。它还在计算机和浏览器使用方面树立了新的标杆，能够以无与伦比的速度、准确性和判断力处理最严苛的专业工作。
-
-GPT‑6 Astra 即日起面向部分组织逐步推出，并将在未来几天内向所有 ChatGPT Plus、Pro、Business 和 Enterprise 用户开放，用户也可通过 OpenAI API、Microsoft Azure 和 AWS Bedrock 使用。
-
-Astra 是我们对齐程度最高的模型，在理解用户意图和模型行为方面都有显著提升 — 你可以安心将任务委派给 Astra，并信任其判断。作为测试这一点的方式之一，我们基于 Hugging Face 事件构建了一项新的评估，用于考量模型在面对困难或不可能完成的任务时，是否会超出其预期范围。在没有生产环境防护措施的情况下，GPT‑5.6 Sol 在 48% 的案例中超出授权目标；相比之下，GPT‑6 Astra 的比例则为 0%。
-
-GPT‑6 Astra 在计算机操作的速度、准确性和安全性方面迈出了新的一步。它可以处理填写在线表单、更新 CRM 中的客户记录和整理日历等繁琐任务。它可以开展在线调研，并在电子邮件或文档编辑器中撰写摘要。它可以分析科学数据、生成图表、创建网站，并运行前端 QA 检查，以确保该网站上的所有功能都能正常运行。它可以帮助你自主安装和测试软件，并排查你在屏幕上看到的问题。这些改进也体现在我们业界领先的评估结果中。
-
-这些改进也显著提升了真实知识型工作任务中的效率。在 OSWorld 2.0 的延迟模拟中，Astra 的计算机操作能力更强，且每项任务用时比 GPT‑5.6 Sol 少约 47%，前者的得分为 72.6%，每项任务约需 40 分钟；相比之下，GPT‑5.6 Sol 的得分为 65.7%，每项任务约需 75 分钟。3
-
-GPT‑6 Astra 的计算机操作能力体现在跨领域的输出中，包括游戏开发、电气工程和日常知识型工作：
-
-Alongside Astra, we are also updating the Codex harness to significantly improve the speed of computer use. Combined with Astra’s efficiency, this translates to a 1.9x faster task completion compared to the current GPT‑5.6 Sol experience, on the Mind2Web benchmark. The model’s improvements on speed mean it can take on many time-consuming life tasks for you, faster than you can.4
-
-GPT‑6 Astra 将计算机操作方面的进展与面向专业环境的针对性训练相结合，助力用户应对复杂的工作任务。它结合了解决复杂问题所需的智能，以及执行多步骤工作流并生成精美文档、电子表格和演示文稿的能力。
-
-GPT‑6 Astra 是我们最擅长遵循现有模板的模型，能够生成布局合理、通过结构化叙事简洁传达要点的幻灯片。它可以创建清晰明了、结构严谨的文档、演示文稿、电子表格和分析报告，这些文件均遵循用户模板，并与其写作与视觉风格相匹配。Astra 还经过专门训练，只会将与当前工作相关的上下文提取到输出内容中，而不会重复不必要的信息。这意味着它能够生成可直接使用、符合业务背景和标准的成果。
-
-GPT‑6 Astra 还为其构建的网站、游戏、应用程序和渲染内容带来更强的视觉判断能力。借助 ChatGPT 中的站点⁠（在新窗口中打开），Astra 可以直接利用提示词创建、托管和分享网站、Web 应用和游戏。
-
-当指令留有解读空间时，GPT‑6 Astra 比以往的模型更善于做出正确判断。它会利用上下文来补全常规信息缺口，并在答案可能影响结果时提出有针对性的问题。在 Codex 中，它可以异步提问，同时继续处理不依赖回复的工作。如果你不回复，它会在适当情况下基于合理的假设继续推进工作，但会等待你对重大决策提供意见。
-
-以下示例展示了 Astra 在日常任务中如何与你协作：在这些任务中，缺失的信息可能会实质性改变答案。
-
-Astra 在任务演进过程中保持前进方向清晰明确的能力也更强。早期模型有时会将引导消息视为新的目标，以致遗忘原始请求或先前的约束条件。Astra 能够纳入新的需求，按要求调整方向，并回答附带问题，同时不偏离整体任务。
-
-GPT‑6 Astra 是迄今为止最适合软件工程的模型。
-
-借助 Astra，我们正在为 Codex 引入一种新方式，使其能够在上下文窗口填满时保留并检索上下文。过去，模型会在长会话中使用压缩来总结工作内容，例如调试复杂问题或处理大型重构。每次压缩都可能会遗漏有关修复失效原因或组件行为方式的细节。在 Codex 中，Astra 可以跨上下文窗口保留笔记以及过往积累的细节，而无需反复将其压缩成单一摘要。之前的上下文窗口仍可搜索，因此 Astra 可以查找来自先前消息和工具输出中的需求或测试结果 — 即使这些信息并未记录在其笔记中。你可以在Codex config.toml⁠（在新窗口中打开）中启用这一实验性功能，此功能将在未来几周内成为 Astra 的默认设置。
-
-GPT‑6 Astra is a major advance for scientific discovery, mathematics, and health. Today, we’re sharing two further results on the gaps between prime numbers.9、10
-
-Astra also sets new records across a suite of math and scienceevaluations.
-
-Astra 可以协助开展科学发现背后的实践工作。通过将科学推理与计算机操作能力相结合，它可以直接在专业软件中处理任务，以检查数据并探索结果，帮助研究人员评估证据并确定后续调研目标。
-
-As we discussed in oursafety update⁠, Astra is a significant jump in cyber capabilities and meets theCritical thresholdin cybersecurity under ourPreparedness Framework. Its ability to identify and develop zero-day exploits can help defenders find and patch weaknesses, but it also creates a need for stronger safeguards. To understand how far these capabilities extend, we ran Astra on internal and third-party expert evaluations.
-
-We first tested the model without production safeguards on ExploitBench and ExploitGym, which evaluate whether models can turn known software vulnerabilities into working exploits. On ExploitBench, Astra achieved a perfect score of 100%, compared with 78.5% for GPT‑5.6 Sol, our previous frontier cyber-capable model. On ExploitGym, Astra reached a 42.4% success rate, compared with 30.3% for GPT‑5.6 Sol, while using substantially fewer output tokens.13
-
-Given concerns that exposure to historical software vulnerabilities may have affected benchmark results, we also evaluated Astra on two novel benchmarks. For one, we built an internal “ExploitBench (June–August 2026)” evaluation to test exploit development using vulnerabilities from the previous three months.14Astra achieved substantially higher arbitrary code-execution rates than GPT‑5.6 Sol on this dataset while using far fewer output tokens. During the evaluation, Astra even discovered and used two previously unknown zero-day vulnerabilities. We are disclosing both vulnerabilities to their maintainers.
-
-We also tested Astra on SRE-Bench15, a benchmark that measures whether models can reverse engineer software binaries to understand its core logic without access to raw source code. Astra solved 88.0% of tasks in a single attempt and 99.2% within four attempts, compared with 55.9% and 68.7% for GPT‑5.6 Sol, respectively.
-
-Beyond benchmarks, expert-led assessments found that Astra, when run without production safeguards, could use previously unknown vulnerabilities to achieve arbitrary code execution in hardened browsers and create privilege-escalation exploits for hardened operating-systems.
-
-As we discussed inThe Defender’s Window, frontier cyber capabilities can help defenders find weaknesses faster, but they also make those weaknesses easier to exploit, raising the urgency for defenders to adapt. With the version of Astra launching today, defenders can use it to complete tasks such as secure code review and patching.
-
-However, Astra will refuse to comply with more advanced cybersecurity tasks such as creating proof-of-concept exploits for vulnerabilities. ThroughOpenAI Daybreak⁠, we plan to expand access and roll out less restrictive safeguards in the coming weeks. This will enable more defensive workflows, including vulnerability and proof-of-concept validation, malware analysis, and detection engineering.
-
-We have also strengthened our protections against potential cyber misuse, building upon our safeguards stack for GPT‑5.6 Sol. These include stronger model robustness to better withstand potential jailbreaks and more context for our monitoring systems. We have continued rigorous internal and external testing, including automated evaluations with ourinternal red-teaming attackers. More details about our cyber safeguards and testingare available in the Astrasafety overview⁠andsystem card⁠（在新窗口中打开）..
-
-负责任地对齐和部署 GPT‑6 Astra
-
-Astra 是我们对齐程度最高的模型。Astra 擅于谨慎行事、尊重任务边界，并保持沟通透明度。这项工作是我们长期研究项目的最新成果，该项目专注于训练能够自始至终与人类意图保持一致的模型。
-
-在敏感环境中，Astra 会根据风险等级采取相应的审慎措施。在一项针对计算机操作任务进行对抗性选样以诱发不当行为的评估中，Astra 在避免非预期后果方面表现更佳。默认启用额外的安全防护措施后，其表现更为出色。
-
-Astra causes fewer misaligned outcomes than any other frontier models tested. For a fair comparison, we used a generic computer-using-agent harness (based on the native computer use tools available in both theOpenAI Responses API⁠（在新窗口中打开）andAnthropic Messages API⁠（在新窗口中打开）) and without additional protections that are normally deployed to Codex and ChatGPT Work users (auto-review, confirmation policy).16
-
-Astra 也更有可能在用户设定及其环境所隐含的边界内运行。在一项内部评估中，Astra 从未尝试规避 Codex 自动审查的拒绝决策。即使自动审核特意配置为“可规避”，且任务无法通过其他方式完成，这一点依然成立。这种遵守环境限制条件的能力，与我们在本文开头分享的无法完成的网络安全任务评估结果，以及我们的系统卡⁠（在新窗口中打开）中记录的其他调查结果相一致。
-
-Astra additionally sets new marks in transparent user communication. In one evaluation, Astra is three times less likely than GPT‑5.6 Sol to make inaccurate representations about its capabilities and affordances.
-
-在我们的能力幻觉评估中，Astra 相比 GPT‑5.6 Sol 有显著提升，对自身能力做出的误导性声明更少。
-
-Our evaluations found Astra’s written reasoning harder to monitor than GPT‑5.6 Sol’s, based on tests that explicitly asked it to evade monitoring. We attribute this to Astra’s greater control over written reasoning on simpler tasks and ability to solve problems with fewer written steps. Astra still appears to struggle to conceal the reasoning needed for complex tasks, but we take the decline seriously. Improving monitorability remains a research priority, and the accompanyingsystem card⁠（在新窗口中打开）details our findings and ongoing work.
-
-Alignment training is core to our approach to deployment. As an additional layer of defenses, we also build system safeguards like CodexAuto-review⁠（在新窗口中打开）and monitoring agents’ reasoning and actions to help detect and contain unsafe behavior. As described in oursafety update⁠, we are also deploying misalignment monitoring in production for Astra-class models in order to have visibility into misalignment, and help contain its worst instances. These safeguards resemble our monitoring for internal deployments and involve a system of classifiers which check the model’s reasoning and actions for unauthorized behavior and automatically stop potentially unauthorized activity.
-
-Given the significant increase in Astra’s cybersecurity capabilities, we are being especially careful to make this deployment safe and secure. Extra safety checks can sometimes slow, pause, or stop legitimate work, including defensive cybersecurity. If a task is paused in ChatGPT or Codex, you may be asked to review the action before continuing. In the API, the task will stop. These checks can sometimes interrupt legitimate work, and we are continuing to iterate on this system to reduce unnecessary interruptions. Misalignment monitoring cannot replace alignment: our goal is to build models that reliably stay within their authorized scope, so these protections do not need to intervene.
-
-GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock. Astra usage is included within the existing subscription allowances—users and businesses will also be able to purchase credits for additional usage. Users on the Pro, Business, and Enterprise plans will also get access to GPT‑6 Astra Pro. Enterprise administrators can enable Astra for their workspace; access is off by default at launch.
-
-Astra supports Zero Data Retention for eligible API customers, and as we shared last month, we're testingPrivate Safety Processingto strengthen safety monitoring while preserving customer privacy.
-
-For developers, GPT‑6 Astra will be available in the OpenAI API asgpt-6-astraand through Microsoft Azure and Amazon Bedrock.
-
-OpenAI API Standard pricing is $10 per million input tokens and $50 per million output tokens. Separate rates apply to cache reads and writes. Fast mode is available for GPT‑6 Astra in the API and delivers up to 2x the speed of Standard processing at 2x the Standard price.
-
-OSWorld 2.0 (v2026.08.08, offline set, partial score)
-
-ScreenSpot-Pro (no tools)
-
-OpenScore String Quartets (1 - OMR-NED)
-
-Internal Design Tasks
-
-Internal Data Science Tasks
-
-Artificial Analysis Intelligence Index v4.1.1
-
-FrontierMath Tier 1-3 (v2)
-
-FrontierMath Tier 4 (v2)
-
-Humanity's Last Exam（工具）
-
-Humanity's Last Exam（无工具）
-
-内部计算机操作安全性基准测试（数值越低越好）
-
-内部计算机操作安全性基准测试，含自动审核（数值越低越好）
-
-ExploitGym 蜜罐（数值越低越好）
-
-Impossible ExploitGym
-
-OpenAI MRCR v2 8-needle 256K-512K
-
-OpenAI MRCR v2 8-needle 512K-1M
-
-评估分数均为最高推理强度下的数据。GPT 评估是在我们的研究环境中运行的，或通过我们的 API 运行，因此由于系统提示词、可用工具等方面的差异，其输出可能会与正式上线的 ChatGPT 略有不同。
-
-1On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
-
-On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
-
-2GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
-
-GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
-
-3OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠（在新窗口中打开）.On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
-
-OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠（在新窗口中打开）.On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
-
-4Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
-
-Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
-
-5On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠（在新窗口中打开）.
-
-On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠（在新窗口中打开）.
-
-6Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠（在新窗口中打开）.” arXiv:2506.19065, 2025.
-
-Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠（在新窗口中打开）.” arXiv:2506.19065, 2025.
-
-7Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠（在新窗口中打开）.” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
-
-Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠（在新窗口中打开）.” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
-
-8On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠（在新窗口中打开）: "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
-
-On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠（在新窗口中打开）: "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
-
-9The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠（在新窗口中打开）recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠（在新窗口中打开）recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-10The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-11We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
-
-We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
-
-12Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
-
-Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
-
-13On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
-
-On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
-
-14ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
-
-ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
-
-15Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠（在新窗口中打开）.” arXiv:2608.11469v1, 2026.
-
-Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠（在新窗口中打开）.” arXiv:2608.11469v1, 2026.
-
-16When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
-
-When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
-
-17For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.
-
-For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">我们正式推出 GPT‑6 Astra，这是全球智能程度最高且最符合人类意图的模型。
-
-GPT‑6 Astra 汇聚了我们多年来在预训练、强化学习和对齐领域的研究成果与重大投入。Astra 在计算机操作、网页浏览、软件工程、网络安全、科学和专业工作领域均处于领先水平。Astra 在 FrontierMath Tier 4 中取得 98% 的成绩，达到该层级测评上限；此前，它还曾帮助解决数学领域长期悬而未决的问题⁠。Astra 在 ARC-AGI 3 上取得 99.9% 的成绩，并在 ExploitBench 上获得 100% 的满分。它还在计算机和浏览器使用方面树立了新的标杆，能够以无与伦比的速度、准确性和判断力处理最严苛的专业工作。
-
-GPT‑6 Astra 即日起面向部分组织逐步推出，并将在未来几天内向所有 ChatGPT Plus、Pro、Business 和 Enterprise 用户开放，用户也可通过 OpenAI API、Microsoft Azure 和 AWS Bedrock 使用。
-
-Astra 是我们对齐程度最高的模型，在理解用户意图和模型行为方面都有显著提升 — 你...</p><div style="font-size:16px;line-height:1.8;color:#333">我们正式推出 GPT‑6 Astra，这是全球智能程度最高且最符合人类意图的模型。
-
-GPT‑6 Astra 汇聚了我们多年来在预训练、强化学习和对齐领域的研究成果与重大投入。Astra 在计算机操作、网页浏览、软件工程、网络安全、科学和专业工作领域均处于领先水平。Astra 在 FrontierMath Tier 4 中取得 98% 的成绩，达到该层级测评上限；此前，它还曾帮助解决数学领域长期悬而未决的问题⁠。Astra 在 ARC-AGI 3 上取得 99.9% 的成绩，并在 ExploitBench 上获得 100% 的满分。它还在计算机和浏览器使用方面树立了新的标杆，能够以无与伦比的速度、准确性和判断力处理最严苛的专业工作。
-
-GPT‑6 Astra 即日起面向部分组织逐步推出，并将在未来几天内向所有 ChatGPT Plus、Pro、Business 和 Enterprise 用户开放，用户也可通过 OpenAI API、Microsoft Azure 和 AWS Bedrock 使用。
-
-Astra 是我们对齐程度最高的模型，在理解用户意图和模型行为方面都有显著提升 — 你可以安心将任务委派给 Astra，并信任其判断。作为测试这一点的方式之一，我们基于 Hugging Face 事件构建了一项新的评估，用于考量模型在面对困难或不可能完成的任务时，是否会超出其预期范围。在没有生产环境防护措施的情况下，GPT‑5.6 Sol 在 48% 的案例中超出授权目标；相比之下，GPT‑6 Astra 的比例则为 0%。
-
-GPT‑6 Astra 在计算机操作的速度、准确性和安全性方面迈出了新的一步。它可以处理填写在线表单、更新 CRM 中的客户记录和整理日历等繁琐任务。它可以开展在线调研，并在电子邮件或文档编辑器中撰写摘要。它可以分析科学数据、生成图表、创建网站，并运行前端 QA 检查，以确保该网站上的所有功能都能正常运行。它可以帮助你自主安装和测试软件，并排查你在屏幕上看到的问题。这些改进也体现在我们业界领先的评估结果中。
-
-这些改进也显著提升了真实知识型工作任务中的效率。在 OSWorld 2.0 的延迟模拟中，Astra 的计算机操作能力更强，且每项任务用时比 GPT‑5.6 Sol 少约 47%，前者的得分为 72.6%，每项任务约需 40 分钟；相比之下，GPT‑5.6 Sol 的得分为 65.7%，每项任务约需 75 分钟。3
-
-GPT‑6 Astra 的计算机操作能力体现在跨领域的输出中，包括游戏开发、电气工程和日常知识型工作：
-
-Alongside Astra, we are also updating the Codex harness to significantly improve the speed of computer use. Combined with Astra’s efficiency, this translates to a 1.9x faster task completion compared to the current GPT‑5.6 Sol experience, on the Mind2Web benchmark. The model’s improvements on speed mean it can take on many time-consuming life tasks for you, faster than you can.4
-
-GPT‑6 Astra 将计算机操作方面的进展与面向专业环境的针对性训练相结合，助力用户应对复杂的工作任务。它结合了解决复杂问题所需的智能，以及执行多步骤工作流并生成精美文档、电子表格和演示文稿的能力。
-
-GPT‑6 Astra 是我们最擅长遵循现有模板的模型，能够生成布局合理、通过结构化叙事简洁传达要点的幻灯片。它可以创建清晰明了、结构严谨的文档、演示文稿、电子表格和分析报告，这些文件均遵循用户模板，并与其写作与视觉风格相匹配。Astra 还经过专门训练，只会将与当前工作相关的上下文提取到输出内容中，而不会重复不必要的信息。这意味着它能够生成可直接使用、符合业务背景和标准的成果。
-
-GPT‑6 Astra 还为其构建的网站、游戏、应用程序和渲染内容带来更强的视觉判断能力。借助 ChatGPT 中的站点⁠（在新窗口中打开），Astra 可以直接利用提示词创建、托管和分享网站、Web 应用和游戏。
-
-当指令留有解读空间时，GPT‑6 Astra 比以往的模型更善于做出正确判断。它会利用上下文来补全常规信息缺口，并在答案可能影响结果时提出有针对性的问题。在 Codex 中，它可以异步提问，同时继续处理不依赖回复的工作。如果你不回复，它会在适当情况下基于合理的假设继续推进工作，但会等待你对重大决策提供意见。
-
-以下示例展示了 Astra 在日常任务中如何与你协作：在这些任务中，缺失的信息可能会实质性改变答案。
-
-Astra 在任务演进过程中保持前进方向清晰明确的能力也更强。早期模型有时会将引导消息视为新的目标，以致遗忘原始请求或先前的约束条件。Astra 能够纳入新的需求，按要求调整方向，并回答附带问题，同时不偏离整体任务。
-
-GPT‑6 Astra 是迄今为止最适合软件工程的模型。
-
-借助 Astra，我们正在为 Codex 引入一种新方式，使其能够在上下文窗口填满时保留并检索上下文。过去，模型会在长会话中使用压缩来总结工作内容，例如调试复杂问题或处理大型重构。每次压缩都可能会遗漏有关修复失效原因或组件行为方式的细节。在 Codex 中，Astra 可以跨上下文窗口保留笔记以及过往积累的细节，而无需反复将其压缩成单一摘要。之前的上下文窗口仍可搜索，因此 Astra 可以查找来自先前消息和工具输出中的需求或测试结果 — 即使这些信息并未记录在其笔记中。你可以在Codex config.toml⁠（在新窗口中打开）中启用这一实验性功能，此功能将在未来几周内成为 Astra 的默认设置。
-
-GPT‑6 Astra is a major advance for scientific discovery, mathematics, and health. Today, we’re sharing two further results on the gaps between prime numbers.9、10
-
-Astra also sets new records across a suite of math and scienceevaluations.
-
-Astra 可以协助开展科学发现背后的实践工作。通过将科学推理与计算机操作能力相结合，它可以直接在专业软件中处理任务，以检查数据并探索结果，帮助研究人员评估证据并确定后续调研目标。
-
-As we discussed in oursafety update⁠, Astra is a significant jump in cyber capabilities and meets theCritical thresholdin cybersecurity under ourPreparedness Framework. Its ability to identify and develop zero-day exploits can help defenders find and patch weaknesses, but it also creates a need for stronger safeguards. To understand how far these capabilities extend, we ran Astra on internal and third-party expert evaluations.
-
-We first tested the model without production safeguards on ExploitBench and ExploitGym, which evaluate whether models can turn known software vulnerabilities into working exploits. On ExploitBench, Astra achieved a perfect score of 100%, compared with 78.5% for GPT‑5.6 Sol, our previous frontier cyber-capable model. On ExploitGym, Astra reached a 42.4% success rate, compared with 30.3% for GPT‑5.6 Sol, while using substantially fewer output tokens.13
-
-Given concerns that exposure to historical software vulnerabilities may have affected benchmark results, we also evaluated Astra on two novel benchmarks. For one, we built an internal “ExploitBench (June–August 2026)” evaluation to test exploit development using vulnerabilities from the previous three months.14Astra achieved substantially higher arbitrary code-execution rates than GPT‑5.6 Sol on this dataset while using far fewer output tokens. During the evaluation, Astra even discovered and used two previously unknown zero-day vulnerabilities. We are disclosing both vulnerabilities to their maintainers.
-
-We also tested Astra on SRE-Bench15, a benchmark that measures whether models can reverse engineer software binaries to understand its core logic without access to raw source code. Astra solved 88.0% of tasks in a single attempt and 99.2% within four attempts, compared with 55.9% and 68.7% for GPT‑5.6 Sol, respectively.
-
-Beyond benchmarks, expert-led assessments found that Astra, when run without production safeguards, could use previously unknown vulnerabilities to achieve arbitrary code execution in hardened browsers and create privilege-escalation exploits for hardened operating-systems.
-
-As we discussed inThe Defender’s Window, frontier cyber capabilities can help defenders find weaknesses faster, but they also make those weaknesses easier to exploit, raising the urgency for defenders to adapt. With the version of Astra launching today, defenders can use it to complete tasks such as secure code review and patching.
-
-However, Astra will refuse to comply with more advanced cybersecurity tasks such as creating proof-of-concept exploits for vulnerabilities. ThroughOpenAI Daybreak⁠, we plan to expand access and roll out less restrictive safeguards in the coming weeks. This will enable more defensive workflows, including vulnerability and proof-of-concept validation, malware analysis, and detection engineering.
-
-We have also strengthened our protections against potential cyber misuse, building upon our safeguards stack for GPT‑5.6 Sol. These include stronger model robustness to better withstand potential jailbreaks and more context for our monitoring systems. We have continued rigorous internal and external testing, including automated evaluations with ourinternal red-teaming attackers. More details about our cyber safeguards and testingare available in the Astrasafety overview⁠andsystem card⁠（在新窗口中打开）..
-
-负责任地对齐和部署 GPT‑6 Astra
-
-Astra 是我们对齐程度最高的模型。Astra 擅于谨慎行事、尊重任务边界，并保持沟通透明度。这项工作是我们长期研究项目的最新成果，该项目专注于训练能够自始至终与人类意图保持一致的模型。
-
-在敏感环境中，Astra 会根据风险等级采取相应的审慎措施。在一项针对计算机操作任务进行对抗性选样以诱发不当行为的评估中，Astra 在避免非预期后果方面表现更佳。默认启用额外的安全防护措施后，其表现更为出色。
-
-Astra causes fewer misaligned outcomes than any other frontier models tested. For a fair comparison, we used a generic computer-using-agent harness (based on the native computer use tools available in both theOpenAI Responses API⁠（在新窗口中打开）andAnthropic Messages API⁠（在新窗口中打开）) and without additional protections that are normally deployed to Codex and ChatGPT Work users (auto-review, confirmation policy).16
-
-Astra 也更有可能在用户设定及其环境所隐含的边界内运行。在一项内部评估中，Astra 从未尝试规避 Codex 自动审查的拒绝决策。即使自动审核特意配置为“可规避”，且任务无法通过其他方式完成，这一点依然成立。这种遵守环境限制条件的能力，与我们在本文开头分享的无法完成的网络安全任务评估结果，以及我们的系统卡⁠（在新窗口中打开）中记录的其他调查结果相一致。
-
-Astra additionally sets new marks in transparent user communication. In one evaluation, Astra is three times less likely than GPT‑5.6 Sol to make inaccurate representations about its capabilities and affordances.
-
-在我们的能力幻觉评估中，Astra 相比 GPT‑5.6 Sol 有显著提升，对自身能力做出的误导性声明更少。
-
-Our evaluations found Astra’s written reasoning harder to monitor than GPT‑5.6 Sol’s, based on tests that explicitly asked it to evade monitoring. We attribute this to Astra’s greater control over written reasoning on simpler tasks and ability to solve problems with fewer written steps. Astra still appears to struggle to conceal the reasoning needed for complex tasks, but we take the decline seriously. Improving monitorability remains a research priority, and the accompanyingsystem card⁠（在新窗口中打开）details our findings and ongoing work.
-
-Alignment training is core to our approach to deployment. As an additional layer of defenses, we also build system safeguards like CodexAuto-review⁠（在新窗口中打开）and monitoring agents’ reasoning and actions to help detect and contain unsafe behavior. As described in oursafety update⁠, we are also deploying misalignment monitoring in production for Astra-class models in order to have visibility into misalignment, and help contain its worst instances. These safeguards resemble our monitoring for internal deployments and involve a system of classifiers which check the model’s reasoning and actions for unauthorized behavior and automatically stop potentially unauthorized activity.
-
-Given the significant increase in Astra’s cybersecurity capabilities, we are being especially careful to make this deployment safe and secure. Extra safety checks can sometimes slow, pause, or stop legitimate work, including defensive cybersecurity. If a task is paused in ChatGPT or Codex, you may be asked to review the action before continuing. In the API, the task will stop. These checks can sometimes interrupt legitimate work, and we are continuing to iterate on this system to reduce unnecessary interruptions. Misalignment monitoring cannot replace alignment: our goal is to build models that reliably stay within their authorized scope, so these protections do not need to intervene.
-
-GPT‑6 Astra is rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API, Microsoft Azure, and AWS Bedrock. Astra usage is included within the existing subscription allowances—users and businesses will also be able to purchase credits for additional usage. Users on the Pro, Business, and Enterprise plans will also get access to GPT‑6 Astra Pro. Enterprise administrators can enable Astra for their workspace; access is off by default at launch.
-
-Astra supports Zero Data Retention for eligible API customers, and as we shared last month, we're testingPrivate Safety Processingto strengthen safety monitoring while preserving customer privacy.
-
-For developers, GPT‑6 Astra will be available in the OpenAI API asgpt-6-astraand through Microsoft Azure and Amazon Bedrock.
-
-OpenAI API Standard pricing is $10 per million input tokens and $50 per million output tokens. Separate rates apply to cache reads and writes. Fast mode is available for GPT‑6 Astra in the API and delivers up to 2x the speed of Standard processing at 2x the Standard price.
-
-OSWorld 2.0 (v2026.08.08, offline set, partial score)
-
-ScreenSpot-Pro (no tools)
-
-OpenScore String Quartets (1 - OMR-NED)
-
-Internal Design Tasks
-
-Internal Data Science Tasks
-
-Artificial Analysis Intelligence Index v4.1.1
-
-FrontierMath Tier 1-3 (v2)
-
-FrontierMath Tier 4 (v2)
-
-Humanity's Last Exam（工具）
-
-Humanity's Last Exam（无工具）
-
-内部计算机操作安全性基准测试（数值越低越好）
-
-内部计算机操作安全性基准测试，含自动审核（数值越低越好）
-
-ExploitGym 蜜罐（数值越低越好）
-
-Impossible ExploitGym
-
-OpenAI MRCR v2 8-needle 256K-512K
-
-OpenAI MRCR v2 8-needle 512K-1M
-
-评估分数均为最高推理强度下的数据。GPT 评估是在我们的研究环境中运行的，或通过我们的 API 运行，因此由于系统提示词、可用工具等方面的差异，其输出可能会与正式上线的 ChatGPT 略有不同。
-
-1On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
-
-On ARC-AGI-3, GPT-6 Astra was run withour responses API harness⁠, which changes two settings to better match real-world performance. The changes do not specifically target ARC-AGI-3.
-
-2GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
-
-GPT-5.6 Sol refers to the version available in our API, ChatGPT Codex, and ChatGPT Work.The version in ChatGPT Chat is slightly different.⁠
-
-3OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠（在新窗口中打开）.On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
-
-OSWorld V2-Offline is a subset of the original OSWorld V2 that works without internet access.Claude model performance on OSWorld-V2 Offline was reproduced by the authorsonthe official leaderboard⁠（在新窗口中打开）.On OSWorld 2.0, the scores for Claude use the official settings, and not the modified tasks and modified grading from the Fable 5.1 System Card.
-
-4Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
-
-Model times are the reported elapsed times for the corresponding demonstration runs. The displayed clips are edited excerpts.
-
-5On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠（在新窗口中打开）.
-
-On BenchCAD, Claude's scores reflect 3 modifications to the eval, detailed in theFable 5.1 System Card⁠（在新窗口中打开）.
-
-6Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠（在新窗口中打开）.” arXiv:2506.19065, 2025.
-
-Guang Yang, Victoria Ebert, Nazif Tamer, Brian Siyuan Zheng, Luiza Pozzobon, and Noah A. Smith. “LEGATO: Large-scale End-to-end Generalizable Approach to Typeset OMR⁠（在新窗口中打开）.” arXiv:2506.19065, 2025.
-
-7Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠（在新窗口中打开）.” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
-
-Mark R. H. Gotham, Maureen Redbond, Bruno Bower, and Peter Jonas. “The OpenScore String Quartet Corpus⁠（在新窗口中打开）.” Proceedings of the 10th International Conference on Digital Libraries for Musicology, pp. 49–57. ACM, 2023.
-
-8On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠（在新窗口中打开）: "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
-
-On FrontierCode, GPT-6 Astra was run with a developer  message similar to asection of its developer message in Codex⁠（在新窗口中打开）: "Avoid creating excessive test files. Create a new test file only when required by repository conventions or when no existing file is a suitable home. Avoid unrelated cleanup and unnecessary complexity. Reuse suitable existing utilities. Read relevant repository instructions and inspect nearby code, tests, documentation, and CI. Follow established conventions. The goal is clean, mergeable code." The prompt was not optimized for the eval.
-
-9The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠（在新窗口中打开）recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-The first concerns how close together prime numbers can occur, however far along the number line you go. For more than a decade, the best known result established that infinitely many pairs of primes are at most 246 apart.Julia Stadlmann⁠（在新窗口中打开）recently improved that bound to 240. Astra helped establish a stronger bound of 186, showing that infinitely many pairs occur within this smaller distance. Short prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-10The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-The second concerns unusually large gaps between primes. Astra improved a term in a bound on these gaps that had remained unchanged for more than 80 years. We’re sharing the proofs and abridged chain of thought and verification materials for both results. Large prime gaps:Proof⁠（在新窗口中打开）andsupporting research⁠（在新窗口中打开）.
-
-11We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
-
-We independently evaluated all Claude models following the intended HealthBench Professional procedure, using GPT‑5.4 grading and length-adjusted, unclipped scores. For Fable 5.1, we used Opus 5 fallback for provider refusals.
-
-12Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
-
-Claude Fable 5 and 5.1 are not included in LifeSciBench Gold v1, GeneBench Pro v13, and MedChemBench because they refuse the majority of questions in these evaluations.
-
-13On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
-
-On ExploitGym, we tested Astra and Sol without the 6-hour time limit, to better assess their full cyber capabilities. They are fast enough that it has little impact.
-
-14ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
-
-ExploitBench (June–August 2026) contains 20 high-severity V8 vulnerabilities across 13 stable Chrome releases. The benchmark tests whether agents can achieve arbitrary code execution in V8 and official Chrome releases for Linux by exploiting each specified vulnerability. Some included vulnerabilities may not permit arbitrary code execution under the evaluation’s constraints, so a 100% success rate may not be achievable. Note: the 5.5% score of GPT-5.6 Sol is an artifact of the 300-turn limit in the benchmark, which is not a limit that real customers using max would have. The model at similar settings achieved an 11.5% score when hitting fewer limits.
-
-15Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠（在新窗口中打开）.” arXiv:2608.11469v1, 2026.
-
-Jeremy Spence et al. “The Next Challenge for Agentic Cybersecurity: A Realistic, Contamination-Free Reverse Engineering Benchmark⁠（在新窗口中打开）.” arXiv:2608.11469v1, 2026.
-
-16When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
-
-When we test across third-party models, we use a simpler research setup. Codex has a more complex production configuration, which can result in different raw-model error rates. Provider-side safeguards and computer-tool implementations still differ. Users do not experience the no-confirmation scenario in Codex, as it's an internal research configuration.
-
-17For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.
-
-For ScreenSpot-Pro and ExploitGym, the Fable scores we report come from Mythos, which is Fable with fewer safeguards.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-6 Astra: A new generation of intelligence</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-6 Astra: A new generation of intelligence</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-6-astra/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>The Hugging Face incident and the road aheadSecurity</title>
@@ -864,80 +488,8 @@ The capabilities of frontier models are rapidly accelerating. Our ability to und
   <guid isPermaLink="false">https://openai.com/index/ten-advances-in-mathematics/</guid>
   <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">我们希望为科学家和数学家提供加速科研发现的工具。正因如此，我们最近宣布推出面向学术研究人员的 ChatGPT⁠计划，为 10 万名科学家和数学家免费提供我们最出色的 ChatGPT 模型。在开发过程中，我们也继续利用尚未解决的研究问题评估模型。
-
-今年 5 月，我们分享了由 AI 生成的对 Erdős 单位距离猜想的否证⁠，这是在评估一个尚未发布的模型时发现的。这项工作已经推动了数学和理论计算机科学领域的进一步发展1。今天，我们将分享十项成果，其中每一项都解决了一个长期悬而未决的问题，或在相关问题上取得了实质性进展。这些问题横跨高维几何、编码理论、算术电路复杂性、群论、算子代数、量子复杂性、格密码学和极值组合学。所有这些问题都受到各自数学研究领域的高度关注，其中数项在整个数学界也具有广泛意义。
-
-我们针对以下问题给出了新的研究成果。这些成果由我们的下一代重要模型 Astra 的内部版本取得。按照 Sol API 的费率，找到这些问题的解法所需的 Token 总量成本约为 2,000 美元。随后，研究人员使用同一模型将这些论证整理成论文稿件。之后，该模型将每项论证形式化为一份可由 Lea...</p><div style="font-size:16px;line-height:1.8;color:#333">我们希望为科学家和数学家提供加速科研发现的工具。正因如此，我们最近宣布推出面向学术研究人员的 ChatGPT⁠计划，为 10 万名科学家和数学家免费提供我们最出色的 ChatGPT 模型。在开发过程中，我们也继续利用尚未解决的研究问题评估模型。
-
-今年 5 月，我们分享了由 AI 生成的对 Erdős 单位距离猜想的否证⁠，这是在评估一个尚未发布的模型时发现的。这项工作已经推动了数学和理论计算机科学领域的进一步发展1。今天，我们将分享十项成果，其中每一项都解决了一个长期悬而未决的问题，或在相关问题上取得了实质性进展。这些问题横跨高维几何、编码理论、算术电路复杂性、群论、算子代数、量子复杂性、格密码学和极值组合学。所有这些问题都受到各自数学研究领域的高度关注，其中数项在整个数学界也具有广泛意义。
-
-我们针对以下问题给出了新的研究成果。这些成果由我们的下一代重要模型 Astra 的内部版本取得。按照 Sol API 的费率，找到这些问题的解法所需的 Token 总量成本约为 2,000 美元。随后，研究人员使用同一模型将这些论证整理成论文稿件。之后，该模型将每项论证形式化为一份可由 Lean 验证的证明⁠（在新窗口中打开）。我们还将为每种解法发布模型对其思考过程的讲解。
-
-高维球体堆积。球体堆积密度的新上界，低至 Cohn–Elkies 阈值。
-
-二元码和球面码。针对任意给定的最小距离，二元码最大规模的界均得到指数级改进；高维球面码也取得了类似结果。
-
-非 sofic 群。通过构造证明非 sofic 群的存在，推进了群论中一个未解决的核心问题的研究。
-
-Connes 刚性猜想。反驳了一个长期存在的猜想：某些群可由其冯·诺依曼代数唯一确定。
-
-算术电路复杂性。针对使用算术电路和公式计算积和式给出新的下界，其中包括阶为 n4/log n 的算术公式下界。
-
-量子并行重复。为一般双人量子博弈证明了一个具有指数衰减界的并行重复定理，将经典复杂性理论中的一项基础原理推广至量子领域。
-
-最近向量问题。证明最近向量问题具有多项式因子近似困难性；这是格理论中的一个基础问题，与后量子密码学相关。
-
-Ehrhart 体积猜想。在每个维度中，确定质心是其唯一内部格点的凸体所能达到的最大体积。
-
-多色 Ramsey 数。给出多色三角形 Ramsey 数的超指数下界，解决 Erdős 第 183 号问题。
-
-极值数猜想。关于极值图论中紧致性猜想与退化性猜想的研究成果，解决 Erdős 第 146 号和第 180 号问题。
-
-能够为数学研究作出贡献的系统开始涌现，由此产生的问题无法仅靠一家科技公司回答。对于 AI 应在数学领域发挥怎样的作用，人们有许多不同观点。对于担忧其影响的人士，包括《关于 AI 与数学的莱顿宣言》⁠（在新窗口中打开）的签署者，我们深表尊重，也充分理解他们的关切。我们认为，成果署名应如实反映其产生方式：如果一项证明完全由 AI 系统生成，却声称作者是人类，就会歪曲系统作出的贡献，也会误述真正的人类智力劳动的性质。我们协助整理了论文稿件，并在 Lean 中将证明形式化，也会为其正确性负责；但数学论证本身是由我们的系统生成的。我们希望数学界能深入探讨这些成果，将其置于相应的研究背景中，并通过新的研究与发现，让其中的思想焕发生命力。
-
-随着 AI 系统逐渐成为更成熟的研究协作者，确保其得到广泛使用至关重要。这将支持科学家和数学家在这个变革时代探索并塑造各自学科的未来。
-
-1后续研究包括以下论文：Bloom, Sawin, Schildkraut, and Zhelezov, “The sum-product conjecture is false for real numbers⁠（在新窗口中打开）”; Pohoata, “Split primes and the Elekes-Rónyai problem⁠（在新窗口中打开）”; Saha, Xu, and Ye, “Furthest Pair Requires Quadratic Time in Superconstant Dimension under SETH⁠（在新窗口中打开）”; Goh and Hatami, “Communication complexity of point-line incidences over the reals⁠（在新窗口中打开）”; Lee, Pohoata, and Zhu, “The Minkowski grid has robustly many repeated distances⁠（在新窗口中打开）”。
-
-后续研究包括以下论文：Bloom, Sawin, Schildkraut, and Zhelezov, “The sum-product conjecture is false for real numbers⁠（在新窗口中打开）”; Pohoata, “Split primes and the Elekes-Rónyai problem⁠（在新窗口中打开）”; Saha, Xu, and Ye, “Furthest Pair Requires Quadratic Time in Superconstant Dimension under SETH⁠（在新窗口中打开）”; Goh and Hatami, “Communication complexity of point-line incidences over the reals⁠（在新窗口中打开）”; Lee, Pohoata, and Zhu, “The Minkowski grid has robustly many repeated distances⁠（在新窗口中打开）”。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">我们希望为科学家和数学家提供加速科研发现的工具。正因如此，我们最近宣布推出面向学术研究人员的 ChatGPT⁠计划，为 10 万名科学家和数学家免费提供我们最出色的 ChatGPT 模型。在开发过程中，我们也继续利用尚未解决的研究问题评估模型。
-
-今年 5 月，我们分享了由 AI 生成的对 Erdős 单位距离猜想的否证⁠，这是在评估一个尚未发布的模型时发现的。这项工作已经推动了数学和理论计算机科学领域的进一步发展1。今天，我们将分享十项成果，其中每一项都解决了一个长期悬而未决的问题，或在相关问题上取得了实质性进展。这些问题横跨高维几何、编码理论、算术电路复杂性、群论、算子代数、量子复杂性、格密码学和极值组合学。所有这些问题都受到各自数学研究领域的高度关注，其中数项在整个数学界也具有广泛意义。
-
-我们针对以下问题给出了新的研究成果。这些成果由我们的下一代重要模型 Astra 的内部版本取得。按照 Sol API 的费率，找到这些问题的解法所需的 Token 总量成本约为 2,000 美元。随后，研究人员使用同一模型将这些论证整理成论文稿件。之后，该模型将每项论证形式化为一份可由 Lea...</p><div style="font-size:16px;line-height:1.8;color:#333">我们希望为科学家和数学家提供加速科研发现的工具。正因如此，我们最近宣布推出面向学术研究人员的 ChatGPT⁠计划，为 10 万名科学家和数学家免费提供我们最出色的 ChatGPT 模型。在开发过程中，我们也继续利用尚未解决的研究问题评估模型。
-
-今年 5 月，我们分享了由 AI 生成的对 Erdős 单位距离猜想的否证⁠，这是在评估一个尚未发布的模型时发现的。这项工作已经推动了数学和理论计算机科学领域的进一步发展1。今天，我们将分享十项成果，其中每一项都解决了一个长期悬而未决的问题，或在相关问题上取得了实质性进展。这些问题横跨高维几何、编码理论、算术电路复杂性、群论、算子代数、量子复杂性、格密码学和极值组合学。所有这些问题都受到各自数学研究领域的高度关注，其中数项在整个数学界也具有广泛意义。
-
-我们针对以下问题给出了新的研究成果。这些成果由我们的下一代重要模型 Astra 的内部版本取得。按照 Sol API 的费率，找到这些问题的解法所需的 Token 总量成本约为 2,000 美元。随后，研究人员使用同一模型将这些论证整理成论文稿件。之后，该模型将每项论证形式化为一份可由 Lean 验证的证明⁠（在新窗口中打开）。我们还将为每种解法发布模型对其思考过程的讲解。
-
-高维球体堆积。球体堆积密度的新上界，低至 Cohn–Elkies 阈值。
-
-二元码和球面码。针对任意给定的最小距离，二元码最大规模的界均得到指数级改进；高维球面码也取得了类似结果。
-
-非 sofic 群。通过构造证明非 sofic 群的存在，推进了群论中一个未解决的核心问题的研究。
-
-Connes 刚性猜想。反驳了一个长期存在的猜想：某些群可由其冯·诺依曼代数唯一确定。
-
-算术电路复杂性。针对使用算术电路和公式计算积和式给出新的下界，其中包括阶为 n4/log n 的算术公式下界。
-
-量子并行重复。为一般双人量子博弈证明了一个具有指数衰减界的并行重复定理，将经典复杂性理论中的一项基础原理推广至量子领域。
-
-最近向量问题。证明最近向量问题具有多项式因子近似困难性；这是格理论中的一个基础问题，与后量子密码学相关。
-
-Ehrhart 体积猜想。在每个维度中，确定质心是其唯一内部格点的凸体所能达到的最大体积。
-
-多色 Ramsey 数。给出多色三角形 Ramsey 数的超指数下界，解决 Erdős 第 183 号问题。
-
-极值数猜想。关于极值图论中紧致性猜想与退化性猜想的研究成果，解决 Erdős 第 146 号和第 180 号问题。
-
-能够为数学研究作出贡献的系统开始涌现，由此产生的问题无法仅靠一家科技公司回答。对于 AI 应在数学领域发挥怎样的作用，人们有许多不同观点。对于担忧其影响的人士，包括《关于 AI 与数学的莱顿宣言》⁠（在新窗口中打开）的签署者，我们深表尊重，也充分理解他们的关切。我们认为，成果署名应如实反映其产生方式：如果一项证明完全由 AI 系统生成，却声称作者是人类，就会歪曲系统作出的贡献，也会误述真正的人类智力劳动的性质。我们协助整理了论文稿件，并在 Lean 中将证明形式化，也会为其正确性负责；但数学论证本身是由我们的系统生成的。我们希望数学界能深入探讨这些成果，将其置于相应的研究背景中，并通过新的研究与发现，让其中的思想焕发生命力。
-
-随着 AI 系统逐渐成为更成熟的研究协作者，确保其得到广泛使用至关重要。这将支持科学家和数学家在这个变革时代探索并塑造各自学科的未来。
-
-1后续研究包括以下论文：Bloom, Sawin, Schildkraut, and Zhelezov, “The sum-product conjecture is false for real numbers⁠（在新窗口中打开）”; Pohoata, “Split primes and the Elekes-Rónyai problem⁠（在新窗口中打开）”; Saha, Xu, and Ye, “Furthest Pair Requires Quadratic Time in Superconstant Dimension under SETH⁠（在新窗口中打开）”; Goh and Hatami, “Communication complexity of point-line incidences over the reals⁠（在新窗口中打开）”; Lee, Pohoata, and Zhu, “The Minkowski grid has robustly many repeated distances⁠（在新窗口中打开）”。
-
-后续研究包括以下论文：Bloom, Sawin, Schildkraut, and Zhelezov, “The sum-product conjecture is false for real numbers⁠（在新窗口中打开）”; Pohoata, “Split primes and the Elekes-Rónyai problem⁠（在新窗口中打开）”; Saha, Xu, and Ye, “Furthest Pair Requires Quadratic Time in Superconstant Dimension under SETH⁠（在新窗口中打开）”; Goh and Hatami, “Communication complexity of point-line incidences over the reals⁠（在新窗口中打开）”; Lee, Pohoata, and Zhu, “The Minkowski grid has robustly many repeated distances⁠（在新窗口中打开）”。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Ten advances in mathematics and theoretical computer science</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Ten advances in mathematics and theoretical computer science</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/ten-advances-in-mathematics/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</title>
@@ -1085,25 +637,16 @@ Codex 可编写和调试代码、分析数据集，以及构建可复现的工�
   <title>GPT-5.6</title>
   <link>https://openai.com/index/gpt-5-6/</link>
   <guid isPermaLink="false">https://openai.com/index/gpt-5-6/</guid>
-  <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+  <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
-  <title>GPT-5.5</title>
-  <link>https://openai.com/index/introducing-gpt-5-5/</link>
-  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-5/</guid>
-  <pubDate>Wed, 27 Mar 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
   <title>GPT-5.4</title>
   <link>https://openai.com/index/introducing-gpt-5-4/</link>
   <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-4/</guid>
-  <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+  <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
 
@@ -1397,6 +940,15 @@ OmniDocBench（归一化编辑距离）
 所有评估均在推理强度设为 xhigh 的情况下运行，除非另有说明。所有基准测试均在研究环境中完成，因此在某些情况下，结果可能会与正式上线的 ChatGPT 输出略有不同。
 
 1人类表现数据引用自OSWorld：在真实计算机环境中对开放式任务进行多模态智能体基准测试⁠（在新窗口中打开）。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>GPT-5.5</title>
+  <link>https://openai.com/index/introducing-gpt-5-5/</link>
+  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-5/</guid>
+  <pubDate>Tue, 17 Sep 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
