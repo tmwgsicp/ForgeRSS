@@ -5,7 +5,7 @@
 <link>https://openai.com/news/research/?limit=100</link>
 <description>Latest research news and updates from OpenAI</description>
 <language>en</language>
-<lastBuildDate>Fri, 11 Sep 2026 03:20:02 +0000</lastBuildDate>
+<lastBuildDate>Fri, 11 Sep 2026 10:48:11 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://openai.com/news/research/?limit=100" rel="self" type="application/rss+xml"/>
 <image>
@@ -760,120 +760,128 @@ OpenAI 的使命是确保通用人工智能惠及全人类。本文所述的模�
   <guid isPermaLink="false">https://openai.com/index/pacing-model-development-cyber-capabilities/</guid>
   <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
 
-随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
+As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
 
-对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解...</p><div style="font-size:16px;line-height:1.8;color:#333">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
+Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
 
-随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
+We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
 
-对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解决的挑战。即将推出的模型所展现的进展信号清楚表明，我们需要采用更全面的方法：既以现行准备框架为基础，又超越其范围。
+Strengthening safeguards for more capable models
 
-我们认为，有必要公开说明我们的方法正在发生怎样的变化。下面，我们将介绍已对研究流程和基础设施做出的调整，以及仍在推进的工作。
+Our approach to developing more capable models rests on three reinforcing safeguards:
 
-我们开发更强大模型的方法建立在三项相互强化的保障措施之上：
+Monitoring, which detects and allows us to respond to concerning behavior.
 
-监控：发现令人担忧的行为，使我们能够及时应对。
+Alignment, which reduces the likelihood of harmful or unauthorized actions.
 
-对齐：降低有害或未经授权的行为发生的可能性。
+Security measures, which limit what AI systems can access or affect.
 
-安全措施：限制 AI 系统能够访问或影响的对象。
+We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
 
-我们预计，模型很快将承担大部分安全工作，包括防御其他模型。这将使三项保障措施都能随模型能力同步扩展，我们认为这一点至关重要。
+We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
 
-我们将这些保障措施贯穿研究与部署，并根据每个模型的能力、运行环境和风险水平进行调整。
+Securing our research environments
 
-随着前沿模型具备更强的网络安全能力，我们正在提高其训练和评估环境的安全标准。达到这些标准需要大量工程投入，也给前沿研究带来了高昂成本和延误。OpenAI-Hugging Face 事件*发生后，我们立即暂停了研究集群中的部分前沿模型推理任务，涉及可能执行代码或使用可访问互联网工具的运行。我们很快恢复了一条权限更受限、更安全的代码执行路径，随后逐一审查各项工作负载，以确定能否安全恢复。部分研究工作负载在这些新控制措施下恢复，其他工作负载则需要进一步调整。
+As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
 
-在随后几周里，我们制定并开始实施更严格的前沿研究工作负载安全要求。例如：
+Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
 
-工作负载隔离：对于执行模型生成代码或其他不受信任代码的工作负载，我们现在要求采用更严格的隔离措施（“沙箱”）。这也适用于处理模型输出时可能遭到入侵的软件。
+Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
 
-网络隔离：我们实施了更多控制措施，将较高风险和不受信任的工作负载与互联网隔离。这些控制措施经过专门设计，确保单个工作负载或支持服务遭到入侵时，不会仅凭这一点就导致互联网或其他内部网络遭到未经授权的访问。
+Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
 
-持续安全测试：我们重新配置了环境，以移除可能存在漏洞的共享服务、减少常驻权限，并改善安全边界和信任边界。我们也在提升安全日志的收集和监控能力。最后，我们正在投资于自动化，利用模型持续以模拟攻击测试这些边界。
+Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
 
-这些控制措施共同构成纵深防御，有助于保护我们的研究环境免受攻击。目前，涉及 Astra 或网络安全模型的工作负载必须采用最高级别的安全保障措施，因为我们已认定 Astra 模型可能具备关键级别的网络安全能力。这些保障措施也适用于所有其他网络安全相关工作负载。
+Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
 
-部分 Astra 训练和评估已符合这些要求，但大量工作负载仍处于暂停状态，直至完全迁移并强化到符合新的安全标准。我们正优先将安全和对齐工作负载迁移至这些新环境。
+While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
 
-监控长期以来一直是模型开发流程的重要组成部分，包括监控内部编程智能体和长时间运行的会话。我们的监控工作尤其关注前沿模型的内部部署和前沿强化学习训练运行。我们认为这些工作负载风险最高，因为它们可能同时具备先进的模型能力，并能访问工具、敏感系统以及内部或外部网络。这些监控并未应用于所有使用工具的推理和训练运行。我们通过新的监控设置修订并扩展了现有方法。
+Expanding chain-of-thought monitoring
 
-新的监控设置采用多阶段机制：首先由激活分类器（检查模型内部活动的检测器）检查每个采样 Token，再将潜在问题逐级上报给日益复杂、需要更高算力的自动调查系统。这些系统会检查工具操作、可用的推理信息和完整活动序列，以发现未经授权的访问、数据窃取、破坏性行为以及规避保障措施的企图。我们的目标是在监控系统发现可疑活动后的 30 分钟内发出警报。如果监控系统发现可能违反关键安全边界的行为，就会生成最高优先级警报。在当前实施方案中，安全、安保和研究团队会收到传呼通知。如果这些团队无法在 30 分钟内确定该标记为误报，就应暂停相关活动。
+Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
 
-对于能力达到 Sol 或更高水平的模型，所有涉及工具的强化学习训练和评估都必须接受这类监控。8 月 7 日，我们认定 Astra 可能具备关键网络安全能力后，又对所有使用工具的 Astra 推理增加了监控要求，而不再仅限于强化学习训练和评估。
+This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
 
-这些保障措施需要投入可观的算力。根据目前估算，监控开销约相当于被监控推理算力的 20%，但不同训练和评估工作负载的成本差异很大。我们将在后续博客文章中详细介绍这一系统。
+This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
 
-对齐研究是我们使命的核心。我们的使命是确保通用人工智能造福全人类。随着模型获得网络攻击能力等先进能力，并在更复杂的环境中运行，奖励操纵（在训练中设法获得高奖励，却并未真正实现预期结果）、欺骗或未经授权的访问等未对齐行为将带来越来越严重的风险。
+These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
 
-对于能力最强模型的强化学习训练，我们现在会在训练流程的更多阶段应用核心对齐技术。其中包括：改进奖励模型，以便更好地发现并抑制不同任务和环境中的不安全行为；训练模型，使其更诚实地说明自身的行为、能力和局限；减少利用奖励、评分器、工具或监督机制弱点的行为。对于模型与外部系统或资源交互时可能造成伤害的行为，我们也在扩大训练覆盖范围。
+Advancing alignment research
 
-我们将继续大力投入对齐研究、扩大评估覆盖范围，并将研究所得用于指导训练和保障措施。我们计划近期分享更多对齐研究成果，包括对模型行为的新认识，以及发现的任何新型挑战。
+Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
 
-我们将完善准备框架，把这些保障措施贯穿训练和部署，并更准确地反映未来模型的能力及其运行环境。要开发能够随这些能力同步扩展的方法，就必须持续投资于模型辅助安全、更有效的监控，并不断推进对齐研究。随着方法不断完善，我们计划邀请外部组织参与，并分享更多研究所得。
+For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
 
-前沿模型的能力正在迅速提升。我们理解、对齐和保护这些模型的能力必须始终领先一步。
+We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
 
-*我们将在未来几周发布一份技术报告，介绍从中获得的经验。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
+We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
 
-随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
+The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
 
-对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解...</p><div style="font-size:16px;line-height:1.8;color:#333">过去几周的两项进展凸显出，能力日益增强的 AI 系统正带来不断上升的风险：一是OpenAI-Hugging Face 事件；二是初步证据表明，我们即将推出的模型之一 Astra 可能已达到网络安全关键能力门槛，即符合我们准备框架中的相关标准。这些进展，加上内部研究的快速推进，使我们更迫切地需要在训练流程的各个阶段加强监控、对齐和遏制保障措施。
+*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containme...</p><div style="font-size:16px;line-height:1.8;color:#333">Over the past several weeks, two developments have underscored the growing risks associated with increasingly capable AI systems: theOpenAI-Hugging Face incidentand, separately, preliminary evidence that one of our upcoming models, Astra, may meet theCritical cybersecurity capabilitythreshold under ourPreparedness Framework. Together, these developments, combined with rapid progress in our internal research, have added urgency to our work on strengthening our monitoring, alignment, and containment safeguards across all stages of the training process.
 
-随着模型能力增强，内部开发和测试模型所伴随的风险也在上升。我们的监控、对齐和安全标准必须领先于这些风险。为了留出达到这些标准所需的时间，我们暂时放慢了扩展步伐。其中包括暂停两周对拟部署的最新模型进行强化学习（RL）训练，以便进一步加固研究环境、开展红队测试，并扩大监控系统的覆盖范围。我们计划开展的最大规模前沿强化学习训练仍处于暂停状态。在继续推进之前，我们正通过较小规模的训练和评估来考察模型行为、验证保障措施，并积累更多对齐证据。
+As models become more capable, the risks associated with developing and testing them internally also grow. Our standards for monitoring, alignment, and security must stay ahead of those risks. We wanted to take the time necessary to meet those standards, so we temporarily slowed the pace of scaling. This included a two-week pause in reinforcement learning (RL) training on our latest models intended for deployment while we further hardened and red-teamed our research environments and expanded the coverage of our monitoring systems. Our largest planned frontier RL run remains on hold while we conduct smaller-scale training and evaluations to assess model behavior, validate our safeguards, and establish more evidence of alignment before proceeding.
 
-对齐，即让 AI 系统按预期行事并接受人类监督，长期以来一直是我们研究计划的核心。在现有研究和评估的基础上，我们现在要求在整个训练过程中提供更有力的行为对齐证据。如何让能力日益增强的系统保持对齐，是整个领域都需要解决的挑战。即将推出的模型所展现的进展信号清楚表明，我们需要采用更全面的方法：既以现行准备框架为基础，又超越其范围。
+Alignment—the work of making AI systems behave as intended and responsive to human oversight—has long been at the core of our research program. We now require stronger evidence of aligned behavior throughout all of training, building on research and evaluations already underway. Keeping increasingly capable systems aligned is a challenge the whole field will need to address. The signals we are seeing from upcoming model progress make clear that we need a broader approach—one that builds on and extends beyond the current Preparedness Framework.
 
-我们认为，有必要公开说明我们的方法正在发生怎样的变化。下面，我们将介绍已对研究流程和基础设施做出的调整，以及仍在推进的工作。
+We think it is important to be transparent about how our approach is changing. Below, we describe the changes we have already made to our research processes and infrastructure, and the work still underway.
 
-我们开发更强大模型的方法建立在三项相互强化的保障措施之上：
+Strengthening safeguards for more capable models
 
-监控：发现令人担忧的行为，使我们能够及时应对。
+Our approach to developing more capable models rests on three reinforcing safeguards:
 
-对齐：降低有害或未经授权的行为发生的可能性。
+Monitoring, which detects and allows us to respond to concerning behavior.
 
-安全措施：限制 AI 系统能够访问或影响的对象。
+Alignment, which reduces the likelihood of harmful or unauthorized actions.
 
-我们预计，模型很快将承担大部分安全工作，包括防御其他模型。这将使三项保障措施都能随模型能力同步扩展，我们认为这一点至关重要。
+Security measures, which limit what AI systems can access or affect.
 
-我们将这些保障措施贯穿研究与部署，并根据每个模型的能力、运行环境和风险水平进行调整。
+We expect models to soon drive most security work, including defending against other models. This will allow all three safeguards to scale with model capability, which we see as crucial.
 
-随着前沿模型具备更强的网络安全能力，我们正在提高其训练和评估环境的安全标准。达到这些标准需要大量工程投入，也给前沿研究带来了高昂成本和延误。OpenAI-Hugging Face 事件*发生后，我们立即暂停了研究集群中的部分前沿模型推理任务，涉及可能执行代码或使用可访问互联网工具的运行。我们很快恢复了一条权限更受限、更安全的代码执行路径，随后逐一审查各项工作负载，以确定能否安全恢复。部分研究工作负载在这些新控制措施下恢复，其他工作负载则需要进一步调整。
+We apply these safeguards across research and deployment, adapting them to each model’s capabilities, operating environment, and level of risk.
 
-在随后几周里，我们制定并开始实施更严格的前沿研究工作负载安全要求。例如：
+Securing our research environments
 
-工作负载隔离：对于执行模型生成代码或其他不受信任代码的工作负载，我们现在要求采用更严格的隔离措施（“沙箱”）。这也适用于处理模型输出时可能遭到入侵的软件。
+As frontier models gain stronger cybersecurity capabilities, we are raising the security standards for the environments in which we train and evaluate them. Meeting these standards has required substantial engineering work and has incurred great cost and delays to frontier research. Immediately following the OpenAI-Hugging Face incident*, we paused frontier model inference in research clusters for runs that could execute code or use tools that could access the internet. We restored a more limited and secure path for code execution fairly quickly, then worked through each workload individually to determine whether it could safely resume. Some research workloads resumed under these new controls, while others required additional changes.
 
-网络隔离：我们实施了更多控制措施，将较高风险和不受信任的工作负载与互联网隔离。这些控制措施经过专门设计，确保单个工作负载或支持服务遭到入侵时，不会仅凭这一点就导致互联网或其他内部网络遭到未经授权的访问。
+Over the subsequent weeks, we have defined and started implementing stronger security requirements for frontier research workloads. For example:
 
-持续安全测试：我们重新配置了环境，以移除可能存在漏洞的共享服务、减少常驻权限，并改善安全边界和信任边界。我们也在提升安全日志的收集和监控能力。最后，我们正在投资于自动化，利用模型持续以模拟攻击测试这些边界。
+Workload isolation:We now require stronger isolation (“sandboxes”) for workloads that execute model-generated or otherwise untrusted code. This also applies to software that could be compromised while processing model outputs.
 
-这些控制措施共同构成纵深防御，有助于保护我们的研究环境免受攻击。目前，涉及 Astra 或网络安全模型的工作负载必须采用最高级别的安全保障措施，因为我们已认定 Astra 模型可能具备关键级别的网络安全能力。这些保障措施也适用于所有其他网络安全相关工作负载。
+Network isolation:We have implemented more controls to isolate higher-risk and untrusted workloads from the internet. We have designed these controls so that a single compromise of a workload or supporting service does not, by itself, allow for unauthorized access to the internet or other internal networks.
 
-部分 Astra 训练和评估已符合这些要求，但大量工作负载仍处于暂停状态，直至完全迁移并强化到符合新的安全标准。我们正优先将安全和对齐工作负载迁移至这些新环境。
+Continuous security testing:We have reconfigured our environment to remove potentially vulnerable shared services, reduce standing privileges, and improve security and trust boundaries. We are also improving our ability to collect and monitor security logs. Finally, we are investing in automation using our models to test these boundaries continuously against simulated attacks.
 
-监控长期以来一直是模型开发流程的重要组成部分，包括监控内部编程智能体和长时间运行的会话。我们的监控工作尤其关注前沿模型的内部部署和前沿强化学习训练运行。我们认为这些工作负载风险最高，因为它们可能同时具备先进的模型能力，并能访问工具、敏感系统以及内部或外部网络。这些监控并未应用于所有使用工具的推理和训练运行。我们通过新的监控设置修订并扩展了现有方法。
+Together, these controls provide defense in depth and help protect our research environment against attacks. Today, we require the strictest level of security safeguards for workloads involving Astra or cyber models, since we have determined that Astra models may have a critical level of cyber capability. These safeguards also apply to all other cyber-related workloads.
 
-新的监控设置采用多阶段机制：首先由激活分类器（检查模型内部活动的检测器）检查每个采样 Token，再将潜在问题逐级上报给日益复杂、需要更高算力的自动调查系统。这些系统会检查工具操作、可用的推理信息和完整活动序列，以发现未经授权的访问、数据窃取、破坏性行为以及规避保障措施的企图。我们的目标是在监控系统发现可疑活动后的 30 分钟内发出警报。如果监控系统发现可能违反关键安全边界的行为，就会生成最高优先级警报。在当前实施方案中，安全、安保和研究团队会收到传呼通知。如果这些团队无法在 30 分钟内确定该标记为误报，就应暂停相关活动。
+While some Astra training and evaluations meet those requirements, a significant number of workloads remain paused until they are fully migrated and enhanced to meet the new security bar. We are prioritizing safety and alignment workloads for migration to these new environments first.
 
-对于能力达到 Sol 或更高水平的模型，所有涉及工具的强化学习训练和评估都必须接受这类监控。8 月 7 日，我们认定 Astra 可能具备关键网络安全能力后，又对所有使用工具的 Astra 推理增加了监控要求，而不再仅限于强化学习训练和评估。
+Expanding chain-of-thought monitoring
 
-这些保障措施需要投入可观的算力。根据目前估算，监控开销约相当于被监控推理算力的 20%，但不同训练和评估工作负载的成本差异很大。我们将在后续博客文章中详细介绍这一系统。
+Monitoring has long been an important part of our model development process, includingmonitoring for internal coding agentsandlong-running sessions. Our monitoring efforts were especially focused on internal deployments of frontier models and frontier RL training runs, which we considered the highest-risk workloads because they can combine advanced model capabilities with access to tools, sensitive systems, and internal or external networks. They were not applied to all inference and training runs using tools. We have revised and expanded our approach with our new monitoring setup.
 
-对齐研究是我们使命的核心。我们的使命是确保通用人工智能造福全人类。随着模型获得网络攻击能力等先进能力，并在更复杂的环境中运行，奖励操纵（在训练中设法获得高奖励，却并未真正实现预期结果）、欺骗或未经授权的访问等未对齐行为将带来越来越严重的风险。
+This new monitoring setup is multistage, starting with activation classifiers (detectors that inspect a model’s internal activity) that run at every sampled token and escalate potential concerns to increasingly sophisticated and high-compute automated investigators. Those systems examine tool actions, available reasoning, and the full sequence of activity for unauthorized access, data theft, destructive behavior, and attempts to defeat safeguards. We aim to issue an alert within 30 minutes after concerning activity is surfaced through our monitoring system. If the monitoring system identifies a likely violation of a critical security boundary, it generates a highest-priority alert. In our current implementation, the safety, security, and research teams are paged. If they cannot conclusively determine within 30 minutes that the flag is a false positive, those teams are expected to pause the activity.
 
-对于能力最强模型的强化学习训练，我们现在会在训练流程的更多阶段应用核心对齐技术。其中包括：改进奖励模型，以便更好地发现并抑制不同任务和环境中的不安全行为；训练模型，使其更诚实地说明自身的行为、能力和局限；减少利用奖励、评分器、工具或监督机制弱点的行为。对于模型与外部系统或资源交互时可能造成伤害的行为，我们也在扩大训练覆盖范围。
+This monitoring is required for all RL training and evaluations involving tools for models of Sol capability or higher. Once we determined that Astra may have critical cyber capabilities on August 7, we added an additional monitoring requirement for all inference of Astra with tools (not just RL training and evaluations).
 
-我们将继续大力投入对齐研究、扩大评估覆盖范围，并将研究所得用于指导训练和保障措施。我们计划近期分享更多对齐研究成果，包括对模型行为的新认识，以及发现的任何新型挑战。
+These safeguards require meaningful compute. Our current estimates put monitoring overhead at roughly 20% of the inference compute being monitored, though the cost varies substantially across training and evaluation workloads. We’ll share more details about this system in a forthcoming blog post.
 
-我们将完善准备框架，把这些保障措施贯穿训练和部署，并更准确地反映未来模型的能力及其运行环境。要开发能够随这些能力同步扩展的方法，就必须持续投资于模型辅助安全、更有效的监控，并不断推进对齐研究。随着方法不断完善，我们计划邀请外部组织参与，并分享更多研究所得。
+Advancing alignment research
 
-前沿模型的能力正在迅速提升。我们理解、对齐和保护这些模型的能力必须始终领先一步。
+Alignment research is central to our mission. Our mission is to ensure that artificial general intelligence benefits all of humanity. As models gain advanced capabilities, such as the ability to cyberattack, and operate in more complex environments, misaligned behaviors like reward hacking (finding ways to receive high rewards in training without actually achieving the intended outcome), deception, or unauthorized access will create increasingly serious risk.
 
-*我们将在未来几周发布一份技术报告，介绍从中获得的经验。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+For RL runs on the most capable models, we are now applying our core alignment techniques across more stages of the training process. This includes improving reward models to better detect and discourage unsafe behavior across tasks and environments; training models to be more honest about their actions, capabilities, and limitations; and reducing behaviors that exploit weaknesses in rewards, graders, tools, or oversight. We are also increasing training coverage for behaviors that could cause harm when models interact with external systems or resources.
+
+We are continuing to invest aggressively in alignment research, increase evaluation coverage, and use what we learn to inform training and safeguards. We plan to share substantially more about our alignment research in the near future, including what we are learning about model behavior and any novel challenges we uncover.
+
+We will evolve our Preparedness Framework to bring these safeguards together across training and deployment, and to better reflect the capabilities of future models and the environments in which they operate. Developing methods that can scale with those capabilities will require sustained investment in model-assisted security, more effective monitoring, and continued advances in alignment research. We intend to involve external organizations and share more of what we learn as our approach develops.
+
+The capabilities of frontier models are rapidly accelerating. Our ability to understand, align, and secure them must stay ahead.
+
+*We will publish a technical report of our learnings in the coming weeks.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>Ten advances in mathematics and theoretical computer science</title>
@@ -890,399 +898,461 @@ OpenAI 的使命是确保通用人工智能惠及全人类。本文所述的模�
   <guid isPermaLink="false">https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/</guid>
   <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">How enabling two settings tripled our scores on the ARC-AGI-3 benchmark</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>GPT-5.5</title>
-  <link>https://openai.com/index/introducing-gpt-5-5/</link>
-  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-5/</guid>
-  <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">This post introduced GPT-5.5.
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">这段加速视频展示了 GPT‑5.6 Sol 尝试解决 ARC-AGI-3 基准测试中的谜题：左侧使用官方执行框架，右侧使用我们保留推理并启用压缩的 Responses API 执行框架。在这款游戏⁠（在新窗口中打开）的排行榜上，没有任何前沿模型能通过第一关之后的关卡。使用我们的执行框架后，GPT‑5.6 Sol 通关了全部六关。
 
-Learn about OpenAI’s latest model:
+最初看到 GPT‑5.6 Sol 在ARC-AGI-3⁠（在新窗口中打开）基准测试中的低分时，我们十分困惑。
 
-我们正式发布 GPT‑5.5。作为我们迄今最智能、交互体验最直观的模型，它标志着人类迈向全新计算机办公模式的关键一步。
+GPT‑5.6 Sol 已经解决了数学界长期悬而未决的难题，例如圈双覆盖猜想⁠（在新窗口中打开），也通关了《宝可梦 火红》等游戏。但在由二维益智游戏组成的 ARC-AGI-3 基准测试中，GPT‑5.6 Sol 仅得 7.8%，GPT‑5.5 更是几乎无法游玩，得分只有 0.4%。
 
-GPT‑5.5 能够更快速地洞察用户意向，并独立承担更多实质性工作。无论是编写与调试代码、开展在线调研、分析复杂数据，还是撰写文档、制作表格，乃至跨软件操作，它都能游刃有余地衔接各个工具，直至任务圆满完成。以往你需要步步为营地引导 AI，而现在，你只需将一个繁杂的多阶段任务交给 GPT‑5.5。它具备极强的自主性，能够自行制定计划、调用工具、核查结果并在模糊的边界中寻找最优路径，始终保持高效推进。
+二维益智游戏对我们的模型来说格外困难吗？还是另有原因？
 
-在智能体编程、计算机使用、知识型工作以及前沿科学研究等领域，GPT‑5.5 的提升尤为显著。这些领域往往要求模型具备跨语境推理及长周期的行动能力。令人惊叹的是，GPT‑5.5 在实现智能跃迁的同时，并未牺牲响应速度。通常情况下，模型体量越大速度越慢，但 GPT‑5.5 在真实应用环境中的单 Token 延迟与 GPT‑5.4 持平，智能水...</p><div style="font-size:16px;line-height:1.8;color:#333">This post introduced GPT-5.5.
+基准测试很少只衡量 AI 模型本身。它们还会衡量一些不太显眼的选择，包括 API 设置、执行框架设计和提示方式。在 ARC-AGI-3 上，我们发现，开启 ChatGPT 和 Codex 中使用的两项 API ...</p><div style="font-size:16px;line-height:1.8;color:#333">这段加速视频展示了 GPT‑5.6 Sol 尝试解决 ARC-AGI-3 基准测试中的谜题：左侧使用官方执行框架，右侧使用我们保留推理并启用压缩的 Responses API 执行框架。在这款游戏⁠（在新窗口中打开）的排行榜上，没有任何前沿模型能通过第一关之后的关卡。使用我们的执行框架后，GPT‑5.6 Sol 通关了全部六关。
 
-Learn about OpenAI’s latest model:
+最初看到 GPT‑5.6 Sol 在ARC-AGI-3⁠（在新窗口中打开）基准测试中的低分时，我们十分困惑。
 
-我们正式发布 GPT‑5.5。作为我们迄今最智能、交互体验最直观的模型，它标志着人类迈向全新计算机办公模式的关键一步。
+GPT‑5.6 Sol 已经解决了数学界长期悬而未决的难题，例如圈双覆盖猜想⁠（在新窗口中打开），也通关了《宝可梦 火红》等游戏。但在由二维益智游戏组成的 ARC-AGI-3 基准测试中，GPT‑5.6 Sol 仅得 7.8%，GPT‑5.5 更是几乎无法游玩，得分只有 0.4%。
 
-GPT‑5.5 能够更快速地洞察用户意向，并独立承担更多实质性工作。无论是编写与调试代码、开展在线调研、分析复杂数据，还是撰写文档、制作表格，乃至跨软件操作，它都能游刃有余地衔接各个工具，直至任务圆满完成。以往你需要步步为营地引导 AI，而现在，你只需将一个繁杂的多阶段任务交给 GPT‑5.5。它具备极强的自主性，能够自行制定计划、调用工具、核查结果并在模糊的边界中寻找最优路径，始终保持高效推进。
+二维益智游戏对我们的模型来说格外困难吗？还是另有原因？
 
-在智能体编程、计算机使用、知识型工作以及前沿科学研究等领域，GPT‑5.5 的提升尤为显著。这些领域往往要求模型具备跨语境推理及长周期的行动能力。令人惊叹的是，GPT‑5.5 在实现智能跃迁的同时，并未牺牲响应速度。通常情况下，模型体量越大速度越慢，但 GPT‑5.5 在真实应用环境中的单 Token 延迟与 GPT‑5.4 持平，智能水平却大幅领先。此外，在处理相同的 Codex 任务时，其消耗的 Token 显著减少，真正实现了更高能、更经济。
+基准测试很少只衡量 AI 模型本身。它们还会衡量一些不太显眼的选择，包括 API 设置、执行框架设计和提示方式。在 ARC-AGI-3 上，我们发现，开启 ChatGPT 和 Codex 中使用的两项 API 设置——保留推理和压缩——可使公开任务集的得分增至三倍，同时将输出词元降至六分之一。
 
-伴随 GPT‑5.5 一同发布的，还有我们迄今为止最完善的安全防护方案。这套体系旨在打击滥用行为，同时确保合法、有益的工作流程不受干扰。在正式发布前，我们不仅通过了全套安全与准备框架评估，还联合内外红队专家，针对高级网络安全和生物技术领域进行了专项测试。此外，我们还从近 200 家值得信赖的合作伙伴处收集了大量真实应用场景的反馈，确保模型在复杂实战中的安全性与可靠性。
+使用官方执行框架时，GPT‑5.6 Sol 在 ARC-AGI-3 公开集上得分为 13.3%；保留推理并启用压缩后，得分达到 38.3%。分数衡量相对人类行动效率（RHAE⁠（在新窗口中打开））—该指标将模型表现与人类基准进行比较。根据官方游戏记录⁠（在新窗口中打开），我们估计人类测试者的平均得分为 48%。模型不会获知评分方式，在整个过程中也看不到自己的分数—每次操作只会返回当前画面及所在关卡的文本表示。
 
-即日起，GPT‑5.5 将陆续面向 ChatGPT 及 Codex 的 Plus、Pro、Business 和 Enterprise 用户开放。同时，GPT‑5.5 Pro 也将同步推送给 Pro、Business 和 Enterprise 的订阅用户。由于 API 部署涉及不同的防护策略，我们正与合作伙伴及客户紧密协作，确保在大规模服务下的安全性。GPT‑5.5 与 GPT‑5.5 Pro 的 API 服务将于近期正式上线。
+ARC-AGI-3 是一项旨在衡量 AI 智能体学习和推理能力的基准测试。智能体需要探索陌生的二维游戏，在没有明确说明的情况下推断游戏机制。你可以前往arcprize.org/tasks⁠（在新窗口中打开）体验 25 款演示游戏。
 
-Expert-SWE (Internal)
+ARC-AGI-3 有意采用不含工具或特殊功能的通用执行框架。ARC 认为，简单的执行框架能更清楚地暴露模型的不足，也能让模型之间的比较更加公平。相比之下，商业开发者会针对每个模型的功能和特点优化执行框架。
 
-FrontierMath Tier 1–3
+在游戏方面，GPT‑5.6 Sol 已通过仅使用视觉的执行框架通关《宝可梦 火红》（由GPT_Plays_Pokemon⁠（在新窗口中打开）直播），通过 Codex 的计算机操作功能通关《杀戮尖塔》（由EpochAI⁠（在新窗口中打开）直播），并完成《巴巴是你》的前几个关卡（由Piotr Migdał & Piotr Grabowski⁠（在新窗口中打开）分享）。ARC-AGI-3 究竟有何不同？
 
-OpenAI 正在致力于打造全球性的智能体 AI 基础设施，旨在让全球用户与企业都能真正通过 AI 交付工作成果。在过去的一年里，我们见证了 AI 对软件工程效率的巨大拉动；而随着 GPT‑5.5 接入 Codex 与 ChatGPT，这种变革正进一步延伸至科学研究及更广泛的计算机办公领域。
+Ethan Mollick展示了⁠（在新窗口中打开）Codex 中的 GPT‑5.6 Sol 如何完成《杀戮尖塔 2》的一项随机每日挑战；这款游戏发布于 GPT‑5.6 Sol 的知识截止日期之后。
 
-在这些领域中，GPT‑5.5 的进化不仅体现在更深层次的智能，更在于其解决问题的高效性。它通常能以更少的 Token 消耗和更低的重试频率，交付更高质量的产出。在 Artificial Analysis 的 Coding Agent Index 中，GPT‑5.5 以竞品前沿编程模型一半的成本，实现了行业领先的智能表现。
+受到ARC 对 GPT‑5.5 缺陷的分析⁠（在新窗口中打开）启发，我们查看了 GPT‑5.6 Sol 的一些尝试。和 ARC 一样，我们也发现模型看起来并不聪明。它每次行动前都会思考很久，却迟迟无法取得进展。
 
-Artificial Analysis Intelligence Index⁠（在新窗口中打开）是由第三方机构测评的加权平均得分，涵盖了以下 10 项权威评估：AA-LCR、AA-Omniscience、CritPt、GDPval-AA、GPQA Diamond、Humanity’s Last Exam、IFBench、SciCode、Terminal-Bench Hard 以及 τ²-Bench Telecom。
+但在深入研究后，我们发现模型的困惑大多并非源于模型本身，而是执行框架中的设置。
 
-GPT‑5.5 是我们迄今最强大的智能体编程模型。在Terminal-Bench 2.0测试中，面对需要缜密规划、反复迭代及多工具协作的复杂命令行工作流，GPT‑5.5 取得了 82.7% 的顶尖准确率。在衡量解决真实 GitHub 议题能力的SWE-Bench Pro评估中，其得分达到 58.6%，相比以往模型，它能在单次尝试中端到端地解决更多任务。而在针对长周期编程任务（人类中位完成时间约为 20 小时）的内部前沿评估Expert-SWE中，GPT‑5.5 的表现同样超越了 GPT‑5.4。
+首先，我们注意到，每次游戏操作后，所有私有推理都会被丢弃。这意味着 GPT‑5.6 Sol 每次行动时都必须重新理解游戏，无法记住之前的思考。模型仍能看到过去的操作记录和简短附注，但看不到促成这些操作的计划、见解或思考。
 
-在上述三项评估中，GPT‑5.5 不仅全面刷新了 GPT‑5.4 的成绩，且 Token 使用量更少。
+其次，我们发现执行框架采用了滚动截断窗口，随着历史记录增长，较早的操作会逐渐不可见。因此，GPT‑5.6 Sol 不仅无法记住过去的思考，也在逐渐忘记过去的操作。
 
-GPT‑5.5 的编程能力优势在 Codex 中得到明显体现。从代码实现、重构到调试、测试及验证，它都能全方位接管工程任务。早期测试表明，GPT‑5.5 更加契合真实工程环境下的行为模式：它能精准把握大型系统的上下文，在面对含义模糊的报错时进行深入推理，并主动通过工具验证假设，确保修改后的代码能适配整个库的既有逻辑。
+执行框架的这两项特性——丢弃推理和滚动截断——共同解释了 GPT‑5.6 Sol 为何难以持续学习。
 
-除了基准测试表现优异，早期测试者还反映 GPT‑5.5 对系统架构的整体把握能力更强：它能洞察故障的底层逻辑，锁定精准的修复位置，并预判代码变更可能引发的连锁反应。
+我们的模型经过训练，会先通过私有推理消息进行思考，再输出回复或调用工具。这些私有思考消息会作为对话历史的一部分保留下来。如果对话过长，我们会对其进行总结，然后继续。
 
-“这是我用过的第一个在概念理解上具有极高清晰度的编程模型。”
+我们的模型正是以这种方式训练，也以同样的方式部署在 ChatGPT 和 Codex 中。为了更贴近我们的生产环境，我们使用Responses API⁠（在新窗口中打开）实现了 ARC-AGI-3 执行框架。我们的 API 可轻松管理上下文：对于 GPT‑5.6，只需传入上一次响应的 ID，即可在工具调用和对话轮次之间自动保留推理。
 
-“这是我用过的第一个在概念理解上具有极高清晰度的编程模型。”
+保留推理后，我们观察到两项显著变化。首先，GPT‑5.6 Sol 每次行动前的思考时间更短，因为它不再需要每一轮都从头理解游戏。其次，能够记住过去的思考后，GPT‑5.6 Sol 更善于持续学习和采用连贯的策略。
 
-Every 创始人兼 CEODan Shipper将 GPT‑5.5 评价为：“这是我用过的第一个在概念理解上具有极高清晰度的编程模型。”
+下一项改进是用压缩⁠（在新窗口中打开）取代滚动截断；压缩是 Responses API 中的另一项设置。
 
-在应用上线后，他曾花费数天时间调试一个线上故障，最后不得不抽调一名最顶尖的工程师重写了部分系统。为了测试 GPT‑5.5，他实际上采用了“倒流时间”的方法：面对当时那个受损的状态，模型是否能够像工程师最终决定的那样，给出相同类型的重写方案？GPT‑5.4 没能做到。GPT‑5.5 成功了。
+ARC-AGI-3 执行框架通过滚动截断来应对上下文限制。当对话上下文超过 175,000 个字符时，最早的消息会被丢弃。
 
-“它真的让我感觉是在与更高阶的智能协同工作，甚至产生了一种由衷的敬畏感。”
+滚动截断有两个缺点。首先，模型会丢失较早的观察和操作。其次，模型在大部分任务期间都要使用接近满载的上下文窗口，这可能会略微影响表现。
 
-“它真的让我感觉是在与更高阶的智能协同工作，甚至产生了一种由衷的敬畏感。”
+在 ARC-AGI-3 上启用压缩后，GPT‑5.6 Sol 能在更长的运行过程中更好地保留从每款游戏中学到的内容，并以更少的输出词元取得更高的得分。
 
-MagicPath 首席执行官Pietro Schirano也见证了类似的质变：GPT‑5.5 将一个包含数百项前端修改和重构的分支，成功合并到了一个同样发生巨变的主分支中。它仅用约 20 分钟便一次性完成了所有冲突解决与代码整合。
+为了直观展示保留推理和启用压缩的效果，下面的动画呈现了 GPT‑5.6 Sol 分别使用两种执行框架解决一系列 ARC-AGI-3 谜题时，其 175K 上下文窗口的变化。
 
-资深工程师在对比测试后指出，GPT‑5.5 在推理能力和自主性上明显优于 GPT‑5.4 和 Claude Opus 4.7。它能提前发现潜在隐患，甚至在无需显式指令的情况下，预判测试与评审需求。在一次实测案例中，一位工程师要求其重构协作式 Markdown 编辑器的评论系统，结果它交出的 12 个 Diff 堆栈几乎已经可以直接发布。许多用户表示，相比 GPT‑5.4，他们对 GPT‑5.5 制定的方案更有信心，且极少需要对具体实现进行人工修正。
+中间两列展示了两种执行框架以不同方式使用模型上下文窗口的情况。由于能更好地记住过去，GPT‑5.6 Sol 每次行动所需的思考更少，推进速度也快得多。注意：我们的实现采用 175,000 个词元而非字符作为上限，但两者最终非常接近，因为绝大多数文本都是操作网格，我们的分词器会按 1:1 的比例将其转换为词元。
 
-一位提前试用该模型的 NVIDIA 工程师感叹道：“失去对 GPT‑5.5 的访问权限，感觉就像被截肢了一样。”
+保留推理与压缩结合使用后，GPT‑5.6 Sol（Max）的得分约为原来的三倍，而输出词元仅为原来的六分之一。
 
-这些让 GPT‑5.5 在编程领域大放异彩的优势，同样使其成为日常办公的强大助力。由于模型能更敏锐地捕捉用户意向，它在处理知识型工作时显得更加自然流畅：从搜集资料、提炼核心价值，到调用工具、核查产出，并最终将零散的素材转化为实用成果，整个链路一气呵成。
+我们希望这些实验能够提醒大家：评测很少只衡量模型本身，也会衡量一系列不太显眼的选择，包括 API 设置、执行框架设计和提示方式。这并非我们第一次因公开基准测试中的低分而感到意外，随后才发现评测运行程序使用了会丢弃推理消息的通用执行框架。
 
-在 Codex 环境下，GPT‑5.5 制作文档、表格及演示文稿的能力较 GPT‑5.4 有了显著提升。Alpha 测试者反馈，在运筹研究、电子表格建模以及将凌乱的业务需求转化为执行计划等任务中，它的表现远超以往模型。结合 Codex 的计算机使用 (computer use) 能力，GPT‑5.5 带来了前所未有的“人机协作感”：它能实时理解屏幕内容，精准进行点击、录入和界面导航，并熟练地在不同工具间跨越操作。
+如果你是希望充分发挥性能的 API 开发者，我们建议采用与自家产品相同的设置：
 
-目前，OpenAI 内部团队已率先将这些优势应用到真实的业务流中。如今，公司内超过 85% 的员工每周都会使用 Codex，涵盖软件工程、财务、传播、市场营销、数据科学和产品管理等多个职能领域。公关团队利用 Codex 中的 GPT‑5.5 分析了过去六个月的演讲请求数据，建立了一套评分与风险预警框架，并以此验证了一款自动化 Slack 智能体。该智能体能够自动处理低风险请求，而将高风险项转交人工审核。财务团队借助 Codex 处理了 24,771 份 K-1 税务报表，共计 71,637 页。通过这一脱敏处理的工作流，团队比去年提前两周完成了任务。市场拓展团队的一名员工实现了周报生成的自动化，每周节省了 5 到 10 小时。
+使用 Responses API，而非旧版 Chat Completions API
 
-在 ChatGPT 中，GPT‑5.5 Thinking让攻克难题变得更为高效，通过更智能、更简洁的回答，协助用户理清复杂工作的头绪。它在编程、调研、信息综合分析以及处理文档密集型任务方面表现卓越，配合插件使用时效果尤为显著。
+如果你要比较模型，我们建议采用使用上述设置的评测，因为这些设置最贴近 ChatGPT 和 Codex 中的实际应用。
 
-GPT‑5.5 Pro的表现同样出色：早期测试者发现 ChatGPT 承接任务的难度上限和交付质量都有了跨越式提升，延迟表现的改善也使其在处理高强度任务时更具实用性。相比 GPT‑5.4 Pro，测试者认为 GPT‑5.5 Pro 的回答在全面性、结构化、准确度、相关性及实用价值上均有显著突破，尤其在商业、法律、教育和数据科学领域表现强劲。
+我们感谢 ARC 多年来在 AGI 评测领域开展的创造性工作，也感谢其分析启发我们进一步深入研究。
 
-多项衡量实战能力的基准测试结果也印证了这一点：GDPval（衡量 44 种职业中具有经济价值的真实知识型工作）：GPT‑5.5 得分为 84.9%。OSWorld-Verified（衡量模型自主操作真实计算机环境的能力）：得分达到 78.7%。Tau2-bench Telecom（测试复杂客服工作流）：在无需提示词微调的情况下，准确率高达 98.0%。
+如果你想与前沿模型一较高下，可以前往arcprize.org/tasks⁠（在新窗口中打开）亲自挑战这些公开游戏。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">这段加速视频展示了 GPT‑5.6 Sol 尝试解决 ARC-AGI-3 基准测试中的谜题：左侧使用官方执行框架，右侧使用我们保留推理并启用压缩的 Responses API 执行框架。在这款游戏⁠（在新窗口中打开）的排行榜上，没有任何前沿模型能通过第一关之后的关卡。使用我们的执行框架后，GPT‑5.6 Sol 通关了全部六关。
 
-此外，GPT‑5.5 在结构化知识型工作方面同样表现不俗：在FinanceAgent测试中取得 60.0% 的成绩；在内部投资银行建模任务中达到 88.5%；而在OfficeQA Pro（要求模型结合文件、工具和上下文进行实操而非死记硬背）测试中，得分为 54.1%。
+最初看到 GPT‑5.6 Sol 在ARC-AGI-3⁠（在新窗口中打开）基准测试中的低分时，我们十分困惑。
 
-Tau2-bench Telecom 测试是在未进行提示词微调（且以 GPT‑4.1 作为用户模型）的情况下运行的。与前代模型相比，GPT‑5.5 能够更精准地理解任务意向，且 Token 利用效率更高。
+GPT‑5.6 Sol 已经解决了数学界长期悬而未决的难题，例如圈双覆盖猜想⁠（在新窗口中打开），也通关了《宝可梦 火红》等游戏。但在由二维益智游戏组成的 ARC-AGI-3 基准测试中，GPT‑5.6 Sol 仅得 7.8%，GPT‑5.5 更是几乎无法游玩，得分只有 0.4%。
 
-GPT‑5.5 在科学和技术研究工作流中同样展现出显著优势。科研工作并非简单的问答，而是一个探索构思、搜集证据、验证假设、解读结果并决策下一步行动的完整循环。GPT‑5.5 在这一循环中的表现比以往任何模型都更加稳健持久。
+二维益智游戏对我们的模型来说格外困难吗？还是另有原因？
 
-值得注意的是，在GeneBench⁠（在新窗口中打开）测试中，GPT‑5.5 较 GPT‑5.4 有了跨越式的提升。这是一项专注于遗传学和定量生物学多阶段科学数据分析的新型评估，要求模型在极少的人工干预下，对具有模糊性或存在误差的数据进行推理，处理如隐藏混杂因素或质控 (QC) 失败等现实障碍，并精准实现及解读现代统计学方法。考虑到该测试中的任务通常对应科学专家数天的项目量，模型的表现确实令人瞩目。
+基准测试很少只衡量 AI 模型本身。它们还会衡量一些不太显眼的选择，包括 API 设置、执行框架设计和提示方式。在 ARC-AGI-3 上，我们发现，开启 ChatGPT 和 Codex 中使用的两项 API ...</p><div style="font-size:16px;line-height:1.8;color:#333">这段加速视频展示了 GPT‑5.6 Sol 尝试解决 ARC-AGI-3 基准测试中的谜题：左侧使用官方执行框架，右侧使用我们保留推理并启用压缩的 Responses API 执行框架。在这款游戏⁠（在新窗口中打开）的排行榜上，没有任何前沿模型能通过第一关之后的关卡。使用我们的执行框架后，GPT‑5.6 Sol 通关了全部六关。
 
-同样，在围绕真实生物信息学及数据分析设计的 BixBench 测试中，GPT‑5.5 在所有已公布评分的模型中名列前茅。目前，该模型的科学能力已足以作为真正的“科学共同体”成员，切实加速生物医学研究的前沿进展。
+最初看到 GPT‑5.6 Sol 在ARC-AGI-3⁠（在新窗口中打开）基准测试中的低分时，我们十分困惑。
 
-在另一个案例中，一个搭载自定义框架的 GPT‑5.5 内部版本协助发现了关于拉姆齐数 (Ramsey numbers) 的全新证明⁠（在新窗口中打开）。拉姆齐数是组合数学的核心研究对象之一；组合数学主要研究离散对象（如路径、网络、集合和模式）如何相互关联。简单来说，拉姆齐数探究的是：一个网络必须达到多大规模，才能保证某种秩序必然出现。该领域的成果非常罕见且技术难度极大。GPT‑5.5 发现了一个关于非对角拉姆齐数长期存在的渐近事实证明，随后该证明在 Lean 形式化证明语言中得到了验证。该成果是一个具体的范例，表明 GPT‑5.5 不仅仅能提供代码或解释，更能为研究领域贡献出令人惊喜且极具价值的数学论证。
+GPT‑5.6 Sol 已经解决了数学界长期悬而未决的难题，例如圈双覆盖猜想⁠（在新窗口中打开），也通关了《宝可梦 火红》等游戏。但在由二维益智游戏组成的 ARC-AGI-3 基准测试中，GPT‑5.6 Sol 仅得 7.8%，GPT‑5.5 更是几乎无法游玩，得分只有 0.4%。
 
-早期测试者在使用 ChatGPT 中的 GPT‑5.5 Pro 时，更多是将其视为研究伙伴而非单次应答机：它能通过多轮交互评议手稿、压力测试技术论证、提议分析方案，并结合代码、笔记和 PDF 上下文进行协作。这种转变的核心在于，GPT‑5.5 能够更有效地辅助研究人员完成从提出问题到设计实验，再到最终产出的全过程。
+二维益智游戏对我们的模型来说格外困难吗？还是另有原因？
 
-Derya Unutmaz是杰克逊基因组医学实验室 (Jackson Laboratory for Genomic Medicine) 的免疫学教授兼研究员，他使用 GPT‑5.5 Pro 分析了一个包含 62 个样本、近 28,000 个基因的基因表达数据集。他生成了一份详尽的研究报告，不仅总结了实验发现，还提出了关键问题和见解。他表示，这类工作以往通常需要团队耗时数月才能完成。
+基准测试很少只衡量 AI 模型本身。它们还会衡量一些不太显眼的选择，包括 API 设置、执行框架设计和提示方式。在 ARC-AGI-3 上，我们发现，开启 ChatGPT 和 Codex 中使用的两项 API 设置——保留推理和压缩——可使公开任务集的得分增至三倍，同时将输出词元降至六分之一。
 
-波兰波兹南亚当·密茨凯维奇大学 (Adam Mickiewicz University) 数学系助理教授Bartosz Naskręcki使用 Codex 中的 GPT‑5.5，仅凭一条提示词就在 11 分钟内构建了一个代数几何应用。该应用能够实现二次曲面交集的可视化，并能将生成的曲线转换为魏尔斯特拉斯模型 (Weierstrass model)。
+使用官方执行框架时，GPT‑5.6 Sol 在 ARC-AGI-3 公开集上得分为 13.3%；保留推理并启用压缩后，得分达到 38.3%。分数衡量相对人类行动效率（RHAE⁠（在新窗口中打开））—该指标将模型表现与人类基准进行比较。根据官方游戏记录⁠（在新窗口中打开），我们估计人类测试者的平均得分为 48%。模型不会获知评分方式，在整个过程中也看不到自己的分数—每次操作只会返回当前画面及所在关卡的文本表示。
 
-随后，他进一步扩展了该应用，加入了更稳定的奇点可视化功能，并提供了可供后续研究复用的精确系数。对他而言，更重大的转变在于 Codex 现在能够辅助实现自定义的数学可视化和计算机代数工作流，而这些在以前往往需要专门的工具。综合来看，这些案例证明了 GPT‑5.5 正在将专家的意向转化为切实可用的研究工具和分析成果。
+ARC-AGI-3 是一项旨在衡量 AI 智能体学习和推理能力的基准测试。智能体需要探索陌生的二维游戏，在没有明确说明的情况下推断游戏机制。你可以前往arcprize.org/tasks⁠（在新窗口中打开）体验 25 款演示游戏。
 
-图片来源：Bartosz Naskręcki⁠（在新窗口中打开）
+ARC-AGI-3 有意采用不含工具或特殊功能的通用执行框架。ARC 认为，简单的执行框架能更清楚地暴露模型的不足，也能让模型之间的比较更加公平。相比之下，商业开发者会针对每个模型的功能和特点优化执行框架。
 
-Prompt:# Algebraic geometry surface intersection
+在游戏方面，GPT‑5.6 Sol 已通过仅使用视觉的执行框架通关《宝可梦 火红》（由GPT_Plays_Pokemon⁠（在新窗口中打开）直播），通过 Codex 的计算机操作功能通关《杀戮尖塔》（由EpochAI⁠（在新窗口中打开）直播），并完成《巴巴是你》的前几个关卡（由Piotr Migdał & Piotr Grabowski⁠（在新窗口中打开）分享）。ARC-AGI-3 究竟有何不同？
 
-Make an app which draws two quadratic surfaces and colors in red the intersection curve. Use computational Riemann-Roch theorem to convert this into Weierstrass curve.
+Ethan Mollick展示了⁠（在新窗口中打开）Codex 中的 GPT‑5.6 Sol 如何完成《杀戮尖塔 2》的一项随机每日挑战；这款游戏发布于 GPT‑5.6 Sol 的知识截止日期之后。
 
-Two tinted surfaces with a slightly transparent shading, high quality rendering intersect along a red colored algebraic curve
+受到ARC 对 GPT‑5.5 缺陷的分析⁠（在新窗口中打开）启发，我们查看了 GPT‑5.6 Sol 的一些尝试。和 ARC 一样，我们也发现模型看起来并不聪明。它每次行动前都会思考很久，却迟迟无法取得进展。
 
-Rotation with mouses in both directions, full pinch mechanism for zoom, haptic press to show the little menu with sliders for changing the coefficients of each surface; detection via Z-buffor level
+但在深入研究后，我们发现模型的困惑大多并非源于模型本身，而是执行框架中的设置。
 
-Short Weierstrass equation (over Q or quadratic field extension) computed on the go via effective Riemann-Roch theorem formulas
+首先，我们注意到，每次游戏操作后，所有私有推理都会被丢弃。这意味着 GPT‑5.6 Sol 每次行动时都必须重新理解游戏，无法记住之前的思考。模型仍能看到过去的操作记录和简短附注，但看不到促成这些操作的计划、见解或思考。
 
-## Ambient mode where all the controls are hidden and the user can admire the beauty of the shapes
+其次，我们发现执行框架采用了滚动截断窗口，随着历史记录增长，较早的操作会逐渐不可见。因此，GPT‑5.6 Sol 不仅无法记住过去的思考，也在逐渐忘记过去的操作。
 
-App is running in the browser, light-weight implementation with full stack newest libraries, portable, deployable
+执行框架的这两项特性——丢弃推理和滚动截断——共同解释了 GPT‑5.6 Sol 为何难以持续学习。
 
-Git repo, journal, plan (Markdown files)
+我们的模型经过训练，会先通过私有推理消息进行思考，再输出回复或调用工具。这些私有思考消息会作为对话历史的一部分保留下来。如果对话过长，我们会对其进行总结，然后继续。
 
-为了在维持 GPT‑5.4 延迟水平的前提下提供 GPT‑5.5 的强大性能，我们必须将推理视为一个完整的集成系统进行重新思考，而非单纯的局部优化。GPT‑5.5 适配了 NVIDIA GB200 及 GB300 NVL72 系统，从联合设计、模型训练到在线服务均基于此。Codex 与 GPT‑5.5 对实现性能目标起到了决定性作用。Codex 协助团队快速将构思转化为可测试的方案，通过勾勒技术路径和搭建实验环境，帮助我们精准锁定最具投资价值的优化点。GPT‑5.5 甚至亲自参与了系统底层栈的改进与实现。简而言之，模型亲自优化了运行它自身的底层基础设施。
+我们的模型正是以这种方式训练，也以同样的方式部署在 ChatGPT 和 Codex 中。为了更贴近我们的生产环境，我们使用Responses API⁠（在新窗口中打开）实现了 ARC-AGI-3 执行框架。我们的 API 可轻松管理上下文：对于 GPT‑5.6，只需传入上一次响应的 ID，即可在工具调用和对话轮次之间自动保留推理。
 
-其中一项关键改进体现在负载均衡与分区启发式算法。在 GPT‑5.5 发布前，为了平衡计算核心的工作量并确保不同规模的请求能在同一 GPU 上运行，我们将加速器上的请求拆分为固定数量的区块。然而，静态区块分配并非面对各种流量形态的最优解。为了更充分地利用 GPU 性能，Codex 分析了数周的生产环境流量模式，并编写了定制的启发式算法，实现了任务的最优分区与平衡。这项工作产生了远超预期的影响，将 Token 生成速度提升了 20% 以上。
+保留推理后，我们观察到两项显著变化。首先，GPT‑5.6 Sol 每次行动前的思考时间更短，因为它不再需要每一轮都从头理解游戏。其次，能够记住过去的思考后，GPT‑5.6 Sol 更善于持续学习和采用连贯的策略。
 
-在模型能够精准发现并修复漏洞的时代，构建防御韧性是一项需要全行业参与的系统性工程。我们需要通过民主化的模型准入和迭代部署，为下一个阶段的网络防御⁠构筑全生态的免疫力。
+下一项改进是用压缩⁠（在新窗口中打开）取代滚动截断；压缩是 Responses API 中的另一项设置。
 
-前沿模型在网络安全领域的实力正日益增强。由于这些能力终将走向普及，我们坚信，最有效的应对之道是确保这些力量能优先用于加速网络防御，从而增强整个生态系统。
+ARC-AGI-3 执行框架通过滚动截断来应对上下文限制。当对话上下文超过 175,000 个字符时，最早的消息会被丢弃。
 
-在利用 AI 应对网络安全等全球性挑战的进程中，GPT‑5.5 迈出了虽小但至关重要的一步。继去年 12 月在 GPT‑5.2 中主动部署了必要的网络安全护栏⁠以遏制潜在滥用后，我们在 GPT‑5.5 中引入了更严苛的风险分类器。虽然在后续的持续微调过程中，部分用户初期可能会感到些许不便，但这对于保障系统安全至关重要。
+滚动截断有两个缺点。首先，模型会丢失较早的观察和操作。其次，模型在大部分任务期间都要使用接近满载的上下文窗口，这可能会略微影响表现。
 
-多年来，随着模型能力的递进式提升，我们始终在准备框架⁠（在新窗口中打开）中将网络安全列为重点领域。通过不断开发并校准缓解方案，我们确保了能够在负责任的前提下，发布具备实质性网络安全能力的前沿模型。
+在 ARC-AGI-3 上启用压缩后，GPT‑5.6 Sol 能在更长的运行过程中更好地保留从每款游戏中学到的内容，并以更少的输出词元取得更高的得分。
 
-针对这一级别的网络安全能力，我们部署了行业领先的防护措施。自去年在GPT‑5.2⁠（在新窗口中打开）中首次引入专项安全护栏以来，我们持续在后续部署中进行测试与完善。针对 GPT‑5.5，我们围绕高风险活动和敏感网络请求设计了更严密的管控机制，并增加了针对重复性滥用行为的保护。通过在模型安全、身份认证以及违规监控方面的投入，我们才得以实现如此广泛的模型准入。数月以来，我们一直与外部专家合作，不断打磨并强化这些防护措施的稳健性。在 GPT‑5.5 中，我们致力于确保开发者能轻松加固代码，同时对恶意攻击者最可能利用的危害性工作流施加了更强有力的管控。
+为了直观展示保留推理和启用压缩的效果，下面的动画呈现了 GPT‑5.6 Sol 分别使用两种执行框架解决一系列 ARC-AGI-3 谜题时，其 175K 上下文窗口的变化。
 
-为了全面加速各层级的网络防御，我们正在扩大模型的使用权限。通过网络安全受信访问 (Trusted Access for Cyber)⁠计划，我们正率先在 Codex 中提供“网络安全放行版”模型。这意味着在发布之初，符合特定信任信号⁠（在新窗口中打开）的认证用户即可在更少限制的情况下，调用 GPT‑5.5 强大的网络安全能力。负责保护关键基础设施⁠的机构在满足严格安全要求的前提下，可申请使用 GPT‑5.4‑Cyber 等专项模型来加固其内部系统。这种模式不仅为广大认证防御者提供了更高效的专业工具，还减少了不必要的阻碍，确保核心防御能力得以真正普及。从事认证防御工作的用户可前往chatgpt.com/cyber⁠（在新窗口中打开）申请受信访问，以减少使用 GPT‑5.5 时的误报拦截。
+中间两列展示了两种执行框架以不同方式使用模型上下文窗口的情况。由于能更好地记住过去，GPT‑5.6 Sol 每次行动所需的思考更少，推进速度也快得多。注意：我们的实现采用 175,000 个词元而非字符作为上限，但两者最终非常接近，因为绝大多数文本都是操作网格，我们的分词器会按 1:1 的比例将其转换为词元。
 
-我们正与政府合作伙伴共同守护关乎民生的关键基础设施。我们正在共同探索如何利用尖端 AI 技术，支持相关部门开展防御工作 — 从保障重要纳税人数据的数字系统，到社区的电网和水源供应，确保这些民众赖以生存的系统安全无虞。
+保留推理与压缩结合使用后，GPT‑5.6 Sol（Max）的得分约为原来的三倍，而输出词元仅为原来的六分之一。
 
-我们根据准备框架⁠（在新窗口中打开），将 GPT‑5.5 的生物/化学及网络安全能力评定为“高” (high) 等级。尽管 GPT‑5.5 尚未达到“极高” (critical) 的网络安全能力水平，但评估显示，其防御实战能力较 GPT‑5.4 已有显著跨越。
+我们希望这些实验能够提醒大家：评测很少只衡量模型本身，也会衡量一系列不太显眼的选择，包括 API 设置、执行框架设计和提示方式。这并非我们第一次因公开基准测试中的低分而感到意外，随后才发现评测运行程序使用了会丢弃推理消息的通用执行框架。
 
-同时，GPT‑5.5 在发布前经过了完整的安全与治理流程，包括准备性评估、领域专项测试、针对高级生物与网络安全能力的定向评估，以及由外部专家参与的深度压力测试。更多技术细节可在 GPT‑5.5 系统卡中查阅。
+如果你是希望充分发挥性能的 API 开发者，我们建议采用与自家产品相同的设置：
 
-这些努力体现了我们构建“AI 韧性”的宏观思路。随着模型能力的进化，我们希望将强大的 AI 交到那些守护系统、机构和公众安全的人手中。受信访问、随能力动态扩展的防护体系、以及检测并响应严重滥用的实操能力 — 这才是行之有效的必经之路。
+使用 Responses API，而非旧版 Chat Completions API
 
-即日起，GPT‑5.5 将全面登陆 ChatGPT、Codex 及 API 平台，并同步面向 Microsoft Foundry 的开发者开放。
+如果你要比较模型，我们建议采用使用上述设置的评测，因为这些设置最贴近 ChatGPT 和 Codex 中的实际应用。
 
-在 ChatGPT 中，Plus、Pro、Business 和 Enterprise 用户均可使用 GPT‑5.5 Thinking。专为应对极端复杂问题、追求极高准确率而设计的 GPT‑5.5 Pro，则面向 Pro、Business 及 Enterprise 用户开放。
+我们感谢 ARC 多年来在 AGI 评测领域开展的创造性工作，也感谢其分析启发我们进一步深入研究。
 
-在 Codex 中，GPT‑5.5 已支持 Plus、Pro、Business、Enterprise、Edu 及 Go 套餐，并提供 400K 上下文窗口。此外，Codex 还推出了快速模式，能以 1.5 倍的生成速度响应请求（费用为标准模式的 2.5 倍）。
-
-面向 API 开发者，gpt-5.5 即将接入 Responses 及 Chat Completions API。其定价为每百万输入 Token 5 美元，每百万输出 Token 30 美元，并支持高达 1M 的上下文窗口。此外，Batch 和 Flex 的价格仅为标准 API 费率的一半，而 Priority（优先）处理的费率为标准费率的 2.5 倍。我们还将在 API 中推出 gpt-5.5-pro，以实现更高的准确性，定价为每百万输入 Token 30 美元，每百万输出 Token 180 美元。详情请查看定价页面情。
-
-尽管 GPT‑5.5 的定价高于 GPT‑5.4，但它在实现智能跃迁的同时，Token 利用效率也大幅提升。在 Codex 中，我们经过精心调优，确保 GPT‑5.5 在大多数场景下能以更少的 Token 交付优于 GPT‑5.4 的结果。此外，各订阅层级依然享有极具诚意的使用配额。
-
-SWE-Bench Pro (Public) *
-
-Expert-SWE (Internal)
-
-*实验室已在该评估项中发现存在“记忆化”(memorization) 的证据⁠（在新窗口中打开）
-
-Tau2-bench Telecom***（原始提示词）
-
-** MCP Atlas：Scale AI 在 2026 年 4 月最新更新后的结果。*** Tau2-bench telecom：GPT‑5.5 与 5.4 采用原始提示词（即未进行提示词调整）的测试结果。此处忽略了其他实验室在评估时采用提示词调整后所得出的结果。
-
-FrontierMath Tier 1–3
-
-Humanity's Last Exam（无工具）
-
-Humanity's Last Exam（含工具）
-
-**** 在系统卡原有的最难 CTF（夺旗挑战）基础上进行了扩展，并新增了一系列极具挑战性的项目。
-
-Graphwalks BFS 256k f1
-
-Graphwalks BFS 1mil f1
-
-Graphwalks parents 256k f1
-
-Graphwalks parents 1mil f1
-
-OpenAI MRCR v2 8-needle 4K-8K
-
-OpenAI MRCR v2 8-needle 8K-16K
-
-OpenAI MRCR v2 8-needle 16K-32K
-
-OpenAI MRCR v2 8-needle 32K-64K
-
-OpenAI MRCR v2 8-needle 64K-128K
-
-OpenAI MRCR v2 8-needle 128K-256K
-
-OpenAI MRCR v2 8-needle 256K-512K
-
-OpenAI MRCR v2 8-needle 512K-1M</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">This post introduced GPT-5.5.
-
-Learn about OpenAI’s latest model:
-
-我们正式发布 GPT‑5.5。作为我们迄今最智能、交互体验最直观的模型，它标志着人类迈向全新计算机办公模式的关键一步。
-
-GPT‑5.5 能够更快速地洞察用户意向，并独立承担更多实质性工作。无论是编写与调试代码、开展在线调研、分析复杂数据，还是撰写文档、制作表格，乃至跨软件操作，它都能游刃有余地衔接各个工具，直至任务圆满完成。以往你需要步步为营地引导 AI，而现在，你只需将一个繁杂的多阶段任务交给 GPT‑5.5。它具备极强的自主性，能够自行制定计划、调用工具、核查结果并在模糊的边界中寻找最优路径，始终保持高效推进。
-
-在智能体编程、计算机使用、知识型工作以及前沿科学研究等领域，GPT‑5.5 的提升尤为显著。这些领域往往要求模型具备跨语境推理及长周期的行动能力。令人惊叹的是，GPT‑5.5 在实现智能跃迁的同时，并未牺牲响应速度。通常情况下，模型体量越大速度越慢，但 GPT‑5.5 在真实应用环境中的单 Token 延迟与 GPT‑5.4 持平，智能水...</p><div style="font-size:16px;line-height:1.8;color:#333">This post introduced GPT-5.5.
-
-Learn about OpenAI’s latest model:
-
-我们正式发布 GPT‑5.5。作为我们迄今最智能、交互体验最直观的模型，它标志着人类迈向全新计算机办公模式的关键一步。
-
-GPT‑5.5 能够更快速地洞察用户意向，并独立承担更多实质性工作。无论是编写与调试代码、开展在线调研、分析复杂数据，还是撰写文档、制作表格，乃至跨软件操作，它都能游刃有余地衔接各个工具，直至任务圆满完成。以往你需要步步为营地引导 AI，而现在，你只需将一个繁杂的多阶段任务交给 GPT‑5.5。它具备极强的自主性，能够自行制定计划、调用工具、核查结果并在模糊的边界中寻找最优路径，始终保持高效推进。
-
-在智能体编程、计算机使用、知识型工作以及前沿科学研究等领域，GPT‑5.5 的提升尤为显著。这些领域往往要求模型具备跨语境推理及长周期的行动能力。令人惊叹的是，GPT‑5.5 在实现智能跃迁的同时，并未牺牲响应速度。通常情况下，模型体量越大速度越慢，但 GPT‑5.5 在真实应用环境中的单 Token 延迟与 GPT‑5.4 持平，智能水平却大幅领先。此外，在处理相同的 Codex 任务时，其消耗的 Token 显著减少，真正实现了更高能、更经济。
-
-伴随 GPT‑5.5 一同发布的，还有我们迄今为止最完善的安全防护方案。这套体系旨在打击滥用行为，同时确保合法、有益的工作流程不受干扰。在正式发布前，我们不仅通过了全套安全与准备框架评估，还联合内外红队专家，针对高级网络安全和生物技术领域进行了专项测试。此外，我们还从近 200 家值得信赖的合作伙伴处收集了大量真实应用场景的反馈，确保模型在复杂实战中的安全性与可靠性。
-
-即日起，GPT‑5.5 将陆续面向 ChatGPT 及 Codex 的 Plus、Pro、Business 和 Enterprise 用户开放。同时，GPT‑5.5 Pro 也将同步推送给 Pro、Business 和 Enterprise 的订阅用户。由于 API 部署涉及不同的防护策略，我们正与合作伙伴及客户紧密协作，确保在大规模服务下的安全性。GPT‑5.5 与 GPT‑5.5 Pro 的 API 服务将于近期正式上线。
-
-Expert-SWE (Internal)
-
-FrontierMath Tier 1–3
-
-OpenAI 正在致力于打造全球性的智能体 AI 基础设施，旨在让全球用户与企业都能真正通过 AI 交付工作成果。在过去的一年里，我们见证了 AI 对软件工程效率的巨大拉动；而随着 GPT‑5.5 接入 Codex 与 ChatGPT，这种变革正进一步延伸至科学研究及更广泛的计算机办公领域。
-
-在这些领域中，GPT‑5.5 的进化不仅体现在更深层次的智能，更在于其解决问题的高效性。它通常能以更少的 Token 消耗和更低的重试频率，交付更高质量的产出。在 Artificial Analysis 的 Coding Agent Index 中，GPT‑5.5 以竞品前沿编程模型一半的成本，实现了行业领先的智能表现。
-
-Artificial Analysis Intelligence Index⁠（在新窗口中打开）是由第三方机构测评的加权平均得分，涵盖了以下 10 项权威评估：AA-LCR、AA-Omniscience、CritPt、GDPval-AA、GPQA Diamond、Humanity’s Last Exam、IFBench、SciCode、Terminal-Bench Hard 以及 τ²-Bench Telecom。
-
-GPT‑5.5 是我们迄今最强大的智能体编程模型。在Terminal-Bench 2.0测试中，面对需要缜密规划、反复迭代及多工具协作的复杂命令行工作流，GPT‑5.5 取得了 82.7% 的顶尖准确率。在衡量解决真实 GitHub 议题能力的SWE-Bench Pro评估中，其得分达到 58.6%，相比以往模型，它能在单次尝试中端到端地解决更多任务。而在针对长周期编程任务（人类中位完成时间约为 20 小时）的内部前沿评估Expert-SWE中，GPT‑5.5 的表现同样超越了 GPT‑5.4。
-
-在上述三项评估中，GPT‑5.5 不仅全面刷新了 GPT‑5.4 的成绩，且 Token 使用量更少。
-
-GPT‑5.5 的编程能力优势在 Codex 中得到明显体现。从代码实现、重构到调试、测试及验证，它都能全方位接管工程任务。早期测试表明，GPT‑5.5 更加契合真实工程环境下的行为模式：它能精准把握大型系统的上下文，在面对含义模糊的报错时进行深入推理，并主动通过工具验证假设，确保修改后的代码能适配整个库的既有逻辑。
-
-除了基准测试表现优异，早期测试者还反映 GPT‑5.5 对系统架构的整体把握能力更强：它能洞察故障的底层逻辑，锁定精准的修复位置，并预判代码变更可能引发的连锁反应。
-
-“这是我用过的第一个在概念理解上具有极高清晰度的编程模型。”
-
-“这是我用过的第一个在概念理解上具有极高清晰度的编程模型。”
-
-Every 创始人兼 CEODan Shipper将 GPT‑5.5 评价为：“这是我用过的第一个在概念理解上具有极高清晰度的编程模型。”
-
-在应用上线后，他曾花费数天时间调试一个线上故障，最后不得不抽调一名最顶尖的工程师重写了部分系统。为了测试 GPT‑5.5，他实际上采用了“倒流时间”的方法：面对当时那个受损的状态，模型是否能够像工程师最终决定的那样，给出相同类型的重写方案？GPT‑5.4 没能做到。GPT‑5.5 成功了。
-
-“它真的让我感觉是在与更高阶的智能协同工作，甚至产生了一种由衷的敬畏感。”
-
-“它真的让我感觉是在与更高阶的智能协同工作，甚至产生了一种由衷的敬畏感。”
-
-MagicPath 首席执行官Pietro Schirano也见证了类似的质变：GPT‑5.5 将一个包含数百项前端修改和重构的分支，成功合并到了一个同样发生巨变的主分支中。它仅用约 20 分钟便一次性完成了所有冲突解决与代码整合。
-
-资深工程师在对比测试后指出，GPT‑5.5 在推理能力和自主性上明显优于 GPT‑5.4 和 Claude Opus 4.7。它能提前发现潜在隐患，甚至在无需显式指令的情况下，预判测试与评审需求。在一次实测案例中，一位工程师要求其重构协作式 Markdown 编辑器的评论系统，结果它交出的 12 个 Diff 堆栈几乎已经可以直接发布。许多用户表示，相比 GPT‑5.4，他们对 GPT‑5.5 制定的方案更有信心，且极少需要对具体实现进行人工修正。
-
-一位提前试用该模型的 NVIDIA 工程师感叹道：“失去对 GPT‑5.5 的访问权限，感觉就像被截肢了一样。”
-
-这些让 GPT‑5.5 在编程领域大放异彩的优势，同样使其成为日常办公的强大助力。由于模型能更敏锐地捕捉用户意向，它在处理知识型工作时显得更加自然流畅：从搜集资料、提炼核心价值，到调用工具、核查产出，并最终将零散的素材转化为实用成果，整个链路一气呵成。
-
-在 Codex 环境下，GPT‑5.5 制作文档、表格及演示文稿的能力较 GPT‑5.4 有了显著提升。Alpha 测试者反馈，在运筹研究、电子表格建模以及将凌乱的业务需求转化为执行计划等任务中，它的表现远超以往模型。结合 Codex 的计算机使用 (computer use) 能力，GPT‑5.5 带来了前所未有的“人机协作感”：它能实时理解屏幕内容，精准进行点击、录入和界面导航，并熟练地在不同工具间跨越操作。
-
-目前，OpenAI 内部团队已率先将这些优势应用到真实的业务流中。如今，公司内超过 85% 的员工每周都会使用 Codex，涵盖软件工程、财务、传播、市场营销、数据科学和产品管理等多个职能领域。公关团队利用 Codex 中的 GPT‑5.5 分析了过去六个月的演讲请求数据，建立了一套评分与风险预警框架，并以此验证了一款自动化 Slack 智能体。该智能体能够自动处理低风险请求，而将高风险项转交人工审核。财务团队借助 Codex 处理了 24,771 份 K-1 税务报表，共计 71,637 页。通过这一脱敏处理的工作流，团队比去年提前两周完成了任务。市场拓展团队的一名员工实现了周报生成的自动化，每周节省了 5 到 10 小时。
-
-在 ChatGPT 中，GPT‑5.5 Thinking让攻克难题变得更为高效，通过更智能、更简洁的回答，协助用户理清复杂工作的头绪。它在编程、调研、信息综合分析以及处理文档密集型任务方面表现卓越，配合插件使用时效果尤为显著。
-
-GPT‑5.5 Pro的表现同样出色：早期测试者发现 ChatGPT 承接任务的难度上限和交付质量都有了跨越式提升，延迟表现的改善也使其在处理高强度任务时更具实用性。相比 GPT‑5.4 Pro，测试者认为 GPT‑5.5 Pro 的回答在全面性、结构化、准确度、相关性及实用价值上均有显著突破，尤其在商业、法律、教育和数据科学领域表现强劲。
-
-多项衡量实战能力的基准测试结果也印证了这一点：GDPval（衡量 44 种职业中具有经济价值的真实知识型工作）：GPT‑5.5 得分为 84.9%。OSWorld-Verified（衡量模型自主操作真实计算机环境的能力）：得分达到 78.7%。Tau2-bench Telecom（测试复杂客服工作流）：在无需提示词微调的情况下，准确率高达 98.0%。
-
-此外，GPT‑5.5 在结构化知识型工作方面同样表现不俗：在FinanceAgent测试中取得 60.0% 的成绩；在内部投资银行建模任务中达到 88.5%；而在OfficeQA Pro（要求模型结合文件、工具和上下文进行实操而非死记硬背）测试中，得分为 54.1%。
-
-Tau2-bench Telecom 测试是在未进行提示词微调（且以 GPT‑4.1 作为用户模型）的情况下运行的。与前代模型相比，GPT‑5.5 能够更精准地理解任务意向，且 Token 利用效率更高。
-
-GPT‑5.5 在科学和技术研究工作流中同样展现出显著优势。科研工作并非简单的问答，而是一个探索构思、搜集证据、验证假设、解读结果并决策下一步行动的完整循环。GPT‑5.5 在这一循环中的表现比以往任何模型都更加稳健持久。
-
-值得注意的是，在GeneBench⁠（在新窗口中打开）测试中，GPT‑5.5 较 GPT‑5.4 有了跨越式的提升。这是一项专注于遗传学和定量生物学多阶段科学数据分析的新型评估，要求模型在极少的人工干预下，对具有模糊性或存在误差的数据进行推理，处理如隐藏混杂因素或质控 (QC) 失败等现实障碍，并精准实现及解读现代统计学方法。考虑到该测试中的任务通常对应科学专家数天的项目量，模型的表现确实令人瞩目。
-
-同样，在围绕真实生物信息学及数据分析设计的 BixBench 测试中，GPT‑5.5 在所有已公布评分的模型中名列前茅。目前，该模型的科学能力已足以作为真正的“科学共同体”成员，切实加速生物医学研究的前沿进展。
-
-在另一个案例中，一个搭载自定义框架的 GPT‑5.5 内部版本协助发现了关于拉姆齐数 (Ramsey numbers) 的全新证明⁠（在新窗口中打开）。拉姆齐数是组合数学的核心研究对象之一；组合数学主要研究离散对象（如路径、网络、集合和模式）如何相互关联。简单来说，拉姆齐数探究的是：一个网络必须达到多大规模，才能保证某种秩序必然出现。该领域的成果非常罕见且技术难度极大。GPT‑5.5 发现了一个关于非对角拉姆齐数长期存在的渐近事实证明，随后该证明在 Lean 形式化证明语言中得到了验证。该成果是一个具体的范例，表明 GPT‑5.5 不仅仅能提供代码或解释，更能为研究领域贡献出令人惊喜且极具价值的数学论证。
-
-早期测试者在使用 ChatGPT 中的 GPT‑5.5 Pro 时，更多是将其视为研究伙伴而非单次应答机：它能通过多轮交互评议手稿、压力测试技术论证、提议分析方案，并结合代码、笔记和 PDF 上下文进行协作。这种转变的核心在于，GPT‑5.5 能够更有效地辅助研究人员完成从提出问题到设计实验，再到最终产出的全过程。
-
-Derya Unutmaz是杰克逊基因组医学实验室 (Jackson Laboratory for Genomic Medicine) 的免疫学教授兼研究员，他使用 GPT‑5.5 Pro 分析了一个包含 62 个样本、近 28,000 个基因的基因表达数据集。他生成了一份详尽的研究报告，不仅总结了实验发现，还提出了关键问题和见解。他表示，这类工作以往通常需要团队耗时数月才能完成。
-
-波兰波兹南亚当·密茨凯维奇大学 (Adam Mickiewicz University) 数学系助理教授Bartosz Naskręcki使用 Codex 中的 GPT‑5.5，仅凭一条提示词就在 11 分钟内构建了一个代数几何应用。该应用能够实现二次曲面交集的可视化，并能将生成的曲线转换为魏尔斯特拉斯模型 (Weierstrass model)。
-
-随后，他进一步扩展了该应用，加入了更稳定的奇点可视化功能，并提供了可供后续研究复用的精确系数。对他而言，更重大的转变在于 Codex 现在能够辅助实现自定义的数学可视化和计算机代数工作流，而这些在以前往往需要专门的工具。综合来看，这些案例证明了 GPT‑5.5 正在将专家的意向转化为切实可用的研究工具和分析成果。
-
-图片来源：Bartosz Naskręcki⁠（在新窗口中打开）
-
-Prompt:# Algebraic geometry surface intersection
-
-Make an app which draws two quadratic surfaces and colors in red the intersection curve. Use computational Riemann-Roch theorem to convert this into Weierstrass curve.
-
-Two tinted surfaces with a slightly transparent shading, high quality rendering intersect along a red colored algebraic curve
-
-Rotation with mouses in both directions, full pinch mechanism for zoom, haptic press to show the little menu with sliders for changing the coefficients of each surface; detection via Z-buffor level
-
-Short Weierstrass equation (over Q or quadratic field extension) computed on the go via effective Riemann-Roch theorem formulas
-
-## Ambient mode where all the controls are hidden and the user can admire the beauty of the shapes
-
-App is running in the browser, light-weight implementation with full stack newest libraries, portable, deployable
-
-Git repo, journal, plan (Markdown files)
-
-为了在维持 GPT‑5.4 延迟水平的前提下提供 GPT‑5.5 的强大性能，我们必须将推理视为一个完整的集成系统进行重新思考，而非单纯的局部优化。GPT‑5.5 适配了 NVIDIA GB200 及 GB300 NVL72 系统，从联合设计、模型训练到在线服务均基于此。Codex 与 GPT‑5.5 对实现性能目标起到了决定性作用。Codex 协助团队快速将构思转化为可测试的方案，通过勾勒技术路径和搭建实验环境，帮助我们精准锁定最具投资价值的优化点。GPT‑5.5 甚至亲自参与了系统底层栈的改进与实现。简而言之，模型亲自优化了运行它自身的底层基础设施。
-
-其中一项关键改进体现在负载均衡与分区启发式算法。在 GPT‑5.5 发布前，为了平衡计算核心的工作量并确保不同规模的请求能在同一 GPU 上运行，我们将加速器上的请求拆分为固定数量的区块。然而，静态区块分配并非面对各种流量形态的最优解。为了更充分地利用 GPU 性能，Codex 分析了数周的生产环境流量模式，并编写了定制的启发式算法，实现了任务的最优分区与平衡。这项工作产生了远超预期的影响，将 Token 生成速度提升了 20% 以上。
-
-在模型能够精准发现并修复漏洞的时代，构建防御韧性是一项需要全行业参与的系统性工程。我们需要通过民主化的模型准入和迭代部署，为下一个阶段的网络防御⁠构筑全生态的免疫力。
-
-前沿模型在网络安全领域的实力正日益增强。由于这些能力终将走向普及，我们坚信，最有效的应对之道是确保这些力量能优先用于加速网络防御，从而增强整个生态系统。
-
-在利用 AI 应对网络安全等全球性挑战的进程中，GPT‑5.5 迈出了虽小但至关重要的一步。继去年 12 月在 GPT‑5.2 中主动部署了必要的网络安全护栏⁠以遏制潜在滥用后，我们在 GPT‑5.5 中引入了更严苛的风险分类器。虽然在后续的持续微调过程中，部分用户初期可能会感到些许不便，但这对于保障系统安全至关重要。
-
-多年来，随着模型能力的递进式提升，我们始终在准备框架⁠（在新窗口中打开）中将网络安全列为重点领域。通过不断开发并校准缓解方案，我们确保了能够在负责任的前提下，发布具备实质性网络安全能力的前沿模型。
-
-针对这一级别的网络安全能力，我们部署了行业领先的防护措施。自去年在GPT‑5.2⁠（在新窗口中打开）中首次引入专项安全护栏以来，我们持续在后续部署中进行测试与完善。针对 GPT‑5.5，我们围绕高风险活动和敏感网络请求设计了更严密的管控机制，并增加了针对重复性滥用行为的保护。通过在模型安全、身份认证以及违规监控方面的投入，我们才得以实现如此广泛的模型准入。数月以来，我们一直与外部专家合作，不断打磨并强化这些防护措施的稳健性。在 GPT‑5.5 中，我们致力于确保开发者能轻松加固代码，同时对恶意攻击者最可能利用的危害性工作流施加了更强有力的管控。
-
-为了全面加速各层级的网络防御，我们正在扩大模型的使用权限。通过网络安全受信访问 (Trusted Access for Cyber)⁠计划，我们正率先在 Codex 中提供“网络安全放行版”模型。这意味着在发布之初，符合特定信任信号⁠（在新窗口中打开）的认证用户即可在更少限制的情况下，调用 GPT‑5.5 强大的网络安全能力。负责保护关键基础设施⁠的机构在满足严格安全要求的前提下，可申请使用 GPT‑5.4‑Cyber 等专项模型来加固其内部系统。这种模式不仅为广大认证防御者提供了更高效的专业工具，还减少了不必要的阻碍，确保核心防御能力得以真正普及。从事认证防御工作的用户可前往chatgpt.com/cyber⁠（在新窗口中打开）申请受信访问，以减少使用 GPT‑5.5 时的误报拦截。
-
-我们正与政府合作伙伴共同守护关乎民生的关键基础设施。我们正在共同探索如何利用尖端 AI 技术，支持相关部门开展防御工作 — 从保障重要纳税人数据的数字系统，到社区的电网和水源供应，确保这些民众赖以生存的系统安全无虞。
-
-我们根据准备框架⁠（在新窗口中打开），将 GPT‑5.5 的生物/化学及网络安全能力评定为“高” (high) 等级。尽管 GPT‑5.5 尚未达到“极高” (critical) 的网络安全能力水平，但评估显示，其防御实战能力较 GPT‑5.4 已有显著跨越。
-
-同时，GPT‑5.5 在发布前经过了完整的安全与治理流程，包括准备性评估、领域专项测试、针对高级生物与网络安全能力的定向评估，以及由外部专家参与的深度压力测试。更多技术细节可在 GPT‑5.5 系统卡中查阅。
-
-这些努力体现了我们构建“AI 韧性”的宏观思路。随着模型能力的进化，我们希望将强大的 AI 交到那些守护系统、机构和公众安全的人手中。受信访问、随能力动态扩展的防护体系、以及检测并响应严重滥用的实操能力 — 这才是行之有效的必经之路。
-
-即日起，GPT‑5.5 将全面登陆 ChatGPT、Codex 及 API 平台，并同步面向 Microsoft Foundry 的开发者开放。
-
-在 ChatGPT 中，Plus、Pro、Business 和 Enterprise 用户均可使用 GPT‑5.5 Thinking。专为应对极端复杂问题、追求极高准确率而设计的 GPT‑5.5 Pro，则面向 Pro、Business 及 Enterprise 用户开放。
-
-在 Codex 中，GPT‑5.5 已支持 Plus、Pro、Business、Enterprise、Edu 及 Go 套餐，并提供 400K 上下文窗口。此外，Codex 还推出了快速模式，能以 1.5 倍的生成速度响应请求（费用为标准模式的 2.5 倍）。
-
-面向 API 开发者，gpt-5.5 即将接入 Responses 及 Chat Completions API。其定价为每百万输入 Token 5 美元，每百万输出 Token 30 美元，并支持高达 1M 的上下文窗口。此外，Batch 和 Flex 的价格仅为标准 API 费率的一半，而 Priority（优先）处理的费率为标准费率的 2.5 倍。我们还将在 API 中推出 gpt-5.5-pro，以实现更高的准确性，定价为每百万输入 Token 30 美元，每百万输出 Token 180 美元。详情请查看定价页面情。
-
-尽管 GPT‑5.5 的定价高于 GPT‑5.4，但它在实现智能跃迁的同时，Token 利用效率也大幅提升。在 Codex 中，我们经过精心调优，确保 GPT‑5.5 在大多数场景下能以更少的 Token 交付优于 GPT‑5.4 的结果。此外，各订阅层级依然享有极具诚意的使用配额。
-
-SWE-Bench Pro (Public) *
-
-Expert-SWE (Internal)
-
-*实验室已在该评估项中发现存在“记忆化”(memorization) 的证据⁠（在新窗口中打开）
-
-Tau2-bench Telecom***（原始提示词）
-
-** MCP Atlas：Scale AI 在 2026 年 4 月最新更新后的结果。*** Tau2-bench telecom：GPT‑5.5 与 5.4 采用原始提示词（即未进行提示词调整）的测试结果。此处忽略了其他实验室在评估时采用提示词调整后所得出的结果。
-
-FrontierMath Tier 1–3
-
-Humanity's Last Exam（无工具）
-
-Humanity's Last Exam（含工具）
-
-**** 在系统卡原有的最难 CTF（夺旗挑战）基础上进行了扩展，并新增了一系列极具挑战性的项目。
-
-Graphwalks BFS 256k f1
-
-Graphwalks BFS 1mil f1
-
-Graphwalks parents 256k f1
-
-Graphwalks parents 1mil f1
-
-OpenAI MRCR v2 8-needle 4K-8K
-
-OpenAI MRCR v2 8-needle 8K-16K
-
-OpenAI MRCR v2 8-needle 16K-32K
-
-OpenAI MRCR v2 8-needle 32K-64K
-
-OpenAI MRCR v2 8-needle 64K-128K
-
-OpenAI MRCR v2 8-needle 128K-256K
-
-OpenAI MRCR v2 8-needle 256K-512K
-
-OpenAI MRCR v2 8-needle 512K-1M</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
-</item>
-<item>
-  <title>GPT-5.6</title>
-  <link>https://openai.com/index/gpt-5-6/</link>
-  <guid isPermaLink="false">https://openai.com/index/gpt-5-6/</guid>
-  <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
-  <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+如果你想与前沿模型一较高下，可以前往arcprize.org/tasks⁠（在新窗口中打开）亲自挑战这些公开游戏。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 <item>
   <title>GPT-5.4</title>
   <link>https://openai.com/index/introducing-gpt-5-4/</link>
   <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-4/</guid>
-  <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+  <pubDate>Mon, 30 Sep 2024 00:00:00 +0000</pubDate>
   <category>Research</category>
-  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
-  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.4</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
+
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+...</p><div style="font-size:16px;line-height:1.8;color:#333">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
+
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+
+在 Codex 与 API 中，GPT‑5.4 是我们发布的第一个具备原生且顶尖计算机使用能力的通用模型，让智能体能够操作计算机，并跨应用程序执行复杂的工作流程。该模型支持高达1M Token 的上下文，允许智能体在长周期内进行任务规划、执行与验证。此外，GPT‑5.4 通过工具搜索功能优化了模型在庞大的工具与连接器生态中的运作方式，帮助智能体在不牺牲智能的前提下，更高效地发现并使用正确工具。最后，GPT‑5.4 是我们迄今为止 Token 效率最高的推理模型，与 GPT‑5.2 相比，解决相同问题所需的 Token 数量显著减少 — 这直接转化为更低的 Token 消耗和更快的响应速度。
+
+GPT‑5.4 在通用推理、编程和专业知识工作方面都有全面提升，因此能支持更可靠的智能体、更高效的开发流程，并在 ChatGPT、API 和 Codex 中带来更高质量的输出。
+
+SWE-Bench Pro (Public)
+
+*此前报告的数据为 64.7%。GPT‑5.3‑Codex 现已达到 74.0% — 通过引入一个能够保留原始图像分辨率的新 API 参数。
+
+基于 GPT‑5.2 的通用推理能力，GPT‑5.4 在专业人士关注的实际任务中，能够提供更加稳定且精炼的输出。
+
+在GDPval⁠（一项评估智能体在 44 个职业中产出明确知识工作能力的测试）中，GPT‑5.4 刷新纪录。在与行业专业人士的横向评测中，GPT‑5.4 在83.0%的案例里达到了持平或更优的水准（GPT‑5.2 为71.0%）。
+
+在 GDPval 测试中，模型尝试完成定义明确的知识型工作，内容涵盖美国 GDP 贡献度最高的 9 个行业中的 44 种职业。任务要求生成真实的工作成果，例如销售演示文稿、会计表格、急诊排班表、制造业图表或短视频。GPT‑5.4 的推理强度设置为 xhigh，GPT‑5.2 的推理强度设置为 heavy（在 ChatGPT 中可用的较低强度）。
+
+我们重点提升了 GPT‑5.4 创建和编辑表格、演示文稿及文档的能力。在针对初级投行分析师水平的电子表格建模任务内部基准测试中，GPT‑5.4 的平均得分达到87.5%，而 GPT‑5.2 为68.4%。在演示文稿评估测试中，人工评分者在68.0%的情况下更偏好 GPT‑5.4 而非 GPT‑5.2 生成的作品，主要原因在于其更强的审美水平、更丰富的视觉元素，以及对图像生成功能更有效的运用。
+
+你可以在 ChatGPT 中使用 GPT‑5.4 Thinking 或 Pro 模型体验这些功能。如果你是 Enterprise 客户，建议使用我们新发布的ChatGPT Excel 和 Google Sheets 插件⁠（在新窗口中打开），该插件也于今天推出。同时，我们也更新了 Codex 和 API 中的电子表格⁠（在新窗口中打开）及演示文稿⁠（在新窗口中打开）技能。
+
+为了提升 GPT‑5.4 在实际工作中的表现，我们持续致力于降低幻觉与错误率。GPT‑5.4 是我们迄今为止准确率最高的模型：在用户标记了事实错误的一组去标识化提示词测试中，与 GPT‑5.2 相比，GPT‑5.4 的单项陈述错误率降低了 33%，完整回复包含错误的概率降低了 18%。
+
+GPT‑5.4 是我们首款原生支持计算机使用能力的通用模型，这标志着在开发与智能体领域向前迈出了重要一步。如果你正在构建跨网页和软件系统执行任务的智能体，GPT‑5.4 是目前市面上的最佳选择。
+
+我们设计 GPT‑5.4 的初衷，是让其在各种“计算机使用”负载中都能表现出色。它擅长通过 Playwright 等库编写代码来操作计算机，也能根据屏幕截图直接下达鼠标和键盘指令。开发者可以通过“开发者消息”引导模型行为，从而灵活调整其表现以适配特定场景。你甚至可以根据不同的风险承受能力，通过指定自定义确认策略来配置模型的安全行为。
+
+模型的性能与灵活性，在针对不同场景下“计算机使用”能力的基准测试中得到充分体现。在OSWorld-Verified测试（该测试通过屏幕截图以及键盘/鼠标操作，来评估模型导航桌面环境的能力）中，GPT‑5.4 达到了75.0%的成功率，刷新了纪录。这一成绩远超 GPT‑5.2 的47.3%，并超越了人类72.4%的表现。1
+
+在评估浏览器使用能力的WebArena-Verified基准测试中，GPT‑5.4 在同时结合 DOM 和屏幕截图驱动的交互方式下，达到了领先的67.3%成功率（GPT‑5.2 为65.4%）。而在同样评估浏览器使用能力的Online-Mind2Web测试中，仅凭基于屏幕截图的观察，GPT‑5.4 就能达到92.8%的成功率，远超 ChatGPT Atlas 智能体模式，后者的成功率为70.9%。
+
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
+
+GPT‑5.4 在“计算机使用”方面的提升，源于模型更强的通用视觉感知能力。在评估视觉理解与推理能力的MMMU-Pro测试中，GPT‑5.4 在不使用工具的情况下达到了81.2%的成功率（GPT‑5.2 为79.5%）。此外，视觉感知的提升也转化为更强的文档解析能力：在OmniDocBench测试中，GPT‑5.4 在不使用推理强度的情况下平均误差（通过模型预测值与标准答案之间的归一化编辑距离衡量）降至0.109，较 GPT‑5.2 的0.140有显著提升。
+
+MMMUPro 在测试时将推理强度设置为 xhigh。OmniDocBench 在测试时将推理强度设置为 none，以反映低成本、低延迟的性能表现。
+
+我们同时提升了对高细节、高分辨率图像的视觉理解能力，这对于要求全保真度的场景至关重要。从 GPT‑5.4 起，我们将引入“原始 (original)”图像输入细节⁠（在新窗口中打开）级别。该级别支持全保真感知，上限为 1024 万总像素或 6000 像素的最大长边（以较低者为准）；同时，“高 (high)”图像输入细节级别现在最高支持 256 万总像素或 2048 像素的最大长边。在与 API 用户进行的早期测试中，我们观察到在使用“原始”或“高”细节时，模型的定位能力、图像理解以及点击准确度均有显著提升。
+
+在 API 中，开发者可以通过更新后的计算机工具来使用这些功能。请参考我们更新后的文档⁠（在新窗口中打开），以获取最佳实践建议。
+
+GPT‑5.4 结合了 GPT‑5.3‑Codex 的编程优势，以及领先的知识型工作与“计算机使用”能力。这对于长时间运行的任务至关重要。在这些任务中，模型可以自主使用工具、进行迭代并推进工作，从而减少人工干预。在 SWE-Bench Pro 测试中，GPT‑5.4 的表现超越了 GPT‑5.3‑Codex 或与其持平，同时在各项推理任务中拥有更低的延迟。
+
+我们通过观察模型的生产环境行为并进行离线模拟来估算延迟。延迟估算涵盖了工具调用耗时（代码执行时间）、采样 Token 以及输入 Token。实际延迟可能会有显著差异，并取决于诸多我们的模拟中未涵盖的因素。推理强度已从 none 调整为 xhigh。
+
+开启 Codex 中的 /fast 模式后，可将 GPT‑5.4 的 Token 吐字速度提升至 1.5 倍。模型本身及其智能水平完全一致，只是速度更快。这意味着用户在处理编码任务、迭代和调试时，能够始终保持专注顺畅的状态。通过使用优先处理服务⁠（在新窗口中打开），开发者也可以在 API 中以同样的高速访问 GPT‑5.4。
+
+在评估和内部测试中，我们发现 GPT‑5.4 擅长处理复杂的垂直前端任务。与我们此前发布的任何模型相比，其产出的结果在审美水平和功能性上都有显著提升。
+
+为了展示模型在“计算机使用”与编程能力上的双重进化，我们还将发布一个名为“Playwright (Interactive)”的实验性Codex 技能⁠（在新窗口中打开）。它允许 Codex 对网页和 Electron 应用进行可视化调试；甚至在构建应用的过程中，它就能同步对该应用进行实时测试。
+
+在 GPT‑5.4 中，我们显著优化了模型与外部工具的协作方式。现在，智能体能够在更庞大的工具生态中进行操作，更可靠地筛选匹配工具，并以更低的成本和延迟完成多步骤的工作流程。
+
+在 API 层面，GPT‑5.4 引入了工具搜索⁠（在新窗口中打开）功能。这使得模型在面对海量工具选项时，依然能够保持高效运作。
+
+在此之前，当模型调用工具时，所有的工具定义都必须预先包含在提示词中。对于拥有大量工具的系统，这会导致每次请求都额外增加数千甚至数万个 Token，不仅推高了成本、减慢了响应速度，还让上下文中充斥着模型可能永远用不到的冗余信息。
+
+通过工具搜索，GPT‑5.4 不再需要预加载完整定义，而是接收一份精简的可选工具列表及工具搜索能力。当模型需要调用特定工具时，它会即时查找该工具的定义，并将其添加到当前的对话上下文。
+
+这种方法大幅减少了重度工具调用工作流程所需的 Token 数量，并有效保留了缓存，使请求变得更快、成本更低。它还让智能体能够可靠地与更庞大的工具生态协同工作。对于那些工具定义可能包含数万个 Token 的 MCP 服务器而言，效率提升尤为显著。
+
+为了展示效率提升的实际效果，我们对 ScaleMCP Atlas⁠（在新窗口中打开）基准测试中的 250 个任务进行了评估。在开启全部 36 个 MCP 服务器的情况下，我们对比了两种模式：(1) 将每个 MCP 函数直接暴露在模型上下文中；(2) 将所有 MCP 服务器置于“工具搜索”之后。结果显示，在保持同等准确率的前提下，“工具搜索”配置将总 Token 使用量降低了 47%。
+
+示例 Token 计数是基于 MCP-Atlas 公开数据集中 250 个任务的平均值得出的。
+
+GPT‑5.4 同样优化了工具调用能力，使其在推理过程中能更准确、更高效地判断调用工具的时机与方式，这在 API 环境下尤为突出。相比 GPT‑5.2，它在 Toolathlon 基准测试中能以更少的轮次达到更高的准确率。该测试旨在评估 AI 智能体利用真实世界工具和 API 完成多步任务的能力 — 例如，智能体需要读取邮件、提取作业附件、上传并评分，最后将结果记录到电子表格中。
+
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
+
+针对那些对延迟极度敏感、且倾向于将推理强度设为“无 (None)”的使用场景，GPT‑5.4 相比前代产品有显著提升。
+
+在τ2-bench⁠⁠（在新窗口中打开）测试中，模型必须利用工具来完成某项客服任务；该场景下可能包含一名模拟用户，此用户能够进行交流并针对环境状态执行操作。在测试中，推理强度设为 None。
+
+GPT‑5.4 在智能体联网搜索方面表现更佳。在 BrowseComp 基准测试（衡量 AI 智能体通过持续浏览网页获取难寻信息的能力）中，GPT‑5.4 相比 GPT‑5.2 提升了 17 个百分点；而 GPT‑5.4 Pro 更是创下了 89.3% 的纪录。
+
+在实际应用中，这意味着 GPT‑5.4 Thinking 能够更强有力地解答那些需要整合全网多方信息的复杂问题。它能以更强的持久性进行多轮搜索，从而锁定最相关的信源 — 尤其是在处理“大海捞针”式的问题时，它能高效提炼核心信息，并给出逻辑清晰、论证严密的回答。
+
+在 BrowseComp 测试中，我们使用了搜索黑名单，剔除了包含测试答案的网站，以防止数据污染并确保性能评估的公正性。由于 GPT‑5.4 的测试时间晚于 GPT‑5.2，其得分反映了模型能力、搜索系统优化以及互联网实时状态的综合变化。此外，GPT‑5.4 采用了范围更广、经过更新的黑名单进行测试。测试模型统一调用 ChatGPT 搜索工具，该工具与 API 搜索可能存在细微差异。
+
+与 Codex 开始工作时会概述思路类似，ChatGPT 中的 GPT‑5.4 Thinking 现在也会在处理更长、更复杂的查询时，通过“前言 (preamble)”来简述其工作方案。此外，你还可以在模型生成过程中实时添加指令或调整其方向。这让你能更轻松地引导模型达成预期的结果，而无需推倒重来，或通过多轮额外对话进行补救。该功能目前已在chatgpt.com⁠（在新窗口中打开）和 Android 应用上线，iOS 应用也将于近期推出。
+
+该模型在处理困难任务时能够进行更深入的思考，同时对会话早期的步骤保持更强的记忆。这使其能够应对更长的工作流和更复杂的提示词，并确保整个过程中给出的回答始终连贯且高度切题。
+
+在筹备 GPT‑5.4 部署的近几个月里，我们持续完善了自 GPT‑5.3‑Codex 以来引入的安全防护措施。与 GPT‑5.3‑Codex 类似，根据我们的《准备框架》(Preparedness Framework)，我们将 GPT‑5.4 评定为具有“高网络能力”级别，并按照系统卡⁠中的记录，为其配置了相应的安全防护进行部署。这些举措包括一套扩展版网络安全技术栈，涵盖了监控系统、可信访问控制，以及针对零数据留存 (ZDR) 层面高风险请求的异步拦截机制；与此同时，我们也对更广泛的安全生态系统持续投入资源。
+
+由于网络安全能力本质上具有“双重用途 (dual-use)”，我们在部署时保持审慎态度，并持续优化策略与分类器。针对 ZDR 界面上的特定客户，请求级拦截仍是我们网络风险缓解栈的一部分；鉴于分类器仍在迭代中，在我们持续完善这些防护措施的过程中，可能会出现一些误报。这些更新旨在优化防护措施的实际运行效果，包括减少不必要的拒答和过度生硬的免责声明，同时确保对滥用行为的强力防御。
+
+我们持续开展关于思维链 (CoT) 可监测性的安全研究，以更深入地理解模型的推理逻辑，并协助检测潜在的违规行为。作为该项工作的一部分，我们推出了全新的开源评估指标 —CoT 可控性⁠，用于衡量模型是否能故意混淆其推理过程以规避监控。研究发现，GPT‑5.4 Thinking 控制其 CoT 的能力较低。从安全性角度来看，这是一个积极的特性，表明该模型尚不具备隐藏其真实推理逻辑的能力，也证明了 CoT 监控依然是一项有效的安全手段。
+
+GPT‑5.4 自今日起将在 ChatGPT 和 Codex 中逐步推出。在 API 方面，GPT‑5.4 已正式上线，模型名称为gpt-5.4。此外，针对在极复杂任务中追求极致性能的开发者，GPT‑5.4 Pro 也已通过 API 提供，模型名称为gpt-5.4-pro。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 自即日起向 ChatGPT Plus、Team 及 Pro 用户开放，并取代 GPT‑5.2 Thinking。GPT‑5.2 Thinking 将在模型选择器的“传统模型 (Legacy Models)”栏目中为付费用户保留三个月，随后将于 2026 年 6 月 5 日正式停用。使用 Enterprise 和 Edu 套餐的用户可以通过管理员设置开启早期访问权限。此外，GPT‑5.4 Pro 版本将专门提供给 Pro 和 Enterprise 用户。ChatGPT 中 GPT‑5.4 Thinking 的上下文窗口⁠（在新窗口中打开）与 GPT‑5.2 Thinking 相比保持不变。
+
+GPT‑5.4 是我们首款融合了 GPT‑5.3‑codex 前沿编程能力的常规推理模型，目前正在 ChatGPT、API 及 Codex 平台同步推出。我们将其命名为 GPT‑5.4，旨在体现这一跨越式提升，并简化用户在使用 Codex 时对模型的选择。未来，我们的 Instant 模型和 Thinking 模型将以不同的迭代速度持续进化。
+
+Codex 中的 GPT‑5.4 包含对 1M 上下文窗口的实验性支持。开发者可以通过配置model_context_window和model_auto_compact_token_limit来试用此功能。超过标准 272K 上下文窗口的请求，将按正常费率的 2 倍计入用量限制。
+
+在 API 方面，为了体现能力的提升，GPT‑5.4 的单 Token 价格高于 GPT‑5.2；但凭借更出色的 Token 效率，它在处理许多任务时能显著减少所需的总 Token 数。此外，Batch 和 Flex 的价格仅为标准 API 费率的一半，而 Priority（优先）处理的费率为标准 API 费率的两倍。
+
+SWE-Bench Pro (Public)
+
+Frontier Science Research
+
+FrontierMath Tier 1–3
+
+Humanity's Last Exam（无工具）
+
+Humanity's Last Exam（含工具）
+
+Graphwalks BFS 0K–128K
+
+Graphwalks BFS 256K–1M
+
+Graphwalks parents 0–128K（准确率）
+
+Graphwalks parents 256K–1M（准确率）
+
+OpenAI MRCR v2 8-needle 4K–8K
+
+OpenAI MRCR v2 8-needle 8K–16K
+
+OpenAI MRCR v2 8-needle 16K–32K
+
+OpenAI MRCR v2 8-needle 32K–64K
+
+OpenAI MRCR v2 8-needle 64K–128K
+
+OpenAI MRCR v2 8-needle 128K–256K
+
+OpenAI MRCR v2 8-needle 256K–512K
+
+OpenAI MRCR v2 8-needle 512K–1M
+
+OmniDocBench（归一化编辑距离）
+
+所有评估均在推理强度设为 xhigh 的情况下运行，除非另有说明。所有基准测试均在研究环境中完成，因此在某些情况下，结果可能会与正式上线的 ChatGPT 输出略有不同。
+
+1人类表现数据引用自OSWorld：在真实计算机环境中对开放式任务进行多模态智能体基准测试⁠（在新窗口中打开）。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
+
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+...</p><div style="font-size:16px;line-height:1.8;color:#333">今天，我们将在 ChatGPT（以 GPT‑5.4 Thinking 模式）、API 及 Codex 中发布GPT‑5.4。它是我们目前针对专业化工作负载能力最强、效率最高的前沿模型。同时，我们也将在 ChatGPT 及 API 中发布GPT‑5.4 Pro，该模型专为在复杂任务中追求极致性能的用户而设计。
+
+GPT‑5.4 将我们近期在推理、编程及智能体工作流领域的顶尖性能集于一身。它整合了GPT‑5.3‑Codex⁠行业领先的编程能力，同时优化了模型在各类工具、软件环境以及专业任务（电子表格、演示文稿和文档等）中的表现。因此，该模型能够准确高效地完成复杂的实际工作：无需大量往复沟通，即可交付你所要求的结果。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 现可预先提供其思考计划，让你能在模型运行的中途调整方向，从而无需额外轮次的沟通，即可获得更契合需求的结果。此外，GPT‑5.4 Thinking 还提升了深度网页搜索能力，尤其擅长处理极具针对性的查询，并能更好地维持长时思考任务中的上下文关联。综合来看，这些改进意味着回答质量更高、响应速度更快，且能始终紧扣当前任务。
+
+在 Codex 与 API 中，GPT‑5.4 是我们发布的第一个具备原生且顶尖计算机使用能力的通用模型，让智能体能够操作计算机，并跨应用程序执行复杂的工作流程。该模型支持高达1M Token 的上下文，允许智能体在长周期内进行任务规划、执行与验证。此外，GPT‑5.4 通过工具搜索功能优化了模型在庞大的工具与连接器生态中的运作方式，帮助智能体在不牺牲智能的前提下，更高效地发现并使用正确工具。最后，GPT‑5.4 是我们迄今为止 Token 效率最高的推理模型，与 GPT‑5.2 相比，解决相同问题所需的 Token 数量显著减少 — 这直接转化为更低的 Token 消耗和更快的响应速度。
+
+GPT‑5.4 在通用推理、编程和专业知识工作方面都有全面提升，因此能支持更可靠的智能体、更高效的开发流程，并在 ChatGPT、API 和 Codex 中带来更高质量的输出。
+
+SWE-Bench Pro (Public)
+
+*此前报告的数据为 64.7%。GPT‑5.3‑Codex 现已达到 74.0% — 通过引入一个能够保留原始图像分辨率的新 API 参数。
+
+基于 GPT‑5.2 的通用推理能力，GPT‑5.4 在专业人士关注的实际任务中，能够提供更加稳定且精炼的输出。
+
+在GDPval⁠（一项评估智能体在 44 个职业中产出明确知识工作能力的测试）中，GPT‑5.4 刷新纪录。在与行业专业人士的横向评测中，GPT‑5.4 在83.0%的案例里达到了持平或更优的水准（GPT‑5.2 为71.0%）。
+
+在 GDPval 测试中，模型尝试完成定义明确的知识型工作，内容涵盖美国 GDP 贡献度最高的 9 个行业中的 44 种职业。任务要求生成真实的工作成果，例如销售演示文稿、会计表格、急诊排班表、制造业图表或短视频。GPT‑5.4 的推理强度设置为 xhigh，GPT‑5.2 的推理强度设置为 heavy（在 ChatGPT 中可用的较低强度）。
+
+我们重点提升了 GPT‑5.4 创建和编辑表格、演示文稿及文档的能力。在针对初级投行分析师水平的电子表格建模任务内部基准测试中，GPT‑5.4 的平均得分达到87.5%，而 GPT‑5.2 为68.4%。在演示文稿评估测试中，人工评分者在68.0%的情况下更偏好 GPT‑5.4 而非 GPT‑5.2 生成的作品，主要原因在于其更强的审美水平、更丰富的视觉元素，以及对图像生成功能更有效的运用。
+
+你可以在 ChatGPT 中使用 GPT‑5.4 Thinking 或 Pro 模型体验这些功能。如果你是 Enterprise 客户，建议使用我们新发布的ChatGPT Excel 和 Google Sheets 插件⁠（在新窗口中打开），该插件也于今天推出。同时，我们也更新了 Codex 和 API 中的电子表格⁠（在新窗口中打开）及演示文稿⁠（在新窗口中打开）技能。
+
+为了提升 GPT‑5.4 在实际工作中的表现，我们持续致力于降低幻觉与错误率。GPT‑5.4 是我们迄今为止准确率最高的模型：在用户标记了事实错误的一组去标识化提示词测试中，与 GPT‑5.2 相比，GPT‑5.4 的单项陈述错误率降低了 33%，完整回复包含错误的概率降低了 18%。
+
+GPT‑5.4 是我们首款原生支持计算机使用能力的通用模型，这标志着在开发与智能体领域向前迈出了重要一步。如果你正在构建跨网页和软件系统执行任务的智能体，GPT‑5.4 是目前市面上的最佳选择。
+
+我们设计 GPT‑5.4 的初衷，是让其在各种“计算机使用”负载中都能表现出色。它擅长通过 Playwright 等库编写代码来操作计算机，也能根据屏幕截图直接下达鼠标和键盘指令。开发者可以通过“开发者消息”引导模型行为，从而灵活调整其表现以适配特定场景。你甚至可以根据不同的风险承受能力，通过指定自定义确认策略来配置模型的安全行为。
+
+模型的性能与灵活性，在针对不同场景下“计算机使用”能力的基准测试中得到充分体现。在OSWorld-Verified测试（该测试通过屏幕截图以及键盘/鼠标操作，来评估模型导航桌面环境的能力）中，GPT‑5.4 达到了75.0%的成功率，刷新了纪录。这一成绩远超 GPT‑5.2 的47.3%，并超越了人类72.4%的表现。1
+
+在评估浏览器使用能力的WebArena-Verified基准测试中，GPT‑5.4 在同时结合 DOM 和屏幕截图驱动的交互方式下，达到了领先的67.3%成功率（GPT‑5.2 为65.4%）。而在同样评估浏览器使用能力的Online-Mind2Web测试中，仅凭基于屏幕截图的观察，GPT‑5.4 就能达到92.8%的成功率，远超 ChatGPT Atlas 智能体模式，后者的成功率为70.9%。
+
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
+
+GPT‑5.4 在“计算机使用”方面的提升，源于模型更强的通用视觉感知能力。在评估视觉理解与推理能力的MMMU-Pro测试中，GPT‑5.4 在不使用工具的情况下达到了81.2%的成功率（GPT‑5.2 为79.5%）。此外，视觉感知的提升也转化为更强的文档解析能力：在OmniDocBench测试中，GPT‑5.4 在不使用推理强度的情况下平均误差（通过模型预测值与标准答案之间的归一化编辑距离衡量）降至0.109，较 GPT‑5.2 的0.140有显著提升。
+
+MMMUPro 在测试时将推理强度设置为 xhigh。OmniDocBench 在测试时将推理强度设置为 none，以反映低成本、低延迟的性能表现。
+
+我们同时提升了对高细节、高分辨率图像的视觉理解能力，这对于要求全保真度的场景至关重要。从 GPT‑5.4 起，我们将引入“原始 (original)”图像输入细节⁠（在新窗口中打开）级别。该级别支持全保真感知，上限为 1024 万总像素或 6000 像素的最大长边（以较低者为准）；同时，“高 (high)”图像输入细节级别现在最高支持 256 万总像素或 2048 像素的最大长边。在与 API 用户进行的早期测试中，我们观察到在使用“原始”或“高”细节时，模型的定位能力、图像理解以及点击准确度均有显著提升。
+
+在 API 中，开发者可以通过更新后的计算机工具来使用这些功能。请参考我们更新后的文档⁠（在新窗口中打开），以获取最佳实践建议。
+
+GPT‑5.4 结合了 GPT‑5.3‑Codex 的编程优势，以及领先的知识型工作与“计算机使用”能力。这对于长时间运行的任务至关重要。在这些任务中，模型可以自主使用工具、进行迭代并推进工作，从而减少人工干预。在 SWE-Bench Pro 测试中，GPT‑5.4 的表现超越了 GPT‑5.3‑Codex 或与其持平，同时在各项推理任务中拥有更低的延迟。
+
+我们通过观察模型的生产环境行为并进行离线模拟来估算延迟。延迟估算涵盖了工具调用耗时（代码执行时间）、采样 Token 以及输入 Token。实际延迟可能会有显著差异，并取决于诸多我们的模拟中未涵盖的因素。推理强度已从 none 调整为 xhigh。
+
+开启 Codex 中的 /fast 模式后，可将 GPT‑5.4 的 Token 吐字速度提升至 1.5 倍。模型本身及其智能水平完全一致，只是速度更快。这意味着用户在处理编码任务、迭代和调试时，能够始终保持专注顺畅的状态。通过使用优先处理服务⁠（在新窗口中打开），开发者也可以在 API 中以同样的高速访问 GPT‑5.4。
+
+在评估和内部测试中，我们发现 GPT‑5.4 擅长处理复杂的垂直前端任务。与我们此前发布的任何模型相比，其产出的结果在审美水平和功能性上都有显著提升。
+
+为了展示模型在“计算机使用”与编程能力上的双重进化，我们还将发布一个名为“Playwright (Interactive)”的实验性Codex 技能⁠（在新窗口中打开）。它允许 Codex 对网页和 Electron 应用进行可视化调试；甚至在构建应用的过程中，它就能同步对该应用进行实时测试。
+
+在 GPT‑5.4 中，我们显著优化了模型与外部工具的协作方式。现在，智能体能够在更庞大的工具生态中进行操作，更可靠地筛选匹配工具，并以更低的成本和延迟完成多步骤的工作流程。
+
+在 API 层面，GPT‑5.4 引入了工具搜索⁠（在新窗口中打开）功能。这使得模型在面对海量工具选项时，依然能够保持高效运作。
+
+在此之前，当模型调用工具时，所有的工具定义都必须预先包含在提示词中。对于拥有大量工具的系统，这会导致每次请求都额外增加数千甚至数万个 Token，不仅推高了成本、减慢了响应速度，还让上下文中充斥着模型可能永远用不到的冗余信息。
+
+通过工具搜索，GPT‑5.4 不再需要预加载完整定义，而是接收一份精简的可选工具列表及工具搜索能力。当模型需要调用特定工具时，它会即时查找该工具的定义，并将其添加到当前的对话上下文。
+
+这种方法大幅减少了重度工具调用工作流程所需的 Token 数量，并有效保留了缓存，使请求变得更快、成本更低。它还让智能体能够可靠地与更庞大的工具生态协同工作。对于那些工具定义可能包含数万个 Token 的 MCP 服务器而言，效率提升尤为显著。
+
+为了展示效率提升的实际效果，我们对 ScaleMCP Atlas⁠（在新窗口中打开）基准测试中的 250 个任务进行了评估。在开启全部 36 个 MCP 服务器的情况下，我们对比了两种模式：(1) 将每个 MCP 函数直接暴露在模型上下文中；(2) 将所有 MCP 服务器置于“工具搜索”之后。结果显示，在保持同等准确率的前提下，“工具搜索”配置将总 Token 使用量降低了 47%。
+
+示例 Token 计数是基于 MCP-Atlas 公开数据集中 250 个任务的平均值得出的。
+
+GPT‑5.4 同样优化了工具调用能力，使其在推理过程中能更准确、更高效地判断调用工具的时机与方式，这在 API 环境下尤为突出。相比 GPT‑5.2，它在 Toolathlon 基准测试中能以更少的轮次达到更高的准确率。该测试旨在评估 AI 智能体利用真实世界工具和 API 完成多步任务的能力 — 例如，智能体需要读取邮件、提取作业附件、上传并评分，最后将结果记录到电子表格中。
+
+一次工具产出 (Tool Yield) 是指助手等待工具响应的过程。例如，如果模型并行调用了 3 个工具，随后又并行调用了另外 3 个工具，则产出数计为 2 次。相比于工具调用数，工具产出数能更好地反映并行化的优势，因此是衡量延迟更准确的指标。
+
+针对那些对延迟极度敏感、且倾向于将推理强度设为“无 (None)”的使用场景，GPT‑5.4 相比前代产品有显著提升。
+
+在τ2-bench⁠⁠（在新窗口中打开）测试中，模型必须利用工具来完成某项客服任务；该场景下可能包含一名模拟用户，此用户能够进行交流并针对环境状态执行操作。在测试中，推理强度设为 None。
+
+GPT‑5.4 在智能体联网搜索方面表现更佳。在 BrowseComp 基准测试（衡量 AI 智能体通过持续浏览网页获取难寻信息的能力）中，GPT‑5.4 相比 GPT‑5.2 提升了 17 个百分点；而 GPT‑5.4 Pro 更是创下了 89.3% 的纪录。
+
+在实际应用中，这意味着 GPT‑5.4 Thinking 能够更强有力地解答那些需要整合全网多方信息的复杂问题。它能以更强的持久性进行多轮搜索，从而锁定最相关的信源 — 尤其是在处理“大海捞针”式的问题时，它能高效提炼核心信息，并给出逻辑清晰、论证严密的回答。
+
+在 BrowseComp 测试中，我们使用了搜索黑名单，剔除了包含测试答案的网站，以防止数据污染并确保性能评估的公正性。由于 GPT‑5.4 的测试时间晚于 GPT‑5.2，其得分反映了模型能力、搜索系统优化以及互联网实时状态的综合变化。此外，GPT‑5.4 采用了范围更广、经过更新的黑名单进行测试。测试模型统一调用 ChatGPT 搜索工具，该工具与 API 搜索可能存在细微差异。
+
+与 Codex 开始工作时会概述思路类似，ChatGPT 中的 GPT‑5.4 Thinking 现在也会在处理更长、更复杂的查询时，通过“前言 (preamble)”来简述其工作方案。此外，你还可以在模型生成过程中实时添加指令或调整其方向。这让你能更轻松地引导模型达成预期的结果，而无需推倒重来，或通过多轮额外对话进行补救。该功能目前已在chatgpt.com⁠（在新窗口中打开）和 Android 应用上线，iOS 应用也将于近期推出。
+
+该模型在处理困难任务时能够进行更深入的思考，同时对会话早期的步骤保持更强的记忆。这使其能够应对更长的工作流和更复杂的提示词，并确保整个过程中给出的回答始终连贯且高度切题。
+
+在筹备 GPT‑5.4 部署的近几个月里，我们持续完善了自 GPT‑5.3‑Codex 以来引入的安全防护措施。与 GPT‑5.3‑Codex 类似，根据我们的《准备框架》(Preparedness Framework)，我们将 GPT‑5.4 评定为具有“高网络能力”级别，并按照系统卡⁠中的记录，为其配置了相应的安全防护进行部署。这些举措包括一套扩展版网络安全技术栈，涵盖了监控系统、可信访问控制，以及针对零数据留存 (ZDR) 层面高风险请求的异步拦截机制；与此同时，我们也对更广泛的安全生态系统持续投入资源。
+
+由于网络安全能力本质上具有“双重用途 (dual-use)”，我们在部署时保持审慎态度，并持续优化策略与分类器。针对 ZDR 界面上的特定客户，请求级拦截仍是我们网络风险缓解栈的一部分；鉴于分类器仍在迭代中，在我们持续完善这些防护措施的过程中，可能会出现一些误报。这些更新旨在优化防护措施的实际运行效果，包括减少不必要的拒答和过度生硬的免责声明，同时确保对滥用行为的强力防御。
+
+我们持续开展关于思维链 (CoT) 可监测性的安全研究，以更深入地理解模型的推理逻辑，并协助检测潜在的违规行为。作为该项工作的一部分，我们推出了全新的开源评估指标 —CoT 可控性⁠，用于衡量模型是否能故意混淆其推理过程以规避监控。研究发现，GPT‑5.4 Thinking 控制其 CoT 的能力较低。从安全性角度来看，这是一个积极的特性，表明该模型尚不具备隐藏其真实推理逻辑的能力，也证明了 CoT 监控依然是一项有效的安全手段。
+
+GPT‑5.4 自今日起将在 ChatGPT 和 Codex 中逐步推出。在 API 方面，GPT‑5.4 已正式上线，模型名称为gpt-5.4。此外，针对在极复杂任务中追求极致性能的开发者，GPT‑5.4 Pro 也已通过 API 提供，模型名称为gpt-5.4-pro。
+
+在 ChatGPT 中，GPT‑5.4 Thinking 自即日起向 ChatGPT Plus、Team 及 Pro 用户开放，并取代 GPT‑5.2 Thinking。GPT‑5.2 Thinking 将在模型选择器的“传统模型 (Legacy Models)”栏目中为付费用户保留三个月，随后将于 2026 年 6 月 5 日正式停用。使用 Enterprise 和 Edu 套餐的用户可以通过管理员设置开启早期访问权限。此外，GPT‑5.4 Pro 版本将专门提供给 Pro 和 Enterprise 用户。ChatGPT 中 GPT‑5.4 Thinking 的上下文窗口⁠（在新窗口中打开）与 GPT‑5.2 Thinking 相比保持不变。
+
+GPT‑5.4 是我们首款融合了 GPT‑5.3‑codex 前沿编程能力的常规推理模型，目前正在 ChatGPT、API 及 Codex 平台同步推出。我们将其命名为 GPT‑5.4，旨在体现这一跨越式提升，并简化用户在使用 Codex 时对模型的选择。未来，我们的 Instant 模型和 Thinking 模型将以不同的迭代速度持续进化。
+
+Codex 中的 GPT‑5.4 包含对 1M 上下文窗口的实验性支持。开发者可以通过配置model_context_window和model_auto_compact_token_limit来试用此功能。超过标准 272K 上下文窗口的请求，将按正常费率的 2 倍计入用量限制。
+
+在 API 方面，为了体现能力的提升，GPT‑5.4 的单 Token 价格高于 GPT‑5.2；但凭借更出色的 Token 效率，它在处理许多任务时能显著减少所需的总 Token 数。此外，Batch 和 Flex 的价格仅为标准 API 费率的一半，而 Priority（优先）处理的费率为标准 API 费率的两倍。
+
+SWE-Bench Pro (Public)
+
+Frontier Science Research
+
+FrontierMath Tier 1–3
+
+Humanity's Last Exam（无工具）
+
+Humanity's Last Exam（含工具）
+
+Graphwalks BFS 0K–128K
+
+Graphwalks BFS 256K–1M
+
+Graphwalks parents 0–128K（准确率）
+
+Graphwalks parents 256K–1M（准确率）
+
+OpenAI MRCR v2 8-needle 4K–8K
+
+OpenAI MRCR v2 8-needle 8K–16K
+
+OpenAI MRCR v2 8-needle 16K–32K
+
+OpenAI MRCR v2 8-needle 32K–64K
+
+OpenAI MRCR v2 8-needle 64K–128K
+
+OpenAI MRCR v2 8-needle 128K–256K
+
+OpenAI MRCR v2 8-needle 256K–512K
+
+OpenAI MRCR v2 8-needle 512K–1M
+
+OmniDocBench（归一化编辑距离）
+
+所有评估均在推理强度设为 xhigh 的情况下运行，除非另有说明。所有基准测试均在研究环境中完成，因此在某些情况下，结果可能会与正式上线的 ChatGPT 输出略有不同。
+
+1人类表现数据引用自OSWorld：在真实计算机环境中对开放式任务进行多模态智能体基准测试⁠（在新窗口中打开）。</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-4/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>GPT-5.6</title>
+  <link>https://openai.com/index/gpt-5-6/</link>
+  <guid isPermaLink="false">https://openai.com/index/gpt-5-6/</guid>
+  <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.6</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/gpt-5-6/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+</item>
+<item>
+  <title>GPT-5.5</title>
+  <link>https://openai.com/index/introducing-gpt-5-5/</link>
+  <guid isPermaLink="false">https://openai.com/index/introducing-gpt-5-5/</guid>
+  <pubDate>Fri, 12 Jan 2024 00:00:00 +0000</pubDate>
+  <category>Research</category>
+  <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+  <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">GPT-5.5</p><div style="font-size:16px;line-height:1.8;color:#333"></div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://openai.com/index/introducing-gpt-5-5/" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
