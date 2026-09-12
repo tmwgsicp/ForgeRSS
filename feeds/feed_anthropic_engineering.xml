@@ -5,7 +5,7 @@
 <link>https://www.anthropic.com/engineering</link>
 <description>Engineering blog from Anthropic - MCP, Claude Code, and more</description>
 <language>en</language>
-<lastBuildDate>Fri, 11 Sep 2026 20:37:24 +0000</lastBuildDate>
+<lastBuildDate>Sat, 12 Sep 2026 03:24:09 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://www.anthropic.com/engineering" rel="self" type="application/rss+xml"/>
 <image>
@@ -8561,7 +8561,7 @@ Worktrees: run separate CLI sessions in isolated git checkouts so edits don’t 
 
 Cross-session messaging: let the sessions you run yourself pass findings to each other
 
-Desktop app: manage multiple local sessions visually, each in its own worktree
+Desktop app: manage multiple local sessions visually, optionally each in its own worktree
 
 Claude Code on the web: run sessions in the cloud, on Anthropic-managed infrastructure by default
 
@@ -8800,7 +8800,7 @@ Worktrees: run separate CLI sessions in isolated git checkouts so edits don’t 
 
 Cross-session messaging: let the sessions you run yourself pass findings to each other
 
-Desktop app: manage multiple local sessions visually, each in its own worktree
+Desktop app: manage multiple local sessions visually, optionally each in its own worktree
 
 Claude Code on the web: run sessions in the cloud, on Anthropic-managed infrastructure by default
 
