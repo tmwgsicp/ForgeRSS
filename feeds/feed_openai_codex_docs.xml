@@ -5,7 +5,7 @@
 <link>https://developers.openai.com/codex</link>
 <description>OpenAI Codex coding agent documentation</description>
 <language>en</language>
-<lastBuildDate>Mon, 28 Sep 2026 03:26:42 +0000</lastBuildDate>
+<lastBuildDate>Mon, 05 Oct 2026 03:53:37 +0000</lastBuildDate>
 <generator>ForgeRSS</generator>
 <atom:link href="https://developers.openai.com/codex" rel="self" type="application/rss+xml"/>
 <image>
@@ -17,28 +17,23 @@
   <title>Overview</title>
   <link>https://developers.openai.com/codex</link>
   <guid isPermaLink="false">https://developers.openai.com/codex</guid>
-  <pubDate>Tue, 20 Feb 2024 00:00:00 +0000</pubDate>
+  <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
   <category>Documentation</category>
   <description><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Overview
 Start with a goal, idea, or task. ChatGPT can gather context, take action, and produce something useful.
 Quickstart
 Explore use cases
+New chat
+A
 Codex
 New chat
-⌘N
-Search
-⌘K
-Scheduled
-Plugins
-Sites
-Pull requests
 Pinned
 Update landing page illustrations
 2m
 Projects
 developers-website
 codex
-Chats
+Recents
 Polish onboarding flow
 1h
 Review sidebar changes
@@ -49,10 +44,15 @@ Build a new feature, app, or tool
 Review code and suggest changes
 Fix issues and failures
 Choose project
+main
+On my computer
+Do anything
+6 Sol
 ...</p><div style="font-size:16px;line-height:1.8;color:#333">Overview
 Start with a goal, idea, or task. ChatGPT can gather context, take action, and produce something useful.
 Quickstart
 Explore use cases
+New chat
 What should we build?
 Explore and understand code
 Build a new feature, app, or tool
@@ -71,32 +71,29 @@ Codey
 I found a tiny loose thread in settings. Want me to tug it?
 What’s new
 View all updates
+September 28–October 2, 2026
+Choose GPT-6.1 Sol for complex work
+Use GPT-6.1 Sol for coding and professional work at a lower cost than Astra.
+Delegate ongoing work to your dot
+Dots continue work between conversations and bring back results for review.
 September 21–25, 2026
 Choose GPT-6 Sol and Luna
-GPT-6 Sol and GPT-6 Luna are rolling out in Codex at lower token prices than their GPT-5.6 predecessors.
-September 14–18, 2026
-Prepare for GPT-5.5 retirement
-GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex on October 14, 2026, across all plans.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
+GPT-6 Sol and GPT-6 Luna are rolling out in Codex at lower token prices than their GPT-5.6 predecessors.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></description>
   <content:encoded><![CDATA[<p style="color:#666;font-size:14px;margin-bottom:16px">Overview
 Start with a goal, idea, or task. ChatGPT can gather context, take action, and produce something useful.
 Quickstart
 Explore use cases
+New chat
+A
 Codex
 New chat
-⌘N
-Search
-⌘K
-Scheduled
-Plugins
-Sites
-Pull requests
 Pinned
 Update landing page illustrations
 2m
 Projects
 developers-website
 codex
-Chats
+Recents
 Polish onboarding flow
 1h
 Review sidebar changes
@@ -107,10 +104,15 @@ Build a new feature, app, or tool
 Review code and suggest changes
 Fix issues and failures
 Choose project
+main
+On my computer
+Do anything
+6 Sol
 ...</p><div style="font-size:16px;line-height:1.8;color:#333">Overview
 Start with a goal, idea, or task. ChatGPT can gather context, take action, and produce something useful.
 Quickstart
 Explore use cases
+New chat
 What should we build?
 Explore and understand code
 Build a new feature, app, or tool
@@ -129,12 +131,14 @@ Codey
 I found a tiny loose thread in settings. Want me to tug it?
 What’s new
 View all updates
+September 28–October 2, 2026
+Choose GPT-6.1 Sol for complex work
+Use GPT-6.1 Sol for coding and professional work at a lower cost than Astra.
+Delegate ongoing work to your dot
+Dots continue work between conversations and bring back results for review.
 September 21–25, 2026
 Choose GPT-6 Sol and Luna
-GPT-6 Sol and GPT-6 Luna are rolling out in Codex at lower token prices than their GPT-5.6 predecessors.
-September 14–18, 2026
-Prepare for GPT-5.5 retirement
-GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex on October 14, 2026, across all plans.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
+GPT-6 Sol and GPT-6 Luna are rolling out in Codex at lower token prices than their GPT-5.6 predecessors.</div><hr style="margin:24px 0;border:none;border-top:1px solid #eee"/><p style="margin:12px 0 0"><a href="https://developers.openai.com/codex" style="color:#1890ff;text-decoration:none;font-size:14px">View Original &rarr;</a></p>]]></content:encoded>
 </item>
 </channel>
 </rss>
